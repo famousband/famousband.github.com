@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!-- Working Don't delete -->
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Designed By" content="Zander &amp; Norell">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="MobileOptimized" content="320"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Famous</title>
+<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/main.css" type="text/css"/>
+<style>
+	/* Implementing tabs */
+
+	.wrapper {
+	  margin:30px auto;
+	  width:80%;
+	  font-family:sans-serif;
+	  color:#555;
+	  font-size:14px;
+	  line-height:24px;
+	}
+	.tabs {
+	  li {
+	    float:left;
+	    width:33.33%;
+	    list-style: none;
+	  }
+	  a {
+	    display:block;
+	    text-align:center;
+	    text-decoration:none;
+	    text-transform:uppercase;
+	    color:#888;
+	    padding:20px 0;
+	    border-bottom:2px solid #888;
+	    background:#f7f7f7;
+	    
+	    &:hover, &.active {
+	      background:#eee;
+	    }
+	  }
+	}
+	.tabgroup {
+	  div {
+	    padding:30px;
+	    box-shadow:0 7px 10px rgba(0,0,0,.3);
+	  }
+	}
+	.clearfix:after {
+	  content:"";
+	  display:table;
+	  clear:both;
+	}
+
+	/* nav bar */
+.main-nav{
+  display:inline-block;
+
+}
+
+nav > ul {
+  margin-top: 2em;
+  margin-left: 0px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 2em;
+  list-style: none;
+}
+
+nav > ul > li {
+  position: relative;
+  margin-right: 1em;
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  font: 16px/1 "Julius Sans One";
+  text-decoration: none;
+  color: #FFFF66;
+  text-shadow: 2px 2px #3399FF;
+  font-family: 'Marcellus', serif;
+  background: 0 1px 1px rgba(0,0,0,.7);
+  padding: 10px 14px;
+ 
+}
+
+nav > ul > li > a {
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,.7);
+}
+
+nav ul > li ul {
+  position: absolute;
+  width: 200px;
+  background: #33cda7;
+  border-radius: 5px;
+  padding: 5px 0;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 3px 15px rgba(0,0,0,.7);
+  list-style: none;
+}
+
+nav ul > li ul:after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 1em;
+  height: 0; 
+  width: 0;
+  border: 6px solid transparent;
+  border-bottom-color: rgba(216,30,179,0.56); 
+}
+
+nav > ul li a:hover {
+  background: #E68A8A;
+  box-shadow: inset 0 0 15px rgba(0,0,0,.2);
+  color: white;
+  /*#33CC33;*/
+}
+
+nav > ul li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  top: 2.7em;
+}
+
+nav > ul li > ul > li {
+  position: relative;
+}
+
+nav > ul > li > ul > li > ul {
+  left: 105%;
+  top: -2.5em !important;
+  z-index: 1;
+  width: 180px;
+}
+
+nav > ul > li > ul > li > ul:hover {
+  width: 200px;
+}
+
+nav > ul > li > ul > li > ul:after {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: -12px;
+  heght: 0; width: 0;
+  border: 6px solid transparent;
+  border-right-color: rgba(216,30,179,0.56); 
+}
+
+nav > ul > li > ul > li:hover > ul {
+  top: 0 !important;
+}
+
+
+.drop,.dropp {
+  padding-right: 2em;
+}
+
+.drop:after,
+.dropp:after{
+  content: "";
+  position: absolute;
+  height: 0; width: 0;
+  border: 6px solid transparent;
+}
+
+.drop:after {
+  right: 8px;
+  top: 14px;
+  border-top-color: rgba(216,30,179,0.56); 
+}
+
+.dropp:after {
+  top: 12px;
+  right: 8px;
+  border-left-color: rgba(216,30,179,0.56); 
+}
+
+a{
+  text-decoration: none;
+}
+a h2:hover{
+  color:#E1DFD3;
+}
+/* end nav bar */
+</style>
+</head>
+<body>
+<nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="playlist.html" target="_blank">Playlist</a></li>
+            <!--<li><a href="#">Support</a></li>
+            <li><a href="#" class="drop">Affiliates</a>
+              <ul>
+                <li><a href="#" class="dropp">Artists</a>
+                  <ul>
+                    <li><a href="http://markmallman.com" target="_blank">Mark Mallman</a></li>
+                    <li><a href="http://www.jambots.com" target="_blank">Jambots</a></li>
+                    <li><a href="http://www.naughtywoodmusic.com" target="_blank">Naughty Wood</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+        -->
+          </ul>
+</nav>
+<header>
+	<h1 style="margin-top:-20px;" data-content="FAMOUS">FAMOUS</h1>
+</header>
+<center id="nav">
+	<hr style="border-top: 8px solid black; margin: 20px;">
+  <h2 style="margin-bottom: -20px;">Playlist</h2>
+  <p>*Click on song to expand.*</p>
+  <div class="toggle_head togglebackground">
+    <!--&nbsp;<img src="images/expand.png" alt="Expand" title="Expand" class="expand">
+    &nbsp;<img src="images/collapse.png" alt="Collapse" title="Collapse" class="collapse">-->
+    <label style="color: black; font-size: 20px;">1. Famous - "Climax"</label>
+  </div>
+  <div class="box toggle_body">
+      <ul class="list" style="margin-left: 170px;">
+          <li>
+             <label disabled="disabled">
+              <li><img src="img/climax.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-740px; margin-right: 20px;"/></li>
+              <ul><li>Let love, let love collide.</li>
+              <li>Head on, head on collision.</li>
+              <li>Did not see that coming.</li>
+              <br>
+              <li>Techno, tech, techno, echo</li>
+              <li>On the radio, on the radio.</li>
+              <li>Through your stereo, through your stereo.</li>
+              <li>Turn it up, up, up, up, up, up, ah -</li>
+              <li>Techno, tech, techno, it's on.</li>
+              <li>Electrified. Buzz.</li></ul>
+             </label>
+          </li>
+      </ul>
+  </div>
+  <!-- !END section (Climax) -->
+  <div class="toggle_head togglebackground">
+    <!--
+      &nbsp;<img src="images/expand.png" alt="Expand"  class="expand">
+      &nbsp;<img src="images/collapse.png" alt="Collapse"  class="collapse">-->
+      <label style="color: black; font-size: 20px;">2. Famous - "Escape"</label>
+  </div>
+  <div class="box toggle_body">
+      <ul class="list" style="margin-left: 170px;">
+          <li>
+             <label disabled="disabled">
+              <li><img src="img/escape.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-740px; margin-right: 20px;"/></li>
+              <ul><li>Talk about the weather,</li>
+              <li>Or whatever you like.</li>
+              <li>But we should get together</li>
+              <li>And escape with the knife.</li>
+              <li>And escape with the night.</li>
+              <li>I wanna take you for a ride.</li>
+              <li>I wanna take you for a ride.</li>
+              <br>
+              <li>Let's go for a swim.</li>
+              <br>
+              <li>Undress my mind</li>
+              <li>Caress my thoughts.</li>
+              <li>Get inside, show me what it feels like.</li>
+              <li>Show me what it feels like.</li>
+              <br>
+              <li>Talk about the weather</li>
+              <li>Or whatever you like.</li>
+              <li>But we should get together</li>
+              <li>And escape with the night.</li>
+              <li>Let's escape with the night.</li>
+              <br>
+              <li>Undress my mind.</li></ul>
+             </label>
+          </li>
+      </ul>
+  </div>
+  <!-- !END section (Escape) -->
+   <div class="toggle_head togglebackground">
+    <!--
+      &nbsp;<img src="images/expand.png" alt="Expand"  class="expand">
+      &nbsp;<img src="images/collapse.png" alt="Collapse"  class="collapse">-->
+      <label style="color: black; font-size: 20px;">3. Famous - "You Came To Me"</label>
+  </div>
+  <div class="box toggle_body">
+      <ul class="list" style="margin-left: 170px;">
+          <li>
+             <label disabled="disabled">
+              <li><img src="img/youcame.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-740px; margin-right: 20px;"/></li>
+              <ul><li>Everybody wants to be loved.</li>
+              <li>Everybody wants to be loved.</li>
+              <li>We all want the same thing, to be happy.</li>
+              <li>To live our lives the way that we like.</li>
+              <br>
+              <li>You came for me, and you found love.</li>
+              <li>And you found love...</li>
+              <li>Love to regain your soul...</li><li>Your soul, your soul.</li>
+              <li>You came for me, and you found love.</li> 
+              <li>And you found love...</li>
+              <li>Love to regain your soul...</li><li>Your soul, your soul.</li>
+              <br>
+              <li>Yá Bahá'u'l-Abhá</li>
+              <br>
+              <li>Does it really matter?</li>
+              <li>Does it really matter?</li>
+              <li>Does it really matter now?</li>
+              <li>Does it really matter, matter?</li>
+              <br>
+              <li>You came for me, and you found love.</li>
+              <li>And you found love...</li>
+              <li>Love to regain your soul...</li>
+              <li>It's time for peace.</li>
+              <li>Your soul - it's time for love - your soul.</li>
+              <li>Come together - your soul - come together now.</li>
+              <li>Your soul.</li>
+              <li>I believe it all.</li></ul>
+             </label>
+          </li>
+      </ul>
+  </div>
+  <!-- !END section (You Came To Me) -->
+   <div class="toggle_head togglebackground">
+    <!--
+      &nbsp;<img src="images/expand.png" alt="Expand"  class="expand">
+      &nbsp;<img src="images/collapse.png" alt="Collapse"  class="collapse">-->
+      <label style="color: black; font-size: 20px;">4. Famous Ft. Edmin - "Ink and Feather (A Tribute)"</label>
+  </div>
+  <div class="box toggle_body">
+      <ul class="list" style="margin-left: 170px;">
+          <li>
+             <label disabled="disabled">
+              <li><img src="img/inkfeather.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-740px; margin-right: 20px;"/></li>
+              <ul><li>It is unkind you do not care,</li>
+              <li>To recognize all that we share.</li>
+              <li>How I wish you could care, and open your mind...</li>
+              <li>Open your mind.</li>
+              <br>
+              <li>Power is the love, love is the power.</li>
+              <li>Power is the love, love is the power.</li>
+              <br>
+              <li>Don't be afraid to stand up.</li>
+              <li>Don't be afraid to revolutionize.</li>
+              <li>Don't be afraid to stand up.</li>
+              <br>
+              <li>Love, love, love &amp; happiness...</li></ul>
+             </label>
+          </li>
+      </ul>
+  </div>
+    <!-- !END section (Ink and Feather) -->
+   <div class="toggle_head togglebackground">
+    <!--
+      &nbsp;<img src="images/expand.png" alt="Expand"  class="expand">
+      &nbsp;<img src="images/collapse.png" alt="Collapse"  class="collapse">-->
+      <label style="color: black; font-size: 20px;">5. Famous Ft. Edmin - "Who You Are (Acoustic)"</label>
+  </div>
+  <div class="box toggle_body">
+      <ul class="list" style="margin-left: 170px;">
+          <li>
+             <label disabled="disabled">
+              <li><img src="img/whoyouare.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-740px; margin-right: 20px;"/></li>
+              <ul><li>I don't even know who you are.</li>
+              <li>Who you're supposed to be.</li>
+              <li>Who you chose to be.</li>
+              <li>Don't you know you're not very far?</li>
+              <li>Be whoever you want to be.</li>
+              <li>Who will you be?</li>
+              <li>Who will you be?</li>
+              <br>
+              <li>You gotta make a decision, the world will keep on spinning.</li>
+              <li>With or without you, it'll go on.</li>
+              <br>
+              <li>Where does your heart dwell?</li>
+              <li>Where does your soul fly?</li>
+              <li>That's the way, that's the way, that's the way...</li>
+              <li>That's the way, that's the way, that's the way... to go.</li>
+              <li>That's the way, that's the way, that's the way...</li>
+              <li>That's the way, that's the way, that's the way to go.</li>
+              <li>That's the way to go.</li>
+              <br>
+              <li>I don't even, I don't even - no, wait a minute.</li>
+              <br>
+              <li>I don't even know who you are.</li>
+              <li>Who you're supposed to be.</li>
+              <li>Who you chose to be.</li>
+              <li>Don't you know you're not very far?</li>
+              <li>Be whoever you want to be.</li>
+              <li>Who will you be?</li>
+              <li>Who will you be?</li>
+              <br>
+              <li>You have to choose, you have to make a choice.</li>
+              <li>Make a decision, the world, it's spinning.</li>
+              <li>With or without you - with or without you, it'll go on.</li>
+              <br>
+              <li>Where does your heart dwell?</li>
+              <li>Where does your soul fly?</li>
+              <li>That's the way, that's the way, that's the way...</li>
+              <li>That's the way, that's the way, that's the way...</li>
+              <li>That's the way, that's the way, that's the way to go...</li>
+              <li>To go.</li></ul>
+             </label>
+          </li>
+      </ul>
+  </div>
+    <!-- !END section (Who You Are) -->
+   <div class="toggle_head togglebackground">
+    <!--
+      &nbsp;<img src="images/expand.png" alt="Expand"  class="expand">
+      &nbsp;<img src="images/collapse.png" alt="Collapse"  class="collapse">-->
+      <label style="color: black; font-size: 20px;">6. Famous - "Sea of Wonder (Live)"</label>
+  </div>
+  <div class="box toggle_body">
+      <ul class="list" style="margin-left: 170px;">
+          <li>
+             <label disabled="disabled">
+              <li style="display:inline;"><img src="img/wonder.jpg" style="width:300px; height:auto; margin-bottom: -311px; margin-left:-740px;"/></li>
+              <ul><li>Sea of Wonder, your mystery...</li>
+              <li>Sea of Wonder, your mystery elegantly enveloping me, miniscule me.</li>
+              <li>Sea of Wonder, your mystery elegantly enveloping me, miniscule me.</li>
+              <li>I, I, I ponder...</li>
+              <li>Is the light within you, the light within me?</li>
+              <li>And I wonder, what are your secrets?</li>
+              <li>Would you entrust them to me?</li>
+              <li>Sea of Wonder, won't you tell me your secrets?</li>
+              <li>I wanna know. I wanna know.</li>
+              <li>I wanna know your mystery.</li>
+              <li>I wanna know. I wanna know.</li>
+              <li>I wanna know your history.</li>
+              <li>Sea of Wonder, you're so elegant.</li>
+              <li>You're so elegant - elegantly enveloping me</li> 
+              <li>Miniscule me, miniscule me.</li>
+              <br>
+              <li>I ponder... I am so small, so small.</li>
+              <li>I float in your body, I float in your body.</li>
+              <li>Sea of Wonder, just how big are you?</li>
+              <li>How far can I swim?</li>
+              <li>I wanna know, I wanna know.</li>
+              <li>I wanna know, what's it like in your farwaway waters?</li>
+              <li>I wanna swim in your body.</li>
+              <li>I, I, I quite like your embrace...</li></ul>
+             </label>
+          </li>
+      </ul>
+  </div>
+
+
+
+
+<hr style="border-top: 8px solid black; margin: 20px;">
+</center>
+
+<footer class="homeFoot"><a href="http://www.phonixintl.com" target="_blank"><h2>© Phönix 2013</h2></a></footer>
+<script>$("header").wrap("<div></div>");</script>
+<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
+<script type="text/javascript" src="js/tabs.js"></script>
+<script type="text/javascript" src="js/text.js"></script>
+<script type="text/javascript" src="js/toggle.js"></script>
+
+</body>
+</html>
