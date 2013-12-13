@@ -263,6 +263,10 @@ h1.enterSite{
     float: 
 }
 
+ul.list > li {
+  font-size: 18px;
+}
+
 /* Wrapper div for tabs */
 div.wrapper{
 	margin-bottom: 60px;
