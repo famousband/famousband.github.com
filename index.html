@@ -77,22 +77,58 @@ nav > ul > li {
 }
 
 nav ul li a {
-  display: block;
-  font: 16px/1 "Julius Sans One";
-  text-decoration: none;
-  color: #FFFF66;
-  text-shadow: 2px 2px #3399FF;
-  font-family: 'Marcellus', serif;
-  background: 0 1px 1px rgba(0,0,0,.7);
-  padding: 10px 14px;
+  background: #E68A8A;
+  border-top: 1px solid #bc2c2c;
+  border-right: 1px solid #bc2c2c;
+  border-bottom: 1px solid #bc2c2c;
+  border-left: 1px solid #bc2c2c;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
+  color: #fff;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 10px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #bc2c2c;
+   -webkit-background-clip: padding-box; 
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 100%;
+  height: auto;
  
 }
 
 nav > ul > li > a {
-  border-radius: 5px;
-  border: 0;
-  box-shadow: 0 1px 2px rgba(0,0,0,.7);
+  background: #E68A8A;
+  border-top: 1px solid #bc2c2c;
+  border-right: 1px solid #bc2c2c;
+  border-bottom: 1px solid #bc2c2c;
+  border-left: 1px solid #bc2c2c;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
+  color: #E1DFD3;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 10px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  /*text-shadow: 0px -1px 1px #bc2c2c;*/
+   -webkit-background-clip: padding-box; 
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 100%;
+  height: auto;
 }
+
+nav > ul > li > a:link {color: #E1DFD3; -moz-text-decoration-style: solid; padding: 10px 14px;}      /* unvisited link */
+nav > ul > li > a:visited {color:white;}  /* visited link */
+nav > ul > li > a:hover {color:#25c655; -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    cursor: pointer; }  /* mouse over link */
+nav > ul > li > a:active {color:blue; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    /*margin-top: 58px; */
+    position: static;
+    color:blue;}  /* selected link */
 
 nav ul > li ul {
   position: absolute;
@@ -115,19 +151,6 @@ nav ul > li ul:after {
   width: 0;
   border: 6px solid transparent;
   border-bottom-color: rgba(216,30,179,0.56); 
-}
-
-nav > ul li a:hover {
-  background: #E68A8A;
-  box-shadow: inset 0 0 15px rgba(0,0,0,.2);
-  color: white;
-  /*#33CC33;*/
-}
-
-nav > ul li:hover > ul {
-  visibility: visible;
-  opacity: 1;
-  top: 2.7em;
 }
 
 nav > ul li > ul > li {
@@ -195,6 +218,7 @@ p a:hover{
   color:#E1DFD3;
   font-size: 29px;
 }
+
 /* end nav bar */
 </style>
 </head>

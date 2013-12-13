@@ -372,7 +372,7 @@ button a {
 button a:link {color:white;}      /* unvisited link */
 button a:visited {color:white;}  /* visited link */
 button a:hover {color:#FF00FF;}  /* mouse over link */
-button a:active {color:indigo;}  /* selected link */
+button a:active {color:blue;}  /* selected link */
 
 /* punch */
 .punch {
@@ -407,6 +407,7 @@ button a:active {color:indigo;}  /* selected link */
     box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
     /*margin-top: 58px; */
     position: static;
+    color:blue;
 }
 
 .punch2 {
@@ -474,6 +475,10 @@ td.zander{
 
 input.punch:hover{
 	color:#25c655;
+}
+
+input.punch:active{
+  color:blue;
 }
 
 input.punch2:hover{
