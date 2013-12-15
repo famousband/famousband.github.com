@@ -1,0 +1,894 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Famous</title>
+        <link rel="stylesheet" href="themes/famousband.min.css" />
+        <link rel="stylesheet" href="css/improv.css" type="text/css"/>
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
+		<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'/>
+		<style>
+			/* Implementing tabs */
+            /*
+			.wrapper {
+			  margin:30px auto;
+			  width:80%;
+			  font-family:sans-serif;
+			  color:#555;
+			  font-size:14px;
+			  line-height:24px;
+			}
+
+			.tabs {
+			  li {
+			    float:left;
+			    width:33.33%;
+			    list-style: none;
+			  }
+			  a {
+			    display:block;
+			    text-align:center;
+			    text-decoration:none;
+			    text-transform:uppercase;
+			    color:#888;
+			    padding:20px 0;
+			    border-bottom:2px solid #888;
+			    background:#f7f7f7;
+			    
+			    &:hover, &.active {
+			      background:#eee;
+			    }
+			  }
+			}
+			.tabgroup {
+			  div {
+			    padding:30px;
+			    box-shadow:0 7px 10px rgba(0,0,0,.3);
+			  }
+			}
+			.clearfix:after {
+			  content:"";
+			  display:table;
+			  clear:both;
+			}
+            */
+
+			a{
+			  text-decoration: none;
+			}
+			a h2:hover{
+			  color:#E1DFD3;
+			}
+
+			p a:hover{
+			  color:#E1DFD3;
+			  /*font-size: 29px;*/
+			}
+
+			hr{
+				border-top: 8px solid black
+			}
+			img{
+				width: 100%;
+				height: auto;
+			}
+			h1 {
+			  position: absolute;
+			  left: 45%;
+			  margin-left: -2.1em;
+			  color: #3399FF;
+			  font:700 4.8em 'Montserrat Subrayada', sans-serif; 
+			}
+
+			@keyframes loading {
+			  from { max-width: 0; }
+			}
+
+			h1:before {
+			  content: attr(data-content);
+			  position: absolute;
+			  overflow: hidden;
+			  max-width: 5.3em;
+			  color: #FFFF66;
+			  animation: loading 8s linear;
+			}
+
+			h2 {
+			    background-color: #33CC33;
+			    text-align: center;
+			    color: #FFFF66;
+			    border-color: indigo;
+			    letter-spacing: 2px;
+			    word-spacing: 2px;
+			    text-shadow: 2px 2px #3399FF;
+			    font-size: 150%;
+			    font-family: 'Marcellus', serif;
+			    padding: 1em;
+			    margin: -1em -1em 1em -1em;
+			    margin-bottom: -25px;
+			}
+
+			h1 + h2 {
+			    margin-top: -2em;
+			    padding-top: 0;
+			}
+
+			p.fancy{
+				font-size: 20px;
+				text-align: center;
+				color: #FFFF66;
+			    border-color: indigo;
+			    letter-spacing: 2px;
+			    word-spacing: 2px;
+			    text-shadow: 2px 2px #3399FF;
+			}
+			/* end nav bar */
+
+            /* Overriding jquery mobile button styles */
+            button.bb-play {
+              display: inline-block;
+              vertical-align: middle;
+              height: 65px;
+              width:  65px;
+              border: 5px solid #CFCFCF;
+              border-radius: 50%; 
+              background: transparent; 
+              background-image: url('images/play_med.png');
+              background-repeat: no-repeat;
+              background-position: 7px center;
+              cursor: pointer;
+            }
+
+            button.bb-playing {
+              vertical-align: middle;
+              background-image: url('images/pause.png');
+              background-position: center center;
+            }
+
+            button.bb-forward {
+              vertical-align: middle;
+              display: inline-block;
+              height: 32px;
+              width:  32px;
+              background: transparent;
+              background-image: url('images/forward.png');
+              background-position: center;
+              background-repeat: no-repeat;
+              cursor: pointer;
+            }
+
+            button.bb-rewind {
+              vertical-align: middle;
+              display: inline-block;
+              height: 32px;
+              width:  32px;
+              background: transparent;
+              background-image: url('images/rewind.png');
+              background-position: center;
+              background-repeat: no-repeat;
+              cursor: pointer;
+            }
+
+		</style>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
+        
+	</head>
+	<body>
+    <!--Home Page -->
+        <div data-role="page" id="home">
+        	<div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+            <div data-role="content">
+            	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+            	<br>
+            	<br>
+    		    <hr>
+    		    <img src="img/famous.jpg"/>
+
+                <p class="fancy">Sample Famous Music?</p>
+
+                <p><a data-icon="arrow-r" data-iconpos="right" data-role="button"
+                data-theme="a" href="#signup">Playlist</a></p>
+
+                <p class="fancy">Lyrics:</p>
+
+                <!-- Change Below to Collapsible ULs/Lis like in desktop version -->
+                <div data-collapsed="true" data-role="collapsible">
+                    <h3>Famous Songs</h3>
+
+                    <ul data-filter="true" data-inset="true" data-role="listview">
+                        <li data-role="list-divider"></li>
+
+                        <li>
+                           <a href="#climax"><img src="img/climax.jpg">Climax</a>
+                            
+                        </li>
+                        <li data-role="list-divider"></li>
+                        <li>
+                           <a href="#escape"><img src="img/escape.jpg">Escape</a>
+                            
+                        </li>
+                        <li data-role="list-divider"></li>
+                        <li>
+                           <a href="#youcametome"><img src="img/youcame.jpg">You Came To Me</a>
+                            
+                        </li>
+                        <li data-role="list-divider"></li>
+                        <li>
+                           <a href="#inkfeather"><img src="img/inkfeather.jpg">Ink &amp; Feather</a>
+                            
+                        </li>
+                        <li data-role="list-divider"></li>
+                        <li>
+                           <a href="#whoyouare"><img src="img/whoyouare.jpg">Who You Are (Acoustic)</a>
+                            
+                        </li>
+                        <li data-role="list-divider"></li>
+                        <li>
+                           <a href="#seaofwonder"><img src="img/wonder.jpg">Sea of Wonder (Live)</a>
+                            
+                        </li>
+                        <li data-role="list-divider"></li>
+                        
+                    </ul>
+                </div>
+
+                <!--
+                <ul style="float:left;">
+                    <li>
+                        <form method="link" action="home.html">
+                            <input type="submit" value="Desktop" class="punch2" id="port">
+                        </form>
+                    </li>
+                </ul>  
+                -->  
+                
+
+
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a class="ui-btn-active ui-state-persist" data-icon="home" href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#display">News</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#rss">Contact</a>
+                        </li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+
+        </div>
+
+        <!-- Playlist Page -->
+
+        <div data-add-back-btn="true" data-role="page" id="signup">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+
+            <div data-role="content">
+            	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+
+                <div id="control-panel">
+    				<hr>
+    				<div class="bbplayer">
+    				  <button class="bb-rewind"></button>
+    				  <button class="bb-play"></button>
+    				  <button class="bb-forward"></button>
+    				  <span class="bb-trackTime">--:--</span> 
+    				  <span class="bb-trackLength">--:--</span>
+    				  <p style="font-size: 20px; color: #FFFF66; border-color: indigo; letter-spacing: 2px; word-spacing: 2px; text-shadow: 2px 2px #3399FF;">Now Playing: </p><span style="margin-top: -68px; margin-left: 180px;" class="bb-trackTitle"></span>
+                      <br>
+    				  <audio>
+    				    <source src="media/Climax.mp3" type="audio/mpeg"></source>
+    				    <source src="media/Escape.mp3" type="audio/mpeg"></source>
+    				    <source src="media/You Came To Me.mp3" type="audio/mpeg"></source>
+    				    <source src="media/Ink and Feather.mp3" type="audio/mpeg"></source>
+    				    <source src="media/Who You Are.mp3" type="audio/mpeg"></source>
+    				    <source src="media/Sea of Wonder.mp3" type="audio/mpeg"></source>
+    				    HTML5 Audio Not Available
+    				  </audio>
+    				  <br>
+    				  	<p>1. Famous - "Climax"</p>
+    					<p>2. Famous - "Escape"</p>
+    					<p>3. Famous - "You Came To Me"</p>
+    					<p>4. Famous Ft. Edmin - "Ink and Feather (A Tribute)"</p>
+    					<p>5. Famous Ft. Edmin - "Who You Are (Acoustic)"</p>
+    					<p>6. Famous Ft. Edmin - "Sea of Wonder (Live)"</p>
+    				</div>
+    				<div id="wrapper">
+    				  <canvas width="1280" height="720" id="main"></canvas>
+    				</div>
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#display">News</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#rss">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- News-->
+
+        <div data-add-back-btn="true" data-role="page" id="display">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+
+            <div data-role="content">
+            	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+            	<br>
+            	<br>
+    		    <hr>
+            	<h1 class="mail">News</h1>
+                <div class="special">
+     
+                    <div id="SocialLinks">
+                        <a href="http://www.twitter.com/MaryNorell"><img src="images/twittericon.png" width="32" height="32" alt="Twitter" /></a>
+                        <a href="http://www.facebook.com/MaryNorell"><img src="images/facebookicon.png" width="32" height="32" alt="Facebook" /></a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a class="ui-btn-active ui-state-persist" data-icon=
+                            "star" href="#display">News</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#rss">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Climax Lyrics -->
+
+        <div data-add-back-btn="true" data-role="page" id="climax">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+            <div data-role="content">
+            	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+            	<br>
+            	<br>
+    		    <hr>
+                <h1 class="mail">"Climax"</h1>
+                <div class="special">
+                        <section>
+                            <img src="img/climax.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-700px; margin-right: 20px;"/>
+                            <p>Let love, let love collide.</p>
+                            <p>Head on, head on collision.</p>
+                            <p>Did not see that coming.</p>
+                            <br>
+                            <p>Techno, tech, techno, echo.</p>
+                            <p>Techno, tech, techno, techno.</p>
+                            <p>On the radio, on the radio.</p>
+                            <p>Through your stereo, through your stereo.</p>
+                            <p>Turn it up, up, up, up, up, up, ah -</p>
+                            <p>Techno, tech, techno, it's on.</p>
+                            <br>
+                            <p>Electrified. Buzz.</p>
+                        		
+
+                        </section>
+                </div>
+                <img src="img/climax.jpg" alt="Climax"/>
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#display">News</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#rss">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Escape Lyrics -->
+
+        <div data-add-back-btn="true" data-role="page" id="ios">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+
+            <div data-role="content">
+            	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+            	<br>
+            	<br>
+    		    <hr>
+                <h1 class="mail">"Escape"</h1>
+                <div class="special">
+                        <section>
+                            ><img src="img/escape.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-700px; margin-right: 20px;"/>
+                            <p>Talk about the weather,</p>
+                            <p>Or whatever you like.</p>
+                            <p>But we should get together</p>
+                            <p>And escape with the knife.</p>
+                            <p>And escape with the night.</p>
+                            <p>I wanna take you for a ride.</p>
+                            <p>I wanna take you for a ride.</p>
+                            <br>
+                            <p>Let's go for a swim.</p>
+                            <br>
+                            <p>Undress my mind</p>
+                            <p>Caress my thoughts.</p>
+                            <p>Get inside, show me what it feels like.</p>
+                            <p>Show me what it feels like.</p>
+                            <br>
+                            <p>Talk about the weather</p>
+                            <p>Or whatever you like.</p>
+                            <p>But we should get together</p>
+                            <p>And escape with the night.</p>
+                            <p>Let's escape with the night.</p>
+                            <br>
+                            <p>Undress my mind.</p>		
+
+                        </section>
+                </div>
+                <img src="img/escape.jpg" alt="Escape"/>
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#display">News</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#rss">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- You Came To Me Lyrics -->
+
+        <div data-add-back-btn="true" data-role="page" id="web">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+
+            <div data-role="content">
+            	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+            	<br>
+            	<br>
+    		    <hr>
+                <h1 class="mail">"You Came To Me"</h1>
+                <div class="special">
+                        <section>
+                            <img src="img/youcame.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-700px; margin-right: 20px;"/>
+    					    <p>Everybody wants to be loved.</p>
+    						<p>Everybody wants to be loved.</p>
+    						<p>We all want the same thing, to be happy.</p>
+    						<p>To live our lives the way that we like.</p>
+    						<br>
+    						<p>You came for me, and you found love.</p>
+    						<p>And you found love...</p>
+                            <p>Love to regain your soul...</p><p>Your soul, your soul.</p>
+                            <p>You came for me, and you found love.</p> 
+                            <p>And you found love...</p>
+                            <p>Love to regain your soul...</p><p>Your soul, your soul.</p>
+                            <br>
+                            <p>Yá Bahá'u'l-Abhá</p>
+                            <br>
+                            <p>Does it really matter?</p>
+                            <p>Does it really matter?</p>
+                            <p>Does it really matter now?</p>
+                            <p>Does it really matter, matter?</p>
+                            <br>
+                            <p>You came for me, and you found love.</p>
+                            <p>And you found love...</p>
+                            <p>Love to regain your soul...</p>
+                            <p>It's time for peace.</p>
+                            <p>Your soul - it's time for love - your soul.</p>
+                            <p>Come together - your soul - come together now.</p>
+                            <p>Your soul.</p>
+                            <p>I believe it all.</p>          	
+    					    
+                        </section>
+                </div>
+                <img src="img/youcame.jpg" alt="You Came To Me" style="margin-top:50px;"/>
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#display">News</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#rss">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ink & Feather -->
+
+        <div data-add-back-btn="true" data-role="page" id="web">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+
+            <div data-role="content">
+            	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+            	<br>
+            	<br>
+    		    <hr>
+                <h1 class="mail">"Ink &amp; Feather"</h1>
+                <div class="special">
+                        <section>
+                            <img src="img/inkfeather.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-700px; margin-right: 20px;"/>
+    					    <p>It is unkind you do not care,</p>
+                            <p>To recognize all that we share.</p>
+                            <p>How I wish you could care, and open your mind...</p>
+                            <p>Open your mind.</p>
+                            <br>
+                            <p>Power is the love, love is the power.</p>
+                            <p>Power is the love, love is the power.</p>
+                            <br>
+                            <p>Don't be afraid to stand up.</p>
+                            <p>Don't be afraid to revolutionize.</p>
+                            <p>Don't be afraid to stand up.</p>
+                            <br>
+                            <p>Love, love, love &amp; happiness...</p>      	
+
+                        </section>
+                </div>
+                <img src="img/inkfeather.jpg" alt="Ink &amp; Feather" style="margin-top:50px;"/>
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#display">News</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#rss">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Who You Are Lyrics -->
+
+        <div data-add-back-btn="true" data-role="page" id="web">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+
+            <div data-role="content">
+            	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+            	<br>
+            	<br>
+    		    <hr>
+                <h1 class="mail">"Who You Are (Acoustic)"</h1>
+                <div class="special">
+                        <section>
+                            <img src="img/whoyouare.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-700px; margin-right: 20px;"/>
+    					    <p>I don't even know who you are.</p>
+    			            <p>Who you're supposed to be.</p>
+    			            <p>Who you chose to be.</p>
+                            <p>Don't you know you're not very far?</p>
+                            <p>Be whoever you want to be.</p>
+                            <p>Who will you be?</p>
+                            <p>Who will you be?</p>
+                            <br>
+                            <p>You gotta make a decision,</p>
+                            <p>The world will keep on spinning.</p>
+                            <p>With or without you, it'll go on.</p>
+                            <br>
+                            <p>Where does your heart dwell?</p>
+                            <p>Where does your soul fly?</p>
+                            <p>That's the way, that's the way, that's the way...</p>
+                            <p>That's the way, that's the way, that's the way... to go.</p>
+                            <p>That's the way, that's the way, that's the way...</p>
+                            <p>That's the way, that's the way, that's the way to go.</p>
+                            <p>That's the way to go.</p>
+                            <br>
+                            <p>I don't even, I don't even - no, wait a minute.</p>
+                            <br>
+                            <p>I don't even know who you are.</p>
+                            <p>Who you're supposed to be.</p>
+                            <p>Who you chose to be.</p>
+                            <p>Don't you know you're not very far?</p>
+                            <p>Be whoever you want to be.</p>
+                            <p>Who will you be?</p>
+                            <p>Who will you be?</p>
+                            <br>
+                            <p>You have to choose, you have to make a choice.</p>
+                            <p>Make a decision, the world, it's spinning.</p>
+                            <p>With or without you - with or without you, it'll go on.</p>
+                            <br>
+                            <p>Where does your heart dwell?</p>
+                            <p>Where does your soul fly?</p>
+                            <p>That's the way, that's the way, that's the way...</p>
+                            <p>That's the way, that's the way, that's the way...</p>
+                            <p>That's the way, that's the way, that's the way to go...</p>
+                            <p>To go.</p>       
+                        </section>
+                </div>
+                <img src="img/whoyouare.jpg" alt="Who You Are" style="margin-top:50px;"/>
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#display">News</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#rss">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    	<!-- Sea of Wonder -->
+
+        <div data-add-back-btn="true" data-role="page" id="web">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+
+            <div data-role="content">
+            	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+            	<br>
+            	<br>
+    		    <hr>
+                <h1 class="mail">"Sea of Wonder (Live)"</h1>
+                <div class="special">
+                        <section>
+                            <img src="img/seaofwonder.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-700px; margin-right: 20px;"/>
+    					    <p>Sea of Wonder, your mystery...</p>
+                            <p>Sea of Wonder, your mystery elegantly,</p> 
+                            <p>Enveloping me, miniscule me.</p>
+                            <p>Sea of Wonder, your mystery elegantly,</p> 
+                            <p>Enveloping me, miniscule me.</p>
+                            <p>I, I, I ponder...</p>
+                            <p>Is the light within you, the light within me?</p>
+                            <p>And I wonder, what are your secrets?</p>
+                            <p>Would you entrust them to me?</p>
+                            <p>Sea of Wonder, won't you tell me your secrets?</p>
+                            <p>I wanna know. I wanna know.</p>
+                            <p>I wanna know your mystery.</p>
+                            <p>I wanna know. I wanna know.</p>
+                            <p>I wanna know your history.</p>
+                            <p>Sea of Wonder, you're so elegant.</p>
+                            <p>You're so elegant - elegantly enveloping me</p> 
+                            <p>Miniscule me, miniscule me.</p>
+                            <br>
+                            <p>I ponder... I am so small, so small.</p>
+                            <p>I float in your body, I float in your body.</p>
+                            <p>Sea of Wonder, just how big are you?</p>
+                            <p>How far can I swim?</p>
+                            <p>I wanna know, I wanna know.</p>
+                            <p>I wanna know, what's it like in your farwaway waters?</p>
+                            <p>I wanna swim in your body.</p>
+                            <p>I, I, I quite like your embrace...</p>         	
+
+                        </section>
+                </div>
+                <img src="img/seaofwonder.jpg" alt="Ink &amp; Feather" style="margin-top:50px;"/>
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#display">News</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#rss">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+
+        <div data-add-back-btn="true" data-role="page" id="about">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+
+            <div data-role="content">
+                <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+                <br>
+                <br>
+                <hr>
+            	<h1 class="mail">About </h1>
+
+            	<div class="special">
+    	        		    <!--Company Information below -->
+    			    <section>	
+    					<article style="float: right; margin-top: -80px;">
+    						<p>It's original. It's improv. It's Famous.</p>
+    						<p>Lyrics, vocals, &amp; keyboards - Norell.</p>
+    						<p>Violin, distortion &amp; synthesizers - Zander.</p>
+    						<p>Synthesizers, distortion, &amp; keyboards - The man &amp; the man behind the man behind the machine.</p> 
+    					</article>
+    			    </section>
+    			</div>
+
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a class="ui-btn-active ui-state-persist" data-icon=
+                            "info" href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#display">Portfolio</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#rss">Newsfeed</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- RSS -->
+
+        <div data-add-back-btn="true" data-role="page" id="rss">
+            <div data-position="fixed" data-role="header" data-theme="b">
+             </div>
+
+            <div data-role="content">
+            	<script type="text/javascript" src="https://formscentral.acrobat.com/Clients/Current/FormsCentral/htmlClient/scripts/adobe.form.embed.min.js"></script>
+    			<script type="text/javascript">;ADOBEFORMS.EmbedForm({formId:"PnIzW9kcKKMLvDsZwyVlww"});</script>
+                
+                <!--<h1 class="mail">Newsfeed</h1>
+                <div class="special">
+                    <p>Our website, both the mobile and desktop versions, is under construction in some places, such as the contact pages, and Zander and Norell's personal pages in the desktop browser. Check back often to see the progressive transformations our website will take! Thank you for joining us on the journey!</p>
+                    <article><img src="img/gay90s.jpg" class="pride"/><p class="pride">Recently, you may have seen Norell &amp; Zander, or the brains behind Ph&ouml;nix LLC, decorating and embellishing many live canvases at MN Pride at the Gay 90s.</p><p>They were joined with MUA &amp; Photographer, not to mention model herself, Jessica Collette.</p> <a href="jcartist.html"><img src="img/jcbus.jpg"/></a>
+                    <p>The three of them painted the town, in the  name of love, and pride in love.</p></article>
+                    <article><p>Prior to Pride, Zander was hired by SIMShows, or Sound In Motion, to provide live, stellar body painting entertainment in downtown Minneapolis at Epic Nightclub for: <h4>Benny Benassi</h4><img src="http://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-ash3/936365_566588893362840_1742481921_n.jpg"/></p></article>
+                    <article><h4>Tron in 3D</h4><h5>Live at Benny Benassi</h5> <img src="http://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn2/980805_567540636600999_1601684874_o.jpg"/></article>
+                </div>-->
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#display">Portfolio</a>
+                        </li>
+
+                        <li>
+                            <a class="ui-btn-active ui-state-persist" data-icon=
+                            "forward" href="#rss">Newsfeed</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+        <script src="js/twitter.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/tabs.js"></script>
+        <script type="text/javascript" src="js/improv.js"></script>
+		<script type="text/javascript" src="js/text.js"></script>
+        <script src="js/bbplayer.js"></script>
+	</body>
+</html>
