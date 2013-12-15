@@ -55,6 +55,50 @@
 			  clear:both;
 			}
             */
+                        /* Overriding jquery mobile button styles */
+            div.bbplayer > button.bb-play {
+              display: inline-block;
+              vertical-align: middle;
+              height: 65px;
+              width:  65px;
+              border: 5px solid #CFCFCF;
+              border-radius: 50%; 
+              background: transparent; 
+              background-image: url('images/play_med.png');
+              background-repeat: no-repeat;
+              background-position: 7px center;
+              cursor: pointer;
+            }
+
+            div.bbplayer > button.bb-playing {
+              vertical-align: middle;
+              background-image: url('images/pause.png');
+              background-position: center center;
+            }
+
+            div.bbplayer > button.bb-forward {
+              vertical-align: middle;
+              display: inline-block;
+              height: 32px;
+              width:  32px;
+              background: transparent;
+              background-image: url('images/forward.png');
+              background-position: center;
+              background-repeat: no-repeat;
+              cursor: pointer;
+            }
+
+            div.bbplayer > button.bb-rewind {
+              vertical-align: middle;
+              display: inline-block;
+              height: 32px;
+              width:  32px;
+              background: transparent;
+              background-image: url('images/rewind.png');
+              background-position: center;
+              background-repeat: no-repeat;
+              cursor: pointer;
+            }
 
 			a{
 			  text-decoration: none;
@@ -126,51 +170,6 @@
 			    text-shadow: 2px 2px #3399FF;
 			}
 			/* end nav bar */
-
-            /* Overriding jquery mobile button styles */
-            button.bb-play {
-              display: inline-block;
-              vertical-align: middle;
-              height: 65px;
-              width:  65px;
-              border: 5px solid #CFCFCF;
-              border-radius: 50%; 
-              background: transparent; 
-              background-image: url('images/play_med.png');
-              background-repeat: no-repeat;
-              background-position: 7px center;
-              cursor: pointer;
-            }
-
-            button.bb-playing {
-              vertical-align: middle;
-              background-image: url('images/pause.png');
-              background-position: center center;
-            }
-
-            button.bb-forward {
-              vertical-align: middle;
-              display: inline-block;
-              height: 32px;
-              width:  32px;
-              background: transparent;
-              background-image: url('images/forward.png');
-              background-position: center;
-              background-repeat: no-repeat;
-              cursor: pointer;
-            }
-
-            button.bb-rewind {
-              vertical-align: middle;
-              display: inline-block;
-              height: 32px;
-              width:  32px;
-              background: transparent;
-              background-image: url('images/rewind.png');
-              background-position: center;
-              background-repeat: no-repeat;
-              cursor: pointer;
-            }
             h3{
                 font-size: 24px;
                 margin-bottom: -15px;
