@@ -98,12 +98,14 @@ button {
   margin: 10px 0 5px;
 }
 
+/*
 a {
   border-bottom: 1px dotted #444;
   color: #fff;
   font-size: 12px;
   text-decoration: none;
 }
+*/
 
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
