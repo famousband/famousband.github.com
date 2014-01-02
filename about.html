@@ -226,7 +226,15 @@ p a:hover{
 </style>
 </head>
 <body>
-<nav class="main-nav">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=492306967513697";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <nav class="main-nav">
           <ul>
             <li><a href="desktop.html">Home</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -246,7 +254,7 @@ p a:hover{
             </li>
         -->
           </ul>
-</nav>
+  </nav>
 <header>
 	<h1 style="margin-top:-20px;" data-content="FAMOUS">FAMOUS</h1>
 </header>
@@ -271,6 +279,10 @@ p a:hover{
         <p class="big" style="text-align: left; margin-left: 20px;">Lyrics, vocals, keyboards - <a href="http://phonixintl.com/norell" target="_blank" style="text-decoration: none; color:yellow;">Norell</a>.</p><p class="big" style="text-align: left; margin-left: 20px;">Violin, distortion and synthesizers - <a href="http://phonixintl.com/zander" target="_blank" style="text-decoration: none; color:yellow;">Zander</a>.</p><p style="text-align: left; margin-left: 20px;">Synthesizers, distortion, and keyboards - The man and the man behind the man behind the machine.</p>  
       </article>
     </section>
+    <h4 style="text-align: left; color: white; font-size: 24px; margin-left: 20px; text-shadow: 1px 1px #3399FF; font-family: 'Marcellus';">Famous Wall</h4>
+    <p style="color: white; text-align:left; margin-top: -30px; margin-left: 20px; font-family: 'Marcellus';">Have something to say about Famous? Leave a comment.</p>
+    <center><div class="fb-comments" data-href="http://bandfamous.com/about" data-width="700" data-numposts="7" data-colorscheme="light"></div></center>
+
   </div>            
 <hr style="border-top: 8px solid black; margin: 20px;">
 </center>
