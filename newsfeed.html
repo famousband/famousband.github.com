@@ -222,16 +222,37 @@ p a:hover{
   font-size: 29px;
 }
 
+article{
+  background:transparent;
+}
+
+article p{
+  color: #FFFF66;
+  word-spacing: 2px;
+  text-shadow: 1px 1px #3399FF;
+  font-family: "Marcellus", serif;
+  margin-top: -5px;
+}
+
 /* end nav bar */
 </style>
 </head>
 <body>
-<nav class="main-nav">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=492306967513697";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <nav class="main-nav">
           <ul>
+            <li><a href="desktop.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="lyrics.html">Lyrics</a></li>
-            <li><a href="newsfeed.html">Newsfeed</a></li>
+            
             <!--<li><a href="#">Support</a></li>
             <li><a href="#" class="drop">Affiliates</a>
               <ul>
@@ -246,44 +267,54 @@ p a:hover{
             </li>
         -->
           </ul>
-</nav>
+  </nav>
 <header>
 	<h1 style="margin-top:-20px;" data-content="FAMOUS">FAMOUS</h1>
 </header>
 <center id="nav">
+	<h2>Newsfeed</h2>
 	<hr style="border-top: 8px solid black; margin: 20px;">
-	<img src="img/famous.jpg" style="width: 65%; height: auto;"/>
-	<!-- Implementing tabs-->
-    <h2 style="margin: 10px;">Sample Famous Music?</h2>
-		    <form method="link" action="playlist.html">
-				<input type="submit" value="Listen Now" class="punch">
-			</form>
 
-			<!--<form method="link" action="halloffame.html">
-				<input type="submit" value="Hall of Fame" class="punch2">
-			</form>-->
+  <center>
+      <ul class="newsfeed">
+        
+        <li style="width: 400px;">
+          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/TheBandFamous"  data-widget-id="429403825355517954">Tweets by @TheBandFamous</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-	<!-- 
-			    <p>It's original. It's improv. It's Famous.</p>
-        	<p>Lyrics, vocals, keyboards - Norell</p>
-     		<p>The Artist Zander has contributed violin, distortion and synthesizers, and vocals.</p>
-     		<p>A couple of anonymous musicians and the man behind the man behind the machine have also contributed synthesizers, distortion, and keys to Famous.</p> 
-	-->
 
-<!-- test
-<button type="button" class="punch" id="mobile"><a href="mobile.html">Mobile Version</a></button>
-<button type="button" class="punch2" id="desktop"><a href="desktop.html">Desktop Version</a></button>
--->
-</center>
-<h2 style="margin: 10px; margin-top: -20px;">A Famous Plea For Peace</h2>
-<iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/norell-1/famous-new-machine" width="100%" height="130" scrolling="no" frameborder="no"></iframe>
-<h2 style="font-size: 18px; margin-top: 10px;">Famous - "New Machine"</h2> 
-<h2 style="font-size: 12px; margin-top: -15px;">Recorded on Friday, 09/06/13.</h2>
-<article style="background: transparent; margin-top: 20px;"><p>After about a half hour of recording improv music, Famous built up to this incredible release.</p> 
-<p>A little about the emotion behind this song:</p> 
-<p>Famous expression of defiance against any notion of any war. Famous felt rage, in emotion, but also in music.</p>
-<p>That is, for singer Norell, "Rage Against the Machine is definitely an influence to my work, probably more so on a subconscious level than I am even aware of. I guess I'm protesting in my own way.</p><p>Why shouldn't lyrics in our music pertain to current events? We really do need to stand up and take the power back! I gave a little tribute to RATM in this piece for always being so real."</p></article>
+
+
+        </li>
+        <li>
+            <!-- FB Newsfeed -->
+          <div style="background: white;" class="fb-like-box" data-href="http://www.facebook.com/TheBandFamous" data-width="400px" data-height="700px" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div>
+          <!--<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FPhonixLLC&amp;width=400px&amp;height=427&amp;colorscheme=light&amp;show_faces=false&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=492306967513697" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400pxpx; height:427px;" allowTransparency="true"></iframe>-->
+            <!-- Twitter Newsfeed -->
+        </li>
+      </ul>
+    </center>
+
+    <article>
+      <p class="big">An iOS Native Application is currently in development by <a href="http://phonixintl.com/mobile" target="_blank" style="text-decoration: none; color:yellow;">Phönix LLC</a>.</p>
+      <img src="img/famous.png" alt="Famous APP"/>
+      <p style="text-align: left; margin-left: 20px;">More details coming soon, including when you will be able to download it to your device!</p>
+      <p style="text-align: left; margin-left: 20px;">In other news, Famous is continuing to build material, and is working on very special projects. But, do expect live shows in the near future. They will be debuting their upcoming album "Last Words" at a special live performance and exhibition, shortly after the New Year.</p>
+      </article>
+                
+      <img src="img/FamousDebut_LoveMonsters.jpg" style="width:50%; height: auto;" alt="Famous Love Monster Party"/>
+      <div style="margin-top: 20px;" class="special">
+        <div id="SocialLinks">
+          <a href="http://www.twitter.com/TheBandFamous" target="_blank"><img src="images/twittericon.png" style="height: 32px; width: 32px;" alt="Twitter" /></a>
+                        <!-- <a href="http://www.instagram.com/norellxo" target="_blank"><img src="images/instagram.png" style="height: 36px; width: 36px;" alt="Instagram" /></a> -->
+          <a href="http://www.facebook.com/TheBandFamous" target="_blank"><img src="images/facebookicon.png" style="height: 32px; width: 32px;" alt="Facebook" /></a>
+
+        </div>
+      </div>              
+  </div>            
 <hr style="border-top: 8px solid black; margin: 20px;">
+</center>
+
 <footer class="homeFoot"><h2>© Famous 2013</h2><a href="http://www.phonixintl.com" target="_blank"><h2 style="font-size: 16px;">Website by Phönix LLC</h2></a></footer>
 <script>$("header").wrap("<div></div>");</script>
 <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
