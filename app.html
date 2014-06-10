@@ -224,70 +224,103 @@ p a:hover{
   font-size: 29px;
 }
 
+#wrapper {
+  display: table;
+  width: 80%;
+}
+#left, #right {
+  padding: 1em;
+  font-family: sans-serif;
+  color: #fff;
+  height: 480px;
+  display: table-cell;
+}
+#left {
+  min-width:640px;
+}
+#right {
+  width: 640px;
+
+}
+
+/* app store effect */
+.gallery {
+  width: 530px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > a > img {
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > a > img {
+  transform: scale(1.5,1.5);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.cf:after {
+    clear: both;
+}
+
 /* end nav bar */
 </style>
 </head>
 <body>
 <nav class="main-nav">
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="lyrics.html">Lyrics</a></li>
-            <li><a href="newsfeed.html">Newsfeed</a></li>
-            <!--<li><a href="#">Support</a></li>
-            <li><a href="#" class="drop">Affiliates</a>
-              <ul>
-                <li><a href="#" class="dropp">Artists</a>
-                  <ul>
-                    <li><a href="http://markmallman.com" target="_blank">Mark Mallman</a></li>
-                    <li><a href="http://www.jambots.com" target="_blank">Jambots</a></li>
-                    <li><a href="http://www.naughtywoodmusic.com" target="_blank">Naughty Wood</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-        -->
-          </ul>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="lyrics.html">Lyrics</a></li>
+    <li><a href="newsfeed.html">Newsfeed</a></li>
+
+  </ul>
 </nav>
 <header>
-	<h1 style="margin-top:-20px;" data-content="FAMOUS">FAMOUS</h1>
+<h1 style="margin-top:-20px;" data-content="FAMOUS">FAMOUS</h1>
 </header>
 <center id="nav">
+  <h2>The Band Famous App</h2>
 	<hr style="border-top: 8px solid black; margin: 20px;">
-	<img src="img/famous.jpg" style="width: 65%; height: auto;"/>
-	<!-- Implementing tabs-->
-    <h2 style="margin: 10px;">Sample Famous Music?</h2>
-		    <form method="link" action="playlist.html">
-				<input type="submit" value="Listen Now" class="punch">
-			</form>
 
-			<!--<form method="link" action="halloffame.html">
-				<input type="submit" value="Hall of Fame" class="punch2">
-			</form>-->
-
-	<!-- 
-			    <p>It's original. It's improv. It's Famous.</p>
-        	<p>Lyrics, vocals, keyboards - Norell</p>
-     		<p>The Artist Zander has contributed violin, distortion and synthesizers, and vocals.</p>
-     		<p>A couple of anonymous musicians and the man behind the man behind the machine have also contributed synthesizers, distortion, and keys to Famous.</p> 
-	-->
-
-<!-- test
-<button type="button" class="punch" id="mobile"><a href="mobile.html">Mobile Version</a></button>
-<button type="button" class="punch2" id="desktop"><a href="desktop.html">Desktop Version</a></button>
--->
+  <center>
+    <div id="wrapper">
+      <div id="left"><img src="img/famousApp.gif" style="width: 88%; height: auto;" alt="Download The Band Famous on the App Store today!"/> </div>
+      <div id="right">
+        <iframe id="ytplayer" type="text/html" width="580" height="420"
+src="https://www.youtube.com/embed/OPp5yO8Ai3w"
+frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </center>
+  <div class="gallery cf">
+    <div>
+       <a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank"><img src="img/appstore.gif" style="width: 50%; height: auto; margin: -2%;" alt="Download The Band Famous on the App Store today!"/></a>
+    </div>
+   
+  </div>
 </center>
-<h2 style="margin: 10px; margin-top: -20px;">A Famous Plea For Peace</h2>
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133324753&amp;color=00cc11&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-
-<h2 style="font-size: 18px; margin-top: 10px;">Famous - "New Machine"</h2> 
-<h2 style="font-size: 12px; margin-top: -15px;">Recorded on Friday, 09/06/13.</h2>
-<article style="background: transparent; margin-top: 20px;"><p>After about a half hour of recording improv music, Famous built up to this incredible release.</p> 
-<p>A little about the emotion behind this song:</p> 
-<p>Famous expression of defiance against any notion of any war. Famous felt rage, in emotion, but also in music.</p>
-<p>That is, for singer Norell, "Rage Against the Machine is definitely an influence to my work, probably more so on a subconscious level than I am even aware of. I guess I'm protesting in my own way.</p><p>Why shouldn't lyrics in our music pertain to current events? We really do need to stand up and take the power back! I gave a little tribute to RATM in this piece for always being so real."</p></article>
 <hr style="border-top: 8px solid black; margin: 20px;">
+
 <footer class="homeFoot"><h2>™ The Band Famous</h2><a href="http://www.phonixintl.com" target="_blank"><h2 style="font-size: 16px; margin-top: -20px;">Website by Phönix LLC</h2></a></footer>
 <script>$("header").wrap("<div></div>");</script>
 <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
