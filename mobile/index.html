@@ -137,6 +137,45 @@
                 font-size: 16px;
             }
 
+    /* app store effect */
+    .gallery {
+      width: 530px;
+      margin: 0 auto;
+      padding: 5px;
+      margin-left:75%;
+      margin-top:-40%;
+    }
+
+    .gallery > div {
+      position: relative;
+      float: left;
+      padding: 5px;
+    }
+
+    .gallery > div > a > img {
+      transition: .1s transform;
+      transform: translateZ(0); /* hack */
+    }
+
+    .gallery > div:hover {
+      z-index: 1;
+    }
+
+    .gallery > div:hover > a > img {
+      transform: scale(1.5,1.5);
+      transition: .3s transform;
+    }
+
+    .cf:before, .cf:after {
+        display: table;
+        content: "";
+        line-height: 0;
+    }
+
+    .cf:after {
+        clear: both;
+    }
+
 		</style>
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
@@ -161,7 +200,6 @@
             	<br>
     		    <hr>
     		    <img src="img/famous.jpg"/>
-
                 <p class="fancy">Sample Famous Music?</p>
 
                 <p><a data-icon="arrow-r" data-iconpos="right" data-role="button"
@@ -207,25 +245,15 @@
                         <li data-role="list-divider"></li>
                     </ul>
                 </div>
-
-                <!--
-                <ul style="float:left;">
-                    <li>
-                        <form method="link" action="home.html">
-                            <input type="submit" value="Desktop" class="punch2" id="port">
-                        </form>
-                    </li>
-                </ul>  
-                --> 
-                <!--<hr style="margin-top:30px;">--> 
-                <p class="fancy" style="margin-top: 30px;">A Famous Plea For Peace</p>
-                <iframe width="100%" height="130" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133324753&amp;color=00cc11&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-                <p class="fancy" style="font-size: 18px;">Famous - "New Machine"</p> 
-                <p class="fancy" style="font-size: 12px; margin-top: -15px;">Recorded on Friday, 09/06/13.</p>
-                <article><p>After about a half hour of recording improv music, Famous built up to this incredible release.</p> 
-                <p>A little about the emotion behind this song:</p> 
-                <p>Famous expression of defiance against any notion of any war. Famous felt rage, in emotion, but also in music.</p>
-                <p>That is, for singer Norell, "Rage Against the Machine is definitely an influence to my work, probably more so on a subconscious level than I am even aware of. I guess I'm protesting in my own way.</p><p>Why shouldn't lyrics in our music pertain to current events? We really do need to stand up and take the power back! I gave a little tribute to RATM in this piece for always being so real."</p></article>
+                <p class="big">The Band Famous EP - Last Words is available now for FREE in The Band Famous App, along with media, games, and so much more. Get is now! We built the app in native iOS ourselves, and will have a Kickstarter to help us port the app to Android.</p>
+                <section>
+                  <div class="gallery cf">
+                    <div>
+                      <a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank"><img src="img/appstore.gif" style="width: 50%; height: auto; margin-left: -44%; margin-top:140px; margin-bottom:-30px;" alt="Download The Band Famous on the App Store today!"/></a>
+                    </div>           
+                  </div>
+                </section>
+                <br>
                 <hr>
                 <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>

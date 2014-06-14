@@ -223,25 +223,42 @@ p a:hover{
   color:#E1DFD3;
   font-size: 29px;
 }
-h1 {
-  position: absolute;
-  left: 45%;
-  margin-left: -2.1em;
-  color: #3399FF;
-  font:700 4.8em 'Montserrat Subrayada', sans-serif; 
+
+/* app store effect */
+.gallery {
+  width: 530px;
+  margin: 0 auto;
+  padding: 5px;
 }
 
-@keyframes loading {
-  from { max-width: 0; }
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
 }
 
-h1:before {
-  content: attr(data-content);
-  position: absolute;
-  overflow: hidden;
-  max-width: 5.3em;
-  color: #FFFF66;
-  animation: loading 8s linear;
+.gallery > div > a > img {
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > a > img {
+  transform: scale(1.5,1.5);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.cf:after {
+    clear: both;
 }
 
 
@@ -253,8 +270,12 @@ h1:before {
 	<h1 style="margin-top:-20px;" data-content="FAMOUS">FAMOUS</h1>
 </header>
 <center id="nav">
-	<hr style="border-top: 8px solid black; margin: 20px; margin-top: -60px;">
-	<img src="img/famous.jpg" style="width: 65%; height: auto;"/>
+	<hr style="border-top: 8px solid black; margin: 20px;">
+  <div class="gallery cf">
+    <div>
+      <a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank"><img src="img/appstore.gif" style="width: 50%; height: auto; margin: -2%;" alt="Download The Band Famous on the App Store today!"/></a>
+    </div>   
+  </div>
 	<!-- Implementing tabs-->
     <h2 style="margin: 10px;">Choose Your Experience:</h2>
 		<form method="link" action="http://www.bandfamous.com/desktop">
@@ -263,7 +284,6 @@ h1:before {
     <form method="link" action="http://www.bandfamous.com/mobile">
         <input type="submit" value="Mobile" class="punch">
 		</form>
-
 			
 </center>
 <hr style="border-top: 8px solid black; margin: 20px;">
