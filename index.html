@@ -228,13 +228,12 @@ p a:hover{
 .gallery {
   width: 530px;
   margin: 0 auto;
-  padding: 5px;
+
 }
 
 .gallery > div {
   position: relative;
-  float: left;
-  padding: 5px;
+
 }
 
 .gallery > div > a > img {
@@ -260,6 +259,33 @@ p a:hover{
 .cf:after {
     clear: both;
 }
+#earth {
+  margin: 0 auto;
+  margin-top: 160px;
+  margin-bottom: 100px;
+  transform: rotate(-8deg) scale(3);
+  width: 100px;
+  height: 100px;
+  background: url(http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+  border-radius: 50%;
+  background-size: 210px;
+  box-shadow: inset 16px 0px 40px 6px rgb(0, 0, 0),
+    inset -0px 0 16px 2px rgba(255, 255, 255, 0.4);
+  animation-name: rotate;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border: 0px;
+  transition: all 200ms ease-in-out;
+}
+#earth:hover {
+  /* border: 2px solid black; */
+}
+
+@keyframes rotate {
+  from { background-position-x: 0px; }
+  to { background-position-x: 210px; }
+}
 
 
 /* end nav bar */
@@ -271,11 +297,7 @@ p a:hover{
 </header>
 <center id="nav">
 	<hr style="border-top: 8px solid black; margin: 20px;">
-  <div class="gallery cf">
-    <div>
-      <a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank"><img src="img/appstore.gif" style="width: 50%; height: auto; margin: -2%;" alt="Download The Band Famous on the App Store today!"/></a>
-    </div>   
-  </div>
+  <div id="earth"></div>
 	<!-- Implementing tabs-->
     <h2 style="margin: 10px;">Choose Your Experience:</h2>
 		<form method="link" action="http://www.bandfamous.com/desktop">
@@ -284,7 +306,12 @@ p a:hover{
     <form method="link" action="http://www.bandfamous.com/mobile">
         <input type="submit" value="Mobile" class="punch">
 		</form>
-			
+    <h2 style="margin: 10px;">Or Download Our App:</h2>
+		<div class="gallery cf">
+      <div>
+        <a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank"><img src="img/appstore.gif" style="width: 50%; height: auto;" alt="Download The Band Famous on the App Store today!"/></a>
+      </div>   
+    </div>	
 </center>
 <hr style="border-top: 8px solid black; margin: 20px;">
 <footer class="homeFoot"><h2>™ The Band Famous</h2><a href="http://www.phonixintl.com" target="_blank"><h2 style="font-size: 16px; margin-top: -20px;">Website by Phönix LLC</h2></a></footer>
