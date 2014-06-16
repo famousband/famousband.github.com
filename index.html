@@ -211,6 +211,27 @@ nav > ul > li > ul > li:hover > ul {
   right: 8px;
   border-left-color: rgba(216,30,179,0.56); 
 }
+    
+h1 {
+  position: absolute;
+  left: 45%;
+  margin-left: -2.1em;
+  color: #3399FF;
+  font:700 4.8em 'Montserrat Subrayada', sans-serif; 
+}
+
+@keyframes loading {
+  from { max-width: 0; }
+}
+
+h1:before {
+  content: attr(data-content);
+  position: absolute;
+  overflow: hidden;
+  max-width: 5.3em;
+  color: #FFFF66;
+  animation: loading 8s linear;
+}
 
 a{
   text-decoration: none;
@@ -259,35 +280,6 @@ p a:hover{
 .cf:after {
     clear: both;
 }
-#earth {
-  margin: 0 auto;
-  margin-top: 160px;
-  margin-bottom: 100px;
-  transform: rotate(-8deg) scale(3);
-  width: 100px;
-  height: 100px;
-  background: url(http://www.noirextreme.com/digital/Earth-Color4096.jpg);
-  border-radius: 50%;
-  background-size: 210px;
-  box-shadow: inset 16px 0px 40px 6px rgb(0, 0, 0),
-    inset -0px 0 16px 2px rgba(255, 255, 255, 0.4);
-  animation-name: rotate;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  border: 0px;
-  transition: all 200ms ease-in-out;
-}
-#earth:hover {
-  /* border: 2px solid black; */
-}
-
-@keyframes rotate {
-  from { background-position-x: 0px; }
-  to { background-position-x: 210px; }
-}
-
-
 /* end nav bar */
 </style>
 </head>
@@ -296,8 +288,7 @@ p a:hover{
 	<h1 style="margin-top:-20px;" data-content="FAMOUS">FAMOUS</h1>
 </header>
 <center id="nav">
-	<hr style="border-top: 8px solid black; margin: 20px;">
-  <div id="earth"></div>
+	<hr style="border-top: 8px solid black; margin: 20px; margin-top: -60px;">
 	<!-- Implementing tabs-->
     <h2 style="margin: 10px;">Choose Your Experience:</h2>
 		<form method="link" action="http://www.bandfamous.com/desktop">
