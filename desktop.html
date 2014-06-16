@@ -227,6 +227,7 @@ p a:hover{
 #wrapper {
   display: table;
   width: 80%;
+  margin-left: -47px;
 }
 #left, #right {
   padding: 1em;
@@ -280,6 +281,35 @@ p a:hover{
     clear: both;
 }
 
+#earth {
+  margin: 0 auto;
+  margin-top: 116px;
+  margin-bottom: 140px;
+  margin-left:78%;
+  transform: rotate(-8deg) scale(3);
+  width: 90px;
+  height: 90px;
+  background: url(http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+  border-radius: 50%;
+  background-size: 210px;
+  box-shadow: inset 16px 0px 40px 6px rgb(0, 0, 0),
+    inset -0px 0 16px 2px rgba(255, 255, 255, 0.4);
+  animation-name: rotate;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border: 0px;
+  transition: all 200ms ease-in-out;
+}
+#earth:hover {
+  /* border: 2px solid black; */
+}
+
+@keyframes rotate {
+  from { background-position-x: 0px; }
+  to { background-position-x: 210px; }
+}
+
 /* end nav bar */
 </style>
 </head>
@@ -303,6 +333,104 @@ p a:hover{
 </header>
 <center id="nav">
 	<hr style="border-top: 8px solid black; margin: 20px;">
+
+  <section id="vertical_tab_nav">
+
+      <ul>
+        <li><a href="index.html">Now Touring!</a></li>
+        <li class="selected"><a href="index.html">Love Monster Tour</a></li>
+        <li><a href="index.html">Virtual Concerts</a></li>
+        <li><a href="index.html">Want Famous at your venue?</a></li>
+      </ul>
+
+      <div>
+        <article>
+          <p>The Band Famous kicked off their Love Monster Tour this past Friday the 13th to celebrate their app release, of which members of the band coded themselves!</p>
+          <p>They are busy working on future updates to the App already, and planning future shows for their tour. If you want to get to know the band, and what they're all about, we encourage you to download The Band Famous from the iPhone App Store!</p>
+        </article>
+
+        <article>
+          <h2>Love Monster Tour Schedule</h2>
+          <table class="rwd-table" style="height:180px;">
+            <tr>
+              <th style="color: #33CC33">Date</th>
+              <th style="color: #33CC33">Venue</th>
+              <th style="color: #33CC33">Time</th>
+              <th style="color: #33CC33">Where?</th>
+            </tr>
+            <tr>
+              <td>06/13/2014</td>
+              <td>Annex Room at the Gay 90s</td>
+              <td>11:11pm</td>
+              <td>Minneapolis, MN</td>
+            </tr>
+            <tr>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>TBA</td>
+            </tr>
+            <tr>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>TBA</td>
+            </tr>
+            <tr>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>TBA</td>
+            </tr>
+          </table>
+        </article>
+
+        <article>
+          <h2>Virtual Concerts</h2>
+          <table class="rwd-table" style="height:180px;">
+            <tr>
+              <th style="color: #33CC33">Date</th>
+              <th style="color: #33CC33">Venue</th>
+              <th style="color: #33CC33">Time</th>
+              <th style="color: #33CC33">Where?</th>
+            </tr>
+            <tr>
+              <td>Virtual Concerts</td>
+              <td>Coming Soon</td>
+              <td>Stay Tuned</td>
+              <td>In App - The Band Famous</td>
+            </tr>
+            <tr>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>In App - The Band Famous</td>
+            </tr>
+            <tr>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>In App - The Band Famous</td>
+            </tr>
+            <tr>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>TBA</td>
+              <td>In App - The Band Famous</td>
+            </tr>
+          </table>
+
+        </article>
+
+        <article>
+          <h2>Want Famous at your venue?</h2>
+          <p>The Band Famous is composed of talented artists, musicians, and developers. They put on a great show! Interested?</p>
+          <p>Simply contact them through the contact page, or through their native iOS app they built and recently launched!</p>
+        </article>
+        
+      </div>
+    </section>
+    <div id="earth"></div>
 	<!-- Implementing tabs-->
   <center id="nav">
     <center>
@@ -329,6 +457,8 @@ p a:hover{
 <script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
 <script type="text/javascript" src="js/tabs.js"></script>
 <script type="text/javascript" src="js/text.js"></script>
+<script type="text/javascript" src="js/tour.js"></script>
+<script type="text/javascript" src="js/tourTable.js"></script>
 
 </body>
 </html>

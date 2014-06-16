@@ -535,3 +535,181 @@ p.title:hover{
   font-size: 22px;
   color: #eb2755;
 }
+
+/*---------- vertical tab nav */
+#vertical_tab_nav{
+  display: block;
+  width: 88%;
+
+}
+#vertical_tab_nav ul{
+  font: bold 25px/1 "Marcellus", serif;
+  display: block;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  overflow: hidden;
+  width: 30%;
+  border-radius: 10px 0 0 10px;
+  background: #E68A8A;
+}
+#vertical_tab_nav li{
+  border-bottom: 1px solid #000;
+  margin-bottom: 1px;
+  text-align: left;
+  padding: 0px;
+}
+#vertical_tab_nav li:last-child{
+  margin-bottom: 0px;
+  border-bottom: 0px;
+}
+#vertical_tab_nav li a{
+  display: block;
+  font-size: 14pt;
+  color: #fff;
+  text-decoration: none;
+  padding: 7%;
+  background: #E68A8A;
+  background: -webkit-linear-gradient(top,#FFFF66,#3399FF);
+  background: -moz-linear-gradient(top,#FFFF66,#3399FF);
+}
+
+#vertical_tab_nav li a:hover{
+  background: #E68A8A;
+}
+
+#vertical_tab_nav li a.selected{
+  background: black;
+  color: #33CC33;
+}
+#vertical_tab_nav div{
+  display: block;
+  float: left;
+  background: black;
+  background: black;
+  width:64%;
+  min-height: 236px;
+  max-height: 236px;
+  min-width:600px;
+  padding: 10px 3% 3% 3%;
+  border-radius: 0 10px 10px 0;
+}
+#vertical_tab_nav div article{
+  display: none;
+  margin: 0px;
+  color: #555;
+  background: black;
+  min-width:600px;
+  
+}
+#vertical_tab_nav div article h2{
+  margin: 0px;
+  margin-left: -1%;
+  float:left;
+  margin-top: -10px;
+  margin-bottom: 2px;
+  background: black;
+  color: #33CC33;
+  border-color: indigo;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  text-shadow: 2px 2px #3399FF;
+  
+}
+#vertical_tab_nav div article p{
+  margin: 0px 0px 20px 0px;
+  width: 60%;
+  float: left;
+  font-size: 16px;
+}
+
+h4.tour{
+  font-size: 26px;
+  color: #33CC33;
+}
+
+
+/* for table of tour schedule */
+
+$breakpoint-alpha: 480px;
+
+.rwd-table {
+  margin: 1em 0;
+  margin-left: -80px;
+
+  tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    display: none;
+    color: #33CC33;
+  }
+  
+  td {
+    display: block; 
+    
+    &:first-child {
+      padding-top: .5em;
+    }
+    &:last-child {
+      padding-bottom: .5em;
+    }
+
+    &:before {
+      content: attr(data-th)": ";
+
+      width: 6.5em;
+      display: inline-block;
+      
+      @media (min-width: $breakpoint-alpha) {
+        display: none;
+      }
+    }
+  }
+  
+  th, td {
+    text-align: left;
+    
+    @media (min-width: $breakpoint-alpha) {
+      display: table-cell;
+      padding: .25em .5em;
+      
+      &:first-child {
+        padding-left: 0;
+      }
+      
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+  }
+  
+  
+}
+
+.rwd-table {
+  background: #34495E;
+  color: #fff;
+  font: bold 14px/1 "Marcellus", serif;
+  border-radius: .4em;
+  overflow: hidden;
+  margin-top: 40px;
+  margin-left: -40%;
+  min-width: 200px;
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+  th, td {
+    margin: .5em 1em;
+    @media (min-width: $breakpoint-alpha) { 
+      padding: 1em !important; 
+    }
+  }
+  th, td:before {
+    color: #dd5;
+  }
+
+}
