@@ -592,6 +592,7 @@ p.title:hover{
   min-height: 236px;
   max-height: 236px;
   min-width:600px;
+  max-width: 600px;
   padding: 10px 3% 3% 3%;
   border-radius: 0 10px 10px 0;
 }
@@ -601,6 +602,7 @@ p.title:hover{
   color: #555;
   background: black;
   min-width:600px;
+  max-width: 600px;
   
 }
 #vertical_tab_nav div article h2{
