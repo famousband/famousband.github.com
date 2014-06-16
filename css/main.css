@@ -539,7 +539,9 @@ p.title:hover{
 /*---------- vertical tab nav */
 #vertical_tab_nav{
   display: block;
-  width: 88%;
+  width: 100%;
+  margin-left: 8%;
+
 
 }
 #vertical_tab_nav ul{
