@@ -603,6 +603,7 @@ p.title:hover{
   background: black;
   min-width:600px;
   max-width: 1000px;
+  max-height: 500px;
   
 }
 #vertical_tab_nav div article h2{
