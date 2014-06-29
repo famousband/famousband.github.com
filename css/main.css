@@ -1,3 +1,599 @@
+	/* Implementing tabs */
+
+	.wrapper {
+	  margin:30px auto;
+	  width:80%;
+	  font-family:sans-serif;
+	  color:#555;
+	  font-size:14px;
+	  line-height:24px;
+	}
+	.tabs {
+	  li {
+	    float:left;
+	    width:33.33%;
+	    list-style: none;
+	  }
+	  a {
+	    display:block;
+	    text-align:center;
+	    text-decoration:none;
+	    text-transform:uppercase;
+	    color:#888;
+	    padding:20px 0;
+	    border-bottom:2px solid #888;
+	    background:#f7f7f7;
+	    
+	    &:hover, &.active {
+	      background:#eee;
+	    }
+	  }
+	}
+	.tabgroup {
+	  div {
+	    padding:30px;
+	    box-shadow:0 7px 10px rgba(0,0,0,.3);
+	  }
+	}
+	.clearfix:after {
+	  content:"";
+	  display:table;
+	  clear:both;
+	}
+
+	/* nav bar */
+.main-nav{
+  display:inline-block;
+
+}
+
+nav > ul {
+  margin-top: 2em;
+  margin-left: 0px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 2em;
+  list-style: none;
+}
+
+nav > ul > li {
+  position: relative;
+  margin-right: 1em;
+  float: left;
+}
+
+nav ul li a {
+  background: #E68A8A;
+  border-top: 1px solid #bc2c2c;
+  border-right: 1px solid #bc2c2c;
+  border-bottom: 1px solid #bc2c2c;
+  border-left: 1px solid #bc2c2c;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
+  color: white;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 10px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #bc2c2c;
+   -webkit-background-clip: padding-box; 
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 100%;
+  height: auto;
+ 
+}
+
+nav > ul > li > a {
+  background: #E68A8A;
+  border-top: 1px solid #bc2c2c;
+  border-right: 1px solid #bc2c2c;
+  border-bottom: 1px solid #bc2c2c;
+  border-left: 1px solid #bc2c2c;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
+  color: #E1DFD3;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 10px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  /*text-shadow: 0px -1px 1px #bc2c2c;*/
+   -webkit-background-clip: padding-box; 
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 100%;
+  height: auto;
+}
+
+nav > ul > li > a:link {color: white; -moz-text-decoration-style: solid; padding: 10px 14px;}      /* unvisited link */
+nav > ul > li > a:visited {color:white;}  /* visited link */
+nav > ul > li > a:hover {color:#25c655; -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    cursor: pointer; }  /* mouse over link */
+nav > ul > li > a:active {color:blue; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    /*margin-top: 58px; */
+    position: static;
+    color:blue;}  /* selected link */
+
+nav ul > li ul {
+  position: absolute;
+  width: 200px;
+  background: #33cda7;
+  border-radius: 5px;
+  padding: 5px 0;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 3px 15px rgba(0,0,0,.7);
+  list-style: none;
+}
+
+nav ul > li ul:after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 1em;
+  height: 0; 
+  width: 0;
+  border: 6px solid transparent;
+  border-bottom-color: rgba(216,30,179,0.56); 
+}
+
+nav > ul li > ul > li {
+  position: relative;
+}
+
+nav > ul > li > ul > li > ul {
+  left: 105%;
+  top: -2.5em !important;
+  z-index: 1;
+  width: 180px;
+}
+
+nav > ul > li > ul > li > ul:hover {
+  width: 200px;
+}
+
+nav > ul > li > ul > li > ul:after {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: -12px;
+  heght: 0; width: 0;
+  border: 6px solid transparent;
+  border-right-color: rgba(216,30,179,0.56); 
+}
+
+nav > ul > li > ul > li:hover > ul {
+  top: 0 !important;
+}
+
+
+.drop,.dropp {
+  padding-right: 2em;
+}
+
+.drop:after,
+.dropp:after{
+  content: "";
+  position: absolute;
+  height: 0; width: 0;
+  border: 6px solid transparent;
+}
+
+.drop:after {
+  right: 8px;
+  top: 14px;
+  border-top-color: rgba(216,30,179,0.56); 
+}
+
+.dropp:after {
+  top: 12px;
+  right: 8px;
+  border-left-color: rgba(216,30,179,0.56); 
+}
+
+a{
+  text-decoration: none;
+}
+a h2:hover{
+  color:#E1DFD3;
+}
+
+p a:hover{
+  color:#E1DFD3;
+  font-size: 29px;
+}
+
+#wrapper {
+  display: table;
+  width: 80%;
+  margin-left: -47px;
+}
+#left, #right {
+  padding: 1em;
+  font-family: sans-serif;
+  color: #fff;
+  height: 480px;
+  max-height: 480px;
+  display: table-cell;
+}
+#left {
+  min-width:640px;
+  max-width: 640px;
+}
+#right {
+  width: 640px;
+  max-width: 640px;
+
+}
+
+/* app store effect */
+.gallery {
+  width: 530px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > a > img {
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > a > img {
+  transform: scale(1.5,1.5);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.cf:after {
+    clear: both;
+}
+
+#earth {
+  margin: 0 auto;
+  margin-top: 120px;
+  margin-bottom: 140px;
+  margin-left:77%;
+  transform: rotate(-8deg) scale(3);
+  width: 92px;
+  height: 92px;
+  background: url(http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+  border-radius: 50%;
+  background-size: 210px;
+  box-shadow: inset 16px 0px 40px 6px rgb(0, 0, 0),
+    inset -0px 0 16px 2px rgba(255, 255, 255, 0.4);
+  animation-name: rotate;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border: 0px;
+  transition: all 200ms ease-in-out;
+}
+#earth:hover {
+  /* border: 2px solid black; */
+}
+
+@keyframes rotate {
+  from { background-position-x: 0px; }
+  to { background-position-x: 210px; }
+}
+
+/* end nav bar */
+
+	/* Implementing tabs */
+
+	.wrapper {
+	  margin:30px auto;
+	  width:80%;
+	  font-family:sans-serif;
+	  color:#555;
+	  font-size:14px;
+	  line-height:24px;
+	}
+	.tabs {
+	  li {
+	    float:left;
+	    width:33.33%;
+	    list-style: none;
+	  }
+	  a {
+	    display:block;
+	    text-align:center;
+	    text-decoration:none;
+	    text-transform:uppercase;
+	    color:#888;
+	    padding:20px 0;
+	    border-bottom:2px solid #888;
+	    background:#f7f7f7;
+	    
+	    &:hover, &.active {
+	      background:#eee;
+	    }
+	  }
+	}
+	.tabgroup {
+	  div {
+	    padding:30px;
+	    box-shadow:0 7px 10px rgba(0,0,0,.3);
+	  }
+	}
+	.clearfix:after {
+	  content:"";
+	  display:table;
+	  clear:both;
+	}
+
+	/* nav bar */
+.main-nav{
+  display:inline-block;
+
+}
+
+nav > ul {
+  margin-top: 2em;
+  margin-left: 0px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 2em;
+  list-style: none;
+}
+
+nav > ul > li {
+  position: relative;
+  margin-right: 1em;
+  float: left;
+}
+
+nav ul li a {
+  background: #E68A8A;
+  border-top: 1px solid #bc2c2c;
+  border-right: 1px solid #bc2c2c;
+  border-bottom: 1px solid #bc2c2c;
+  border-left: 1px solid #bc2c2c;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
+  color: white;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 10px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #bc2c2c;
+   -webkit-background-clip: padding-box; 
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 100%;
+  height: auto;
+ 
+}
+
+nav > ul > li > a {
+  background: #E68A8A;
+  border-top: 1px solid #bc2c2c;
+  border-right: 1px solid #bc2c2c;
+  border-bottom: 1px solid #bc2c2c;
+  border-left: 1px solid #bc2c2c;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
+  color: #E1DFD3;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 10px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  /*text-shadow: 0px -1px 1px #bc2c2c;*/
+   -webkit-background-clip: padding-box; 
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 100%;
+  height: auto;
+}
+
+nav > ul > li > a:link {color: white; -moz-text-decoration-style: solid; padding: 10px 14px;}      /* unvisited link */
+nav > ul > li > a:visited {color:white;}  /* visited link */
+nav > ul > li > a:hover {color:#25c655; -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    cursor: pointer; }  /* mouse over link */
+nav > ul > li > a:active {color:blue; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    /*margin-top: 58px; */
+    position: static;
+    color:blue;}  /* selected link */
+
+nav ul > li ul {
+  position: absolute;
+  width: 200px;
+  background: #33cda7;
+  border-radius: 5px;
+  padding: 5px 0;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 3px 15px rgba(0,0,0,.7);
+  list-style: none;
+}
+
+nav ul > li ul:after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 1em;
+  height: 0; 
+  width: 0;
+  border: 6px solid transparent;
+  border-bottom-color: rgba(216,30,179,0.56); 
+}
+
+nav > ul li > ul > li {
+  position: relative;
+}
+
+nav > ul > li > ul > li > ul {
+  left: 105%;
+  top: -2.5em !important;
+  z-index: 1;
+  width: 180px;
+}
+
+nav > ul > li > ul > li > ul:hover {
+  width: 200px;
+}
+
+nav > ul > li > ul > li > ul:after {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: -12px;
+  heght: 0; width: 0;
+  border: 6px solid transparent;
+  border-right-color: rgba(216,30,179,0.56); 
+}
+
+nav > ul > li > ul > li:hover > ul {
+  top: 0 !important;
+}
+
+
+.drop,.dropp {
+  padding-right: 2em;
+}
+
+.drop:after,
+.dropp:after{
+  content: "";
+  position: absolute;
+  height: 0; width: 0;
+  border: 6px solid transparent;
+}
+
+.drop:after {
+  right: 8px;
+  top: 14px;
+  border-top-color: rgba(216,30,179,0.56); 
+}
+
+.dropp:after {
+  top: 12px;
+  right: 8px;
+  border-left-color: rgba(216,30,179,0.56); 
+}
+
+a{
+  text-decoration: none;
+}
+a h2:hover{
+  color:#E1DFD3;
+}
+
+p a:hover{
+  color:#E1DFD3;
+  font-size: 29px;
+}
+
+#wrapper {
+  display: table;
+  width: 80%;
+  margin-left: -47px;
+}
+#left, #right {
+  padding: 1em;
+  font-family: sans-serif;
+  color: #fff;
+  height: 480px;
+  max-height: 480px;
+  display: table-cell;
+}
+#left {
+  min-width:640px;
+  max-width: 640px;
+}
+#right {
+  width: 640px;
+  max-width: 640px;
+
+}
+
+/* app store effect */
+.gallery {
+  width: 530px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > a > img {
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > a > img {
+  transform: scale(1.5,1.5);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.cf:after {
+    clear: both;
+}
+
+#earth {
+  margin: 0 auto;
+  margin-top: 120px;
+  margin-bottom: 140px;
+  margin-left:77%;
+  transform: rotate(-8deg) scale(3);
+  width: 92px;
+  height: 92px;
+  background: url(http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+  border-radius: 50%;
+  background-size: 210px;
+  box-shadow: inset 16px 0px 40px 6px rgb(0, 0, 0),
+    inset -0px 0 16px 2px rgba(255, 255, 255, 0.4);
+  animation-name: rotate;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border: 0px;
+  transition: all 200ms ease-in-out;
+}
+
+#earth:hover {
+  /* border: 2px solid black; */
+}
+
+@keyframes rotate {
+  from { background-position-x: 0px; }
+  to { background-position-x: 210px; }
+}
+
+/* end nav bar */
 /* Default wide-screen styles */
 
 @media only screen and (max-width: 999px) {
