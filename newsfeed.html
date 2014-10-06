@@ -17,238 +17,6 @@
 <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/main.css" type="text/css"/>
 <style>
-	/* Implementing tabs */
-  body{
-    min-width: 1180px;
-  }
-
-	.wrapper {
-	  margin:30px auto;
-	  width:80%;
-	  font-family:sans-serif;
-	  color:#555;
-	  font-size:14px;
-	  line-height:24px;
-	}
-	.tabs {
-	  li {
-	    float:left;
-	    width:33.33%;
-	    list-style: none;
-	  }
-	  a {
-	    display:block;
-	    text-align:center;
-	    text-decoration:none;
-	    text-transform:uppercase;
-	    color:#888;
-	    padding:20px 0;
-	    border-bottom:2px solid #888;
-	    background:#f7f7f7;
-	    
-	    &:hover, &.active {
-	      background:#eee;
-	    }
-	  }
-	}
-	.tabgroup {
-	  div {
-	    padding:30px;
-	    box-shadow:0 7px 10px rgba(0,0,0,.3);
-	  }
-	}
-	.clearfix:after {
-	  content:"";
-	  display:table;
-	  clear:both;
-	}
-
-	/* nav bar */
-  .main-nav{
-    display:inline-block;
-
-  }
-
-  nav > ul {
-    margin-top: 2em;
-    margin-left: 0px;
-    height: 40px;
-    line-height: 40px;
-    padding-left: 2em;
-    list-style: none;
-  }
-
-  nav > ul > li {
-    position: relative;
-    margin-right: 1em;
-    float: left;
-  }
-
-  nav ul li a {
-    background: #E68A8A;
-    border-top: 1px solid #bc2c2c;
-    border-right: 1px solid #bc2c2c;
-    border-bottom: 1px solid #bc2c2c;
-    border-left: 1px solid #bc2c2c;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
-    color: white;
-    font: bold 25px/1 "Marcellus", serif;
-    margin-bottom: 10px;
-    padding: 10px 0 12px 0;
-    text-align: center;
-    text-shadow: 0px -1px 1px #bc2c2c;
-     -webkit-background-clip: padding-box; 
-    /* attempting to get buttons to resize accordingly with screen adjust */
-    width: 100%;
-    height: auto;
-   
-  }
-
-  nav > ul > li > a {
-    background: #E68A8A;
-    border-top: 1px solid #bc2c2c;
-    border-right: 1px solid #bc2c2c;
-    border-bottom: 1px solid #bc2c2c;
-    border-left: 1px solid #bc2c2c;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
-    color: #E1DFD3;
-    font: bold 25px/1 "Marcellus", serif;
-    margin-bottom: 10px;
-    padding: 10px 0 12px 0;
-    text-align: center;
-    /*text-shadow: 0px -1px 1px #bc2c2c;*/
-     -webkit-background-clip: padding-box; 
-    /* attempting to get buttons to resize accordingly with screen adjust */
-    width: 100%;
-    height: auto;
-  }
-
-  nav > ul > li > a:link {color: white; -moz-text-decoration-style: solid; padding: 10px 14px;}      /* unvisited link */
-  nav > ul > li > a:visited {color:white;}  /* visited link */
-  nav > ul > li > a:hover {color:#25c655; -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-      box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-      cursor: pointer; }  /* mouse over link */
-  nav > ul > li > a:active {color:blue; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-      box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-      /*margin-top: 58px; */
-      position: static;
-      color:blue;}  /* selected link */
-
-  nav ul > li ul {
-    position: absolute;
-    width: 200px;
-    background: #33cda7;
-    border-radius: 5px;
-    padding: 5px 0;
-    opacity: 0;
-    visibility: hidden;
-    box-shadow: 0 3px 15px rgba(0,0,0,.7);
-    list-style: none;
-  }
-
-  nav ul > li ul:after {
-    content: "";
-    position: absolute;
-    top: -11px;
-    left: 1em;
-    height: 0; 
-    width: 0;
-    border: 6px solid transparent;
-    border-bottom-color: rgba(216,30,179,0.56); 
-  }
-
-  nav > ul li > ul > li {
-    position: relative;
-  }
-
-  nav > ul > li > ul > li > ul {
-    left: 105%;
-    top: -2.5em !important;
-    z-index: 1;
-    width: 180px;
-  }
-
-  nav > ul > li > ul > li > ul:hover {
-    width: 200px;
-  }
-
-  nav > ul > li > ul > li > ul:after {
-    content: "";
-    position: absolute;
-    top: 1em;
-    left: -12px;
-    heght: 0; width: 0;
-    border: 6px solid transparent;
-    border-right-color: rgba(216,30,179,0.56); 
-  }
-
-  nav > ul > li > ul > li:hover > ul {
-    top: 0 !important;
-  }
-
-
-  .drop,.dropp {
-    padding-right: 2em;
-  }
-
-  .drop:after,
-  .dropp:after{
-    content: "";
-    position: absolute;
-    height: 0; width: 0;
-    border: 6px solid transparent;
-  }
-
-  .drop:after {
-    right: 8px;
-    top: 14px;
-    border-top-color: rgba(216,30,179,0.56); 
-  }
-
-  .dropp:after {
-    top: 12px;
-    right: 8px;
-    border-left-color: rgba(216,30,179,0.56); 
-  }
-
-  article{
-    background:transparent;
-  }
-
-  article p{
-    color: #FFFF66;
-    word-spacing: 2px;
-    text-shadow: 1px 1px #3399FF;
-    font-family: "Marcellus", serif;
-    margin-top: -5px;
-    text-align: center;
-  }
-  ul.newsfeed{
-    list-style: none;
-  }
-  ul.newsfeed li{
-    margin: 10px;
-    display: inline-block;
-    width: 400px;
-  }
-
-  a{
-    text-decoration: none;
-    font-size: 22px;
-  }
-  a h2:hover{
-    color:#E1DFD3;
-  }
-
-  p a:hover{
-    color:#E1DFD3;
-    font-size: 29px;
-  }
-
 /* end nav bar */
 </style>
 </head>
@@ -272,7 +40,7 @@
             <!--<li><a href="#">Support</a></li>
             <li><a href="#" class="drop">Affiliates</a>
               <ul>
-                <li><a href="#" class="dropp">Artists</a>
+                <li><a href="#" class="dropp">Press</a>
                   <ul>
                     <li><a href="http://markmallman.com" target="_blank">Mark Mallman</a></li>
                     <li><a href="http://www.jambots.com" target="_blank">Jambots</a></li>
@@ -290,32 +58,52 @@
 <center id="nav">
 	<h2>Newsfeed</h2>
 	<hr style="border-top: 8px solid black; margin: 20px;">
+        <div class="gallery cf">
+      <div>
+        <a href="https://www.kickstarter.com/projects/thebandfamous/help-build-the-smart-album" target="_blank" title="Help Build the Smart Album!"><img src="images/kickstart.gif" alt="RT our Kickstarter!" style="min-width: 40%; max-width: 70%; width: 200%; margin-top: 45px;"></a>
+      </div>
+    </div>
 
-    <article>
-      <p style="text-align: left; margin-left: 20px;"><a href="http://www.facebook.com/events/1432806496966976/" target="_blank" style="text-decoration: none; color:yellow; text-align: center; margin-left: 10%;">RSVP: This Friday the 13th, Love Monsters take over!</a></p>
-      <img src="img/LoveMonsters.jpg" style="width:28%; min-width:400px; height: auto; margin-left: -50%; margin-right: 20px;" alt="Famous Love Monster Party"/>
-      <article style="margin-top: -43%; margin-left: 30%; width: 50%; min-width: 500px; margin-bottom: 50px;">
-        <p style="text-align: left; margin-left: 20px;">Join us for our App Release Party this June, on Friday the 13th, and celebrate your inner Love Monster!</p>
-        <p style="text-align: left; margin-left: 20px;">Who knows? You might even find a love monster to take home with you while supporting local artists and musicians. ☺</p>
-        <p style="text-align: left; margin-left: 20px;">We are not just celebrating the release of an iOS app but we did in fact create the app ourselves, as members Zander &amp; Norell are also developers who make apps for smartphones, and run a small business together. This is an App Release party that will feature house music by <a href="http://www.naughtywoodmusic.com/about/" target="_blank" style="text-decoration: none; color:yellow;">Naughty Wood</a> as well as a debut live performance by <a href="http://www.facebook.com/thebandfamous" target="_blank" style="text-decoration: none; color:yellow;">The Band Famous</a>, with featured art by <a href="http://www.etsy.com/shop/LolaMade/about" target="_blank" style="text-decoration: none; color:yellow;">LolaMade Monsters</a> and the body painted Sexy Silhouettes. We will also have a photo booth set up that night by TJ &amp; <a href="http://www.allealovely.com" target="_blank" style="text-decoration: none; color:yellow;">Allea Lovely</a> where you can have your photos taken with some Lovely Love Monsters, and there will be special prizes and giveaways throughout the night as well.  </p> 
-        <p style="text-align: left; margin-left: 20px;">The Gay 90s, for those of you who have not been there, is a huge club with six very unique, different rooms:  <a href="http://www.gay90s.com/  " target="_blank" style="text-decoration: none; color:yellow;">http://www.gay90s.com/   </a>
-        <p style="text-align: left; margin-left: 20px;">To enter the venue, it is a $5.00 cover, which will grant you access to five of the six rooms at the club that night.  Our event in the Annex Room (one of the six rooms, the very first room you will enter) is a  $5.00 cover, so a total of a $10.00 entry for a night of dancing and grooving, loving and moving, bumping and grinding - love bite by love bite. We’ll also have friendly bartenders serving up the notorious Love Potion No. 9 all night long.</p>  
-      </article>
+    <ul class="docs">
+      <li>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zSvFqe-zQu4" frameborder="0" allowfullscreen></iframe>
+      </li>
+      <li>
+        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/TheBandFamous"  data-widget-id="429403825355517954" width="1200" height="315" frameborder="0" style="border:medium none; max-width: 100%; min-width:180px;">Tweets by @TheBandFamous</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </li>
+    </ul>
+
+    <ul class="docs">
+      <li>
+        <p style="text-align: left; margin-left: 20px;"><a href="http://www.facebook.com/events/1432806496966976/" target="_blank" style="text-decoration: none; color:yellow; text-align: center; margin-left: 10%;">RSVP: This Friday the 13th, Love Monsters take over!</a></p>
+        <img src="img/LoveMonsters.jpg" style="width:28%; min-width:400px; height: auto; margin-left: -50%; margin-right: 20px;" alt="Famous Love Monster Party"/>
+      </li>
+      <li>
+        <article style="margin-top: -43%; margin-left: 30%; width: 50%; min-width: 500px; margin-bottom: 30px;">
+          <p style="text-align: left; margin-left: 20px;">Join us for our App Release Party this June, on Friday the 13th, and celebrate your inner Love Monster!</p>
+          <p style="text-align: left; margin-left: 20px;">Who knows? You might even find a love monster to take home with you while supporting local artists and musicians. ☺</p>
+          <p style="text-align: left; margin-left: 20px;">We are not just celebrating the release of an iOS app but we did in fact create the app ourselves, as members Zander &amp; Norell are also developers who make apps for smartphones, and run a small business together. This is an App Release party that will feature house music by <a href="http://www.naughtywoodmusic.com/about/" target="_blank" style="text-decoration: none; color:yellow;">Naughty Wood</a> as well as a debut live performance by <a href="http://www.facebook.com/thebandfamous" target="_blank" style="text-decoration: none; color:yellow;">The Band Famous</a>, with featured art by <a href="http://www.etsy.com/shop/LolaMade/about" target="_blank" style="text-decoration: none; color:yellow;">LolaMade Monsters</a> and the body painted Sexy Silhouettes. We will also have a photo booth set up that night by TJ &amp; <a href="http://www.allealovely.com" target="_blank" style="text-decoration: none; color:yellow;">Allea Lovely</a> where you can have your photos taken with some Lovely Love Monsters, and there will be special prizes and giveaways throughout the night as well.  </p> 
+          <p style="text-align: left; margin-left: 20px;">The Gay 90s, for those of you who have not been there, is a huge club with six very unique, different rooms:  <a href="http://www.gay90s.com/  " target="_blank" style="text-decoration: none; color:yellow;">http://www.gay90s.com/   </a>
+          <p style="text-align: left; margin-left: 20px;">To enter the venue, it is a $5.00 cover, which will grant you access to five of the six rooms at the club that night.  Our event in the Annex Room (one of the six rooms, the very first room you will enter) is a  $5.00 cover, so a total of a $10.00 entry for a night of dancing and grooving, loving and moving, bumping and grinding - love bite by love bite. We’ll also have friendly bartenders serving up the notorious Love Potion No. 9 all night long.</p>  
+        </article>
+      </li>
+    </ul>
 
 
         <img src="img/lovePotion.jpg" style="width:45%; height: auto; margin-right: -30%; margin-bottom: 200px;" alt="Famous Love Monster Party"/> 
-        <article style="min-width: 300px; width: 33%; margin-left: -48%; margin-top: -22%; margin-bottom: 400px;"><p style="text-align: left; margin-left: 20px;">The first 50 people that enter our exhibit, get a free prize!</p>
+        <article style="min-width: 300px; width: 33%; margin-left: -48%; margin-top: -32%; margin-bottom: 400px;"><p style="text-align: left; margin-left: 20px;">The first 50 people that enter our exhibit, get a free prize!</p>
         
         <p style="text-align: left; margin-left: 20px;">The 100th person to arrive will win a FREE iPad Mini! </p>
         <p style="text-align: left; margin-left: 20px;">This event is sponsored by <a href="http://phonixintl.com/" target="_blank" style="text-decoration: none; color:yellow;">Phönix LLC</a>.</p></article>
 
-        <h4 style="margin-top:-200px; color:#EB006A; font:bold 27px/1 'Marcellus', serif; text-shadow: 0px -1px 1px white;">Extra Reading &amp; Resources</h4>
+        <h4 style="margin-top:-280px; color:#EB006A; font:bold 27px/1 'Marcellus', serif; text-shadow: 0px -1px 1px white;">Extra Reading &amp; Resources</h4>
         <center>
           <article>
             <p><a href="http://www.phonixintl.com/zander" target="_blank" style="text-decoration: none; color:yellow;">Bio of Zander</a>, <a href="http://www.phonixintl.com/norell" target="_blank" style="text-decoration: none; color:yellow;">Bio of Norell</a>, <a href="http://www.naughtywoodmusic.com/about/" target="_blank" style="text-decoration: none; color:yellow;">Bio of Naughty Wood</a>, <a href="https://www.etsy.com/shop/LolaMade/about?ref=announce" target="_blank" style="text-decoration: none; color:yellow;">Bio of LolaMade</a>.</p> 
           </article>
         </center>
-
+        <!--
         <center>
           <ul class="newsfeed" style="margin-bottom: -10px;">
             <li style="width: 1000px; margin-bottom:10px; margin-top: 15px;">
@@ -324,14 +112,13 @@
 
             </li>
             <li>
-                <!-- FB Newsfeed 
-              <div style="width: 400px; background: white;" class="fb-like-box" data-href="http://www.facebook.com/TheBandFamous" data-width="400px" data-height="700px" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div>-->
+                
+              <div style="width: 400px; background: white;" class="fb-like-box" data-href="http://www.facebook.com/TheBandFamous" data-width="400px" data-height="700px" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div>
 
             </li>
           </ul>
         </center>
-
-    </article>
+      -->
                 
      
       <div style="margin-top: 20px;" class="special">
