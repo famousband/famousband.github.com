@@ -1124,9 +1124,9 @@ article{
   padding: 10px;
 }
 article p{
-  color: #FFFF66;
   word-spacing: 2px;
-  text-shadow: 1px 1px #3399FF;
+  color: #FFFFCC;
+  text-shadow: 2px 2px #3399FF;
   font-family: "Marcellus", serif;
   margin-top: -5px;
 }
@@ -1340,14 +1340,6 @@ article{
   background:transparent;
 }
 
-article p{
-  color: #FFFF66;
-  word-spacing: 2px;
-  text-shadow: 1px 1px #3399FF;
-  font-family: "Marcellus", serif;
-  margin-top: -5px;
-  text-align: center;
-}
   ul.newsfeed{
     list-style: none;
   }

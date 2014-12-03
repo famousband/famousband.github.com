@@ -16,211 +16,11 @@
 <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/main.css" type="text/css"/>
 <style>
-	/* Implementing tabs */
-
-	.wrapper {
-	  margin:30px auto;
-	  width:80%;
-	  font-family:sans-serif;
-	  color:#555;
-	  font-size:14px;
-	  line-height:24px;
-	}
-	.tabs {
-	  li {
-	    float:left;
-	    width:33.33%;
-	    list-style: none;
-	  }
-	  a {
-	    display:block;
-	    text-align:center;
-	    text-decoration:none;
-	    text-transform:uppercase;
-	    color:#888;
-	    padding:20px 0;
-	    border-bottom:2px solid #888;
-	    background:#f7f7f7;
-	    
-	    &:hover, &.active {
-	      background:#eee;
-	    }
-	  }
-	}
-	.tabgroup {
-	  div {
-	    padding:30px;
-	    box-shadow:0 7px 10px rgba(0,0,0,.3);
-	  }
-	}
-	.clearfix:after {
-	  content:"";
-	  display:table;
-	  clear:both;
-	}
-
-	/* nav bar */
-.main-nav{
-  display:inline-block;
-
-}
-
-nav > ul {
-  margin-top: 2em;
-  margin-left: 0px;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 2em;
-  list-style: none;
-}
-
-nav > ul > li {
-  position: relative;
-  margin-right: 1em;
-  float: left;
-}
-
-nav ul li a {
-  background: #E68A8A;
-  border-top: 1px solid #bc2c2c;
-  border-right: 1px solid #bc2c2c;
-  border-bottom: 1px solid #bc2c2c;
-  border-left: 1px solid #bc2c2c;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
-  color: white;
-  font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 10px;
-  padding: 10px 0 12px 0;
-  text-align: center;
-  text-shadow: 0px -1px 1px #bc2c2c;
-   -webkit-background-clip: padding-box; 
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 100%;
-  height: auto;
- 
-}
-
-nav > ul > li > a {
-  background: #E68A8A;
-  border-top: 1px solid #bc2c2c;
-  border-right: 1px solid #bc2c2c;
-  border-bottom: 1px solid #bc2c2c;
-  border-left: 1px solid #bc2c2c;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
-  color: white;
-  font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 10px;
-  padding: 10px 0 12px 0;
-  text-align: center;
-  /*text-shadow: 0px -1px 1px #bc2c2c;*/
-   -webkit-background-clip: padding-box; 
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 100%;
-  height: auto;
-}
-
-nav > ul > li > a:link {color: white; -moz-text-decoration-style: solid; padding: 10px 14px;}      /* unvisited link */
-nav > ul > li > a:visited {color:white;}  /* visited link */
-nav > ul > li > a:hover {color:#25c655; -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    cursor: pointer; }  /* mouse over link */
-nav > ul > li > a:active {color:blue; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    /*margin-top: 58px; */
-    position: static;
-    color:blue;}  /* selected link */
-
-nav ul > li ul {
-  position: absolute;
-  width: 200px;
-  background: #33cda7;
-  border-radius: 5px;
-  padding: 5px 0;
-  opacity: 0;
-  visibility: hidden;
-  box-shadow: 0 3px 15px rgba(0,0,0,.7);
-  list-style: none;
-}
-
-nav ul > li ul:after {
-  content: "";
-  position: absolute;
-  top: -11px;
-  left: 1em;
-  height: 0; 
-  width: 0;
-  border: 6px solid transparent;
-  border-bottom-color: rgba(216,30,179,0.56); 
-}
-
-nav > ul li > ul > li {
-  position: relative;
-}
-
-nav > ul > li > ul > li > ul {
-  left: 105%;
-  top: -2.5em !important;
-  z-index: 1;
-  width: 180px;
-}
-
-nav > ul > li > ul > li > ul:hover {
-  width: 200px;
-}
-
-nav > ul > li > ul > li > ul:after {
-  content: "";
-  position: absolute;
-  top: 1em;
-  left: -12px;
-  heght: 0; width: 0;
-  border: 6px solid transparent;
-  border-right-color: rgba(216,30,179,0.56); 
-}
-
-nav > ul > li > ul > li:hover > ul {
-  top: 0 !important;
-}
-
-
-.drop,.dropp {
-  padding-right: 2em;
-}
-
-.drop:after,
-.dropp:after{
-  content: "";
-  position: absolute;
-  height: 0; width: 0;
-  border: 6px solid transparent;
-}
-
-.drop:after {
-  right: 8px;
-  top: 14px;
-  border-top-color: rgba(216,30,179,0.56); 
-}
-
-.dropp:after {
-  top: 12px;
-  right: 8px;
-  border-left-color: rgba(216,30,179,0.56); 
-}
-
-a{
-  text-decoration: none;
-}
-a h2:hover{
-  color:#E1DFD3;
-}
 
 ul > li {
   font-size: 22px;
   color: #FFFFCC;
+  text-shadow: 2px 2px #3399FF;
 }
 
 p{
@@ -229,10 +29,6 @@ p{
   text-shadow: 2px 2px #3399FF;
 }
 
-label{
-
-}
-/* end nav bar */
 </style>
 </head>
 <body>
@@ -243,6 +39,7 @@ label{
             <li><a href="playlist.html">Music</a></li>
             <li><a href="lyrics.html">Lyrics</a></li>
             <li><a href="newsfeed.html">Newsfeed</a></li>
+            <li><a href="press.html">Press</a></li>
             <li><a href="contact.html">Contact</a></li>
             
             <!--<li><a href="#">Support</a></li>
@@ -383,7 +180,7 @@ label{
     <!--
       &nbsp;<img src="images/expand.png" alt="Expand"  class="expand">
       &nbsp;<img src="images/collapse.png" alt="Collapse"  class="collapse">-->
-      <label style="color: black; font-size: 24px;"><h2>4. Famous Ft. Edwin - "Who You Are (Acoustic)"</h2></label>
+      <label style="color: black; font-size: 24px;"><h2>4. Famous Ft. Edwin P. Scherr - "Who You Are (Acoustic)"</h2></label>
   </div>
   <div class="box toggle_body">
       <ul class="list" style="margin-left: 250px; margin-bottom: 50px;">
@@ -439,18 +236,22 @@ label{
     <!--
       &nbsp;<img src="images/expand.png" alt="Expand"  class="expand">
       &nbsp;<img src="images/collapse.png" alt="Collapse"  class="collapse">-->
-      <label style="color: black; font-size: 24px;"><h2>5. Famous Ft. Edwin- "Sea of Wonder (Live)"</h2></label>
+      <label style="color: black; font-size: 24px;"><h2>5. Famous Ft. Edwin P. Scherr - "Sea of Wonder (Live)"</h2></label>
   </div>
   <div class="box toggle_body">
       <ul class="list" style="margin-left: 250px; margin-bottom: 50px;">
           <li>
              <label disabled="disabled">
               <li><img src="img/wonder.jpg" style="width:300px; height:auto; margin-bottom: -305px; margin-left:-700px; margin-right: 20px;"/></li>
-              <ul><li>Sea of Wonder, your mystery...</li>
+              <ul>
+                <li>Oooh, ahhh, ahhh, ah oh...</li>
+                <li>Ooooh, Ooooh, Ooooh, I, I...</li>
+              <li>Sea of Wonder, your mystery...</li>
               <li>Sea of Wonder, your mystery elegantly,</li> 
               <li>Enveloping me, miniscule me.</li>
               <li>Sea of Wonder, your mystery elegantly,</li> 
               <li>Enveloping me, miniscule me.</li>
+              <br>
               <li>I, I, I ponder...</li>
               <li>Is the light within you, the light within me?</li>
               <li>And I wonder, what are your secrets?</li>
@@ -480,7 +281,7 @@ label{
     <!--
       &nbsp;<img src="images/expand.png" alt="Expand"  class="expand">
       &nbsp;<img src="images/collapse.png" alt="Collapse"  class="collapse">-->
-      <label style="color: black; font-size: 24px;"><h2>6. Famous Ft. Edwin - "Ink and Feather (A Tribute)"</h2></label>
+      <label style="color: black; font-size: 24px;"><h2>6. Famous Ft. Edwin P. Scherr - "Ink and Feather (A Tribute)"</h2></label>
   </div>
   <div class="box toggle_body">
       <ul class="list" style="margin-left: 250px; margin-bottom: 50px;">
