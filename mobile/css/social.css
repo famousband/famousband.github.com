@@ -26,8 +26,8 @@ a {
 
 
 .circle1 {
-  width:400px;
-  height:400px;
+  width:300px;
+  height:300px;
   margin:auto;
   border-radius:50%;
   background:#00ACED;
@@ -42,8 +42,8 @@ a {
 }
 
 .circle2 {
-  width:300px;
-  height:300px;
+  width:200px;
+  height:200px;
   margin:auto;
   border-radius:50%;
   background:#3B5998;
@@ -56,8 +56,8 @@ a {
 }
 
 .circle3 {
-  width:200px;
-  height:200px;
+  width:100px;
+  height:100px;
   margin:auto;
   border-radius:50%;
   background:#F76700;
