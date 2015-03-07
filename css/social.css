@@ -20,10 +20,6 @@ body {
 }
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6e19152e967f45730aedd88b198bfd3727fb5e63
 .circle1 {
   width:400px;
   height:400px;
@@ -92,7 +88,6 @@ body {
 .block {
   border-radius:50%;
   width:100%;
-<<<<<<< HEAD
   height:300px;
   background:#33CC33;
   margin:auto;
@@ -100,14 +95,6 @@ body {
   border-style:solid;
   border-color:#999999;
   border-width:2px;
-=======
-  height:250px;
-  background:#33CC33;
-  margin:auto;
-  margin-top:-35px;
-  margin-bottom: -100px;
-
->>>>>>> 6e19152e967f45730aedd88b198bfd3727fb5e63
 }
 
 .block2 {
