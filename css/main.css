@@ -769,7 +769,7 @@ html, body {
     min-width: 800px;
     Below is with added columns
     height: 100%; */
-  min-width: 360px;
+  min-width: 300px;
   width:auto;
   position: relative;
 }
@@ -792,14 +792,7 @@ body {
 
 }
 
-background {
-  max-width: auto;
-  max-height: auto;
-  width: 768px;
-  min-width: 30%;
-  position: center;
-  background-position: absolute;
-}
+
 #content{
     height:auto;
     min-width:640px;
