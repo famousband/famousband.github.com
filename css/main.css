@@ -1361,3 +1361,15 @@ article{
     color:#E1DFD3;
     font-size: 29px;
   }
+
+  ul.list2 li {
+    width: 47%;
+    height: auto;
+    display: inline-block;
+    text-align: left;
+  }
+
+  ul.list3 li {
+    display: inline;
+    margin-right: 30px;
+  }
