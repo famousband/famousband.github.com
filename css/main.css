@@ -621,12 +621,12 @@ p a:hover{
 @media only screen and (max-device-width: 480px) and (orientation: landscape){
   /* iPhone, Android rules here in landscape mode */
     * {
-        max-width: 480px;
+        max-width: auto;
         box-sizing: border-box;
         -moz-box-sizing: border-box;
      }
      html{
-        max-width: 480px;
+        max-width: auto;
      }
      ul.desktop{
         list-style-type: none;
