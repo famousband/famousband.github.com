@@ -621,12 +621,12 @@ p a:hover{
 @media only screen and (max-device-width: 480px) and (orientation: landscape){
   /* iPhone, Android rules here in landscape mode */
     * {
-        max-width: 800px;
+        max-width: 480px;
         box-sizing: border-box;
         -moz-box-sizing: border-box;
      }
      html{
-        max-width: 800px;
+        max-width: 480px;
      }
      ul.desktop{
         list-style-type: none;
@@ -673,12 +673,12 @@ p a:hover{
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* iPhone, Android rules here */
     * {
-        max-width: 320;
+        max-width: 320px;
         box-sizing: border-box;
         -moz-box-sizing: border-box;
      }
      html{
-        max-width: 320;
+        max-width: 320px;
      }
      ul.desktop{
         list-style-type: none;
