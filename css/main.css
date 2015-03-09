@@ -786,7 +786,23 @@ button a:active {color:blue;}  /* selected link */
 
 /* punch */
 .punch {
- background: #3399FF;
+  background: #F6FCB8;
+  border-radius: 11px;
+  -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  cursor: pointer; 
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 20px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 320px;
+  color: #3399FF;
+  height: 70px;
+}
+  
+.punch:hover {
+  background: #3399FF;
   border-top: 1px solid #3399FF;
   border-right: 1px solid #3399FF;
   border-bottom: 1px solid #3399FF;
@@ -795,22 +811,8 @@ button a:active {color:blue;}  /* selected link */
   -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
   box-shadow: inset 0 1px 10px 1px #FFFF66, 0px 1px 0 #FFFF66, 0 6px 0px #FFFF66, 0 8px 4px 1px #111111;
   color: #fff;
-  font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 20px;
-  padding: 10px 0 12px 0;
-  text-align: center;
   text-shadow: 0px -1px 1px #E1DFD3;
-   -webkit-background-clip: padding-box; 
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 320px;
-  height: 70px;
-}
-  
-.punch:hover {
-    background: #F6FCB8;
-    -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    cursor: pointer; 
+  -webkit-background-clip: padding-box; 
 }
 
 .punch:active {
@@ -885,11 +887,11 @@ td.zander{
 */
 
 input.punch:hover{
-  color:#25c655;
+  color:white;
 }
 
 input.punch:active{
-  color:blue;
+  color:#25c655;
 }
 
 input.punch2:hover{
