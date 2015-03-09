@@ -8,6 +8,8 @@
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="themes/famousband.min.css" />
+        <link rel="stylesheet" href="css/foundation.css" />
+        <script src="js/vendor/modernizr.js"></script>
         <link rel="stylesheet" href="css/improv.css" type="text/css"/>
         <link rel="stylesheet" href="css/social.css" type="text/css" />
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -15,7 +17,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'/>
 		<style>
 
-                        /* Overriding jquery mobile button styles */
+            /* Overriding jquery mobile button styles */
             div.bbplayer > button.bb-play {
               display: inline-block;
               vertical-align: middle;
@@ -217,7 +219,7 @@
             	<br>
             	<br>
       		    <hr>
-      		    <img src="images/face.jpg"/>
+      		    <img src="img/bannertest.jpg"/>
 
                 <p><a data-icon="arrow-r" data-iconpos="right" data-role="button"
                 data-theme="a" href="#playlist">Music</a></p>
@@ -225,7 +227,7 @@
                 <!-- Change Below to Collapsible ULs/Lis like in desktop version -->
                 <div data-collapsed="true" data-role="collapsible">
                     <h3>Lyrics</h3>
-                    <p>Songs below are sampled from the Band Famous debut EP <i>Last Words</i>. The whole album is available for FREE in "The Band Famous" App for iOS.</p>
+                    <p style="text-align: left;">Songs below are sampled from the Band Famous debut EP <i>Last Words</i>. The whole album is available for FREE in "The Band Famous" App for iOS.</p>
                     <ul data-filter="true" data-inset="true" data-role="listview">
                         <li data-role="list-divider"></li>
                         <li>
@@ -270,7 +272,7 @@
                 </div>
                 <center>     
 
-                      <p class="big">We built the app, "The Band Famous", in native iOS ourselves. Currently we're working to port TBF app to Android as quickly as we can while simultaneously working on our 2nd album, "Awakening", and more. Sign up for our montlhy newsletter to follow our progress on these and other creative ventures!</p>
+                      <p class="big" style="text-align: left;">We built the app, "The Band Famous", in native iOS ourselves. Currently we're working to port TBF app to Android as quickly as we can while simultaneously working on our 2nd album, "Awakening", and more. Sign up for our montlhy newsletter to follow our progress on these and other creative ventures!</p>
                       <a href="#contact"><img src="images/connect.png" alt="Contact the Band Famous or sign up for their monthly newsletter"/></a>
 
                   
@@ -436,9 +438,9 @@
             </div>
         </div>
 
-        <!-- The Band Famous App -->
+        <!-- The Band Famous Shop, Happy & Grateful Now That Money Comes -->
 
-        <div data-add-back-btn="true" data-role="page" id="app">
+        <div data-add-back-btn="true" data-role="page" id="shop">
             <div data-position="fixed" data-role="header" data-theme="b">
             </div>
             <div data-role="content">
@@ -447,22 +449,102 @@
               <br>
             <hr>
                 <div class="special">
-                        <section>
-                            <center><img src="img/famousApp.gif" style="width: 88%; height: auto;" alt="Download The Band Famous on the App Store today!"/>
-                            
-                            <iframe id="ytplayer" type="text/html" width="300" height="220"
-src="https://www.youtube.com/embed/OPp5yO8Ai3w"
-frameborder="0" allowfullscreen></iframe>
+                  <ul id="shop">
+                    <li><a href="#contact"><img src="images/connect2.png" alt="Shop the Band Famous!" style="margin-left: -15px;" /></a></li>
+                    <li><a href="#" data-reveal-id="shopNote"><img src="img/shop/placeorder.png" alt="Shop the Band Famous!" style="margin-left:20px;"/></a></li>
+                  </ul>
 
-                            <div class="gallery cf">
-                              <div>
-                                 <a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank"><img src="img/appstore.gif" style="width: 50%; height: auto; margin: -2%;" alt="Download The Band Famous on the App Store today!"/></a>
-                              </div>
-                             
-                            </div>
+                  <div id="shopNote" class="reveal-modal" data-reveal>
+                    <h2 style="background:transparent; color:black; text-shadow: 1px 1px #3399FF;">READY TO ORDER</h2>
+                    <p>We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
+                    <p>If you know what you'd like, tap the feather to contact us with your inquiry and include:</p>
+                        <ul id="shop">
+                          <li><p style="margin:4px;">1. Item #.</p></li>
+                          <li><p style="margin:4px;">2. Quanity desired.</p></li>
+                          <li><p style="margin:4px;">3. Your name so we can personalize your order. </p></li>
+                        </ul>
+                    <p>The profits from our merchandising funnel into our creative projects. Your support helps us continue to make music, art, and apps. Thank you!</p>
+                    <p>xoxo</p>
+                    <p class="lead">The Band Famous</p>
+                    <a class="close-reveal-modal">&#215;</a>
+                  </div>
 
-                            </center>
-                        </section>
+                  <div data-role="collapsible" id="shop">
+                    <h4>iPhone Cases</h4>
+                    <p>Item #001<p>
+                    <p>"Reincarnation" iPhone Pouch Case</p>
+                    <p>$50.00</p>
+                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/001.gif" alt="iPhone Case Option 1 Reincarnation" title="iPhone 'Reincarnation' Pouch Case - $50.00" onmouseover="this.src='img/shop/1.jpg';" onmouseout="this.src='img/shop/001.gif';" /></a>
+                    <p>I am a divine pouch for your iPhone. If you desire to have me keep your iPhone case safe, include "Item #001" in your inquiry.</p>
+                    <img src="images/separater2.png" class="plain"/>
+                    <p>Item #002<p>
+                    <p>"Maze Amazed" iPhone Tough Case</p>
+                    <p>$60.00</p> 
+                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/002.gif" alt="iPhone Case Option 2 Maze Amazed" onmouseover="this.src='img/shop/2.jpg';" onmouseout="this.src='img/shop/002.gif';" title="iPhone 'Maze Amazed' Tough Case - $60.00" /></a>
+                    <p>I'm a beautiful, tough case, and I'll protect your beloved iPhone. If you wish for me to do so, include "Item #002" in your inquiry.</p>
+                    <img src="images/separater2.png" class="plain"/>
+                    <p>Item #003</p>
+                    <p>"Norell" iPhone Tough Extreme Case</p>
+                    <p>$65.00</p>
+                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/003.gif" alt="iPhone Case Option 3 Norell" onmouseover="this.src='img/shop/3.jpg';" onmouseout="this.src='img/shop/003.gif';" title="iPhone 'Norell' Tough Extreme Case - $65.00" /></a>
+                    <p>Tougher than the rest, I'm extreme, yo. If you want my bad assery to keep your iPhone truly safe, include "Item #003" in your inquiry.</p>
+                        
+                  </div> 
+                  <div data-role="collapsible">
+                    <h4>iPad Cases</h4>
+                    <p>Item #004<p>
+                    <p>"Neverland" iPad 2/3/4 Case</p>
+                    <p>Also available for iPad Air and iPad Mini by request.</p>
+                    <p>$50.00</p>
+                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/004.gif" alt="iPad Case Neverland" onmouseover="this.src='img/shop/4.jpg';" onmouseout="this.src='img/shop/004.gif';" title="iPad 'Neverland' Case - $60.00"/></a>
+                    <p>I'll remind you of imaginative daydreams while keeping your iPad safe and sound, to order me include "Item #004" in your inquiry.</p>
+                  </div>  
+
+                  <div data-role="collapsible">
+                    <h4>Coffee Mugs</h4>
+                    <p>Item #005<p>
+                    <p>"In the Smoke" Coffee Mug</p>
+                    <p>$30.00</p> 
+                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/005.gif" alt="Zander Coffee Mug" onmouseover="this.src='img/shop/5.jpg';" onmouseout="this.src='img/shop/005.gif';" title="'Zander' Coffee Mug - $30.00"/></a>
+                    <p>Enjoy your morning Java with this special edition TBF coffee mug, featuring Zander "In the Smoke", Photography by Jessica Ramaker. To order me include "Item #005" in your inquiry.
+                  </div>  
+
+                  <div data-role="collapsible">
+                    <h4>Clocks</h4>
+                    <p>Item #006<p>
+                    <p>"Standing in Time" Clock</p>
+                    <p>$35.00</p> 
+                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/006.gif" alt="Clock, Art by Zander" onmouseover="this.src='img/shop/6.jpg';" onmouseout="this.src='img/shop/006.gif';" title="'Standing in Time' Clock - $35.00"/></a>
+                    <p>Enjoy this 8" diameter wall clock with featured artwork by Zander. It is sure to add character to any room you choose to display it. To order me include "Item #006" in your inquiry.</p>
+                  </div>
+
+                  <div data-role="collapsible">
+                    <h4>Pillows</h4>
+                    <p>Item #007<p>
+                    <p>"Awakening" Pillow Special Edition</p>
+                    <p>$40.00</p> 
+                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/007.gif" alt="Awakening Pillow Special Edition" onmouseover="this.src='img/shop/7.jpg';" onmouseout="this.src='img/shop/007.gif';" title="Limited Edition 'Awakening' Pillow - $40.00"/></a>
+                    <p>I am a special edition pillow featuring the album cover artwork of TBF's upcoming 2nd album, "Awakening". Photo by Jessica Ramaker Photography. To awaken with me, include "Item #007" in your inquiry.</p>
+                  </div>
+
+                  <div data-role="collapsible">
+                    <h4>Bags</h4>
+                    <p>Item #008<p>
+                    <p>"Love" Limited Edition Mini Clutch Bag</p>
+                    <p>$55.00</p> 
+                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/008.gif" alt="Mini Clutch, Art by Zander with TBF Lyrics" onmouseover="this.src='img/shop/8.jpg';" onmouseout="this.src='img/shop/008.gif';" title="Limited Edition 'Love' Mini Clutch Bag - $55.00"/></a>
+                    <p>Wear your love everywhere you go with this limited edition "Love" mini clutch bag, which features artworks by TBF's Zander, as well as lyrics from "You Came To Me", off of our debut EP <i>Last Words</i>. To order, include "Item# 008" in your inquiry.</p>
+                  </div>
+
+                  <div data-role="collapsible">
+                    <h4>Posters</h4>
+                    <p>Item #009<p>
+                    <p>12x16 TBF "Awakening" Poster</p>
+                    <p>$25.00</p> 
+                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/009.gif" alt="The Band Famous Awakening Poster 12x16" onmouseover="this.src='img/shop/9.jpg';" onmouseout="this.src='img/shop/009.gif';" title="12x16 TBF 'Awakening' Poster - $25.00"/></a>
+                    <p>Are you excited for TBF's upcoming 2nd album, "Awakening"? We are, too! You can order your poster featuring all three members of the Band Famous, today! By request, we'd be happy to sign it for you with a personal message. Include "Item #009" in your inquiry!</p>
+                  </div>
+                 
                 </div>
                 <hr>
                 <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
@@ -502,12 +584,19 @@ frameborder="0" allowfullscreen></iframe>
               <br>
             <hr>
               <div><h2 style="background: transparent;">Press</h2></div>
-                <center><img src="img/press/press.jpg" style="width: 100%; height:auto; margin-top: 2px; margin-bottom: -30px; box-shadow: 8px 8px 5px #888888;"/></center>
               <div>
+                <label style="color: black; font-size: 22px; float:left; text-align: left; margin-top: 20px;"><a href="http://plymouthmag.com/native-apps" target="_blank">February 2015 Issue - Plymouth Magazine</a></label>
+                <br>
+                <p style="text-align: left;">An article titled "Native Apps" was published featuring TBF app.</p>
+    
+
+
+                <!-- END Plymouth Magazine -->
+
                 <label style="color: black; font-size: 22px; float: left; margin-top: 25px;"><a href="http://www.jctmagazine.com" target="_blank">Nov. 30th, 2014 - JCT tv</a></label>
                 <br>
                 <br>
-                <p style="margin-top:-5px;">The Band Famous was a special guest on <a href="http://www.jctmagazine.com" target="_blank">JCT tv</a>, broadcast at 10:00pm Eastern Standard Time on Channel 13 (Comcast) &amp; Channel 96 (AT&amp;T).</p>
+                <p style="margin-top:-5px; text-align: left;">The Band Famous was a special guest on <a href="http://www.jctmagazine.com" target="_blank">JCT tv</a>, broadcast at 10:00pm Eastern Standard Time on Channel 13 (Comcast) &amp; Channel 96 (AT&amp;T).</p>
                   <center>
                     <iframe width="330" height="215" style="box-shadow: 8px 8px 5px #888888;" src="http://www.youtube.com/embed/d64e1m4_MJA" frameborder="0" allowfullscreen></iframe>
                     <br>
@@ -521,16 +610,16 @@ frameborder="0" allowfullscreen></iframe>
                 <label style="color: black; font-size: 22px; float: left; margin-top: 10px;"><a href="http://www.jctmagazine.com/radio.html" target="_blank">Nov. 27th, 2014 - JCT92.G Radio</a></label>
                 <br>
                 <br>
-                <p style="margin-top: -15px;">The Band Famous was interviewed on Thanksgiving Day by <a href="http://www.jctmagazine.com/radio.html" target="_blank">JCT92.G Radio</a>. Listen to Archive:</p>
+                <p style="margin-top: -15px; text-align: left;">The Band Famous was interviewed on Thanksgiving Day by <a href="http://www.jctmagazine.com/radio.html" target="_blank">JCT92.G Radio</a>. Listen to Archive:</p>
                 <center><iframe width="330" height="215" src="http://www.youtube.com/embed/FN3vgeGc3S4" style="box-shadow: 8px 8px 5px #888888;" frameborder="0" allowfullscreen></iframe></center>
 
               </div>
               <!-- END JCT92.G Radio -->
 
               <div>
-                <label style="color: black; font-size: 22px; float: left; margin-top:10px;"><a href="http://www.mixcloud.com/WEEKONradio/week-on-radio-show-season-2-07-nov-24-alvaro-duran-the-band-famous-and-ramsey-w-jack-bianka/" target="_blank">Nov. 24th, 2014 - WeekOnLatinoAmerica Radio</a></label>
+                <label style="color: black; font-size: 22px; float: left; text-align:left; margin-top:10px;"><a href="http://www.mixcloud.com/WEEKONradio/week-on-radio-show-season-2-07-nov-24-alvaro-duran-the-band-famous-and-ramsey-w-jack-bianka/" target="_blank">Nov. 24th, 2014 - WeekOnLatinoAmerica Radio</a></label>
                 <br>
-                <p>The Band Famous was interviewed on Monday, November 24th, by <a href="http://www.weekonla.com" target="_blank">WeekONLA Radio</a>. Hear them at 01:19:00 - Listen to Archive:</p>
+                <p style="text-align: left;">The Band Famous was interviewed on Monday, November 24th, by <a href="http://www.weekonla.com" target="_blank">WeekONLA Radio</a>. Hear them at 01:19:00 - Listen to Archive:</p>
                 <center>
                   <a href="http://www.mixcloud.com/WEEKONradio/week-on-radio-show-season-2-07-nov-24-alvaro-duran-the-band-famous-and-ramsey-w-jack-bianka/" target="_blank"><img src="img/press/WEEKON.jpg" style="height: auto; width: 90%; box-shadow: 8px 8px 5px #888888;" alt="The Band Famous featured by WeekOnLatinoAmerica Radio"/></a>
                   <img src="img/press/radio.jpg" style="height:auto; width: 50%; box-shadow: 8px 8px 5px #888888;"/>
@@ -542,16 +631,16 @@ frameborder="0" allowfullscreen></iframe>
               <!-- END Week ON Latin America -->
 
               <div>
-                <label style="color: black; font-size: 22px; float: left;"><a href="http://www.thecurrent.org/programs/local-show/2014/11/23" target="_blank">Nov. 23rd, 2014 - The Local Show on 89.3FM The Current</a></label>
+                <label style="color: black; font-size: 22px; float: left; text-align: left;"><a href="http://www.thecurrent.org/programs/local-show/2014/11/23" target="_blank">Nov. 23rd, 2014 - The Local Show on 89.3FM The Current</a></label>
                 <br>
-                <p style="margin-top: 10px;"><a href="http://www.jaygabler.com" target="_blank">Jay Gabler</a> talks about The Band Famous on <a href="http://www.thecurrent.org/programs/local-show/2014/11/23" target="_blank">The Local Show</a> with host, David Campbell, at 01:14:26 into the show on Sunday, November 23th, 6:00pm - 8:00pm Central Standard Time. Listen to Archive:</p>
+                <p style="margin-top: 10px; text-align: left;"><a href="http://www.jaygabler.com" target="_blank">Jay Gabler</a> talks about The Band Famous on <a href="http://www.thecurrent.org/programs/local-show/2014/11/23" target="_blank">The Local Show</a> with host, David Campbell, at 01:14:26 into the show on Sunday, November 23th, 6:00pm - 8:00pm Central Standard Time. Listen to Archive:</p>
                 <center><a href="http://www.thecurrent.org/programs/local-show/2014/11/23" target="_blank"><img src="img/press/localShow.png" style="height: auto; width: 300; box-shadow: 8px 8px 5px #888888;" alt="The Band Famous featured with Jay Gabler and David Campbell on The Local Show"/></a></center>
               </div>
                 <!-- END 89.3FM The Current -->
               <div>
-                <label style="color: black; font-size: 22px; float: left; margin-top: 10px;"><a href="http://blog.thecurrent.org/2014/11/music-body-painting-web-development-meet-the-band-famous/" target="_blank">Nov. 20th, 2014 - 89.3FM The Current | Local Current Blog | Minnesota Public Radio</a></label>
+                <label style="color: black; font-size: 22px; float: left; text-align: left; margin-top: 10px;"><a href="http://blog.thecurrent.org/2014/11/music-body-painting-web-development-meet-the-band-famous/" target="_blank">Nov. 20th, 2014 - 89.3FM The Current | Local Current Blog | Minnesota Public Radio</a></label>
                 <br>
-                <p style="margin-top: -20px;"><a href="http://www.jaygabler.com" target="_blank">Jay Gabler</a> interviewed Norell of The Band Famous and wrote a wonderful feature on TBF on <a href="http://blog.thecurrent.org/2014/11/music-body-painting-web-development-meet-the-band-famous/" target="_blank">89.3FM The Current | Local Current Blog | Minnesota Public Radio</a> on Thursday, November 20th:</p>
+                <p style="margin-top: -20px; text-align: left;"><a href="http://www.jaygabler.com" target="_blank">Jay Gabler</a> interviewed Norell of The Band Famous and wrote a wonderful feature on TBF on <a href="http://blog.thecurrent.org/2014/11/music-body-painting-web-development-meet-the-band-famous/" target="_blank">89.3FM The Current | Local Current Blog | Minnesota Public Radio</a> on Thursday, November 20th:</p>
                 <center>
                   <img src="img/press/quotesJay.png" style="width:90%; height:auto; margin-bottom:10px; margin-left: 5%; box-shadow: 8px 8px 5px #888888;"/>
                   <!-- figure out hover effect!!! <img src="img/press/localCurrent.jpg" style="width:auto; height: 580px;"/> -->
@@ -564,21 +653,20 @@ frameborder="0" allowfullscreen></iframe>
               <div>
                   <label style="color: black; font-size: 22px; float:left; margin-top: -10px;"><a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank">July 11th, 2014: I Love Body Art</a></label>
                   <br>
-                  <p style="margin-top: 2px; margin-bottom: -20px;"><a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank">I Love Body Art</a> interviewed Zander of The Band Famous and did a wonderful feature on his artistry on Friday, July 11th:</p>
-                  <a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank"><img src="img/press/lovebodyart.png" style="width:90%; height:auto; margin-bottom:10px; margin-left: 5%; margin-right: 20px;" alt="I Love Body Art Interviews TBF's Zander"/></a>
-                  <a href="http://www.theartistzander.wordpress.com" target="_blank"><img src="img/press/zander.jpg" style="margin-left: 5%; width: 90%; height: auto; box-shadow: 8px 8px 5px #888888;" alt="Meet Zander"/></a>
+                  <p style="margin-top: 2px; margin-bottom: 10px; text-align: left;"><a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank">I Love Body Art</a> interviewed <a href="http://www.theartistzander.wordpress.com" target="_blank">Zander</a> of The Band Famous and did a wonderful feature on his artistry on Friday, July 11th:</p>
+                  <a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank"><img src="img/press/ilove.png" style="box-shadow: 8px 8px 5px #888888;" alt="I Love Body Art Interviews TBF's Zander"/></a>
               </div>
                 <!-- END I Love Body Art -->
 
               <div>
-                  <label style="color: black; font-size: 22px; float:left; margin-top: 10px;"><a href="http://www.lavendermagazine.com" target="_blank">May 29th - June 11th, 2014: Lavender Magazine</a></label>
+                  <label style="color: black; font-size: 22px; float:left; margin-top: 10px; text-align: left;"><a href="http://www.lavendermagazine.com" target="_blank">May 29th - June 11th, 2014: Lavender Magazine</a></label>
                   <br>
-                  <p style="margin-top: 20px; margin-bottom: 20px;"><a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank">Lavender Magazine</a> printed our debut live performance and App Release (EP Release) Party on Page 19 of their May 29-June 11 2014 issue:</p>
+                  <p style="margin-top: 20px; margin-bottom: 20px; text-align: left;"><a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank">Lavender Magazine</a> printed our debut live performance and App Release (EP Release) Party on Page 19 of their May 29-June 11 2014 issue:</p>
                   <center><img src="img/press/lavender.jpg" style="width:80%; height:auto; box-shadow: 8px 8px 5px #888888;" alt="I Love Body Art Interviews TBF's Zander"/></center>
                   <p style="margin-left:32%; margin-top: -8px;">Poster design by Nicole Leer.</p>
                   <label style="color: black; font-size: 22px; float:left; margin-top: 5px;"><a href="https://www.facebook.com/media/set/?set=a.753050838067619.1073741830.662034180502619&type=3" target="_blank">View Gallery</a></label>
                   <br>
-                  <p style="margin-top:15px;">Famous Debut Performance &amp; App Release (EP Release) Party, the Love Monster Takeover. Courtesy Jessica Ramaker Photography, Dale Lotts, and Page Photographics. Click to view.</p> 
+                  <p style="margin-top:15px; text-align: left;">Famous Debut Performance &amp; App Release (EP Release) Party, the Love Monster Takeover. Courtesy Jessica Ramaker Photography, Dale Lotts, and Page Photographics. Click to view.</p> 
                   <center><a href="https://www.facebook.com/media/set/?set=a.753050838067619.1073741830.662034180502619&type=3" target="_blank"><img src="img/lovemonster.gif" style="width:95%; height:auto; box-shadow: 8px 8px 5px #888888;" alt="I Love Body Art Interviews TBF's Zander"/></a></center>
                   
               </div>
@@ -1028,19 +1116,19 @@ frameborder="0" allowfullscreen></iframe>
             </div>
 
             <div data-role="content">
-                <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+                <h1 style="margin-top: -20px; margin-right:-40px; color:white; font-family:;" data-content="FAMOUS">FAMOUS</h1>
                 <br>
                 <br>
                 <hr>
                 <div><h2 style="background: transparent; margin-bottom:-50px;">Bio</h2></div>
-                <h3 style="text-align:left;">fa·mous</h3>
-                <p style="color: white; text-align:left; margin-top: -20px; margin-left: 20px; font-family: 'Marcellus';">adjective</p>   
+                <h3 style="text-align:left; color: white; font-family: 'Marcellus';">fa·mous</h3>
+                <p style="color: white; text-align:left; margin-top: -8px; margin-left: 20px; font-family: 'Marcellus';">adjective</p>   
                 <img src="img/press/quotesJay.jpg" style="box-shadow: 8px 8px 5px #888888;"/>
                 <img src="images/theBandFamous.jpg" style="box-shadow: 8px 8px 5px #888888;"/>
                 <p style="margin-bottom: 15px;"><a data-icon="arrow-r" data-iconpos="right" data-role="button"
-                data-theme="a" href="#press">View EPK</a></p>
+                data-theme="a" href="#press"><img src="img/press/press.jpg" style="width: 100%; height:auto; margin-top: 2px; margin-bottom: 10px;"/><br>View EPK</a></p>
                 <a href="https://twitter.com/TheBandFamous" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TheBandFamous</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                <p>All three members are working diligently on the front and back-end development to cross-platform "The Band Famous" iTunes app to Android, along with recording and production of their 2nd album, “Awakening”, a tribute album. Expect some music videos in the near future, too.</p>
+                <p style="text-align: left; margin-bottom: 15px;">All three members are working diligently on the front and back-end development to cross-platform "The Band Famous" iTunes app to Android, along with recording and production of their 2nd album, “Awakening”, a tribute album. Expect some music videos in the near future, too.</p>
               
                 <article>  
                   <ul>
@@ -1226,6 +1314,11 @@ frameborder="0" allowfullscreen></iframe>
         <script type="text/javascript" src="js/improv.js"></script>
 		    <script type="text/javascript" src="js/text.js"></script>
         <script src="js/bbplayer.js"></script>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/foundation.min.js"></script>
+        <script>
+          $(document).foundation();
+        </script>
 
  
 

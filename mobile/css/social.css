@@ -116,3 +116,47 @@ a {
     box-shadow:         0px -9px 9px rgba(50, 50, 50, 0.50);
 padding-top:30px;
 }
+
+div#shop {
+  text-align: left;
+}
+
+
+div#shop img {
+  width: 100%;
+  height: auto;
+  box-shadow: 8px 8px 5px #888888;
+}
+
+div#shop img.plain {
+  box-shadow: none;
+}
+
+div#shop h4, p {
+  color: white;
+}
+
+ul#shop li {
+  display: inline;
+  list-style: none;
+}
+
+ul#shop li img {
+  box-shadow: none;
+  width:150px;
+  height: 140px;
+}
+
+div#shopNote p {
+  color:black;
+  text-align: left;
+}
+
+div#shopNote a {
+  font-size: 24px;
+}
+
+div a:hover{
+  
+}
+
