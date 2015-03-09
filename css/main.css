@@ -242,7 +242,25 @@ nav ul li a {
 }
 
 nav > ul > li > a {
- background: #3399FF;
+  color:#25c625;
+  background: #F6FCB8;
+  -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  cursor: pointer;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 20px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 100%;
+  height: auto;
+  border-radius: 11px;
+}
+
+nav > ul > li > a:link {color: #3399FF; -moz-text-decoration-style: solid; padding: 10px 14px;}      /* unvisited link */
+nav > ul > li > a:visited {color:#3399FF;}  /* visited link */
+nav > ul > li > a:hover {
+  background: #3399FF;
   border-top: 1px solid #3399FF;
   border-right: 1px solid #3399FF;
   border-bottom: 1px solid #3399FF;
@@ -251,30 +269,13 @@ nav > ul > li > a {
   -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
   box-shadow: inset 0 1px 10px 1px #FFFF66, 0px 1px 0 #FFFF66, 0 6px 0px #FFFF66, 0 8px 4px 1px #111111;
   color: #fff;
-  font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 20px;
-  padding: 10px 0 12px 0;
-  text-align: center;
   text-shadow: 0px -1px 1px #E1DFD3;
-   -webkit-background-clip: padding-box; 
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 100%;
-  height: auto;
-}
-
-nav > ul > li > a:link {color: white; -moz-text-decoration-style: solid; padding: 10px 14px;}      /* unvisited link */
-nav > ul > li > a:visited {color:white;}  /* visited link */
-nav > ul > li > a:hover {
-  color:#25c625;
-   background: #F6FCB8;
-    -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    cursor: pointer; }/* mouse over link */
-nav > ul > li > a:active {color:blue; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+  -webkit-background-clip: padding-box; 
+ }/* mouse over link */
+nav > ul > li > a:active {color:#33CC33; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
     box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
     /*margin-top: 58px; */
-    position: static;
-    color:blue;}  /* selected link */
+    position: static;}  /* selected link */
 
 nav ul > li ul {
   position: absolute;
@@ -423,11 +424,7 @@ p a:hover{
 
 @media only screen and (max-width: 999px) {
   /* rules that only apply for canvases narrower than 1000px */
-  h2.enter {
-  
-    font-size: 150px; margin:10px; background: none;
 
-  }
 
 }
 
@@ -442,11 +439,6 @@ p a:hover{
     max-width: 768px;
   }
 
-  h2.enter {
-    
-    font-size: 150px; margin:10px; background: none;
-
-  }
 
 }
 
@@ -497,10 +489,6 @@ p a:hover{
         */
         /*float: right;*/
         width: 48%;
-      }
-
-      h2.enter{
-        font-size: 5em;
       }
 
 
@@ -564,10 +552,6 @@ p a:hover{
         position: relative;
         float: left;
 
-      }
-
-      h2.enter{
-        font-size: 5em;
       }
 
   }
@@ -1205,10 +1189,10 @@ a#shop:hover{
 
 .enter {
   background: transparent;
-  font: bold 150px/1 "Marcellus", serif;
-  margin-bottom: -120px;
+  font: bold 100px/1 "Marcellus", serif;
+  margin-bottom: -80px;
   /* attempting to get buttons to resize accordingly with screen adjust */
   width: 100%;
   height:auto;
-  margin-left: -150px;
+
 }
