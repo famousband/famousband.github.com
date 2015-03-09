@@ -1203,9 +1203,12 @@ a#shop:hover{
   font-size: 24px;
 }
 
-h2.enter {
-  
-  font-size: 150px; margin:10px; background: none;
-
+.enter {
+  background: transparent;
+  font: bold 150px/1 "Marcellus", serif;
+  margin-bottom: -120px;
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 100%;
+  height:auto;
+  margin-left: -150px;
 }
-
