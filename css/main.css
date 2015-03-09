@@ -1186,13 +1186,3 @@ a#shop:hover{
   color: #33CC33;
   font-size: 24px;
 }
-
-.enter {
-  background: transparent;
-  font: bold 100px/1 "Marcellus", serif;
-  margin-bottom: -80px;
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 100%;
-  height:auto;
-
-}
