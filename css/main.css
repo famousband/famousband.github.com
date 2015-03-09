@@ -423,6 +423,12 @@ p a:hover{
 
 @media only screen and (max-width: 999px) {
   /* rules that only apply for canvases narrower than 1000px */
+  h2.enter {
+  
+    font-size: 150px; margin:10px; background: none;
+
+  }
+
 }
 
 @media only screen and (device-width: 768px) and (orientation: landscape) {
@@ -435,6 +441,13 @@ p a:hover{
     width: 100%;
     max-width: 768px;
   }
+
+  h2.enter {
+    
+    font-size: 150px; margin:10px; background: none;
+
+  }
+
 }
 
 @media only screen and (max-device-width: 480px) and (orientation: landscape){
@@ -1189,4 +1202,6 @@ a#shop:hover{
   color: #33CC33;
   font-size: 24px;
 }
+
+
 
