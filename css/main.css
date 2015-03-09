@@ -1154,6 +1154,10 @@ ul#shop li {
   margin:4px;
 }
 
+ul#shop li img {
+  box-shadow: 8px 8px 5px #888888;
+}
+
 #Item1 {
   background-image: url("img/shop/1.jpg");
 }
