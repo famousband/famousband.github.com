@@ -787,6 +787,10 @@ button a:active {color:blue;}  /* selected link */
 /* punch */
 .punch {
   background: #F6FCB8;
+  border-top: 1px solid #bc2c2c;
+  border-right: 1px solid #bc2c2c;
+  border-bottom: 1px solid #bc2c2c;
+  border-left: 1px solid #bc2c2c;
   border-radius: 11px;
   -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
   box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
