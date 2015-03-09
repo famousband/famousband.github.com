@@ -546,8 +546,6 @@ p a:hover{
       .gallery > div {
         position: relative;
         float: left;
-        padding: 5px;
-        margin-left:-20px;
 
       }
 
