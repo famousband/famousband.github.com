@@ -1146,3 +1146,34 @@ article{
     margin-right: 30px;
   }
 
+/* SHOP ITEMS CSS */
+
+ul#shop li {
+  list-style: none;
+  display: inline;
+  margin:4px;
+}
+
+#Item1 {
+  background-image: url("img/shop/1.jpg");
+}
+#Item1:hover {
+  background-image: url("img/shop/001.gif");
+}
+
+p{
+  background:transparent; 
+  color:black; 
+  text-shadow: 1px 1px #3399FF;
+  font-family: 'Marcellus', serif;
+  font-size: 18px;
+}
+
+a#shop{
+  font-size: 24px;
+}
+
+a#shop:hover{
+  color: #33CC33;
+  font-size: 24px;
+}
