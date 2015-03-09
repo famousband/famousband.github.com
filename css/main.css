@@ -486,6 +486,10 @@ p a:hover{
         width: 48%;
       }
 
+      h2.enter{
+        font-size: 5em;
+      }
+
 
 }
 
@@ -547,6 +551,10 @@ p a:hover{
         position: relative;
         float: left;
 
+      }
+
+      h2.enter{
+        font-size: 5em;
       }
 
   }
@@ -1181,3 +1189,4 @@ a#shop:hover{
   color: #33CC33;
   font-size: 24px;
 }
+
