@@ -47,152 +47,6 @@
 
 }
 
-nav > ul {
-  margin-top: 2em;
-  margin-left: 0px;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 2em;
-  list-style: none;
-}
-
-nav > ul > li {
-  position: relative;
-  margin-right: 1em;
-  float: left;
-}
-
-nav ul li a {
-  background: #E68A8A;
-  border-top: 1px solid #bc2c2c;
-  border-right: 1px solid #bc2c2c;
-  border-bottom: 1px solid #bc2c2c;
-  border-left: 1px solid #bc2c2c;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
-  color: white;
-  font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 10px;
-  padding: 10px 0 12px 0;
-  text-align: center;
-  text-shadow: 0px -1px 1px #bc2c2c;
-   -webkit-background-clip: padding-box; 
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 100%;
-  height: auto;
- 
-}
-
-nav > ul > li > a {
-  background: #E68A8A;
-  border-top: 1px solid #bc2c2c;
-  border-right: 1px solid #bc2c2c;
-  border-bottom: 1px solid #bc2c2c;
-  border-left: 1px solid #bc2c2c;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
-  color: #E1DFD3;
-  font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 10px;
-  padding: 10px 0 12px 0;
-  text-align: center;
-  /*text-shadow: 0px -1px 1px #bc2c2c;*/
-   -webkit-background-clip: padding-box; 
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 100%;
-  height: auto;
-}
-
-nav > ul > li > a:link {color: white; -moz-text-decoration-style: solid; padding: 10px 14px;}      /* unvisited link */
-nav > ul > li > a:visited {color:white;}  /* visited link */
-nav > ul > li > a:hover {color:#25c655; -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    cursor: pointer; }  /* mouse over link */
-nav > ul > li > a:active {color:blue; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    /*margin-top: 58px; */
-    position: static;
-    color:blue;}  /* selected link */
-
-nav ul > li ul {
-  position: absolute;
-  width: 200px;
-  background: #33cda7;
-  border-radius: 5px;
-  padding: 5px 0;
-  opacity: 0;
-  visibility: hidden;
-  box-shadow: 0 3px 15px rgba(0,0,0,.7);
-  list-style: none;
-}
-
-nav ul > li ul:after {
-  content: "";
-  position: absolute;
-  top: -11px;
-  left: 1em;
-  height: 0; 
-  width: 0;
-  border: 6px solid transparent;
-  border-bottom-color: rgba(216,30,179,0.56); 
-}
-
-nav > ul li > ul > li {
-  position: relative;
-}
-
-nav > ul > li > ul > li > ul {
-  left: 105%;
-  top: -2.5em !important;
-  z-index: 1;
-  width: 180px;
-}
-
-nav > ul > li > ul > li > ul:hover {
-  width: 200px;
-}
-
-nav > ul > li > ul > li > ul:after {
-  content: "";
-  position: absolute;
-  top: 1em;
-  left: -12px;
-  heght: 0; width: 0;
-  border: 6px solid transparent;
-  border-right-color: rgba(216,30,179,0.56); 
-}
-
-nav > ul > li > ul > li:hover > ul {
-  top: 0 !important;
-}
-
-
-.drop,.dropp {
-  padding-right: 2em;
-}
-
-.drop:after,
-.dropp:after{
-  content: "";
-  position: absolute;
-  height: 0; width: 0;
-  border: 6px solid transparent;
-}
-
-.drop:after {
-  right: 8px;
-  top: 14px;
-  border-top-color: rgba(216,30,179,0.56); 
-}
-
-.dropp:after {
-  top: 12px;
-  right: 8px;
-  border-left-color: rgba(216,30,179,0.56); 
-}
-
 a{
   text-decoration: none;
 }
@@ -361,7 +215,7 @@ nav > ul > li {
 }
 
 nav ul li a {
-  background: #E68A8A;
+  background: #3399FF;
   border-top: 1px solid #bc2c2c;
   border-right: 1px solid #bc2c2c;
   border-bottom: 1px solid #bc2c2c;
@@ -383,20 +237,20 @@ nav ul li a {
 }
 
 nav > ul > li > a {
-  background: #E68A8A;
-  border-top: 1px solid #bc2c2c;
-  border-right: 1px solid #bc2c2c;
-  border-bottom: 1px solid #bc2c2c;
-  border-left: 1px solid #bc2c2c;
-  border-radius: 4px;
+ background: #3399FF;
+  border-top: 1px solid #3399FF;
+  border-right: 1px solid #3399FF;
+  border-bottom: 1px solid #3399FF;
+  border-left: 1px solid #3399FF;
+  border-radius: 11px;
   -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
-  color: #E1DFD3;
+  box-shadow: inset 0 1px 10px 1px #FFFF66, 0px 1px 0 #FFFF66, 0 6px 0px #FFFF66, 0 8px 4px 1px #111111;
+  color: #fff;
   font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 10px 0 12px 0;
   text-align: center;
-  /*text-shadow: 0px -1px 1px #bc2c2c;*/
+  text-shadow: 0px -1px 1px #E1DFD3;
    -webkit-background-clip: padding-box; 
   /* attempting to get buttons to resize accordingly with screen adjust */
   width: 100%;
@@ -405,9 +259,12 @@ nav > ul > li > a {
 
 nav > ul > li > a:link {color: white; -moz-text-decoration-style: solid; padding: 10px 14px;}      /* unvisited link */
 nav > ul > li > a:visited {color:white;}  /* visited link */
-nav > ul > li > a:hover {color:#25c655; -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    cursor: pointer; }  /* mouse over link */
+nav > ul > li > a:hover {
+  color:#25c625;
+   background: #F6FCB8;
+    -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    cursor: pointer; }/* mouse over link */
 nav > ul > li > a:active {color:blue; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
     box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
     /*margin-top: 58px; */
@@ -817,22 +674,6 @@ p {
     margin: 1.5em 0;
 }
 
-/*
-h1 {
-    background-color: #5E3333;
-    text-align: center;
-    color: #E1DFD3;
-    border-color: indigo;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    text-shadow: 2px 2px #ff0000;
-    font-size: 200%;
-    font-family: 'Great Vibes', cursive;
-    padding: 0.75em;
-    margin: -0.75em -0.75em 0.75em -0.75em;
-    margin-top: -50px;
-}
-*/
 
 h1 {
   position: absolute;
@@ -939,39 +780,7 @@ span img{
   max-height: 400px;
   position: center fixed;
 }
-/* below is css for image transition when in place
 
-#enter{
-    position:relative;
-    height: 711px;
-    width:auto;
-    margin: 1.5em auto;
-    margin-bottom: -200px;
-}
-#enter img{
-    position:absolute;
-    height: 400px;
-    width:auto;
-    left:0;
-    margin-left:-20px;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-}
-
-
-img.enterSite3:hover{
-    opacity:0;
-}
-div img.enterSite4:hover{
-    opacity:0;
-}
-
-*/
-
-
-/* /END mixens*/
 
 .btn {
   background: #eb2755;
@@ -1003,29 +812,30 @@ button a:active {color:blue;}  /* selected link */
 
 /* punch */
 .punch {
-  background: #E68A8A;
-  border-top: 1px solid #bc2c2c;
-  border-right: 1px solid #bc2c2c;
-  border-bottom: 1px solid #bc2c2c;
-  border-left: 1px solid #bc2c2c;
-  border-radius: 4px;
+ background: #3399FF;
+  border-top: 1px solid #3399FF;
+  border-right: 1px solid #3399FF;
+  border-bottom: 1px solid #3399FF;
+  border-left: 1px solid #3399FF;
+  border-radius: 11px;
   -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px #FFFF66, 0px 1px 0 #FFFF66, 0 6px 0px #FFFF66, 0 8px 4px 1px #111111;
   color: #fff;
   font: bold 25px/1 "Marcellus", serif;
   margin-bottom: 20px;
   padding: 10px 0 12px 0;
   text-align: center;
-  text-shadow: 0px -1px 1px #bc2c2c;
+  text-shadow: 0px -1px 1px #E1DFD3;
    -webkit-background-clip: padding-box; 
   /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 250px;
+  width: 320px;
   height: 70px;
 }
   
 .punch:hover {
-    -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    background: #F6FCB8;
+    -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
     cursor: pointer; 
 }
 
@@ -1034,7 +844,7 @@ button a:active {color:blue;}  /* selected link */
     box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
     /*margin-top: 58px; */
     position: static;
-    color:blue;
+    color:indigo;
 }
 
 .punch2 {
