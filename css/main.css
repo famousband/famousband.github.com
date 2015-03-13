@@ -1,5 +1,46 @@
   /* Implementing tabs */
 
+
+header {
+  margin-bottom: 150px;
+  max-height: 60px;
+  max-width: auto;
+  position: center;
+  
+}
+
+html, body {
+  margin: 0;
+  padding-top: 5px;
+  border:0;
+  
+    /* 
+    min-width: 800px;
+    Below is with added columns
+    height: 100%; */
+  min-width: 300px;
+  width:auto;
+  position: relative;
+}
+
+body {
+    font-family: "Julius Sans One";
+    margin: 1.5em auto;
+    padding: 1.5em;
+    background-color: #33CC33;
+    color: #4D4B39;
+     /*max-width: 35em;*/
+    max-width: auto;
+    min-width: auto;
+    /*border: 0.75em solid #E68A8A;*/
+    line-height: 1.5em;
+
+    /* testing image stuff */
+    position: relative;
+
+
+}
+
   .wrapper {
     margin:30px auto;
     width:80%;
@@ -579,45 +620,6 @@ p a:hover{
 }
 /* with modernizr */
 
-header {
-  margin-bottom: 150px;
-  max-height: 60px;
-  max-width: auto;
-  position: center;
-  
-}
-
-html, body {
-  margin: 0;
-  padding-top: 5px;
-  border:0;
-  
-    /* 
-    min-width: 800px;
-    Below is with added columns
-    height: 100%; */
-  min-width: 300px;
-  width:auto;
-  position: relative;
-}
-
-body {
-    font-family: "Julius Sans One";
-    margin: 1.5em auto;
-    padding: 1.5em;
-    background-color: #33CC33;
-    color: #4D4B39;
-     /*max-width: 35em;*/
-    max-width: auto;
-    min-width: auto;
-    /*border: 0.75em solid #E68A8A;*/
-    line-height: 1.5em;
-
-    /* testing image stuff */
-    position: relative;
-
-
-}
 
 
 #content{
