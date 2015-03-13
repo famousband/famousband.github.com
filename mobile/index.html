@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Famous</title>
+		<title>TBF</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="themes/famousband.min.css" />
@@ -83,10 +83,11 @@
 			}
 			h1 {
 			  position: absolute;
+        margin-bottom:-10px;
 			  left: 45%;
 			  margin-left: -2.1em;
 			  color: #3399FF;
-			  font:700 4.8em 'Montserrat Subrayada', sans-serif; 
+			  font:700 4.3em 'Montserrat Subrayada', sans-serif; 
 			}
 
 			@keyframes loading {
@@ -97,10 +98,14 @@
 			  content: attr(data-content);
 			  position: absolute;
 			  overflow: hidden;
-			  max-width: 5.3em;
+			  max-width: 4.3em;
 			  color: #FFFF66;
 			  animation: loading 8s linear;
 			}
+
+      h1:after{
+        color: #3399FF;
+      }
 
 			h2 {
 			    background-color: #33CC33;
@@ -118,7 +123,7 @@
 			}
 
 			h1 + h2 {
-			    margin-top: -2em;
+			    margin-top: 10px;
 			    padding-top: 0;
 			}
 
@@ -140,60 +145,6 @@
                 font-size: 16px;
             }
 
-    /* app store effect */
-    .gallery {
-      width: 530px;
-      margin: 0 auto;
-      padding: 5px;
-
-    }
-
-    .gallery > div {
-      position: relative;
-      float: left;
-      padding: 5px;
-  
-    }
-
-    .gallery > div > a > img {
-      transition: .1s transform;
-      transform: translateZ(0); /* hack */
-    }
-
-    .gallery > div:hover {
-      z-index: 1;
-    }
-
-    .gallery > div:hover > a > img {
-      transform: scale(1.5,1.5);
-      transition: .3s transform;
-    }
-
-    .cf:before, .cf:after {
-        display: table;
-        content: "";
-        line-height: 0;
-    }
-
-    .cf:after {
-        clear: both;
-    }
-
-      background: #E1E1E1;
-      background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
-      background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
-      color: #636363;
-    }
-    #stpulldown .stpulldown-logo
-    {
-      height: 40px;
-      width: 300px;
-      margin-left: 20px;
-      margin-top: 5px;
-      background:url("http://bandfamous.com/img/fame.jpg") no-repeat;
-    }
 
 		</style>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -913,46 +864,46 @@
                 <div class="special">
                         <section>
                             <img src="img/whoyouare.jpg" alt="Who You Are" style="margin-top:10px;"/>
-    					    <p>I don't even know who you are.</p>
-    			            <p>Who you're supposed to be.</p>
-    			            <p>Who you chose to be.</p>
-                            <p>Don't you know you're not very far?</p>
-                            <p>Be whoever you want to be.</p>
-                            <p>Who will you be?</p>
-                            <p>Who will you be?</p>
-                            <br>
-                            <p>You gotta make a decision,</p>
-                            <p>The world will keep on spinning.</p>
-                            <p>With or without you, it'll go on.</p>
-                            <br>
-                            <p>Where does your heart dwell?</p>
-                            <p>Where does your soul fly?</p>
-                            <p>That's the way, that's the way, that's the way...</p>
-                            <p>That's the way, that's the way, that's the way... to go.</p>
-                            <p>That's the way, that's the way, that's the way...</p>
-                            <p>That's the way, that's the way, that's the way to go.</p>
-                            <p>That's the way to go.</p>
-                            <br>
-                            <p>I don't even, I don't even - no, wait a minute.</p>
-                            <br>
-                            <p>I don't even know who you are.</p>
-                            <p>Who you're supposed to be.</p>
-                            <p>Who you chose to be.</p>
-                            <p>Don't you know you're not very far?</p>
-                            <p>Be whoever you want to be.</p>
-                            <p>Who will you be?</p>
-                            <p>Who will you be?</p>
-                            <br>
-                            <p>You have to choose, you have to make a choice.</p>
-                            <p>Make a decision, the world, it's spinning.</p>
-                            <p>With or without you - with or without you, it'll go on.</p>
-                            <br>
-                            <p>Where does your heart dwell?</p>
-                            <p>Where does your soul fly?</p>
-                            <p>That's the way, that's the way, that's the way...</p>
-                            <p>That's the way, that's the way, that's the way...</p>
-                            <p>That's the way, that's the way, that's the way to go...</p>
-                            <p>To go.</p>       
+    					               <p>I don't even know who you are.</p>
+    			                   <p>Who you're supposed to be.</p>
+    			                   <p>Who you chose to be.</p>
+                              <p>Don't you know you're not very far?</p>
+                              <p>Be whoever you want to be.</p>
+                              <p>Who will you be?</p>
+                              <p>Who will you be?</p>
+                              <br>
+                              <p>You gotta make a decision,</p>
+                              <p>The world will keep on spinning.</p>
+                              <p>With or without you, it'll go on.</p>
+                              <br>
+                              <p>Where does your heart dwell?</p>
+                              <p>Where does your soul fly?</p>
+                              <p>That's the way, that's the way, that's the way...</p>
+                              <p>That's the way, that's the way, that's the way... to go.</p>
+                              <p>That's the way, that's the way, that's the way...</p>
+                              <p>That's the way, that's the way, that's the way to go.</p>
+                              <p>That's the way to go.</p>
+                              <br>
+                              <p>I don't even, I don't even - no, wait a minute.</p>
+                              <br>
+                              <p>I don't even know who you are.</p>
+                              <p>Who you're supposed to be.</p>
+                              <p>Who you chose to be.</p>
+                              <p>Don't you know you're not very far?</p>
+                              <p>Be whoever you want to be.</p>
+                              <p>Who will you be?</p>
+                              <p>Who will you be?</p>
+                              <br>
+                              <p>You have to choose, you have to make a choice.</p>
+                              <p>Make a decision, the world, it's spinning.</p>
+                              <p>With or without you - with or without you, it'll go on.</p>
+                              <br>
+                              <p>Where does your heart dwell?</p>
+                              <p>Where does your soul fly?</p>
+                              <p>That's the way, that's the way, that's the way...</p>
+                              <p>That's the way, that's the way, that's the way...</p>
+                              <p>That's the way, that's the way, that's the way to go...</p>
+                              <p>To go.</p>       
                         </section>
                         
                 </div>
@@ -1121,7 +1072,7 @@
             </div>
 
             <div data-role="content">
-                <h1 style="margin-top: -20px; margin-right:-40px; color:white; font-family:;" data-content="FAMOUS">FAMOUS</h1>
+                <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
                 <br>
                 <br>
                 <hr>
@@ -1194,18 +1145,6 @@
 
                      <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="340" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
-                    <!--<script type="text/javascript" src="https://formscentral.acrobat.com/Clients/Current/FormsCentral/htmlClient/scripts/adobe.form.embed.min.js"></script>
-    			<script type="text/javascript">;ADOBEFORMS.EmbedForm({formId:"PnIzW9kcKKMLvDsZwyVlww"});</script></center>
-            -->
-                
-                <!--<h1 class="mail">Newsfeed</h1>
-                <div class="special">
-                    <p>Our website, both the mobile and desktop versions, is under construction in some places, such as the contact pages, and Zander and Norell's personal pages in the desktop browser. Check back often to see the progressive transformations our website will take! Thank you for joining us on the journey!</p>
-                    <article><img src="img/gay90s.jpg" class="pride"/><p class="pride">Recently, you may have seen Norell &amp; Zander, or the brains behind Ph&ouml;nix LLC, decorating and embellishing many live canvases at MN Pride at the Gay 90s.</p><p>They were joined with MUA &amp; Photographer, not to mention model herself, Jessica Collette.</p> <a href="jcartist.html"><img src="img/jcbus.jpg"/></a>
-                    <p>The three of them painted the town, in the  name of love, and pride in love.</p></article>
-                    <article><p>Prior to Pride, Zander was hired by SIMShows, or Sound In Motion, to provide live, stellar body painting entertainment in downtown Minneapolis at Epic Nightclub for: <h4>Benny Benassi</h4><img src="http://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-ash3/936365_566588893362840_1742481921_n.jpg"/></p></article>
-                    <article><h4>Tron in 3D</h4><h5>Live at Benny Benassi</h5> <img src="http://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn2/980805_567540636600999_1601684874_o.jpg"/></article>
-                </div>-->
                 <hr>
                 <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
@@ -1273,17 +1212,13 @@
                         <p>6. Famous Ft. Edwin - "Ink and Feather (A Tribute)"</p>
                         <br>
                     </div>
-                    <!-- <div class="fb-like-box" data-href="http://www.facebook.com/TheBandFamous" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="false" data-show-border="true"></div> -->
+     
                     <div>
                       <p style="margin-top:20px;">Like what you hear? Get our full-length Debut EP "Last Words" when you download our Smart Album - The Band Famous - with videos, games, and so much more. Available on iOS, Android coming soon, go home for details.</p>
                     </div>
                   
                 </div>
-                <!-- acting crazy, trying to promote the full albumß
-                <div>
-                  <p>Like what you hear? Get our full-length Debut EP "Last Words" when you download our Smart Album - The Band Famous - with videos, games, and so much more. Available on iOS, Android coming soon, go home for details.</p>
-                </div>
-                -->
+
                 <hr style="margin-top: 1200px;">
                 <center><ul style="list-style: none;"><li style="text-align: left; font-size: 8px; display: inline; margin-right: 20px; margin-left:-30px; margin-top:10px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
         
