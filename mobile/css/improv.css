@@ -113,8 +113,8 @@ a {
   font: bold 16px/1.5 "Marcellus", serif;
   color: #898989;
   background: black;
-  background-image: url('images/Famous-0010.jpg');
   padding:10px;
+  width: 100%;
 }
 
 button.bb-play {
