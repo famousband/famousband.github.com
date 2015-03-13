@@ -84,6 +84,7 @@ body {
 .main-nav{
   display:inline-block;
   position: top left;
+  width: 50%;
 
 }
 
@@ -104,22 +105,31 @@ p a:hover{
   width: 80%;
 
 }
-#left, #right {
-  padding: 1em;
-  font-family: sans-serif;
-  color: #fff;
-  height: 480px;
-  max-height: 480px;
-  display: table-cell;
+
+ul#preview {
+  width: 100%;
+  margin-left: -20px;
 }
+
+ul#preview li {
+  list-style: none;
+  display: inline-block;
+  min-width:280px;
+  width: 45%;
+  height: 320px;
+}
+
 #left {
-  min-width:640px;
-  max-width: 640px;
+  height: 300px; 
+  min-width:280px;
+  max-width: 600px;
+
 }
 #right {
-  width: 640px;
-  max-width: 640px;
-
+  max-width: 600px;
+  min-width: 280px;
+  margin-top: -70px;
+  margin-left: -20px;
 }
 
 /* app store effect */
@@ -164,29 +174,6 @@ p a:hover{
     clear: both;
 }
 
-#earth {
-  margin: 0 auto;
-  margin-top: 120px;
-  margin-bottom: 140px;
-  margin-left:77%;
-  transform: rotate(-8deg) scale(3);
-  width: 92px;
-  height: 92px;
-  background: url(http://www.noirextreme.com/digital/Earth-Color4096.jpg);
-  border-radius: 50%;
-  background-size: 210px;
-  box-shadow: inset 16px 0px 40px 6px rgb(0, 0, 0),
-    inset -0px 0 16px 2px rgba(255, 255, 255, 0.4);
-  animation-name: rotate;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  border: 0px;
-  transition: all 200ms ease-in-out;
-}
-#earth:hover {
-  /* border: 2px solid black; */
-}
 
 @keyframes rotate {
   from { background-position-x: 0px; }
@@ -404,54 +391,6 @@ a h2:hover{
 p a:hover{
   color:#E1DFD3;
   font-size: 29px;
-}
-
-#wrapper {
-  display: table;
-  width: 80%;
-  margin-left: -47px;
-}
-#left, #right {
-  padding: 1em;
-  font-family: sans-serif;
-  color: #fff;
-  height: 480px;
-  max-height: 480px;
-  display: table-cell;
-}
-#left {
-  min-width:640px;
-  max-width: 640px;
-}
-#right {
-  width: 640px;
-  max-width: 640px;
-
-}
-
-#earth {
-  margin: 0 auto;
-  margin-top: 120px;
-  margin-bottom: 140px;
-  margin-left:77%;
-  transform: rotate(-8deg) scale(3);
-  width: 92px;
-  height: 92px;
-  background: url(http://www.noirextreme.com/digital/Earth-Color4096.jpg);
-  border-radius: 50%;
-  background-size: 210px;
-  box-shadow: inset 16px 0px 40px 6px rgb(0, 0, 0),
-    inset -0px 0 16px 2px rgba(255, 255, 255, 0.4);
-  animation-name: rotate;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  border: 0px;
-  transition: all 200ms ease-in-out;
-}
-
-#earth:hover {
-  /* border: 2px solid black; */
 }
 
 @keyframes rotate {
@@ -784,10 +723,10 @@ button a:active {color:blue;}  /* selected link */
 /* punch */
 .punch {
   background: #F6FCB8;
-  border-top: 1px solid #bc2c2c;
-  border-right: 1px solid #bc2c2c;
-  border-bottom: 1px solid #bc2c2c;
-  border-left: 1px solid #bc2c2c;
+  border-top: 1px solid indigo;
+  border-right: 1px solid indigo;
+  border-bottom: 1px solid indigo;
+  border-left: 1px solid indigo;
   border-radius: 11px;
   -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
   box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;

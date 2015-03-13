@@ -35,7 +35,9 @@
 <header>
   <br>
   <h1 style="margin-top:-20px;" data-content="FAMOUS">FAMOUS</h1><a href="contact.html"  title="Contact" ><img src="images/connect.png" alt="Contact the Band Famous" style="width: 400px; height:auto; margin-top: 11px;"/></a>
-  <a href="shop.html"><img src="img/shop.png" alt="Shop Famous" style="margin-top:-130px; margin-left: -10%; float:right; width:170px;height:140px;"/></a>
+  <a href="shop.html"><img src="img/shop.png" alt="Shop Famous" style="position: absolute;
+    top: 0px;
+    right: 0px; width:170px;height:140px;"/></a>
   
 </header>
 <center id="nav">
@@ -46,12 +48,21 @@
     <center><a href="press.html"><img src="img/header.png" style="width: 86.8%; height:auto; margin-top:20px; margin-bottom: -10px; box-shadow: 8px 8px 5px #888888;"/></a></center>
        <div id="wrapper">
 
-        <div id="left"><a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank" title="Have an iPhone? Click for free download!"><img src="img/famousApp.gif" style="height: 420px; width:auto;" alt="Download The Band Famous on the App Store today!"/></a></div>
-        <div id="right">
-          <iframe id="ytplayer" type="text/html" width="580" height="420"
-  src="https://www.youtube.com/embed/OPp5yO8Ai3w"
-  frameborder="0" allowfullscreen></iframe>
-        </div>
+          <ul id="preview">
+            <li>
+                <a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank" title="Have an iPhone? Click for free download!"><img src="img/famousApp.gif" alt="Download The Band Famous on the App Store today!" style="width:100%; max-width: 600px; min-width: 280px; height:auto; max-height: 100%; margin-left: -20px; box-shadow: 8px 8px 5px #888888;"/></a>
+            </li>
+            <li>
+              <div id="right">
+                <iframe id="ytplayer" type="text/html" width="90%" max-height="320px" min-height="200px" height="320px;"
+        src="https://www.youtube.com/embed/OPp5yO8Ai3w"
+        frameborder="0" allowfullscreen style="box-shadow: 8px 8px 5px #888888;"></iframe>
+              </div>
+            </li>
+
+          </ul>
+
+
       </div> 
 </center>
 <hr style="border-top: 8px solid black; margin: 20px;">
