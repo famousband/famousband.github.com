@@ -429,6 +429,7 @@ ul{
 ul#preview {
   width: 100%;
   margin-left: -20px;
+  margin-right: 20px;
 }
 
 ul#preview li {
@@ -437,6 +438,7 @@ ul#preview li {
   min-width:280px;
   width: 45%;
   height: 320px;
+  margin: auto;
 }
 
 /* UL class of "docs" */
