@@ -1,5 +1,24 @@
-  /* Implementing tabs */
+html, body {
+  margin: 0;
+  padding-top: 5px;
+  border:0;
+  min-width: 300px;
+  width:auto;
+  position: relative;
+}
 
+body {
+    font-family: "";
+    background-color: #33CC33;
+    color: #33CC33;
+    max-width: auto;
+    min-width: auto;
+    line-height: 1.5em;
+    position: relative;
+    /*This just stops me getting horizontal scrolling if anything overflows the width*/
+    overflow-x: hidden;
+
+}
 
 header {
   margin-bottom: 150px;
@@ -10,89 +29,7 @@ header {
   
 }
 
-html, body {
-  margin: 0;
-  padding-top: 5px;
-  border:0;
-  
-    /* 
-    min-width: 800px;
-    Below is with added columns
-    height: 100%; */
-  min-width: 300px;
-  width:auto;
-  position: relative;
-}
-
-body {
-    font-family: "Julius Sans One";
-    background-color: #33CC33;
-    color: #33CC33;
-     /*max-width: 35em;*/
-    max-width: auto;
-    min-width: auto;
-    /*border: 0.75em solid #E68A8A;*/
-    line-height: 1.5em;
-
-    /* testing image stuff */
-    position: relative;
-
-
-}
-
-  .wrapper {
-    margin:30px auto;
-    width:80%;
-    font-family:sans-serif;
-    color:#555;
-    font-size:14px;
-    line-height:24px;
-  }
-  .tabs {
-    li {
-      float:left;
-      width:33.33%;
-      list-style: none;
-    }
-    a {
-      display:block;
-      text-align:center;
-      text-decoration:none;
-      text-transform:uppercase;
-      color:#888;
-      padding:20px 0;
-      border-bottom:2px solid #888;
-      background:#f7f7f7;
-      
-      &:hover, &.active {
-        background:#eee;
-      }
-    }
-  }
-  .tabgroup {
-    div {
-      padding:30px;
-      box-shadow:0 7px 10px rgba(0,0,0,.3);
-    }
-  }
-  .clearfix:after {
-    content:"";
-    display:table;
-    clear:both;
-  }
-
-
-a{
-  text-decoration: none;
-}
-a h2:hover{
-  color:#E1DFD3;
-}
-
-p a:hover{
-  color:#E1DFD3;
-  font-size: 29px;
-}
+/* id of "wrapper" */
 
 #wrapper {
   display: table;
@@ -100,113 +37,38 @@ p a:hover{
 
 }
 
-ul#preview {
-  width: 100%;
-  margin-left: -20px;
+/* class of "wrapper" */
+
+.wrapper {
+  margin:30px auto;
+  width:80%;
+  font-family:sans-serif;
+  color:#555;
+  font-size:14px;
+  line-height:24px;
 }
 
-ul#preview li {
-  list-style: none;
-  display: inline-block;
-  min-width:280px;
-  width: 45%;
-  height: 320px;
-}
-
-#left {
-  height: 300px; 
-  min-width:280px;
-  max-width: 600px;
-
-}
-#right {
-  max-width: 600px;
-  min-width: 280px;
-  margin-top: -70px;
-  margin-left: -20px;
-}
-
-/* app store effect */
-.gallery {
-  width: 530px;
-  margin: 0 auto;
-  padding: 5px;
-}
-
-.gallery > div {
-  position: relative;
-  vertical-align: center;
-  margin: auto;
-  padding: auto;
-  /*float:left;
-  margin-right: -20px;*/
-
-
-}
-
-.gallery > div > a > img {
-  transition: .1s transform;
-  transform: translateZ(0); /* hack */
-}
-
-.gallery > div:hover {
-  z-index: 1;
-}
-
-.gallery > div:hover > a > img {
-  transform: scale(1.5,1.5);
-  transition: .3s transform;
-}
-
-.cf:before, .cf:after {
-    display: table;
-    content: "";
-    line-height: 0;
-}
-
-.cf:after {
-    clear: both;
-}
-
-
-@keyframes rotate {
-  from { background-position-x: 0px; }
-  to { background-position-x: 210px; }
-}
-
-/* end nav bar */
-
-  /* Implementing tabs */
-
-  .wrapper {
-    margin:30px auto;
-    width:80%;
-    font-family:sans-serif;
-    color:#555;
-    font-size:14px;
-    line-height:24px;
+.tabs {
+  li {
+    float:left;
+    width:33.33%;
+    list-style: none;
   }
-  .tabs {
-    li {
-      float:left;
-      width:33.33%;
-      list-style: none;
-    }
-    a {
-      display:block;
-      text-align:center;
-      text-decoration:none;
-      text-transform:uppercase;
-      color:#888;
-      padding:20px 0;
-      border-bottom:2px solid #888;
-      background:#f7f7f7;
+  a {
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    text-transform:uppercase;
+    color:#888;
+    padding:20px 0;
+    border-bottom:2px solid #888;
+    background:#f7f7f7;
       
-      &:hover, &.active {
-        background:#eee;
-      }
+    &:hover, &.active {
+      background:#eee;
     }
   }
+}
   .tabgroup {
     div {
       padding:30px;
@@ -219,18 +81,150 @@ ul#preview li {
     clear:both;
   }
 
-  /* nav bar */
-  /* nav bar */
-.main-nav{
-  display:inline-block;
-  position: top left;
+
+/* sweet button effect */
+
+.btn {
+  background: #eb2755;
+  max-width: 80%;
+  text-decoration: none;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 1em 0;
+  display: block;
+  color: #fff;
+  transition: background .3s;
+  
+  &:hover {
+    background: lighten(#e74c3c, 10%);
+  }
   
 }
 
 
+button a {
+  text-decoration: none;
+  text-color: white;
+}
+
+button a:link {color:white;}      /* unvisited link */
+button a:visited {color:white;}  /* visited link */
+button a:hover {color:#FF00FF;}  /* mouse over link */
+button a:active {color:blue;}  /* selected link */
+
+/* punch */
+.punch {
+  background: black;
+  border-top: 1px solid indigo;
+  border-right: 1px solid indigo;
+  border-bottom: 1px solid indigo;
+  border-left: 1px solid indigo;
+  border-radius: 11px;
+  -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  cursor: pointer; 
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 20px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 320px;
+  color: #3399FF;
+  height: 70px;
+}
+  
+.punch:hover {
+  background: #3399FF;
+  border-top: 1px solid #3399FF;
+  border-right: 1px solid #3399FF;
+  border-bottom: 1px solid #3399FF;
+  border-left: 1px solid #3399FF;
+  border-radius: 11px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px black, 0px 1px 0 black, 0 6px 0px black, 0 8px 4px 1px #111111;
+  color: #fff;
+  text-shadow: 0px -1px 1px #E1DFD3;
+  -webkit-background-clip: padding-box; 
+}
+
+.punch:active {
+    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    /*margin-top: 58px; */
+    position: static;
+    color:indigo;
+}
+
+.punch2 {
+  background: #E68A8A;
+  border-top: 1px solid #eb2755;
+  border-right: 1px solid #eb2755;
+  border-bottom: 1px solid #eb2755;
+  border-left: 1px solid #eb2755;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #eb2755, 0 6px 0px #eb2755, 0 8px 4px 1px #eb2755;
+  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #eb2755, 0 6px 0px #bc2c2c, 0 8px 4px 1px #eb2755;
+  color: #fff;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 10px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #bc2c2c;
+  -webkit-background-clip: padding-box; 
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 80%;
+  height: auto;
+
+}
+  
+.punch2:hover {
+    -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    cursor: pointer; 
+}
+
+.punch2:active {
+    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    /*margin-top: 58px; */
+    position: static;
+}
+
+center#nav{
+  margin-top:40px;
+  margin-bottom:40px;
+  
+}
+
+.getAutoHeight {
+   position: relative;
+   overflow: auto; /* edit by thobens: overflow: hidden seems to be better, as (at least) IE 8 shows always a disabled scrollbar with overflow: auto */
+}
+
+
+input.punch:hover{
+  color:white;
+}
+
+input.punch:active{
+  color:#25c655;
+}
+
+input.punch2:hover{
+  color:#25c655;
+}
+
+/* NAV BAR */
+
+.main-nav{
+  display:inline-block;
+  position: top left;
+
+}
+
 nav > ul {
   margin-top: 2em;
-  margin-left: 0px;
+  margin-left: 130px;
   height: 40px;
   line-height: 40px;
   padding-left: 2em;
@@ -259,7 +253,7 @@ nav ul li a {
   text-shadow: 0px -1px 1px indigo;
    -webkit-background-clip: padding-box; 
   /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 100%;
+  width: 150px;
   height: auto;
   cursor: pointer;
  
@@ -267,7 +261,7 @@ nav ul li a {
 
 nav > ul > li > a {
   color:#25c625;
-  background: #F6FCB8;
+  background: black;
   -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
   box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
   cursor: pointer;
@@ -276,12 +270,12 @@ nav > ul > li > a {
   padding: 10px 0 12px 0;
   text-align: center;
   /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 100%;
+  width: 150px;
   height: auto;
   border-radius: 11px;
 }
 
-nav > ul > li > a:link {color: #3399FF; -moz-text-decoration-style: solid; padding: 10px 14px;}      /* unvisited link */
+nav > ul > li > a:link {color: #3399FF; -moz-text-decoration-style: solid; padding: 11px 30px;}      /* unvisited link */
 nav > ul > li > a:visited {color:#3399FF;}  /* visited link */
 nav > ul > li > a:hover {
   background: #3399FF;
@@ -295,7 +289,8 @@ nav > ul > li > a:hover {
   color: #fff;
   text-shadow: 0px -1px 1px #E1DFD3;
   -webkit-background-clip: padding-box; 
- }/* mouse over link */
+ }
+ /* mouse over link */
 nav > ul > li > a:active {color:#33CC33; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
     box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
     /*margin-top: 58px; */
@@ -378,24 +373,383 @@ nav > ul > li > ul > li:hover > ul {
   border-left-color: rgba(216,30,179,0.56); 
 }
 
+/* End Nav Bar */
+
+/* LINKS */
+
 a{
   text-decoration: none;
+  color: black;
 }
+
+label a {
+  font-size: 22px;
+}
+label a:hover{
+  color:indigo;
+}
+
+a#shop{
+  font-size: 24px;
+}
+
+a#shop:hover{
+  color: #33CC33;
+  font-size: 24px;
+}
+
 a h2:hover{
-  color:#E1DFD3;
+  color:indigo;
 }
 
 p a:hover{
-  color:#E1DFD3;
-  font-size: 29px;
+  color:indigo;
 }
 
-@keyframes rotate {
-  from { background-position-x: 0px; }
-  to { background-position-x: 210px; }
+/*  article styling */
+
+article{
+  background: black;
+  padding: 10px;
+}
+article p{
+  word-spacing: 2px;
+  color: #FFFFCC;
+  text-shadow: 2px 2px #3399FF;
+  font-family: "Marcellus", serif;
+  margin-top: -5px;
 }
 
-/* end nav bar */
+ul{
+  list-style: none;
+}
+
+/* UL id of "preview" */
+
+ul#preview {
+  width: 100%;
+  margin-left: -20px;
+}
+
+ul#preview li {
+  list-style: none;
+  display: inline-block;
+  min-width:280px;
+  width: 45%;
+  height: 320px;
+}
+
+/* UL class of "docs" */
+
+ul.docs
+{
+  list-style: none;
+}
+ul.docs li
+{
+  display: inline;
+}
+
+article{
+  background:transparent;
+}
+/* UL class of "newsfeed" */
+ul.newsfeed{
+  list-style: none;
+}
+ul.newsfeed li{
+  margin: 10px;
+  display: inline-block;
+  width: 400px;
+}
+
+/* UL for lyrics page*/
+ul > li {
+  font-size: 22px;
+  color: black;
+  text-shadow: 2px 2px #3399FF;
+}
+
+/* UL class of "list" */
+ul.list{
+  list-style: none;
+}
+
+ul.list > li {
+  font-size: 18px;
+}
+
+/* UL class of "list2" */
+ul.list2 li {
+  width: 47%;
+  height: auto;
+  display: inline-block;
+  text-align: left;
+}
+/* UL class of "list3" */
+ul.list3 li {
+  display: inline;
+  margin-right: 30px;
+}
+
+/* SHOP ITEMS CSS */
+
+ul#shop li {
+  list-style: none;
+  display: inline;
+  margin:4px;
+}
+
+ul#shop li img {
+  box-shadow: 8px 8px 5px #888888;
+}
+
+/* Wrapper div for tabs */
+div.wrapper{
+  margin-bottom: 60px;
+}
+
+/* Images of Zander Norell */
+
+span img{
+  max-width:200px;
+  max-height:300px;
+  margin-right: 15px;
+  margin-bottom: 60px;
+}
+/* id of "tw" */
+#two {
+  max-width: 670px;
+  max-height: 400px;
+  position: center fixed;
+}
+
+/* id of "left" */
+
+#left {
+  height: 300px; 
+  min-width:280px;
+  max-width: 600px;
+
+}
+
+/* id of "left" */
+
+#right {
+  max-width: 600px;
+  min-width: 280px;
+  margin-top: -70px;
+  margin-left: -20px;
+}
+
+/* Scrollable div id="scroll" */
+
+#scroll{
+  background: #3399FF;
+  width: 90%;
+  min-height: 200px; 
+  height: 320px;
+  overflow-y: scroll;
+}
+
+/* for table of tour schedule */
+
+table {
+  margin-top: 20px;
+  margin-left: 20px;
+
+}
+
+table tr.title {
+  text-decoration: underline;
+  font-style: bold;
+
+}
+
+table tr td p {
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-right:10px;
+  margin-left: 0px;
+}
+/* h1, h2, h3, h4, p */
+
+
+h1.enterSite{
+    text-align: center;
+    background-color: transparent;
+    border-color: indigo;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-shadow: 2px 2px #ff0000;
+    font-size: 180px;
+    font-family: 'Shadows Into Light Two';
+    margin-top: 10px;
+}
+
+
+h1 {
+  position: absolute;
+  text-align: center;
+  color: #FFFF66;
+  font:700 9em 'Montserrat Subrayada', sans-serif; 
+  width: 100%;
+}
+
+@keyframes loading {
+  from { max-width: 0; }
+}
+
+h1:before {
+  content: attr(data-content);
+  position: absolute;
+  overflow: hidden;
+  max-width: 5.3em;
+  color: #3399FF;
+  animation: loading 8s linear;
+}
+
+h2 {
+    background-color: #33CC33;
+    text-align: center;
+    color: black;
+    border-color: indigo;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #3399FF;
+    font-size: 150%;
+    font-family: 'Marcellus', serif;
+    padding: 1em;
+    margin: -1em -1em 1em -1em;
+    margin-bottom: -25px;
+}
+
+h1 + h2 {
+    margin-top: -2em;
+    padding-top: 0;
+}
+
+/* Company Logo Design */
+h3 {
+  
+  display: inline;
+
+  position: relative;
+
+  font: 150px Helvetica, Sans-Serif;
+
+  letter-spacing: -5px;
+
+  color:  #eb2755;
+
+}
+
+h2.headTitle {
+  background: black;
+  color: #3399FF;
+  width: 90%;
+  height:20px;
+  text-shadow: none;
+  border: 1px black solid;
+  margin-bottom:10px;
+}
+
+
+h3:after {
+
+  content: "Famous";
+
+  position: absolute; left: 10px; top: 5px;
+
+  color:  #E1DFD3; 
+
+}
+
+h4.tour{
+  font-size: 26px;
+  color: #33CC33;
+}
+
+
+
+p{
+  background:transparent; 
+  color:black; 
+  text-shadow: 1px 1px #3399FF;
+  font-family: 'Marcellus', serif;
+  font-size: 18px;
+  margin: 1.5em 0;
+  margin-left:10px;
+}
+
+p.title:hover{
+  font-size: 22px;
+  color: #eb2755;
+}
+
+label {
+  color: black; 
+  font-size: 22px; 
+  float:left; 
+  text-align: left; 
+  margin-top: 20px; 
+  margin-left:25px;
+}
+
+/* with modernizr */
+.csscolumns ul.features {
+ -moz-column-count: 2;
+ -webkit-columns: 2;
+ -o-columns: 2;
+ columns: 2;
+}
+.no-csscolumns ul.features {
+ float: left;
+ margin: 0 0 20px;
+}
+.no-csscolumns ul.features li {
+ float: left;
+ width: 180px;
+ margin: 2px;
+}
+.no-csscolumns .column-w{
+  float: left;
+}
+/* with modernizr */
+
+#content{
+    height:auto;
+    min-width:640px;
+    position: center absolute;
+    background-position: fixed;
+}
+#content img{
+    max-width:100%;
+    height:auto;
+}
+
+#container {
+    max-width: auto;
+    max-height: auto;
+    width: 768px;
+    min-width: 30%;
+    position: center;
+    background-position: absolute;
+}
+
+/* press page parts */
+#jct {
+    display:inline;
+    color:black;
+    font-weight:normal;
+    margin: 10px;
+    /*border:black solid 1px;*/
+}
+#jct:after {
+    content:"\A"; 
+    white-space: pre; 
+}
+
 /* Default wide-screen styles */
 
 @media only screen and (max-width: 999px) {
@@ -534,331 +888,6 @@ p a:hover{
 
 }
 
-/* with modernizr */
-.csscolumns ul.features {
- -moz-column-count: 2;
- -webkit-columns: 2;
- -o-columns: 2;
- columns: 2;
-}
-.no-csscolumns ul.features {
- float: left;
- margin: 0 0 20px;
-}
-.no-csscolumns ul.features li {
- float: left;
- width: 180px;
- margin: 2px;
-}
-.no-csscolumns .column-w{
-  float: left;
-}
-/* with modernizr */
-
-
-
-#content{
-    height:auto;
-    min-width:640px;
-    position: center absolute;
-    background-position: fixed;
-}
-#content img{
-    max-width:100%;
-    height:auto;
-}
-
-#container {
-    max-width: auto;
-    max-height: auto;
-    width: 768px;
-    min-width: 30%;
-    position: center;
-    background-position: absolute;
-}
-
-p {
-    margin: 1.5em 0;
-}
-
-
-h1 {
-  position: absolute;
-  text-align: center;
-  color: #3399FF;
-  font:700 9em 'Montserrat Subrayada', sans-serif; 
-  width: 100%;
-}
-
-@keyframes loading {
-  from { max-width: 0; }
-}
-
-h1:before {
-  content: attr(data-content);
-  position: absolute;
-  overflow: hidden;
-  max-width: 5.3em;
-  color: #FFFF66;
-  animation: loading 8s linear;
-}
-
-h2 {
-    background-color: #33CC33;
-    text-align: center;
-    color: #FFFF66;
-    border-color: indigo;
-    word-spacing: 2px;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px #3399FF;
-    font-size: 150%;
-    font-family: 'Marcellus', serif;
-    padding: 1em;
-    margin: -1em -1em 1em -1em;
-    margin-bottom: -25px;
-}
-
-h1 + h2 {
-    margin-top: -2em;
-    padding-top: 0;
-}
-
-/* Company Logo Design */
-h3 {
-  
-  display: inline;
-
-  position: relative;
-
-  font: 150px Helvetica, Sans-Serif;
-
-  letter-spacing: -5px;
-
-  color:  #eb2755;
-
-}
-
-
-
-h3:after {
-
-  content: "Famous";
-
-  position: absolute; left: 10px; top: 5px;
-
-  color:  #E1DFD3; 
-
-}
-
-
-h1.enterSite{
-    text-align: center;
-    background-color: transparent;
-    border-color: indigo;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    text-shadow: 2px 2px #ff0000;
-    font-size: 180px;
-    font-family: 'Shadows Into Light Two';
-    margin-top: 10px;
-    float: 
-}
-
-ul.list > li {
-  font-size: 18px;
-}
-
-/* Wrapper div for tabs */
-div.wrapper{
-  margin-bottom: 60px;
-}
-
-/* Images of Zander Norell */
-
-span img{
-  max-width:200px;
-  max-height:300px;
-  margin-right: 15px;
-  margin-bottom: 60px;
-}
-
-#two {
-  max-width: 670px;
-  max-height: 400px;
-  position: center fixed;
-}
-
-
-.btn {
-  background: #eb2755;
-  max-width: 80%;
-  text-decoration: none;
-  margin-bottom: 30px;
-  text-align: center;
-  padding: 1em 0;
-  display: block;
-  color: #fff;
-  transition: background .3s;
-  
-  &:hover {
-    background: lighten(#e74c3c, 10%);
-  }
-  
-}
-
-
-button a {
-  text-decoration: none;
-  text-color: white;
-}
-
-button a:link {color:white;}      /* unvisited link */
-button a:visited {color:white;}  /* visited link */
-button a:hover {color:#FF00FF;}  /* mouse over link */
-button a:active {color:blue;}  /* selected link */
-
-/* punch */
-.punch {
-  background: #F6FCB8;
-  border-top: 1px solid indigo;
-  border-right: 1px solid indigo;
-  border-bottom: 1px solid indigo;
-  border-left: 1px solid indigo;
-  border-radius: 11px;
-  -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  cursor: pointer; 
-  font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 20px;
-  padding: 10px 0 12px 0;
-  text-align: center;
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 320px;
-  color: #3399FF;
-  height: 70px;
-}
-  
-.punch:hover {
-  background: #3399FF;
-  border-top: 1px solid #3399FF;
-  border-right: 1px solid #3399FF;
-  border-bottom: 1px solid #3399FF;
-  border-left: 1px solid #3399FF;
-  border-radius: 11px;
-  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 1px 10px 1px black, 0px 1px 0 black, 0 6px 0px black, 0 8px 4px 1px #111111;
-  color: #fff;
-  text-shadow: 0px -1px 1px #E1DFD3;
-  -webkit-background-clip: padding-box; 
-}
-
-.punch:active {
-    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    /*margin-top: 58px; */
-    position: static;
-    color:indigo;
-}
-
-.punch2 {
-  background: #E68A8A;
-  border-top: 1px solid #eb2755;
-  border-right: 1px solid #eb2755;
-  border-bottom: 1px solid #eb2755;
-  border-left: 1px solid #eb2755;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #eb2755, 0 6px 0px #eb2755, 0 8px 4px 1px #eb2755;
-  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #eb2755, 0 6px 0px #bc2c2c, 0 8px 4px 1px #eb2755;
-  color: #fff;
-  font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 10px;
-  padding: 10px 0 12px 0;
-  text-align: center;
-  text-shadow: 0px -1px 1px #bc2c2c;
-  -webkit-background-clip: padding-box; 
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 80%;
-  height: auto;
-
-}
-  
-.punch2:hover {
-    -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    cursor: pointer; 
-}
-
-.punch2:active {
-    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    /*margin-top: 58px; */
-    position: static;
-}
-
-center#nav{
-  margin-top:40px;
-  margin-bottom:40px;
-  
-}
-
-.getAutoHeight {
-   position: relative;
-   overflow: auto; /* edit by thobens: overflow: hidden seems to be better, as (at least) IE 8 shows always a disabled scrollbar with overflow: auto */
-}
-
-/* Why is Zanders buttons and photo always larger than mine? b/c hes a boy! duh*/
-/*
-table tr td {
-  color:#bc2c2c;
-}
-
-td.norell{
-  width: 100%;
-  height: auto;
-}
-
-td.zander{
-  width: 50%;
-  height: auto;
-}
-*/
-
-input.punch:hover{
-  color:white;
-}
-
-input.punch:active{
-  color:#25c655;
-}
-
-input.punch2:hover{
-  color:#25c655;
-}
-
-article{
-  background: black;
-  padding: 10px;
-}
-article p{
-  word-spacing: 2px;
-  color: #FFFFCC;
-  text-shadow: 2px 2px #3399FF;
-  font-family: "Marcellus", serif;
-  margin-top: -5px;
-}
-
-ul.list{
-  list-style: none;
-}
-
-ul{
-  list-style: none;
-}
-
-p.title:hover{
-  font-size: 22px;
-  color: #eb2755;
-}
 
 /*---------- vertical tab nav */
 #vertical_tab_nav{
@@ -953,175 +982,56 @@ p.title:hover{
   float: left;
   font-size: 16px;
 }
+/* end verical tab nav */
 
-h4.tour{
-  font-size: 26px;
-  color: #33CC33;
+/* app store effect */
+
+.gallery {
+  width: 530px;
+  margin: 0 auto;
+  padding: 5px;
 }
 
+.gallery > div {
+  position: relative;
+  vertical-align: center;
+  margin: auto;
+  padding: auto;
+  /*float:left;
+  margin-right: -20px;*/
 
-/* for table of tour schedule */
-
-$breakpoint-alpha: 480px;
-
-.rwd-table {
-  margin: 2em 0;
-
-  tr {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-  }
-  th {
-    display: none;
-    color: #33CC33;
-  }
-  
-  td {
-    display: block; 
-    
-    &:first-child {
-      padding-top: .5em;
-    }
-    &:last-child {
-      padding-bottom: .5em;
-    }
-
-    &:before {
-      content: attr(data-th)": ";
-
-      width: 6.5em;
-      display: inline-block;
-      
-      @media (min-width: $breakpoint-alpha) {
-        display: none;
-      }
-    }
-  }
-  
-  th, td {
-    text-align: left;
-    
-    @media (min-width: $breakpoint-alpha) {
-      display: table-cell;
-      padding: .25em .5em;
-      
-      &:first-child {
-        padding-left: 0;
-      }
-      
-      &:last-child {
-        padding-right: 0;
-      }
-    }
-
-  }
-  
-  
-}
-
-.rwd-table {
-  background: #34495E;
-  color: #fff;
-  font: bold 14px/1 "Marcellus", serif;
-  border-radius: .4em;
-  overflow: hidden;
-  margin-top: 0px;
-  margin-left: 20px;
-  min-width: 400px;
-  width: 60%;
-  tr {
-    border-color: lighten(#34495E, 10%);
-  }
-  th, td {
-    margin: .5em 1em;
-    @media (min-width: $breakpoint-alpha) { 
-      padding: 1em !important; 
-    }
-  }
-  th, td:before {
-    color: #dd5;
-  }
 
 }
 
-ul.docs
-{
-  list-style: none;
-}
-ul.docs li
-{
-  display: inline;
-}
-article{
-  background:transparent;
+.gallery > div > a > img {
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
 }
 
-  ul.newsfeed{
-    list-style: none;
-  }
-  ul.newsfeed li{
-    margin: 10px;
-    display: inline-block;
-    width: 400px;
-  }
-
-  a{
-    text-decoration: none;
-    font-size: 22px;
-  }
-  a h2:hover{
-    color:#E1DFD3;
-  }
-
-  p a:hover{
-    color:#E1DFD3;
-    font-size: 29px;
-  }
-
-  ul.list2 li {
-    width: 47%;
-    height: auto;
-    display: inline-block;
-    text-align: left;
-  }
-
-  ul.list3 li {
-    display: inline;
-    margin-right: 30px;
-  }
-
-/* SHOP ITEMS CSS */
-
-ul#shop li {
-  list-style: none;
-  display: inline;
-  margin:4px;
+.gallery > div:hover {
+  z-index: 1;
 }
 
-ul#shop li img {
-  box-shadow: 8px 8px 5px #888888;
+.gallery > div:hover > a > img {
+  transform: scale(1.5,1.5);
+  transition: .3s transform;
 }
 
-#Item1 {
-  background-image: url("img/shop/1.jpg");
-}
-#Item1:hover {
-  background-image: url("img/shop/001.gif");
-}
-
-p{
-  background:transparent; 
-  color:black; 
-  text-shadow: 1px 1px #3399FF;
-  font-family: 'Marcellus', serif;
-  font-size: 18px;
+.cf:before, .cf:after {
+    display: table;
+    content: "";
+    line-height: 0;
 }
 
-a#shop{
-  font-size: 24px;
+.cf:after {
+    clear: both;
 }
 
-a#shop:hover{
-  color: #33CC33;
-  font-size: 24px;
+
+@keyframes rotate {
+  from { background-position-x: 0px; }
+  to { background-position-x: 210px; }
 }
+
+/* end popout effect that was on app store effect */
+
