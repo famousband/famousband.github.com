@@ -13,7 +13,6 @@ body {
     background: linear-gradient(#33CC33, #3399FF, #33CC33);
     border-radius: 6px;
     height: auto;
-    color: #33CC33;
     max-width: auto;
     min-width: auto;
     line-height: 1.5em;
@@ -906,4 +905,3 @@ label {
 }
 
 /* end popout effect that was on app store effect */
-

@@ -33,12 +33,11 @@ canvas {
 
 
 h1 {
-  position: absolute;
-  left: 42%;
-  margin-left: -1.9em;
+  position: absolute center;
   color: #FFFF66;
   font:700 9em 'Montserrat Subrayada', sans-serif; 
   margin-top:-20px;
+  margin-bottom:-130px;
 }
 
 @keyframes loading {
