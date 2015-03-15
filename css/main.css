@@ -9,7 +9,10 @@ html, body {
 
 body {
     font-family: "";
-    background-color: #33CC33;
+    background: #33CC33;
+    background: linear-gradient(#33CC33, #3399FF, #33CC33);
+    border-radius: 6px;
+    height: auto;
     color: #33CC33;
     max-width: auto;
     min-width: auto;
@@ -32,7 +35,6 @@ header {
 #wrapper {
   display: table;
   width: 80%;
-
 }
 
 /* class of "wrapper" */
@@ -617,7 +619,6 @@ h1:before {
 }
 
 h2 {
-    background-color: #33CC33;
     text-align: center;
     color: black;
     border-color: indigo;

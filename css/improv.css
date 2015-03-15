@@ -17,6 +17,8 @@ canvas {
 
 #control-panel {
   background: #33CC33;
+  background: linear-gradient(#33CC33, #3399FF, #33CC33);
+  border-radius: 6px;
   /*border: 15px solid #E68A8A;*/
   left: 20px;
   right: 20px;
@@ -34,7 +36,7 @@ h1 {
   position: absolute;
   left: 42%;
   margin-left: -1.9em;
-  color: #3399FF;
+  color: #FFFF66;
   font:700 9em 'Montserrat Subrayada', sans-serif; 
   margin-top:-20px;
 }
@@ -48,13 +50,13 @@ h1:before {
   position: absolute;
   overflow: hidden;
   max-width: 5.3em;
-  color: #FFFF66;
+  color: #3399FF;
   animation: loading 8s linear;
 }
 
 h2 {
     text-align: center;
-    color: #FFFF66;
+    color: black;
     border-color: indigo;
     letter-spacing: 2px;
     word-spacing: 2px;
@@ -74,7 +76,7 @@ h1 + h2 {
 p.playlist{
   font-family: 'Marcellus', serif;
   font-size: 150%;
-  color: #FFFF66;
+  color: black;
   letter-spacing: 2px;
   word-spacing: 2px;
   text-shadow: 2px 2px #3399FF;
