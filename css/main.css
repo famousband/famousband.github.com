@@ -579,21 +579,48 @@ table tr td p {
   margin-left: 0px;
 }
 
-/* for table on gallery page */
+/* for table galleries on bio page */
 table.gallery {
   margin-top:20px;
   margin-bottom:20px;
-  width: 100%;
-  min-width: 20%;
-}
-
-table.gallery tr td div{
-
-}
-
-table.gallery tr td ul li img {
+  margin-left: 20px;
   width: 100%;
   min-width: 280px;
+}
+
+table.gallery tr {
+  display: inline-block;
+  width: 100%;
+}
+
+table.gallery tr td {
+  margin-left: -20px;
+  padding: 0px;
+  width: 33.3%;
+  display: inline-table;
+  min-width: 300px;
+
+}
+
+/* for table of two images on bio */
+table.bio {
+  width: 100%;
+  min-width: 280px;
+  margin-left: 12%;
+}
+
+table.bio tr {
+  display: inline-block;
+  width: 100%;
+}
+
+table.bio tr td {
+  margin-left: -20px;
+  padding: 0px;
+  width: 50%;
+  display: inline-table;
+  min-width: 280px;
+
 }
 
 /* h1, h2, h3, h4, p */
