@@ -461,6 +461,7 @@ ul.newsfeed li{
   margin: 10px;
   display: inline-block;
   width: 400px;
+  font-size: 14px;
 }
 
 /* UL for lyrics page*/
@@ -468,6 +469,10 @@ ul > li {
   font-size: 22px;
   color: black;
   text-shadow: 2px 2px #3399FF;
+}
+
+ul.lyrics li {
+  text-shadow: none;
 }
 
 /* UL class of "list" */
@@ -594,6 +599,7 @@ h1 {
   color: #FFFF66;
   font:700 9em 'Montserrat Subrayada', sans-serif; 
   width: 100%;
+  min-width: 280px;
 }
 
 @keyframes loading {
@@ -605,6 +611,7 @@ h1:before {
   position: absolute;
   overflow: hidden;
   max-width: 5.3em;
+  min-width: 280px;
   color: #3399FF;
   animation: loading 8s linear;
 }
@@ -648,6 +655,8 @@ h2.headTitle {
   background: black;
   color: #3399FF;
   width: 90%;
+  max-width: 500px;
+  min-width: 100px;
   height:20px;
   text-shadow: none;
   border: 1px black solid;
