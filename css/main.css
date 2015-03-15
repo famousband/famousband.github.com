@@ -612,7 +612,6 @@ h1:before {
   position: absolute;
   overflow: hidden;
   max-width: 5.3em;
-  min-width: 280px;
   color: #3399FF;
   animation: loading 8s linear;
 }
