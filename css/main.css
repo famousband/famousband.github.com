@@ -578,6 +578,24 @@ table tr td p {
   margin-right:10px;
   margin-left: 0px;
 }
+
+/* for table on gallery page */
+table.gallery {
+  margin-top:20px;
+  margin-bottom:20px;
+  width: 100%;
+  min-width: 20%;
+}
+
+table.gallery tr td div{
+
+}
+
+table.gallery tr td ul li img {
+  width: 100%;
+  min-width: 280px;
+}
+
 /* h1, h2, h3, h4, p */
 
 
