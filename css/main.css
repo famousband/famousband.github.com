@@ -569,7 +569,7 @@ table {
 table tr.title {
   text-decoration: underline;
   font-style: bold;
-
+  font-variant: small-caps;
 }
 
 table tr td p {

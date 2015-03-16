@@ -1,70 +1,752 @@
-/* Default wide-screen styles */
-
-@media only screen and (max-width: 999px) {
-  /* rules that only apply for canvases narrower than 1000px */
+html, body {
+  margin: 0;
+  padding-top: 0px;
+  border:0;
+  min-width: 300px;
+  width:auto;
+  position: relative;
 }
 
-@media only screen and (device-width: 768px) and (orientation: landscape) {
-  /* rules for iPad in landscape orientation */
-  body{
-    width:100%;
+body {
+    font-family: "";
+    background: #33CC33;
+    background: linear-gradient(#33CC33, #3399FF, #33CC33);
+    border-radius: 6px;
     height: auto;
-  }
-  html{
-    width: 100%;
-    max-width: 768px;
-  }
+    max-width: auto;
+    min-width: auto;
+    line-height: 1.5em;
+    position: relative;
+    /*This just stops me getting horizontal scrolling if anything overflows the width*/
+    overflow-x: hidden;
+
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* iPhone, Android rules here */
-    * {
-        max-width: 320px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-     }
-     html{
-        max-width: 320px;
-     }
-     ul.desktop{
-        list-style-type: none;
-        margin-bottom: 40px;
-      }
+header {
+  margin-bottom: 150px;
+  max-height: 60px;
+  max-width: auto;
+  position: center;
+}
 
-      ul.desktop li{
-        display: block;
-        /*
-        margin-left: 10%;
-        margin-right: -8%;
-        */
-        margin-top: -90px;
-      }
+/* id of "wrapper" */
 
-      li.port{
-        min-width: 220px;
-        width:240px;
-        display: block;
-        /*float:left;*/
-        width: 48%;
-        margin-left: 3px;
-        margin-right: 10px;
-        /*
-        margin: 10px;
-        */
-      }
+#wrapper {
+  display: table;
+  width: 80%;
+}
 
-      li.contact{
-        width: 240px;
-        min-width: 220px;
-        display: block;
-        margin-right:3px;
-        /*
-        margin: 10px;
-        */
-        /*float: right;*/
-        width: 48%;
-      }
+/* class of "wrapper" */
 
+.wrapper {
+  margin:30px auto;
+  width:80%;
+  font-family:sans-serif;
+  color:#555;
+  font-size:14px;
+  line-height:24px;
+}
+
+.tabs {
+  li {
+    float:left;
+    width:33.33%;
+    list-style: none;
+  }
+  a {
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    text-transform:uppercase;
+    color:#888;
+    padding:20px 0;
+    border-bottom:2px solid #888;
+    background:#f7f7f7;
+      
+    &:hover, &.active {
+      background:#eee;
+    }
+  }
+}
+  .tabgroup {
+    div {
+      padding:30px;
+      box-shadow:0 7px 10px rgba(0,0,0,.3);
+    }
+  }
+  .clearfix:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+
+
+/* sweet button effect */
+
+.btn {
+  background: #eb2755;
+  max-width: 80%;
+  text-decoration: none;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 1em 0;
+  display: block;
+  color: #fff;
+  transition: background .3s;
+  
+  &:hover {
+    background: lighten(#e74c3c, 10%);
+  }
+  
+}
+
+
+button a {
+  text-decoration: none;
+  text-color: white;
+}
+
+button a:link {color:white;}      /* unvisited link */
+button a:visited {color:white;}  /* visited link */
+button a:hover {color:#FF00FF;}  /* mouse over link */
+button a:active {color:blue;}  /* selected link */
+
+/* punch */
+.punch {
+  background: black;
+  border-top: 1px solid indigo;
+  border-right: 1px solid indigo;
+  border-bottom: 1px solid indigo;
+  border-left: 1px solid indigo;
+  border-radius: 11px;
+  -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  cursor: pointer; 
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 20px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 320px;
+  color: #3399FF;
+  height: 70px;
+}
+  
+.punch:hover {
+  background: #3399FF;
+  border-top: 1px solid #3399FF;
+  border-right: 1px solid #3399FF;
+  border-bottom: 1px solid #3399FF;
+  border-left: 1px solid #3399FF;
+  border-radius: 11px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px black, 0px 1px 0 black, 0 6px 0px black, 0 8px 4px 1px #111111;
+  color: #fff;
+  text-shadow: 0px -1px 1px #E1DFD3;
+  -webkit-background-clip: padding-box; 
+}
+
+.punch:active {
+    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    /*margin-top: 58px; */
+    position: static;
+    color:indigo;
+}
+
+.punch2 {
+  background: black;
+  border-top: 1px solid #eb2755;
+  border-right: 1px solid #eb2755;
+  border-bottom: 1px solid #eb2755;
+  border-left: 1px solid #eb2755;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #eb2755, 0 6px 0px #eb2755, 0 8px 4px 1px #eb2755;
+  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #eb2755, 0 6px 0px #bc2c2c, 0 8px 4px 1px #eb2755;
+  color: #fff;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 10px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #bc2c2c;
+  -webkit-background-clip: padding-box; 
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 80%;
+  height: auto;
+
+}
+  
+.punch2:hover {
+    -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+    cursor: pointer; 
+}
+
+.punch2:active {
+    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    /*margin-top: 58px; */
+    position: static;
+}
+
+center#nav{
+  margin-top:40px;
+  margin-bottom:40px;
+  
+}
+
+.getAutoHeight {
+   position: relative;
+   overflow: auto; /* edit by thobens: overflow: hidden seems to be better, as (at least) IE 8 shows always a disabled scrollbar with overflow: auto */
+}
+
+
+input.punch:hover{
+  color:white;
+}
+
+input.punch:active{
+  color:#25c655;
+}
+
+input.punch2:hover{
+  color:#25c655;
+}
+
+/* NAV BAR */
+
+.main-nav{
+  display:inline-block;
+  position: top left;
+
+}
+
+nav > ul {
+  margin-top: 2em;
+  margin-left: 130px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 2em;
+  list-style: none;
+}
+
+nav > ul > li {
+  position: relative;
+  margin-right: 1em;
+  float: left;
+}
+
+nav ul li a {
+  background: #3399FF;
+  border-top: 1px solid indigo;
+  border-right: 1px solid indigo;
+  border-bottom: 1px solid indigo;
+  border-left: 1px solid indigo;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px indigo, 0px 1px 0 indigo, 0 6px 0px indigo, 0 8px 4px 1px #111111;
+  color: white;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 0px -1px 1px indigo;
+   -webkit-background-clip: padding-box; 
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+ 
+}
+
+nav > ul > li > a {
+  color:#25c625;
+  background: black;
+  -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  cursor: pointer;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 20px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 150px;
+  height: auto;
+  border-radius: 11px;
+}
+
+nav > ul > li > a:link {color: #3399FF; -moz-text-decoration-style: solid; padding: 11px 30px;}      /* unvisited link */
+nav > ul > li > a:visited {color:#3399FF;}  /* visited link */
+nav > ul > li > a:hover {
+  background: #3399FF;
+  border-top: 1px solid #3399FF;
+  border-right: 1px solid #3399FF;
+  border-bottom: 1px solid #3399FF;
+  border-left: 1px solid #3399FF;
+  border-radius: 11px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px black, 0px 1px 0 black, 0 6px 0px black, 0 8px 4px 1px #111111;
+  color: #fff;
+  text-shadow: 0px -1px 1px #E1DFD3;
+  -webkit-background-clip: padding-box; 
+ }
+ /* mouse over link */
+nav > ul > li > a:active {color:#33CC33; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    /*margin-top: 58px; */
+    position: static;}  /* selected link */
+
+nav ul > li ul {
+  position: absolute;
+  width: 200px;
+  background: #33cda7;
+  border-radius: 5px;
+  padding: 5px 0;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 3px 15px rgba(0,0,0,.7);
+  list-style: none;
+}
+
+nav ul > li ul:after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 1em;
+  height: 0; 
+  width: 0;
+  border: 6px solid transparent;
+  border-bottom-color: rgba(216,30,179,0.56); 
+}
+
+nav > ul li > ul > li {
+  position: relative;
+}
+
+nav > ul > li > ul > li > ul {
+  left: 105%;
+  top: -2.5em !important;
+  z-index: 1;
+  width: 180px;
+}
+
+nav > ul > li > ul > li > ul:hover {
+  width: 200px;
+}
+
+nav > ul > li > ul > li > ul:after {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: -12px;
+  heght: 0; width: 0;
+  border: 6px solid transparent;
+  border-right-color: rgba(216,30,179,0.56); 
+}
+
+nav > ul > li > ul > li:hover > ul {
+  top: 0 !important;
+}
+
+
+.drop,.dropp {
+  padding-right: 2em;
+}
+
+.drop:after,
+.dropp:after{
+  content: "";
+  position: absolute;
+  height: 0; width: 0;
+  border: 6px solid transparent;
+}
+
+.drop:after {
+  right: 8px;
+  top: 14px;
+  border-top-color: rgba(216,30,179,0.56); 
+}
+
+.dropp:after {
+  top: 12px;
+  right: 8px;
+  border-left-color: rgba(216,30,179,0.56); 
+}
+
+/* End Nav Bar */
+
+/* LINKS */
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+label a {
+  font-size: 22px;
+}
+label a:hover{
+  color:indigo;
+}
+
+a#shop{
+  font-size: 24px;
+}
+
+a#shop:hover{
+  color: #33CC33;
+  font-size: 24px;
+}
+
+a h2:hover{
+  color:indigo;
+}
+
+p a:hover{
+  color:indigo;
+}
+
+/*  article styling */
+
+article{
+  background: black;
+  padding: 10px;
+}
+article p{
+  word-spacing: 2px;
+  color: #FFFFCC;
+  text-shadow: 2px 2px #3399FF;
+  font-family: "Marcellus", serif;
+  margin-top: -5px;
+}
+
+ul{
+  list-style: none;
+}
+
+/* UL id of "preview" */
+
+ul#preview {
+  width: 100%;
+  margin-left: -20px;
+  margin-right: 20px;
+}
+
+ul#preview li {
+  list-style: none;
+  display: inline-block;
+  min-width:280px;
+  width: 45%;
+  height: 320px;
+  margin: auto;
+}
+
+/* UL class of "docs" */
+
+ul.docs
+{
+  list-style: none;
+}
+ul.docs li
+{
+  display: inline;
+}
+
+article{
+  background:transparent;
+}
+/* UL class of "newsfeed" */
+ul.newsfeed{
+  list-style: none;
+}
+ul.newsfeed li{
+  margin: 10px;
+  display: inline-block;
+  width: 400px;
+  font-size: 14px;
+}
+
+/* UL for lyrics page*/
+ul > li {
+  font-size: 22px;
+  color: black;
+  text-shadow: 2px 2px #3399FF;
+}
+
+ul.lyrics li {
+  text-shadow: none;
+}
+
+/* UL class of "list" */
+ul.list{
+  list-style: none;
+}
+
+ul.list > li {
+  font-size: 18px;
+}
+
+/* UL class of "list2" */
+ul.list2 li {
+  width: 47%;
+  height: auto;
+  display: inline-block;
+  text-align: left;
+}
+/* UL class of "list3" */
+ul.list3 li {
+  display: inline;
+  margin-right: 30px;
+}
+
+/* SHOP ITEMS CSS */
+
+ul#shop li {
+  list-style: none;
+  display: inline;
+  margin:4px;
+}
+
+ul#shop li img {
+  box-shadow: 8px 8px 5px #888888;
+}
+
+/* Wrapper div for tabs */
+div.wrapper{
+  margin-bottom: 60px;
+}
+
+/* Images of Zander Norell */
+
+span img{
+  max-width:200px;
+  max-height:300px;
+  margin-right: 15px;
+  margin-bottom: 60px;
+}
+/* id of "two" */
+#two {
+  max-width: 670px;
+  max-height: 400px;
+  position: center fixed;
+}
+
+/* id of "left" */
+
+#left {
+  height: 300px; 
+  min-width:280px;
+  max-width: 600px;
+
+}
+
+/* id of "left" */
+
+#right {
+  max-width: 600px;
+  min-width: 280px;
+  margin-top: -70px;
+  margin-left: -20px;
+}
+
+/* Scrollable div id="scroll" */
+
+#scroll{
+  background: #3399FF;
+  width: 90%;
+  min-height: 200px; 
+  height: 320px;
+  overflow-y: scroll;
+}
+
+/* for table of tour schedule */
+
+table {
+  margin-top: 20px;
+  margin-left: 10px;
+
+}
+
+table tr.title {
+  text-decoration: underline;
+  font-style: bold;
+
+}
+
+table tr td p {
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-right:10px;
+  margin-left: 0px;
+}
+
+/* for table galleries on bio page */
+table.gallery {
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left: 20px;
+  width: 100%;
+  min-width: 280px;
+}
+
+table.gallery tr {
+  display: inline-block;
+  width: 100%;
+}
+
+table.gallery tr td {
+  margin-left: -20px;
+  padding: 0px;
+  width: 33.3%;
+  display: inline-table;
+  min-width: 300px;
+
+}
+
+/* for table of two images on bio */
+table.bio {
+  width: 100%;
+  min-width: 280px;
+  margin-left: 12%;
+}
+
+table.bio tr {
+  display: inline-block;
+  width: 100%;
+}
+
+table.bio tr td {
+  margin-left: -20px;
+  padding: 0px;
+  width: 50%;
+  display: inline-table;
+  min-width: 280px;
+
+}
+
+/* h1, h2, h3, h4, p */
+
+
+h1.enterSite{
+    text-align: center;
+    background-color: transparent;
+    border-color: indigo;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-shadow: 2px 2px #ff0000;
+    font-size: 180px;
+    font-family: 'Shadows Into Light Two';
+    margin-top: 10px;
+}
+
+
+h1 {
+  position: absolute;
+  text-align: center;
+  color: #FFFF66;
+  font:700 9em 'Montserrat Subrayada', sans-serif; 
+  width: 100%;
+  min-width: 280px;
+}
+
+@keyframes loading {
+  from { max-width: 0; }
+}
+
+h1:before {
+  content: attr(data-content);
+  position: absolute;
+  overflow: hidden;
+  max-width: 5.3em;
+  color: #3399FF;
+  animation: loading 8s linear;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    border-color: indigo;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #3399FF;
+    font-size: 150%;
+    font-family: 'Marcellus', serif;
+    padding: 1em;
+    margin: -1em -1em 1em -1em;
+    margin-bottom: -25px;
+}
+
+h1 + h2 {
+    margin-top: -2em;
+    padding-top: 0;
+}
+
+/* Company Logo Design */
+h3 {
+  
+  display: inline;
+
+  position: relative;
+
+  font: 150px Helvetica, Sans-Serif;
+
+  letter-spacing: -5px;
+
+  color:  #eb2755;
+
+}
+
+h2.headTitle {
+  background: black;
+  color: #3399FF;
+  width: 90%;
+  max-width: 500px;
+  min-width: 100px;
+  height:20px;
+  text-shadow: none;
+  border: 1px black solid;
+  margin-bottom:10px;
+}
+
+
+h3:after {
+
+  content: "Famous";
+
+  position: absolute; left: 10px; top: 5px;
+
+  color:  #E1DFD3; 
+
+}
+
+h4.tour{
+  font-size: 26px;
+  color: #33CC33;
+}
+
+
+
+p{
+  background:transparent; 
+  color:black; 
+  text-shadow: 1px 1px #3399FF;
+  font-family: 'Marcellus', serif;
+  font-size: 18px;
+  margin: 1.5em 0;
+  margin-left:10px;
+}
+
+p.title:hover{
+  font-size: 22px;
+  color: #eb2755;
+}
+
+label {
+  color: black; 
+  font-size: 22px; 
+  float:left; 
+  text-align: left; 
+  margin-top: 20px; 
+  margin-left:25px;
 }
 
 /* with modernizr */
@@ -88,58 +770,6 @@
 }
 /* with modernizr */
 
-header {
-	margin-bottom: 150px;
-	max-height: 60px;
-	max-width: auto;
-	position: center;
-	
-}
-
-html{
-    background-color: black;
-}
-
-html, body {
-  margin: 0;
-  padding-top: 5px;
-  border:0;
-  
-    /* 
-    min-width: 800px;
-    Below is with added columns
-    height: 100%; */
-  min-width: 320px;
-  width:auto;
-  position: relative;
-}
-
-body {
-    font-family: "Julius Sans One";
-    margin: 1.5em auto;
-    padding: 1.5em;
-    background-color: #33CC33;
-    color: #4D4B39;
-     /*max-width: 35em;*/
-    max-width: auto;
-    min-width: auto;
-    /*border: 0.75em solid #E68A8A;*/
-    line-height: 1.5em;
-
-    /* testing image stuff */
-    position: relative;
-
-
-}
-
-background {
-	max-width: auto;
-  max-height: auto;
-  width: 768px;
-  min-width: 30%;
-  position: center;
-  background-position: absolute;
-}
 #content{
     height:auto;
     min-width:640px;
@@ -160,356 +790,284 @@ background {
     background-position: absolute;
 }
 
-p {
-    margin: 1.5em 0;
+/* press page parts */
+#jct {
+    display:inline;
+    color:black;
+    font-weight:normal;
+    margin: 10px;
+    /*border:black solid 1px;*/
+}
+#jct:after {
+    content:"\A"; 
+    white-space: pre; 
 }
 
-/*
-h1 {
-    background-color: #5E3333;
-    text-align: center;
-    color: #E1DFD3;
-    border-color: indigo;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    text-shadow: 2px 2px #ff0000;
-    font-size: 200%;
-    font-family: 'Great Vibes', cursive;
-    padding: 0.75em;
-    margin: -0.75em -0.75em 0.75em -0.75em;
-    margin-top: -50px;
-}
-*/
 
-h1 {
-  position: absolute;
-  left: 45%;
-  margin-left: -1.9em;
-  color: #3399FF;
-  font:700 9em 'Montserrat Subrayada', sans-serif; 
-}
+/*---------- vertical tab nav */
+#vertical_tab_nav{
+  display: block;
+  width: 100%;
+  margin-left: 8%;
 
-@keyframes loading {
-  from { max-width: 0; }
-}
 
-h1:before {
-  content: attr(data-content);
-  position: absolute;
+}
+#vertical_tab_nav ul{
+  font: bold 25px/1 "Marcellus", serif;
+  display: block;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
   overflow: hidden;
-  max-width: 5.3em;
+  width: 30%;
+  border-radius: 10px 0 0 10px;
+  background: #E68A8A;
+}
+#vertical_tab_nav li{
+  border-bottom: 1px solid #000;
+  margin-bottom: 1px;
+  text-align: left;
+  padding: 0px;
+}
+#vertical_tab_nav li:last-child{
+  margin-bottom: 0px;
+  border-bottom: 0px;
+}
+#vertical_tab_nav li a{
+  display: block;
+  font-size: 14pt;
+  color: #fff;
+  text-decoration: none;
+  padding: 7%;
+  background: #E68A8A;
+  background: -webkit-linear-gradient(top,#FFFF66,#3399FF);
+  background: -moz-linear-gradient(top,#FFFF66,#3399FF);
+}
+
+#vertical_tab_nav li a:hover{
+  background: #E68A8A;
+}
+
+#vertical_tab_nav li a.selected{
+  background: black;
+  color: #33CC33;
+}
+#vertical_tab_nav div{
+  display: block;
+  float: left;
+  background: black;
+  background: black;
+  width:80%;
+  max-width: 100%;
+  min-height: 236px;
+  max-height: 600px;
+  min-width:1100px;
+  padding: 10px 3% 3% 3%;
+  border-radius: 0 10px 10px 0;
+}
+#vertical_tab_nav div article{
+  display: none;
+  margin: 0px;
+  color: #555;
+  background: black;
+  width:80%;
+  min-width:1100px;
+  max-width: 100%;
+  max-height: 600px;
+  
+}
+#vertical_tab_nav div article h2{
+  margin: 0px;
+  margin-left: -1%;
+  float:left;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  background: black;
   color: #FFFF66;
-  animation: loading 8s linear;
+  border-color: indigo;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  text-shadow: 2px 2px #3399FF;
+  
+}
+#vertical_tab_nav div article p{
+  margin: 0px 0px 20px 0px;
+  width: 60%;
+  float: left;
+  font-size: 16px;
+}
+/* end verical tab nav */
+
+/* app store effect */
+
+.gallery {
+  width: 530px;
+  margin: 0 auto;
+  padding: 5px;
 }
 
-h2 {
-    background-color: #33CC33;
-    text-align: center;
-    color: #FFFF66;
-    border-color: indigo;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    text-shadow: 2px 2px #3399FF;
-    font-size: 150%;
-    font-family: 'Marcellus', serif;
-    padding: 1em;
-    margin: -1em -1em 1em -1em;
-    margin-bottom: -25px;
-}
+.gallery > div {
+  position: relative;
+  vertical-align: center;
+  margin: auto;
+  padding: auto;
+  /*float:left;
+  margin-right: -20px;*/
 
-h1 + h2 {
-    margin-top: -2em;
-    padding-top: 0;
-}
-
-/* Company Logo Design */
-h3 {
-	
-	display: inline;
-
-	position: relative;
-
-	font: 150px Helvetica, Sans-Serif;
-
-	letter-spacing: -5px;
-
-	color:  #eb2755;
 
 }
 
+.gallery > div > a > img {
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
 
+.gallery > div:hover {
+  z-index: 1;
+}
 
-h3:after {
+.gallery > div:hover > a > img {
+  transform: scale(1.5,1.5);
+  transition: .3s transform;
+}
 
-	content: "Famous";
+.cf:before, .cf:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
 
-	position: absolute; left: 10px; top: 5px;
-
-	color:  #E1DFD3; 
-
+.cf:after {
+    clear: both;
 }
 
 
-h1.enterSite{
-    text-align: center;
-    background-color: transparent;
-    border-color: indigo;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    text-shadow: 2px 2px #ff0000;
-    font-size: 180px;
-    font-family: 'Shadows Into Light Two';
-    margin-top: 10px;
-    float: 
+@keyframes rotate {
+  from { background-position-x: 0px; }
+  to { background-position-x: 210px; }
 }
 
-ul.list > li {
-  font-size: 18px;
+/* end popout effect that was on app store effect */
+
+/* Popup note on Contact page */
+hr.modal {
+    clear: both;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 0;
+    border-top: 1px solid indigo;
 }
-
-/* Wrapper div for tabs */
-div.wrapper{
-	margin-bottom: 60px;
+h1.modal {
+    font-size: 30px;
+    margin-bottom: 40px;
 }
-
-/* Images of Zander Norell */
-
-span img{
-	max-width:200px;
-	max-height:300px;
-	margin-right: 15px;
-	margin-bottom: 60px;
-}
-
-#two {
-  max-width: 670px;
-  max-height: 400px;
-  position: center fixed;
-}
-/* below is css for image transition when in place
-
-#enter{
-    position:relative;
-    height: 711px;
-    width:auto;
-    margin: 1.5em auto;
-    margin-bottom: -200px;
-}
-#enter img{
-    position:absolute;
-    height: 400px;
-    width:auto;
-    left:0;
-    margin-left:-20px;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-}
-
-
-img.enterSite3:hover{
-    opacity:0;
-}
-div img.enterSite4:hover{
-    opacity:0;
-}
-
-*/
-
-
-/* /END mixens*/
 
 .btn {
-  background: #eb2755;
-  max-width: auto;
-  text-decoration: none;
-  margin-bottom: 30px;
-  text-align: center;
-  padding: 1em 0;
-  display: block;
-  color: #fff;
-  transition: background .3s;
-  
-  &:hover {
-    background: lighten(#e74c3c, 10%);
-  }
-  
-}
-
-/* punch */
-/*
-button.punch {
-  background: #bc2c2c;
-  border-top: 1px solid #bc2c2c;
-  border-right: 1px solid #bc2c2c;
-  border-bottom: 1px solid #bc2c2c;
-  border-left: 1px solid #bc2c2c;
-  border-radius: 4px;
+  background: black;
+  border-top: 1px solid indigo;
+  border-right: 1px solid indigo;
+  border-bottom: 1px solid indigo;
+  border-left: 1px solid indigo;
+  border-radius: 11px;
   -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
-  color: #fff;
-  font: bold 25px/1 "helvetica neue", helvetica, arial, sans-serif;
-  margin-bottom: 10px;
-  padding: 10px 0 12px 0;
-  text-align: center;
-  text-shadow: 0px -1px 1px #bc2c2c;
-  width: 350px;
-  -webkit-background-clip: padding-box; }
-  button.punch:hover {
-    -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    cursor: pointer; }
-  button.punch:active {
-    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    margin-top: 58px; }
-
-
-*/
-
-button a {
-	text-decoration: none;
-	text-color: white;
-}
-
-button a:link {color:white;}      /* unvisited link */
-button a:visited {color:white;}  /* visited link */
-button a:hover {color:#FF00FF;}  /* mouse over link */
-button a:active {color:blue;}  /* selected link */
-
-/* punch */
-.punch {
-  background: #E68A8A;
-  border-top: 1px solid #bc2c2c;
-  border-right: 1px solid #bc2c2c;
-  border-bottom: 1px solid #bc2c2c;
-  border-left: 1px solid #bc2c2c;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #bc2c2c, 0 6px 0px #bc2c2c, 0 8px 4px 1px #111111;
-  color: #fff;
+  box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  color: #3399FF;
   font: bold 25px/1 "Marcellus", serif;
   margin-bottom: 10px;
-  padding: 10px 0 12px 0;
   text-align: center;
-  text-shadow: 0px -1px 1px #bc2c2c;
+  text-shadow: 0px -1px 1px indigo;
    -webkit-background-clip: padding-box; 
   /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 100%;
-  height: auto;
-}
-  
-.punch:hover {
-    -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    cursor: pointer; 
+  width: 100px;
+  height: 70px;
+  cursor: pointer;
 }
 
-.punch:active {
-    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    /*margin-top: 58px; */
-    position: static;
-    color:blue;
-}
-
-.punch2 {
-  background: #E68A8A;
-  border-top: 1px solid #eb2755;
-  border-right: 1px solid #eb2755;
-  border-bottom: 1px solid #eb2755;
-  border-left: 1px solid #eb2755;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #eb2755, 0 6px 0px #eb2755, 0 8px 4px 1px #eb2755;
-  box-shadow: inset 0 1px 10px 1px #bc2c2c, 0px 1px 0 #eb2755, 0 6px 0px #bc2c2c, 0 8px 4px 1px #eb2755;
+.btn:hover {
+  background: #3399FF;
+  border-top: 1px solid #3399FF;
+  border-right: 1px solid #3399FF;
+  border-bottom: 1px solid #3399FF;
+  border-left: 1px solid #3399FF;
+  border-radius: 11px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px black, 0px 1px 0 black, 0 6px 0px black, 0 8px 4px 1px #111111;
   color: #fff;
   font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 10px;
-  padding: 10px 0 12px 0;
-  text-align: center;
-  text-shadow: 0px -1px 1px #bc2c2c;
+  text-shadow: 0px -1px 1px #E1DFD3;
   -webkit-background-clip: padding-box; 
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 100%;
-  height: auto;
-
 }
-  
-.punch2:hover {
-    -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-    cursor: pointer; 
+.btn.btn-big {
+    font-size: 18px;
+    padding: auto;
+    min-width: 100px;
+    font: bold 25px/1 "Marcellus", serif;
 }
 
-.punch2:active {
-    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    /*margin-top: 58px; */
-    position: static;
+.btn-close {
+    color: #aaaaaa;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
 }
-
-center#nav{
-	margin-top:40px;
-	margin-bottom:40px;
-	
+.btn-close:hover {
+    color: indigo;
 }
-
-.getAutoHeight {
-   position: relative;
-   overflow: auto; /* edit by thobens: overflow: hidden seems to be better, as (at least) IE 8 shows always a disabled scrollbar with overflow: auto */
+.modal:target:before {
+    display: none;
 }
-
-/* Why is Zanders buttons and photo always larger than mine? */
-/*
-table tr td {
-  color:#bc2c2c;
+.modal:before {
+    content:"";
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
 }
-
-td.norell{
-  width: 100%;
-  height: auto;
+.modal .modal-dialog {
+    background: #fefefe;
+    border: #333333 solid 1px;
+    border-radius: 5px;
+    margin-left: -200px;
+    position: fixed;
+    left: 50%;
+    z-index: 11;
+    width: 360px;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    top: 20%;
 }
-
-td.zander{
-  width: 50%;
-  height: auto;
+.modal:target .modal-dialog {
+    top: -100%;
+    -webkit-transform: translate(0, -500%);
+    -ms-transform: translate(0, -500%);
+    transform: translate(0, -500%);
 }
-*/
-
-input.punch:hover{
-	color:#25c655;
+.modal-body {
+    padding: 20px;
 }
-
-input.punch:active{
-  color:blue;
+.modal-header, .modal-footer {
+    padding: 10px 20px;
 }
-
-input.punch2:hover{
-	color:#25c655;
+.modal-header {
+    border-bottom: #eeeeee solid 1px;
 }
-
-article{
-  background: black;
-  padding: 10px;
+.modal-header h2 {
+    font-size: 20px;
 }
-article p{
-  color: #FFFF66;
-  word-spacing: 2px;
-  text-shadow: 1px 1px #3399FF;
-  font-family: "Marcellus", serif;
-  margin-top: -5px;
+.modal-footer {
+    border-top: #eeeeee solid 1px;
+    text-align: right;
 }
-
-ul.list{
-  list-style: none;
-}
-
-ul{
-  list-style: none;
-}
-
-p.title:hover{
-  font-size: 22px;
-  color: #eb2755;
-}
+/* END popup note on Contact page */

@@ -8,6 +8,7 @@
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="themes/famousband.min.css" />
+        <link rel="stylesheet" href="css/foundation/foundation.css" />
         <link rel="stylesheet" href="css/foundation.css" />
         <script src="js/vendor/modernizr.js"></script>
         <link rel="stylesheet" href="css/improv.css" type="text/css"/>
@@ -84,9 +85,9 @@
 			h1 {
 			  position: absolute;
         margin-bottom:-10px;
-        margin-left:-2.2em;
+        margin-left:-2.05em;
 			  left: 45%;
-			  color: #3399FF;
+			  color: #FFFF66;
 			  font:700 4em 'Montserrat Subrayada', sans-serif; 
 			}
 
@@ -99,7 +100,7 @@
 			  position: absolute;
 			  overflow: hidden;
 			  max-width: 100%;
-			  color: #FFFF66;
+			  color: #3399FF;
 			  animation: loading 8s linear;
 			}
 
@@ -110,11 +111,11 @@
 			h2 {
 			    background-color: #33CC33;
 			    text-align: center;
-			    color: #FFFF66;
+			    color: black;
 			    border-color: indigo;
 			    letter-spacing: 2px;
 			    word-spacing: 2px;
-			    text-shadow: 2px 2px #3399FF;
+			    text-shadow: 1px 1px #3399FF;
 			    font-size: 150%;
 			    font-family: 'Marcellus', serif;
 			    padding: 1em;
@@ -145,6 +146,30 @@
                 font-size: 16px;
             }
 
+      /* for table galleries on bio page */
+      table.gallery {
+        background: transparent;
+        border: none;
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-left: 10px;
+        width: 100%;
+        min-width: 280px;
+      }
+
+      table.gallery tr {
+        display: inline-block;
+        width: 100%;
+      }
+
+      table.gallery tr td {
+        margin-left: -20px;
+        padding: 0px;
+        width: 33.3%;
+        display: inline-table;
+        min-width: 300px;
+
+      }
 
 		</style>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -226,20 +251,20 @@
                 </div>
                 <center>     
 
-                      <p class="big" style="text-align: left;">We built the app, "The Band Famous", in native iOS ourselves. Currently we're working to port TBF app to Android as quickly as we can while simultaneously working on our 2nd album, "Awakening", and more. Sign up for our montlhy newsletter to follow our progress on these and other creative ventures!</p>
+                      <p class="big" style="text-align: left; color: black;">We built the app, "The Band Famous", in native iOS ourselves. Currently we're working to port TBF app to Android as quickly as we can while simultaneously working on our 2nd album, "Awakening", and more. Sign up for our montlhy newsletter to follow our progress on these and other creative ventures!</p>
                       <a href="#contact"><img src="images/connect.png" alt="Contact the Band Famous or sign up for their monthly newsletter"/></a>
                       <img src="img/bannertest.jpg"/>
                       <a href="#shop"><img src="img/shop.png" alt="Shop Famous" style="width: 80%;"/></a>
-                      <p>Thank you for visiting our official website!</p>
-                      <p>Love,</p>
-                      <h4 style="color: white; text-shadow: 2px 2px #005599; font:bold 27px/1 'Marcellus', serif; margin-bottom: -10px; margin-top:20px;">TBF</h4>
+                      <p style="color: black;">Thank you for visiting our official website!</p>
+                      <p style="color: black;">Love,</p>
+                      <h4 style="color: black; text-shadow: 2px 2px #3399FF; font:bold 27px/1 'Marcellus', serif; margin-bottom: -10px; margin-top:20px;">TBF</h4>
 
 
                 </center>
                 <br>
                 <hr style="border-top: 8px solid black; margin: 20px;">  
 
-                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
 
             <div data-id="home" data-position="fixed" data-role="footer">
@@ -251,7 +276,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -277,8 +302,7 @@
             	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
             	<br>
     		    <hr>
-                <div><h2 style="background: transparent;">Recent News</h2></div>
-
+            
                 <!-- Twitter Newsfeed -->
                 <center><a class="twitter-timeline" data-dnt="true" style="height:300px; width: 250px;" href="https://twitter.com/TheBandFamous"  data-widget-id="429406927588573184">Tweets by @TheBandFamous</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs")
@@ -292,7 +316,7 @@
 
  
                 <hr>
-                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
 
 
@@ -304,7 +328,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -428,7 +452,7 @@
                  
                 </div>
                 <hr>
-                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
 
             <div data-id="home" data-position="fixed" data-role="footer">
@@ -439,7 +463,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -463,96 +487,94 @@
               <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
               <br>
             <hr>
-              <div><h2 style="background: transparent;">Press</h2></div>
+              <div><h2 style="background: transparent;">Latest Headlines</h2></div>
               <div>
-                <label style="color: black; font-size: 22px; float:left; text-align: left; margin-top: 20px;"><a href="http://plymouthmag.com/native-apps" target="_blank">February 2015 Issue - Plymouth Magazine</a></label>
+                <a href="http://tomgreen.com/2015/03/12/episode-5-the-tom-green-podcast-3/" target="_blank">03/12/15 - Tom Green Podcast</a>
+                <p style="color: black;">TBF is on Episode 5 of the Tom Green Podcast.</p>
+                <center><a href="http://tomgreen.com/2015/03/12/episode-5-the-tom-green-podcast-3/" target="_blank"><img src="img/press/tomgreen.png" alt="TBF on Tom Green Podcast" style="width:90%; height:auto; margin-bottom: 5px; box-shadow: 8px 8px 5px #888888;"/></a></center>          
+              </div>
+              <!-- END Tom Green Podcast -->
+              <div>
+                <a href="http://plymouthmag.com/native-apps" target="_blank">02/15 - Plymouth Magazine</a>
                 <br>
-                <p style="text-align: left;">An article titled "Native Apps" was published featuring TBF app.</p>
-    
-
+                <p style="text-align: left; color: black;">An article titled "Native Apps" was published featuring TBF app.</p>
+              </div>
 
                 <!-- END Plymouth Magazine -->
 
-                <label style="color: black; font-size: 22px; float: left; margin-top: 25px;"><a href="http://www.jctmagazine.com" target="_blank">Nov. 30th, 2014 - JCT tv</a></label>
+              <div>
+                <a href="http://www.jctmagazine.com" target="_blank">11/30/14 - JCT tv</a>
                 <br>
-                <br>
-                <p style="margin-top:-5px; text-align: left;">The Band Famous was a special guest on <a href="http://www.jctmagazine.com" target="_blank">JCT tv</a>, broadcast at 10:00pm Eastern Standard Time on Channel 13 (Comcast) &amp; Channel 96 (AT&amp;T).</p>
+                <p style="text-align: left; color: black;">The Band Famous was a special guest on <a href="http://www.jctmagazine.com" target="_blank">JCT tv</a>, broadcast at 10:00pm Eastern Standard Time on Channel 13 (Comcast) &amp; Channel 96 (AT&amp;T).</p>
                   <center>
-                    <iframe width="330" height="215" style="box-shadow: 8px 8px 5px #888888;" src="http://www.youtube.com/embed/d64e1m4_MJA" frameborder="0" allowfullscreen></iframe>
-                    <br>
-                    <br>
-                    <iframe width="330" height="215" style="margin-top: -30px; box-shadow: 8px 8px 5px #888888;" src="http://www.youtube.com/embed/06bWyS7KgxE" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="90%" max-height="320px" min-height="200px" height="320px;" style="box-shadow: 8px 8px 5px #888888; margin-bottom: 10px;" src="http://www.youtube.com/embed/d64e1m4_MJA" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="90%" max-height="320px" min-height="200px" height="320px;" style="box-shadow: 8px 8px 5px #888888; margin-bottom: 5px;" src="http://www.youtube.com/embed/06bWyS7KgxE" frameborder="0" allowfullscreen></iframe>
                   </center>
               </div>
               <!-- END JCT tv -->
 
               <div>
-                <label style="color: black; font-size: 22px; float: left; margin-top: 10px;"><a href="http://www.jctmagazine.com/radio.html" target="_blank">Nov. 27th, 2014 - JCT92.G Radio</a></label>
+                <a href="http://www.jctmagazine.com/radio.html" target="_blank">11/27/14 - JCT92.G Radio</a>
                 <br>
-                <br>
-                <p style="margin-top: -15px; text-align: left;">The Band Famous was interviewed on Thanksgiving Day by <a href="http://www.jctmagazine.com/radio.html" target="_blank">JCT92.G Radio</a>. Listen to Archive:</p>
-                <center><iframe width="330" height="215" src="http://www.youtube.com/embed/FN3vgeGc3S4" style="box-shadow: 8px 8px 5px #888888;" frameborder="0" allowfullscreen></iframe></center>
+                <p style="text-align: left; color: black;">The Band Famous was interviewed on Thanksgiving Day by <a href="http://www.jctmagazine.com/radio.html" target="_blank">JCT92.G Radio</a>. Listen to Archive:</p>
+                <center><iframe width="90%" max-height="320px" min-height="200px" height="320px;" style="box-shadow: 8px 8px 5px #888888; margin-bottom: 5px;" src="http://www.youtube.com/embed/FN3vgeGc3S4" frameborder="0" allowfullscreen></iframe></center>
 
               </div>
               <!-- END JCT92.G Radio -->
 
               <div>
-                <label style="color: black; font-size: 22px; float: left; text-align:left; margin-top:10px;"><a href="http://www.mixcloud.com/WEEKONradio/week-on-radio-show-season-2-07-nov-24-alvaro-duran-the-band-famous-and-ramsey-w-jack-bianka/" target="_blank">Nov. 24th, 2014 - WeekOnLatinoAmerica Radio</a></label>
+                <a href="http://www.mixcloud.com/WEEKONradio/week-on-radio-show-season-2-07-nov-24-alvaro-duran-the-band-famous-and-ramsey-w-jack-bianka/" target="_blank">11/24/14 - WeekOnLatinoAmerica Radio</a>
                 <br>
-                <p style="text-align: left;">The Band Famous was interviewed on Monday, November 24th, by <a href="http://www.weekonla.com" target="_blank">WeekONLA Radio</a>. Hear them at 01:19:00 - Listen to Archive:</p>
+                <p style="text-align: left; color: black;">The Band Famous was interviewed on Monday, November 24th, by <a href="http://www.weekonla.com" target="_blank">WeekONLA Radio</a>. Hear them at 01:19:00 - Listen to Archive:</p>
                 <center>
                   <a href="http://www.mixcloud.com/WEEKONradio/week-on-radio-show-season-2-07-nov-24-alvaro-duran-the-band-famous-and-ramsey-w-jack-bianka/" target="_blank"><img src="img/press/WEEKON.jpg" style="height: auto; width: 90%; box-shadow: 8px 8px 5px #888888;" alt="The Band Famous featured by WeekOnLatinoAmerica Radio"/></a>
                   <img src="img/press/radio.jpg" style="height:auto; width: 50%; box-shadow: 8px 8px 5px #888888;"/>
                   <img src="img/press/radio2.jpg" style="height:auto; width: 37.5%; margin-top: -335px; box-shadow: 8px 8px 5px #888888;"/>
-                  <iframe width="90%" height="300px" style="box-shadow: 8px 8px 5px #888888;" src="https://www.mixcloud.com/widget/iframe/?feed=%2FWEEKONradio%2Fweek-on-radio-show-season-2-07-nov-24-alvaro-duran-the-band-famous-and-ramsey-w-jack-bianka%2F&amp;mini=&amp;embed_uuid=beafb580-540d-4a7b-a52f-1f3ddf0fe606&amp;replace=0&amp;hide_cover=&amp;light=&amp;hide_artwork=&amp;stylecolor=&amp;embed_type=widget_standard&amp;hide_tracklist=&amp;autoplay=" frameborder="0"></iframe><div style="clear:both; height:3px; width:300;"></div>
+                  <iframe width="90%" max-height="320px" min-height="200px" height="320px;" style="box-shadow: 8px 8px 5px #888888; margin-bottom: 5px;" src="https://www.mixcloud.com/widget/iframe/?feed=%2FWEEKONradio%2Fweek-on-radio-show-season-2-07-nov-24-alvaro-duran-the-band-famous-and-ramsey-w-jack-bianka%2F&amp;mini=&amp;embed_uuid=beafb580-540d-4a7b-a52f-1f3ddf0fe606&amp;replace=0&amp;hide_cover=&amp;light=&amp;hide_artwork=&amp;stylecolor=&amp;embed_type=widget_standard&amp;hide_tracklist=&amp;autoplay=" frameborder="0"></iframe>
                 </center>
 
               </div>
               <!-- END Week ON Latin America -->
 
               <div>
-                <label style="color: black; font-size: 22px; float: left; text-align: left;"><a href="http://www.thecurrent.org/programs/local-show/2014/11/23" target="_blank">Nov. 23rd, 2014 - The Local Show on 89.3FM The Current</a></label>
+                <a href="http://www.thecurrent.org/programs/local-show/2014/11/23" target="_blank">11/23/14 - The Local Show on 89.3FM The Current</a>
                 <br>
-                <p style="margin-top: 10px; text-align: left;"><a href="http://www.jaygabler.com" target="_blank">Jay Gabler</a> talks about The Band Famous on <a href="http://www.thecurrent.org/programs/local-show/2014/11/23" target="_blank">The Local Show</a> with host, David Campbell, at 01:14:26 into the show on Sunday, November 23th, 6:00pm - 8:00pm Central Standard Time. Listen to Archive:</p>
+                <p style="text-align: left; color: black;"><a href="http://www.jaygabler.com" target="_blank">Jay Gabler</a> talks about The Band Famous on <a href="http://www.thecurrent.org/programs/local-show/2014/11/23" target="_blank">The Local Show</a> with host, David Campbell, at 01:14:26 into the show on Sunday, November 23th, 6:00pm - 8:00pm Central Standard Time. Listen to Archive:</p>
                 <center><a href="http://www.thecurrent.org/programs/local-show/2014/11/23" target="_blank"><img src="img/press/localShow.png" style="height: auto; width: 300; box-shadow: 8px 8px 5px #888888;" alt="The Band Famous featured with Jay Gabler and David Campbell on The Local Show"/></a></center>
               </div>
                 <!-- END 89.3FM The Current -->
               <div>
-                <label style="color: black; font-size: 22px; float: left; text-align: left; margin-top: 10px;"><a href="http://blog.thecurrent.org/2014/11/music-body-painting-web-development-meet-the-band-famous/" target="_blank">Nov. 20th, 2014 - 89.3FM The Current | Local Current Blog | Minnesota Public Radio</a></label>
+                <a href="http://blog.thecurrent.org/2014/11/music-body-painting-web-development-meet-the-band-famous/" target="_blank">11/20/14 - 89.3FM The Current | Local Current Blog | Minnesota Public Radio</a>
                 <br>
-                <p style="margin-top: -20px; text-align: left;"><a href="http://www.jaygabler.com" target="_blank">Jay Gabler</a> interviewed Norell of The Band Famous and wrote a wonderful feature on TBF on <a href="http://blog.thecurrent.org/2014/11/music-body-painting-web-development-meet-the-band-famous/" target="_blank">89.3FM The Current | Local Current Blog | Minnesota Public Radio</a> on Thursday, November 20th:</p>
+                <p style="text-align: left; color: black;"><a href="http://www.jaygabler.com" target="_blank">Jay Gabler</a> interviewed Norell of The Band Famous and wrote a wonderful feature on TBF on <a href="http://blog.thecurrent.org/2014/11/music-body-painting-web-development-meet-the-band-famous/" target="_blank">89.3FM The Current | Local Current Blog | Minnesota Public Radio</a> on Thursday, November 20th:</p>
                 <center>
                   <img src="img/press/quotesJay.png" style="width:90%; height:auto; margin-bottom:10px; margin-left: 5%; box-shadow: 8px 8px 5px #888888;"/>
                   <!-- figure out hover effect!!! <img src="img/press/localCurrent.jpg" style="width:auto; height: 580px;"/> -->
-                  <a href="http://blog.thecurrent.org/2014/11/music-body-painting-web-development-meet-the-band-famous/" target="_blank"><img src="img/press/currentgif.gif" alt="Read the Band Famous Feature by 89.3FM The Current | Local Current Blog | Minnesota Public Radio" style="width:90%; height:auto; margin-bottom:10px; margin-left: 5%; margin-top: 10px; box-shadow: 8px 8px 5px #888888;"/></a>
+                  <a href="http://blog.thecurrent.org/2014/11/music-body-painting-web-development-meet-the-band-famous/" target="_blank"><img src="img/press/currentgif.gif" alt="Read the Band Famous Feature by 89.3FM The Current | Local Current Blog | Minnesota Public Radio" style="width:90%; height:auto; margin-bottom:5px; margin-left: 5%; margin-top: 10px; box-shadow: 8px 8px 5px #888888;"/></a>
                 </center>
 
               </div>
               <!-- END The Local Show -->
 
               <div>
-                  <label style="color: black; font-size: 22px; float:left; margin-top: -10px;"><a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank">July 11th, 2014: I Love Body Art</a></label>
+                  <a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank">07/11/14: I Love Body Art</a>
                   <br>
-                  <p style="margin-top: 2px; margin-bottom: 10px; text-align: left;"><a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank">I Love Body Art</a> interviewed <a href="http://www.theartistzander.wordpress.com" target="_blank">Zander</a> of The Band Famous and did a wonderful feature on his artistry on Friday, July 11th:</p>
+                  <p style="margin-bottom: 10px; text-align: left; color: black;"><a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank">I Love Body Art</a> interviewed <a href="http://www.theartistzander.wordpress.com" target="_blank">Zander</a> of The Band Famous and did a wonderful feature on his artistry on Friday, July 11th:</p>
                   <a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank"><img src="img/press/ilove.png" style="box-shadow: 8px 8px 5px #888888;" alt="I Love Body Art Interviews TBF's Zander"/></a>
               </div>
                 <!-- END I Love Body Art -->
 
               <div>
-                  <label style="color: black; font-size: 22px; float:left; margin-top: 10px; text-align: left;"><a href="http://www.lavendermagazine.com" target="_blank">May 29th - June 11th, 2014: Lavender Magazine</a></label>
+                 <a href="http://www.lavendermagazine.com" target="_blank">05 &amp; 06/14: Lavender Magazine</a>
                   <br>
-                  <p style="margin-top: 20px; margin-bottom: 20px; text-align: left;"><a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank">Lavender Magazine</a> printed our debut live performance and App Release (EP Release) Party on Page 19 of their May 29-June 11 2014 issue:</p>
+                  <p style="margin-bottom: 20px; text-align: left; color: black;"><a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank">Lavender Magazine</a> printed our debut live performance and App Release (EP Release) Party on Page 19 of their May 29-June 11 2014 issue:</p>
                   <center><img src="img/press/lavender.jpg" style="width:80%; height:auto; box-shadow: 8px 8px 5px #888888;" alt="I Love Body Art Interviews TBF's Zander"/></center>
-                  <p style="margin-left:32%; margin-top: -8px;">Poster design by Nicole Leer.</p>
-                  <label style="color: black; font-size: 22px; float:left; margin-top: 5px;"><a href="https://www.facebook.com/media/set/?set=a.753050838067619.1073741830.662034180502619&type=3" target="_blank">View Gallery</a></label>
-                  <br>
-                  <p style="margin-top:15px; text-align: left;">Famous Debut Performance &amp; App Release (EP Release) Party, the Love Monster Takeover. Courtesy Jessica Ramaker Photography, Dale Lotts, and Page Photographics. Click to view.</p> 
-                  <center><a href="https://www.facebook.com/media/set/?set=a.753050838067619.1073741830.662034180502619&type=3" target="_blank"><img src="img/lovemonster.gif" style="width:95%; height:auto; box-shadow: 8px 8px 5px #888888;" alt="I Love Body Art Interviews TBF's Zander"/></a></center>
+                  <p style="margin-left:32%; margin-top: -8px; color: black; font-size: 12px;">Poster design by Nicole Leer.</p>
                   
               </div>
 
               <hr>
-              <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+              <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
 
             <div data-id="home" data-position="fixed" data-role="footer">
@@ -563,7 +585,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -592,39 +614,39 @@
                 <div class="special">
                         <section>
                             <img src="img/youcame.jpg" alt="You Came To Me" style="margin-top:10px;"/>
-                            <p>Everybody wants to be loved.</p>
-                            <p>Everybody wants to be loved.</p>
-                            <p>We all want the same thing, to be happy.</p>
-                            <p>To live our lives the way that we like.</p>
+                            <p style="color: black;">Everybody wants to be loved.</p>
+                            <p style="color: black;">Everybody wants to be loved.</p>
+                            <p style="color: black;">We all want the same thing, to be happy.</p>
+                            <p style="color: black;">To live our lives the way that we like.</p>
                             <br>
-                            <p>You came for me, and you found love.</p>
-                            <p>And you found love...</p>
-                            <p>Love to regain your soul...</p><p>Your soul, your soul.</p>
-                            <p>You came for me, and you found love.</p> 
-                            <p>And you found love...</p>
-                            <p>Love to regain your soul...</p><p>Your soul, your soul.</p>
+                            <p style="color: black;">You came for me, and you found love.</p>
+                            <p style="color: black;">And you found love...</p>
+                            <p style="color: black;" >Love to regain your soul...</p><p style="color: black;">Your soul, your soul.</p>
+                            <p style="color: black;">You came for me, and you found love.</p> 
+                            <p style="color: black;">And you found love...</p>
+                            <p style="color: black;">Love to regain your soul...</p><p style="color: black;">Your soul, your soul.</p>
                             <br>
-                            <p>Yá Bahá'u'l-Abhá</p>
+                            <p style="color: black;">Yá Bahá'u'l-Abhá</p>
                             <br>
-                            <p>Does it really matter?</p>
-                            <p>Does it really matter?</p>
-                            <p>Does it really matter now?</p>
-                            <p>Does it really matter, matter?</p>
+                            <p style="color: black;">Does it really matter?</p>
+                            <p style="color: black;">Does it really matter?</p>
+                            <p style="color: black;">Does it really matter now?</p>
+                            <p style="color: black;">Does it really matter, matter?</p>
                             <br>
-                            <p>You came for me, and you found love.</p>
-                            <p>And you found love...</p>
-                            <p>Love to regain your soul...</p>
-                            <p>It's time for peace.</p>
-                            <p>Your soul - it's time for love - your soul.</p>
-                            <p>Come together - your soul - come together now.</p>
-                            <p>Your soul.</p>
-                            <p>I believe it all.</p>            
+                            <p style="color: black;">You came for me, and you found love.</p>
+                            <p style="color: black;">And you found love...</p>
+                            <p style="color: black;">Love to regain your soul...</p>
+                            <p style="color: black;">It's time for peace.</p>
+                            <p style="color: black;">Your soul - it's time for love - your soul.</p>
+                            <p style="color: black;">Come together - your soul - come together now.</p>
+                            <p style="color: black;">Your soul.</p>
+                            <p style="color: black;">I believe it all.</p>            
                             
                         </section>
                     
                 </div>
                 <hr>
-                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
 
             <div data-id="home" data-position="fixed" data-role="footer">
@@ -635,7 +657,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -662,24 +684,24 @@
                 <div class="special">
                         <section>
                             <img src="img/climax.jpg" alt="Climax" style="margin-top:10px;"/>
-                            <p>Let love, let love collide.</p>
-                            <p>Head on, head on collision.</p>
-                            <p>Did not see that coming.</p>
+                            <p style="color: black;">Let love, let love collide.</p>
+                            <p style="color: black;">Head on, head on collision.</p>
+                            <p style="color: black;">Did not see that coming.</p>
                             <br>
-                            <p>Techno, tech, techno, echo.</p>
-                            <p>Techno, tech, techno, techno.</p>
-                            <p>On the radio, on the radio.</p>
-                            <p>Through your stereo, through your stereo.</p>
-                            <p>Turn it up, up, up, up, up, up, ah -</p>
-                            <p>Techno, tech, techno, it's on.</p>
+                            <p style="color: black;">Techno, tech, techno, echo.</p>
+                            <p style="color: black;">Techno, tech, techno, techno.</p>
+                            <p style="color: black;">On the radio, on the radio.</p>
+                            <p style="color: black;">Through your stereo, through your stereo.</p>
+                            <p style="color: black;">Turn it up, up, up, up, up, up, ah -</p>
+                            <p style="color: black;">Techno, tech, techno, it's on.</p>
                             <br>
-                            <p>Electrified.</p>
+                            <p style="color: black;">Electrified.</p>
                         		
 
                         </section>
                 </div>
                 <hr>
-                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
 
             <div data-id="home" data-position="fixed" data-role="footer">
@@ -690,7 +712,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -718,34 +740,34 @@
                 <div class="special">
                         <section>
                             <img src="img/escape.jpg" alt="Escape" style="margin-top:10px;"/>
-                            <p>Talk about the weather,</p>
-                            <p>Or whatever you like.</p>
-                            <p>But we should get together</p>
-                            <p>And escape with the knife.</p>
-                            <p>And escape with the night.</p>
-                            <p>I wanna take you for a ride.</p>
-                            <p>I wanna take you for a ride.</p>
+                            <p style="color: black;">Talk about the weather,</p>
+                            <p style="color: black;">Or whatever you like.</p>
+                            <p style="color: black;">But we should get together</p>
+                            <p style="color: black;">And escape with the knife.</p>
+                            <p style="color: black;">And escape with the night.</p>
+                            <p style="color: black;">I wanna take you for a ride.</p>
+                            <p style="color: black;">I wanna take you for a ride.</p>
                             <br>
-                            <p>Let's go for a swim.</p>
+                            <p style="color: black;">Let's go for a swim.</p>
                             <br>
-                            <p>Undress my mind</p>
-                            <p>Caress my thoughts.</p>
-                            <p>Get inside, show me what it feels like.</p>
-                            <p>Show me what it feels like.</p>
+                            <p style="color: black;">Undress my mind</p>
+                            <p style="color: black;">Caress my thoughts.</p>
+                            <p style="color: black;">Get inside, show me what it feels like.</p>
+                            <p style="color: black;">Show me what it feels like.</p>
                             <br>
-                            <p>Talk about the weather</p>
-                            <p>Or whatever you like.</p>
-                            <p>But we should get together</p>
-                            <p>And escape with the night.</p>
-                            <p>Let's escape with the night.</p>
+                            <p style="color: black;">Talk about the weather</p>
+                            <p style="color: black;">Or whatever you like.</p>
+                            <p style="color: black;">But we should get together</p>
+                            <p style="color: black;">And escape with the night.</p>
+                            <p style="color: black;">Let's escape with the night.</p>
                             <br>
-                            <p>Undress my mind.</p>		
+                            <p style="color: black;">Undress my mind.</p>		
 
                         </section>
        
                 </div>
                 <hr>
-                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
 
             <div data-id="home" data-position="fixed" data-role="footer">
@@ -756,7 +778,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -784,51 +806,51 @@
                 <div class="special">
                         <section>
                             <img src="img/whoyouare.jpg" alt="Who You Are" style="margin-top:10px;"/>
-    					               <p>I don't even know who you are.</p>
-    			                   <p>Who you're supposed to be.</p>
-    			                   <p>Who you chose to be.</p>
-                              <p>Don't you know you're not very far?</p>
-                              <p>Be whoever you want to be.</p>
-                              <p>Who will you be?</p>
-                              <p>Who will you be?</p>
+    					               <p style="color: black;">I don't even know who you are.</p>
+    			                   <p style="color: black;">Who you're supposed to be.</p>
+    			                   <p style="color: black;">Who you chose to be.</p>
+                              <p style="color: black;">Don't you know you're not very far?</p>
+                              <p style="color: black;">Be whoever you want to be.</p>
+                              <p style="color: black;">Who will you be?</p>
+                              <p style="color: black;">Who will you be?</p>
                               <br>
-                              <p>You gotta make a decision,</p>
-                              <p>The world will keep on spinning.</p>
-                              <p>With or without you, it'll go on.</p>
+                              <p style="color: black;">You gotta make a decision,</p>
+                              <p style="color: black;">The world will keep on spinning.</p>
+                              <p style="color: black;">With or without you, it'll go on.</p>
                               <br>
-                              <p>Where does your heart dwell?</p>
-                              <p>Where does your soul fly?</p>
-                              <p>That's the way, that's the way, that's the way...</p>
-                              <p>That's the way, that's the way, that's the way... to go.</p>
-                              <p>That's the way, that's the way, that's the way...</p>
-                              <p>That's the way, that's the way, that's the way to go.</p>
-                              <p>That's the way to go.</p>
+                              <p style="color: black;">Where does your heart dwell?</p>
+                              <p style="color: black;">Where does your soul fly?</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way... to go.</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way to go.</p>
+                              <p style="color: black;">That's the way to go.</p>
                               <br>
-                              <p>I don't even, I don't even - no, wait a minute.</p>
+                              <p style="color: black;">I don't even, I don't even - no, wait a minute.</p>
                               <br>
-                              <p>I don't even know who you are.</p>
-                              <p>Who you're supposed to be.</p>
-                              <p>Who you chose to be.</p>
-                              <p>Don't you know you're not very far?</p>
-                              <p>Be whoever you want to be.</p>
-                              <p>Who will you be?</p>
-                              <p>Who will you be?</p>
+                              <p style="color: black;">I don't even know who you are.</p>
+                              <p style="color: black;">Who you're supposed to be.</p>
+                              <p style="color: black;">Who you chose to be.</p>
+                              <p style="color: black;">Don't you know you're not very far?</p>
+                              <p style="color: black;">Be whoever you want to be.</p>
+                              <p style="color: black;">Who will you be?</p>
+                              <p style="color: black;">Who will you be?</p>
                               <br>
-                              <p>You have to choose, you have to make a choice.</p>
-                              <p>Make a decision, the world, it's spinning.</p>
-                              <p>With or without you - with or without you, it'll go on.</p>
+                              <p style="color: black;">You have to choose, you have to make a choice.</p>
+                              <p style="color: black;">Make a decision, the world, it's spinning.</p>
+                              <p style="color: black;">With or without you - with or without you, it'll go on.</p>
                               <br>
-                              <p>Where does your heart dwell?</p>
-                              <p>Where does your soul fly?</p>
-                              <p>That's the way, that's the way, that's the way...</p>
-                              <p>That's the way, that's the way, that's the way...</p>
-                              <p>That's the way, that's the way, that's the way to go...</p>
-                              <p>To go.</p>       
+                              <p style="color: black;">Where does your heart dwell?</p>
+                              <p style="color: black;">Where does your soul fly?</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way to go...</p>
+                              <p style="color: black;">To go.</p>       
                         </section>
                         
                 </div>
                 <hr>
-                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
 
             <div data-id="home" data-position="fixed" data-role="footer">
@@ -839,7 +861,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -867,37 +889,37 @@
                 <div class="special">
                         <section>
                             <img src="img/wonder.jpg" alt="Ink &amp; Feather" style="margin-top:10px;"/>
-    					              <p>Sea of Wonder, your mystery...</p>
-                            <p>Sea of Wonder, your mystery elegantly,</p> 
-                            <p>Enveloping me, miniscule me.</p>
-                            <p>Sea of Wonder, your mystery elegantly,</p> 
-                            <p>Enveloping me, miniscule me.</p>
-                            <p>I, I, I ponder...</p>
-                            <p>Is the light within you, the light within me?</p>
-                            <p>And I wonder, what are your secrets?</p>
-                            <p>Would you entrust them to me?</p>
-                            <p>Sea of Wonder, won't you tell me your secrets?</p>
-                            <p>I wanna know. I wanna know.</p>
-                            <p>I wanna know your mystery.</p>
-                            <p>I wanna know your history.</p>
-                            <p>Sea of Wonder, you're so elegant.</p>
-                            <p>You're so elegant - elegantly enveloping me</p> 
-                            <p>Miniscule me, miniscule me.</p>
+    					              <p style="color: black;">Sea of Wonder, your mystery...</p>
+                            <p style="color: black;">Sea of Wonder, your mystery elegantly,</p> 
+                            <p style="color: black;">Enveloping me, miniscule me.</p>
+                            <p style="color: black;">Sea of Wonder, your mystery elegantly,</p> 
+                            <p style="color: black;">Enveloping me, miniscule me.</p>
+                            <p style="color: black;">I, I, I ponder...</p>
+                            <p style="color: black;">Is the light within you, the light within me?</p>
+                            <p style="color: black;">And I wonder, what are your secrets?</p>
+                            <p style="color: black;">Would you entrust them to me?</p>
+                            <p style="color: black;">Sea of Wonder, won't you tell me your secrets?</p>
+                            <p style="color: black;">I wanna know. I wanna know.</p>
+                            <p style="color: black;">I wanna know your mystery.</p>
+                            <p style="color: black;">I wanna know your history.</p>
+                            <p style="color: black;">Sea of Wonder, you're so elegant.</p>
+                            <p style="color: black;">You're so elegant - elegantly enveloping me</p> 
+                            <p style="color: black;">Miniscule me, miniscule me.</p>
                             <br>
-                            <p>I ponder... I am so small, so small.</p>
-                            <p>I float in your body, I float in your body.</p>
-                            <p>Sea of Wonder, just how big are you?</p>
-                            <p>How far can I swim?</p>
-                            <p>I wanna know, I wanna know.</p>
-                            <p>I wanna know, what's it like in your farwaway waters?</p>
-                            <p>I wanna swim in your body.</p>
-                            <p>I, I, I quite like your embrace...</p>         	
+                            <p style="color: black;">I ponder... I am so small, so small.</p>
+                            <p style="color: black;">I float in your body, I float in your body.</p>
+                            <p style="color: black;">Sea of Wonder, just how big are you?</p>
+                            <p style="color: black;">How far can I swim?</p>
+                            <p style="color: black;">I wanna know, I wanna know.</p>
+                            <p style="color: black;">I wanna know, what's it like in your farwaway waters?</p>
+                            <p style="color: black;">I wanna swim in your body.</p>
+                            <p style="color: black;">I, I, I quite like your embrace...</p>         	
 
                         </section>
                         
                 </div>
                 <hr>
-                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
 
             <div data-id="home" data-position="fixed" data-role="footer">
@@ -908,7 +930,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -937,26 +959,26 @@
                 <div class="special">
                         <section>
                             <img src="img/inkfeather.jpg" alt="Ink &amp; Feather" style="margin-top:10px;"/>
-                            <p>It is unkind you do not care,</p>
-                            <p>To recognize all that we share.</p>
-                            <p>How I wish you could care, and open your mind...</p>
-                            <p>Open your mind.</p>
+                            <p style="color: black;">It is unkind you do not care,</p>
+                            <p style="color: black;">To recognize all that we share.</p>
+                            <p style="color: black;">How I wish you could care, and open your mind...</p>
+                            <p style="color: black;">Open your mind.</p>
                             <br>
-                            <p>Power is the love, love is the power.</p>
-                            <p>Power is the love, love is the power.</p>
+                            <p style="color: black;">Power is the love, love is the power.</p>
+                            <p style="color: black;">Power is the love, love is the power.</p>
                             <br>
-                            <p>Don't be afraid to stand up.</p>
-                            <p>Don't be afraid to revolutionize.</p>
-                            <p>Don't be afraid to stand up.</p>
+                            <p style="color: black;">Don't be afraid to stand up.</p>
+                            <p style="color: black;">Don't be afraid to revolutionize.</p>
+                            <p style="color: black;">Don't be afraid to stand up.</p>
                             <br>
-                            <p>Love, love, love &amp; happiness...</p>          
+                            <p style="color: black;">Love, love, love &amp; happiness...</p>          
 
                         </section>
                         <br>
                         <p style="font-size: 12px;">This song is dedicated to Willard Sam Hagey &amp; Aaron Maus.</p>
                 </div>
                 <hr>
-                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
 
             <div data-id="home" data-position="fixed" data-role="footer">
@@ -967,7 +989,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -993,20 +1015,314 @@
                 <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
                 <br>
                 <hr>
-                <div><h2 style="background: transparent; margin-bottom:-50px;">Bio</h2></div>
+
                 <h3 style="text-align:left; color: white; font-family: 'Marcellus';">fa·mous</h3>
                 <p style="color: white; text-align:left; margin-top: -8px; margin-left: 20px; font-family: 'Marcellus';">adjective</p>   
                 <img src="img/press/quotesJay.jpg" style="box-shadow: 8px 8px 5px #888888;"/>
                 <img src="images/theBandFamous.jpg" style="box-shadow: 8px 8px 5px #888888;"/>
                 <p style="margin-bottom: 15px;"><a data-icon="arrow-r" data-iconpos="right" data-role="button"
                 data-theme="a" href="#press"><img src="img/press/press.jpg" style="width: 100%; height:auto; margin-top: 2px; margin-bottom: 10px;"/><br>View EPK</a></p>
-                <p style="text-align: left; margin-bottom: 15px;">All three members are working diligently on the front and back-end development to cross-platform "The Band Famous" iTunes app to Android, along with recording and production of their 2nd album, “Awakening”, a tribute album. Expect some music videos in the near future, too.</p>
-                
+                <p style="text-align: left; margin-bottom: 15px; color: black;">All three members are working diligently on the front and back-end development to cross-platform "The Band Famous" iTunes app to Android, along with recording and production of their 2nd album, “Awakening”, a tribute album. Expect some music videos in the near future, too.</p>
+                 <!-- Live, Studio, Promo Galleries -->
+                <table class="gallery" style="margin-top:-20px;">
+                  <tr>
+                    <td>
+                      <p style="margin-left: 40%; color: black;">TBF Live</p>
+                        <!-- Gallery of live images. -->
+
+                        <ul class="clearing-thumbs clearing-feature" data-clearing="">
+                            <li class="clearing-featured-img">
+                              <a href="img/live/7.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/7.jpg" style=
+                                "width: 100%; height:auto; margin-bottom: 20px; box-shadow: 8px 8px 5px #888888;"
+                                title="Click to view live performance images."></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/2.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/2.jpg"></a>
+                            </li> 
+
+                            <li>
+                                <a href="img/live/17.jpg"><img alt="TBF" data-caption="Photography by Page Photographics." src=
+                                "img/live/17.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/14.jpg"><img alt="TBF" data-caption="Photography by Page Photographics." src=
+                                "img/live/14.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/15.jpg"><img alt="TBF" data-caption="Photography by Page Photographics." src=
+                                "img/live/15.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/3.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/3.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/4.jpg"><img alt="TBF" data-caption="Photography by Dale Lotts." src=
+                                "img/live/4.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/6.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/6.jpg"></a>
+                            </li>
+
+                            <!--<li>
+                                <a href="img/live/7.jpg"><img alt="TBF" data-caption="" src=
+                                "img/live/7.jpg"></a>
+                            </li>-->
+
+                            <li>
+                                <a href="img/live/8.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/8.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/16.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/16.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/18.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/18.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/9.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/9.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/28.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/28.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/10.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/10.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/11.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/11.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/12.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/12.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/19.jpg"><img alt="TBF" data-caption="Photography by Page Photographics." src=
+                                "img/live/19.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/20.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/20.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/21.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/21.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/22.jpg"><img alt="TBF" data-caption="Photography by Dale Lotts." src=
+                                "img/live/22.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/13.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/13.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/23.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/23.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/live/24.jpg"><img alt="TBF" data-caption="Art by Lolamade. Photography by Jessica Ramaker." src=
+                                "img/live/24.jpg"></a>
+                            </li>
+                            <li>
+                                <a href="img/live/1.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker." src=
+                                "img/live/1.jpg"></a>
+                            </li>
+
+                        </ul>
+                      </td>
+
+                      <td><p style="margin-left: 35%; color: black;">TBF in Studio</p>
+                          <!-- Gallery of studio images -->
+
+                          <ul class="clearing-thumbs clearing-feature" data-clearing="">
+                              <li class="clearing-featured-img">
+                                  <a href="img/studio/Famous-0022.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker."
+                                  src="img/studio/Famous-0022.jpg" style=
+                                  "width: 100%; height:auto; margin-bottom: 20px; box-shadow: 8px 8px 5px #888888;"
+                                  title="Click to view images of TBF in studio."></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/bw-0035.jpg"><img alt="TBF"
+                                  data-caption="Photography by Jessica Ramaker." src="img/studio/bw-0035.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/Famous-0017.jpg"><img alt="TBF"
+                                  data-caption="Photography by Jessica Ramaker." src="img/studio/Famous-0017.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/Famous-0012.jpg"><img alt="TBF"
+                                  data-caption="Photography by Jessica Ramaker." src="img/studio/Famous-0012.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/bw-0038.jpg"><img alt="TBF"
+                                  data-caption="Photography by Jessica Ramaker." src="img/studio/bw-0038.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/Famous-0018.jpg"><img alt="TBF"
+                                  data-caption="Photography by Jessica Ramaker." src="img/studio/Famous-0018.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/Famous-0013.jpg"><img alt="TBF"
+                                   data-caption="Photography by Jessica Ramaker." src="img/studio/Famous-0013.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/Famous-0016.jpg"><img alt="TBF"
+                                  data-caption="Photography by Jessica Ramaker." src="img/studio/Famous-0016.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/Famous-0023.jpg"><img alt="TBF"
+                                   data-caption="Photography by Jessica Ramaker." src="img/studio/Famous-0023.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/Famous-0026.jpg"><img alt="TBF"
+                                   data-caption="Photography by Jessica Ramaker." src="img/studio/Famous-0026.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/Famous-0014.jpg"><img alt="TBF"
+                                   data-caption="Photography by Jessica Ramaker." src="img/studio/Famous-0014.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/Famous-0019.jpg"><img alt="TBF"
+                                   data-caption="Photography by Jessica Ramaker." src="img/studio/Famous-0019.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/bw-0047.jpg"><img alt="TBF"
+                                  data-caption="Photography by Jessica Ramaker." src="img/studio/bw-0047.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/studio/bw-0046.jpg"><img alt="TBF"
+                                   data-caption="Photography by Jessica Ramaker." src="img/studio/bw-0046.jpg"></a>
+                              </li>
+
+                              <!--<li>
+                                  <a href="img/studio/Famous-0010.jpg"><img alt="TBF"
+                                   src="img/studio/Famous-0010.jpg"></a>
+                              </li>-->
+
+
+                          </ul>
+                        </td>
+
+                        <td><p style="margin-left: 35%; color: black;">TBF Promo</p>
+
+                        <!-- Gallery of promo images -->
+
+                        <ul class="clearing-thumbs clearing-feature" data-clearing="">
+                            <li class="clearing-featured-img">
+                                <a href="img/promo/face5.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker."
+                                src="img/promo/face5.jpg" style=
+                                "width: 100%; height:auto; margin-bottom: 20px; box-shadow: 8px 8px 5px #888888;"
+                                title="Click to view TBF promo images."></a>
+                            </li>
+
+                            <li>
+                                <a href="img/promo/face4.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker."
+                                src="img/promo/face4.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/promo/face.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker."
+                                src="img/promo/face.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/promo/face2.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker."
+                                src="img/promo/face2.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/promo/face3.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker."
+                                src="img/promo/face3.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/promo/face6.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker."
+                                src="img/promo/face6.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/promo/face7.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker."
+                                src="img/promo/face7.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/promo/face8.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker."
+                                src="img/promo/face8.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/promo/face9.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker."
+                                src="img/promo/face9.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/promo/face10.jpg"><img alt="TBF" data-caption="Photography by Jessica Ramaker."
+                                src="img/promo/face10.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/promo/faceTerry.jpg"><img alt="TBF" data-caption=
+                                "Photography by Jessica Ramaker." src="img/promo/faceTerry.jpg"></a>
+                            </li>
+
+                            <li>
+                                <a href="img/promo/faceZander.jpg"><img alt="TBF" data-caption=
+                                "Photography by Jessica Ramaker." src="img/promo/faceZander.jpg"></a>
+                            </li>
+
+
+                        </ul>
+                      </td>
+                    </tr>
+              
+              </table>
                 
     	        	<!--Company Information below -->
 
                 <hr style="margin-top: 40px;">
-                <center><ul style="list-style: none;"><li style="text-align: left; font-size: 8px; display: inline; margin-right: 20px; margin-left:-30px; margin-top:10px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>                
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>             
 
             </div>
 
@@ -1019,7 +1335,7 @@
 
                         <li>
                             <a class="ui-btn-active ui-state-persist" data-icon=
-                            "info" href="#bio">Bio</a>
+                            "info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -1049,7 +1365,7 @@
                     <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="280" height="1007" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
                 <hr>
-                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
             </div>
 
             <div data-id="home" data-position="fixed" data-role="footer">
@@ -1060,7 +1376,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
@@ -1087,7 +1403,6 @@
                 <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
                 <div id="control-panel">
                     <hr style="margin-top:-18px;">
-                    <div><h2 style="background: transparent;">Playlist</h2></div>
                     <div class="bbplayer">
                       <button class="bb-rewind"></button>
                       <button class="bb-play"></button>
@@ -1116,13 +1431,13 @@
                     </div>
      
                     <div>
-                      <p style="margin-top:20px;">Like what you hear? Get our full-length Debut EP "Last Words" when you download our Smart Album - The Band Famous - with videos, games, and so much more. Available on iOS, Android coming soon, go home for details.</p>
+                      <p style="margin-top:20px; color: black;">Like what you hear? Get our full-length Debut EP "Last Words" when you download our Smart Album - The Band Famous - with videos, games, and so much more. Available on iOS, Android coming soon, go home for details.</p>
                     </div>
                   
                 </div>
 
-                <hr style="margin-top: 1200px;">
-                <center><ul style="list-style: none;"><li style="text-align: left; font-size: 8px; display: inline; margin-right: 20px; margin-left:-30px; margin-top:10px;">™ The Band Famous</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+                <hr style="margin-top: 800px;">
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
         
             </div>
 
@@ -1134,7 +1449,7 @@
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Bio</a>
+                            <a data-icon="info" href="#bio">Band</a>
                         </li>
 
                         <li>
