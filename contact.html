@@ -14,6 +14,8 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/foundation.css" />
+<script src="js/vendor/modernizr.js"></script>
 <link rel="stylesheet" href="css/main.css" type="text/css"/>
 <style>
       .main-nav{
@@ -29,10 +31,10 @@
 <body>
 <nav class="main-nav">
           <ul>
-            <li><a href="news.html">News</a></li>
-            <li><a href="bio.html">Band</a></li>
-            <li><a href="playlist.html">Music</a></li>
-            <li><a href="lyrics.html">Lyrics</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="bio.html">BAND</a></li>
+            <li><a href="playlist.html">MUSIC</a></li>
+            <li><a href="lyrics.html">LYRICS</a></li>
           </ul>
 </nav>
 <header>
@@ -41,6 +43,30 @@
 <center id="nav">
 	<hr style="border-top: 8px solid black; margin: 20px;">
 
+<!-- Modal -->
+<div class="modal" id="modal-one" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-header">
+          <h2 style="background:transparent; color:black; text-shadow: 1px 1px #3399FF;">Thank you for your interest in contacting TBF.</h2>
+ <a href="#modal-one" class="btn-close" aria-hidden="true">×</a>
+
+        </div>
+        <div class="modal-body">
+            <p style="text-align: left; margin-bottom:2px;">Please Note:</p>
+            <p style="text-align: left;">We are currently unsigned.</p>
+            <p style="margin-top:-20px; text-align: left;">We do not have a booking agent.</p>
+            <p style="margin-top:-20px; text-align: left;">We do not have a publicist.</p>
+            <p style="margin-top:-20px; text-align: left;">You are contacting the band directly.</p>
+            <p style="text-align: center;" class="lead"><b>Be bold.</b></p>
+        </div>
+        <div class="modal-footer"> 
+          <center><a href="#modal-one" class="btn">OK</a></center>
+        </div>
+    </div>
+</div>
+<div class="wrap" style="margin-top: -15px; margin-bottom: 15px;"> <a href="#" class="btn btn-big">INFO</a>
+
+</div>
   <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="700" height="845" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 <hr style="border-top: 8px solid black; margin: 20px;">
 </center>
@@ -50,6 +76,12 @@
 <script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
 <script type="text/javascript" src="js/tabs.js"></script>
 <script type="text/javascript" src="js/text.js"></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+
 
 </body>
 </html>

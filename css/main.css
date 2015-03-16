@@ -949,3 +949,125 @@ label {
 }
 
 /* end popout effect that was on app store effect */
+
+/* Popup note on Contact page */
+hr.modal {
+    clear: both;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 0;
+    border-top: 1px solid indigo;
+}
+h1.modal {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.btn {
+  background: black;
+  border-top: 1px solid indigo;
+  border-right: 1px solid indigo;
+  border-bottom: 1px solid indigo;
+  border-left: 1px solid indigo;
+  border-radius: 11px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  color: #3399FF;
+  font: bold 25px/1 "Marcellus", serif;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 0px -1px 1px indigo;
+   -webkit-background-clip: padding-box; 
+  /* attempting to get buttons to resize accordingly with screen adjust */
+  width: 100px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #3399FF;
+  border-top: 1px solid #3399FF;
+  border-right: 1px solid #3399FF;
+  border-bottom: 1px solid #3399FF;
+  border-left: 1px solid #3399FF;
+  border-radius: 11px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px black, 0px 1px 0 black, 0 6px 0px black, 0 8px 4px 1px #111111;
+  color: #fff;
+  font: bold 25px/1 "Marcellus", serif;
+  text-shadow: 0px -1px 1px #E1DFD3;
+  -webkit-background-clip: padding-box; 
+}
+.btn.btn-big {
+    font-size: 18px;
+    padding: auto;
+    min-width: 100px;
+    font: bold 25px/1 "Marcellus", serif;
+}
+
+.btn-close {
+    color: #aaaaaa;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.btn-close:hover {
+    color: indigo;
+}
+.modal:target:before {
+    display: none;
+}
+.modal:before {
+    content:"";
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+.modal .modal-dialog {
+    background: #fefefe;
+    border: #333333 solid 1px;
+    border-radius: 5px;
+    margin-left: -200px;
+    position: fixed;
+    left: 50%;
+    z-index: 11;
+    width: 360px;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    top: 20%;
+}
+.modal:target .modal-dialog {
+    top: -100%;
+    -webkit-transform: translate(0, -500%);
+    -ms-transform: translate(0, -500%);
+    transform: translate(0, -500%);
+}
+.modal-body {
+    padding: 20px;
+}
+.modal-header, .modal-footer {
+    padding: 10px 20px;
+}
+.modal-header {
+    border-bottom: #eeeeee solid 1px;
+}
+.modal-header h2 {
+    font-size: 20px;
+}
+.modal-footer {
+    border-top: #eeeeee solid 1px;
+    text-align: right;
+}
+/* END popup note on Contact page */
