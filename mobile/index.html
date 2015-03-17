@@ -171,6 +171,21 @@
 
       }
 
+      ul.shop li {
+        list-style: none;
+      }
+
+      .reveal-modal h2 {
+        background: transparent;
+        color: black;
+        text-shadow: 1px 1px #3399FF;
+      }
+
+      .reveal-modal p {
+        text-align: left;
+        color: black;
+      }
+
 		</style>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
@@ -196,69 +211,24 @@
       		    <hr>
               
       		    <img src="img/header.png"/>
+              <p style="margin-bottom: 15px; margin-top: -5px;"><a data-icon="arrow-r" data-iconpos="right" data-role="button"
+                data-theme="a" href="#press"><img src="img/press/press.jpg" style="width: 100%; height:auto; margin-top: 2px; margin-bottom: 10px;"/><br>View EPK</a></p>
 
-                <p><a data-icon="arrow-r" data-iconpos="right" data-role="button"
-                data-theme="a" href="#playlist">Music</a></p>
+              <!-- Twitter Newsfeed -->
+                <center><a class="twitter-timeline" data-dnt="true" style="height:300px; width: 250px;" href="https://twitter.com/TheBandFamous"  data-widget-id="429406927588573184">Tweets by @TheBandFamous</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs")
+                    </script>
 
-                <!-- Change Below to Collapsible ULs/Lis like in desktop version -->
-                <div data-collapsed="true" data-role="collapsible">
-                    <h3>Lyrics</h3>
-                    <p style="text-align: left;">Songs below are sampled from the Band Famous debut EP <i>Last Words</i>. The whole album is available for FREE in "The Band Famous" App for iOS.</p>
-                    <ul data-filter="true" data-inset="true" data-role="listview">
-                        <li data-role="list-divider"></li>
-                        <li>
-                           <a href="#youcametome"><img src="img/youcame.jpg">You Came To Me</a>
-                            
-                        </li>
-                        <li data-role="list-divider"></li>
-                        <li>
-                           <a href="#climax"><img src="img/climax.jpg">Climax</a>
-                            
-                        </li>
-                        <li data-role="list-divider"></li>
-                        <li>
-                           <a href="#escape"><img src="img/escape.jpg">Escape</a>
-                            
-                        </li>
-                        <li data-role="list-divider"></li>
-                        <li>
-                           <a href="#whoyouare"><img src="img/whoyouare.jpg">Who You Are (Acoustic)</a>
-                            
-                        </li>
-                        <li data-role="list-divider"></li>
-                        <li>
-                           <a href="#seaofwonder"><img src="img/wonder.jpg">Sea of Wonder (Live)</a>
-                            
-                        </li>
-                        <li data-role="list-divider"></li>
-                        <li>
-                           <a href="#inkfeather"><img src="img/inkfeather.jpg">Ink &amp; Feather</a>
-                            
-                        </li>
-                        <li data-role="list-divider"></li>
-                        <li>
-                          <p class="big">Get the full album and more for FREE today!</p>
-                          <center>
-                            <div>
-                              <div>
-                                <a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank"><img src="img/appstore.gif" style="width: 80%; height: auto; margin-bottom: 2px;" alt="Download The Band Famous on the App Store today!" title="Download The Band Famous on the App Store today!"/></a>
-                              </div>           
-                            </div>
-                          </center>
-                        </li>
-                        
-                    </ul>
-                </div>
+                </center>
+          
+                  <!-- FB Newsfeed -->
+                <center><div style="width: 250px; background: white;"><div class="fb-like-box" data-href="http://www.facebook.com/TheBandFamous" data-width="250px" data-height="300px" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div></div>
+                </center>
+
                 <center>     
-
-                      <p class="big" style="text-align: left; color: black;">We built the app, "The Band Famous", in native iOS ourselves. Currently we're working to port TBF app to Android as quickly as we can while simultaneously working on our 2nd album, "Awakening", and more. Sign up for our montlhy newsletter to follow our progress on these and other creative ventures!</p>
-                      <a href="#contact"><img src="images/connect.png" alt="Contact the Band Famous or sign up for their monthly newsletter"/></a>
-                      <img src="img/bannertest.jpg"/>
-                      <a href="#shop"><img src="img/shop.png" alt="Shop Famous" style="width: 80%;"/></a>
-                      <p style="color: black;">Thank you for visiting our official website!</p>
-                      <p style="color: black;">Love,</p>
-                      <h4 style="color: black; text-shadow: 2px 2px #3399FF; font:bold 27px/1 'Marcellus', serif; margin-bottom: -10px; margin-top:20px;">TBF</h4>
-
+                    <p class="big" style="text-align: left; color: black;">We're working to port our iPhone app "The Band Famous" to Android as quickly as we can while simultaneously working on our 2nd album, "Awakening", and more. Sign up for our montlhy newsletter to follow our progress on these and other creative ventures!</p>
+                    <a href="#contact"><img src="images/connect.png" alt="Contact the Band Famous or sign up for their monthly newsletter." style="margin-bottom: -5px;"/></a>
+                    <img src="img/bannertest.jpg" style="margin-bottom: -60px;"/>
 
                 </center>
                 <br>
@@ -272,76 +242,24 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a class="ui-btn-active ui-state-persist" data-icon="home" href="#home">Home</a>
+                            <a class="ui-btn-active ui-state-persist" data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Band</a>
+                            <a data-icon="info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
                         </li>
 
                         <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
+                            <a data-icon="forward" href="#shop">SHOP</a>
                         </li>
                     </ul>
                 </div><!-- /navbar -->
             </div><!-- /footer -->
 
-        </div>
-
-        <!-- News-->
-
-        <div data-add-back-btn="true" data-role="page" id="news">
-            <div data-position="fixed" data-role="header" data-theme="b">
-            </div>
-
-            <div data-role="content">
-            	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
-            	<br>
-    		    <hr>
-            
-                <!-- Twitter Newsfeed -->
-                <center><a class="twitter-timeline" data-dnt="true" style="height:300px; width: 250px;" href="https://twitter.com/TheBandFamous"  data-widget-id="429406927588573184">Tweets by @TheBandFamous</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs")
-                    </script>
-
-                </center>
-          
-                  <!-- FB Newsfeed -->
-                <center><div style="width: 250px; background: white;"><div class="fb-like-box" data-href="http://www.facebook.com/TheBandFamous" data-width="250px" data-height="300px" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div></div>
-                </center>
-
- 
-                <hr>
-                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
-            </div>
-
-
-            <div data-id="home" data-position="fixed" data-role="footer">
-                <div data-role="navbar">
-                    <ul>
-                        <li>
-                            <a data-icon="home" href="#home">Home</a>
-                        </li>
-
-                        <li>
-                            <a data-icon="info" href="#bio">Band</a>
-                        </li>
-
-                        <li>
-                            <a class="ui-btn-active ui-state-persist" data-icon=
-                            "star" href="#news">News</a>
-                        </li>
-
-                        <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
         <!-- The Band Famous Shop, Happy & Grateful Now That Money Comes -->
@@ -358,40 +276,207 @@
                     <li><a href="#contact"><img src="images/connect2.png" alt="Shop the Band Famous!" style="margin-left: -25px;" /></a></li>
                     <li><a href="#" data-reveal-id="shopNote"><img src="img/shop/placeorder.png" alt="Shop the Band Famous!"/></a></li>
                   </ul>
-
+                  <!-- Popups on click for Place Your Order or Items clicked -->
                   <div id="shopNote" class="reveal-modal" data-reveal>
-                    <h2 style="background:transparent; color:black; text-shadow: 1px 1px #3399FF;">READY TO ORDER</h2>
-                    <p>We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
-                    <p>If you know what you'd like, tap the feather to contact us with your inquiry and include:</p>
-                        <ul id="shop">
-                          <li><p style="margin:4px;">1. Item #.</p></li>
-                          <li><p style="margin:4px;">2. Quanity desired.</p></li>
-                          <li><p style="margin:4px;">3. Your name so we can personalize your order. </p></li>
-                        </ul>
-                    <p>The profits from our merchandising funnel into our creative projects. Your support helps us continue to make music, art, and apps. Thank you!</p>
-                    <p>xoxo</p>
-                    <p class="lead">The Band Famous</p>
+                    <center>
+                      <div style="width:90%%; height:auto; margin-bottom: 20px;">
+                        <h2 style="background:transparent; color:black; text-shadow: 1px 1px #3399FF;">READY TO ORDER</h2>
+                        <p style="text-align: left;">We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice, then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
+                        <p style="text-align: left;">With your order please include:</p>
+                            <ul class="shop">
+                              <li><p style="margin:4px; text-align: left;">1. Item #.</p></li>
+                              <li><p style="margin:4px; text-align: left;">2. Quanity desired.</p></li>
+                              <li><p style="margin:4px; text-align: left;">3. Your name so we can personalize your order. </p></li>
+                            </ul>
+                      </div>
+                      <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="90%" height="850" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                      <p style="text-align: left;">The profits from our merchandising funnel into our creative projects. Your support helps us continue to make music, art, and apps.</p>
+                      <p style="text-align: left;" class="lead">Thank you for shopping TBF!</p>
+                    </center>
                     <a class="close-reveal-modal">&#215;</a>
                   </div>
 
+                  <div id="iphoneone" class="reveal-modal" data-reveal>
+                    <br>
+                    <img src="img/shop/1.jpg" alt="iPhone Case Option 1 Reincarnation" title="iPhone 'Reincarnation' Pouch Case - $50.00" onmouseover="this.src='img/shop/001.gif';" onmouseout="this.src='img/shop/1.jpg';" style="width:100%; height:auto;"/>
+                    <div style="width:100%; height:auto;">
+                      <h2>$50.00</h2>
+                      <p>We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice, then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
+                      <p>With your order please include:</p>
+                          <ul class="shop">
+                            <li><p style="margin:4px;">1. Item #.</p></li>
+                            <li><p style="margin:4px;">2. Quanity desired.</p></li>
+                            <li><p style="margin:4px;">3. Your name so we can personalize your order. </p></li>
+                          </ul>
+                      <p class="lead" style="margin-bottom: 10px;">Thank you for shopping TBF!</p>
+                    </div>
+                    <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="320" height="1007" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <a class="close-reveal-modal">&#215;</a>
+                  </div>
+
+                  <div id="iphonetwo" class="reveal-modal" data-reveal>
+                    <br>
+                    <img src="img/shop/2.jpg" alt="iPhone Case Option 2 Maze Amazed" onmouseover="this.src='img/shop/002.gif';" onmouseout="this.src='img/shop/2.jpg';" title="iPhone 'Maze Amazed' Tough Case - $60.00"  style="width:100%; height:auto;"/>
+                    <div style="width:100%; height:auto;">
+                      <h2>$60.00</h2>
+                      <p>We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice, then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
+                      <p>With your order please include:</p>
+                          <ul class="shop">
+                            <li><p style="margin:4px;">1. Item #.</p></li>
+                            <li><p style="margin:4px;">2. Quanity desired.</p></li>
+                            <li><p style="margin:4px;">3. Your name so we can personalize your order. </p></li>
+                          </ul>
+                      <p class="lead" style="margin-bottom: 10px;">Thank you for shopping TBF!</p>
+                    </div>
+                    <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="320" height="1007" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <a class="close-reveal-modal">&#215;</a>
+                  </div>
+
+                  <div id="iphonethree" class="reveal-modal" data-reveal>
+                    <br>
+                    <img src="img/shop/3.jpg" alt="iPhone Case Option 3 Norell" onmouseover="this.src='img/shop/003.gif';" onmouseout="this.src='img/shop/3.jpg';" title="iPhone 'Norell' Tough Extreme Case - $65.00"  style="width:100%; height:auto;"/>
+                    <div style="width:100%; height:auto;">
+                      <h2>$65.00</h2>
+                      <p>We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice, then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
+                      <p>With your order please include:</p>
+                          <ul class="shop">
+                            <li><p style="margin:4px;">1. Item #.</p></li>
+                            <li><p style="margin:4px;">2. Quanity desired.</p></li>
+                            <li><p style="margin:4px;">3. Your name so we can personalize your order. </p></li>
+                          </ul>
+                      <p class="lead" style="margin-bottom: 10px;">Thank you for shopping TBF!</p>
+                    </div>
+                    <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="320" height="1007" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <a class="close-reveal-modal">&#215;</a>
+                  </div>
+
+                  <div id="four" class="reveal-modal" data-reveal>
+                    <br>
+                    <img src="img/shop/4.jpg" alt="iPad Case Neverland" onmouseover="this.src='img/shop/004.gif';" onmouseout="this.src='img/shop/4.jpg';" title="iPad 'Neverland' Case - $60.00" style="width:100%; height:auto;"/>
+                    <div style="width:100%; height:auto;">
+                      <h2>$60.00</h2>
+                      <p>We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice, then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
+                      <p>With your order please include:</p>
+                          <ul class="shop">
+                            <li><p style="margin:4px;">1. Item #.</p></li>
+                            <li><p style="margin:4px;">2. Quanity desired.</p></li>
+                            <li><p style="margin:4px;">3. Your name so we can personalize your order. </p></li>
+                          </ul>
+                      <p class="lead" style="margin-bottom: 10px;">Thank you for shopping TBF!</p>
+                    </div>
+                    <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="320" height="1007" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <a class="close-reveal-modal">&#215;</a>
+                  </div>
+
+                  <div id="five" class="reveal-modal" data-reveal>
+                    <br>
+                    <img src="img/shop/5.jpg" alt="Zander Coffee Mug" onmouseover="this.src='img/shop/005.gif';" onmouseout="this.src='img/shop/5.jpg';" title="'Zander' Coffee Mug - $30.00" style="width:100%; height:auto;"/>
+                    <div style="width:100%; height:auto;">
+                      <h2>$30.00</h2>
+                      <p>We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice, then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
+                      <p>With your order please include:</p>
+                          <ul class="shop">
+                            <li><p style="margin:4px;">1. Item #.</p></li>
+                            <li><p style="margin:4px;">2. Quanity desired.</p></li>
+                            <li><p style="margin:4px;">3. Your name so we can personalize your order. </p></li>
+                          </ul>
+                      <p class="lead" style="margin-bottom: 10px;">Thank you for shopping TBF!</p>
+                    </div>
+                    <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="320" height="1007" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <a class="close-reveal-modal">&#215;</a>
+                  </div>
+
+                  <div id="six" class="reveal-modal" data-reveal>
+                    <br>
+                    <img src="img/shop/6.jpg" alt="Clock, Art by Zander" onmouseover="this.src='img/shop/006.gif';" onmouseout="this.src='img/shop/6.jpg';" title="'Standing in Time' Clock - $35.00" style="width:100%; height:auto;"/>
+                    <div style="width:100%; height:auto;">
+                      <h2>$35.00</h2>
+                      <p>We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice, then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
+                      <p>With your order please include:</p>
+                          <ul class="shop">
+                            <li><p style="margin:4px;">1. Item #.</p></li>
+                            <li><p style="margin:4px;">2. Quanity desired.</p></li>
+                            <li><p style="margin:4px;">3. Your name so we can personalize your order. </p></li>
+                          </ul>
+                      <p class="lead" style="margin-bottom: 10px;">Thank you for shopping TBF!</p>
+                    </div>
+                    <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="320" height="1007" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <a class="close-reveal-modal">&#215;</a>
+                  </div>
+
+                  <div id="seven" class="reveal-modal" data-reveal>
+                    <br>
+                    <img src="img/shop/7.jpg" alt="Awakening Pillow Special Edition" onmouseover="this.src='img/shop/007.gif';" onmouseout="this.src='img/shop/7.jpg';" title="Limited Edition 'Awakening' Pillow - $40.00" style="width:100%; height:auto;"/>
+                    <div style="width:100%; height:auto;">
+                      <h2>$40.00</h2>
+                      <p>We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice, then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
+                      <p>With your order please include:</p>
+                          <ul class="shop">
+                            <li><p style="margin:4px;">1. Item #.</p></li>
+                            <li><p style="margin:4px;">2. Quanity desired.</p></li>
+                            <li><p style="margin:4px;">3. Your name so we can personalize your order. </p></li>
+                          </ul>
+                      <p class="lead" style="margin-bottom: 10px;">Thank you for shopping TBF!</p>
+                    </div>
+                    <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="320" height="1007" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <a class="close-reveal-modal">&#215;</a>
+                  </div>
+
+                  <div id="eight" class="reveal-modal" data-reveal>
+                    <br>
+                    <img src="img/shop/8.jpg" alt="Mini Clutch, Art by Zander with TBF Lyrics" onmouseover="this.src='img/shop/008.gif';" onmouseout="this.src='img/shop/8.jpg';" title="Limited Edition 'Love' Mini Clutch Bag - $55.00" style="width:100%; height:auto;"/>
+                    <div style="width:100%; height:auto;">
+                      <h2>$55.00</h2>
+                      <p>We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice, then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
+                      <p>With your order please include:</p>
+                          <ul class="shop">
+                            <li><p style="margin:4px;">1. Item #.</p></li>
+                            <li><p style="margin:4px;">2. Quanity desired.</p></li>
+                            <li><p style="margin:4px;">3. Your name so we can personalize your order. </p></li>
+                          </ul>
+                      <p class="lead" style="margin-bottom: 10px;">Thank you for shopping TBF!</p>
+                    </div>
+                    <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="320" height="1007" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <a class="close-reveal-modal">&#215;</a>
+                  </div>
+
+                  <div id="nine" class="reveal-modal" data-reveal>
+                    <br>
+                    <img src="img/shop/9.jpg" alt="The Band Famous Awakening Poster 12x16" onmouseover="this.src='img/shop/009.gif';" onmouseout="this.src='img/shop/9.jpg';" title="12x16 TBF 'Awakening' Poster - $25.00" style="width:100%; height:auto;"/>
+                    <div style="width:100%; height:auto;">
+                      <h2>$25.00</h2>
+                      <p>We have everything made custom to order. It works like this: You tell us what you'd like, we send you the invoice, then work to get you your order as soon as possible! Payments are handled through PayPal for security assurance.</p>
+                      <p>With your order please include:</p>
+                          <ul class="shop">
+                            <li><p style="margin:4px;">1. Item #.</p></li>
+                            <li><p style="margin:4px;">2. Quanity desired.</p></li>
+                            <li><p style="margin:4px;">3. Your name so we can personalize your order. </p></li>
+                          </ul>
+                      <p class="lead" style="margin-bottom: 10px;">Thank you for shopping TBF!</p>
+                    </div>
+                    <iframe src="https://docs.google.com/forms/d/1qjemgoFOuwdexgGIK860OxLDqYgQ7XvNGzJNvFv5cBI/viewform?embedded=true" width="320" height="1007" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <a class="close-reveal-modal">&#215;</a>
+                  </div>
+                  <!-- End Popups -->
+                  <!-- Begin Shop Items -->
                   <div data-role="collapsible" id="shop">
                     <h4>iPhone Cases</h4>
                     <p>Item #001<p>
                     <p>"Reincarnation" iPhone Pouch Case</p>
                     <p>$50.00</p>
-                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/001.gif" alt="iPhone Case Option 1 Reincarnation" title="iPhone 'Reincarnation' Pouch Case - $50.00" onmouseover="this.src='img/shop/1.jpg';" onmouseout="this.src='img/shop/001.gif';" /></a>
+                    <a href="#" data-reveal-id="iphoneone"><img src="img/shop/001.gif" alt="iPhone Case Option 1 Reincarnation" title="iPhone 'Reincarnation' Pouch Case - $50.00" onmouseover="this.src='img/shop/1.jpg';" onmouseout="this.src='img/shop/001.gif';" /></a>
                     <p>I am a divine pouch for your iPhone. If you desire to have me keep your iPhone case safe, include "Item #001" in your inquiry.</p>
                     <img src="images/separater2.png" class="plain"/>
                     <p>Item #002<p>
                     <p>"Maze Amazed" iPhone Tough Case</p>
                     <p>$60.00</p> 
-                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/002.gif" alt="iPhone Case Option 2 Maze Amazed" onmouseover="this.src='img/shop/2.jpg';" onmouseout="this.src='img/shop/002.gif';" title="iPhone 'Maze Amazed' Tough Case - $60.00" /></a>
+                    <a href="#" data-reveal-id="iphonetwo"><img src="img/shop/002.gif" alt="iPhone Case Option 2 Maze Amazed" onmouseover="this.src='img/shop/2.jpg';" onmouseout="this.src='img/shop/002.gif';" title="iPhone 'Maze Amazed' Tough Case - $60.00" /></a>
                     <p>I'm a beautiful, tough case, and I'll protect your beloved iPhone. If you wish for me to do so, include "Item #002" in your inquiry.</p>
                     <img src="images/separater2.png" class="plain"/>
                     <p>Item #003</p>
                     <p>"Norell" iPhone Tough Extreme Case</p>
                     <p>$65.00</p>
-                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/003.gif" alt="iPhone Case Option 3 Norell" onmouseover="this.src='img/shop/3.jpg';" onmouseout="this.src='img/shop/003.gif';" title="iPhone 'Norell' Tough Extreme Case - $65.00" /></a>
+                    <a href="#" data-reveal-id="iphonethree"><img src="img/shop/003.gif" alt="iPhone Case Option 3 Norell" onmouseover="this.src='img/shop/3.jpg';" onmouseout="this.src='img/shop/003.gif';" title="iPhone 'Norell' Tough Extreme Case - $65.00" /></a>
                     <p>Tougher than the rest, I'm extreme, yo. If you want my bad assery to keep your iPhone truly safe, include "Item #003" in your inquiry.</p>
                         
                   </div> 
@@ -401,7 +486,7 @@
                     <p>"Neverland" iPad 2/3/4 Case</p>
                     <p>Also available for iPad Air and iPad Mini by request.</p>
                     <p>$50.00</p>
-                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/004.gif" alt="iPad Case Neverland" onmouseover="this.src='img/shop/4.jpg';" onmouseout="this.src='img/shop/004.gif';" title="iPad 'Neverland' Case - $60.00"/></a>
+                    <a href="#" data-reveal-id="four"><img src="img/shop/004.gif" alt="iPad Case Neverland" onmouseover="this.src='img/shop/4.jpg';" onmouseout="this.src='img/shop/004.gif';" title="iPad 'Neverland' Case - $60.00"/></a>
                     <p>I'll remind you of imaginative daydreams while keeping your iPad safe and sound, to order me include "Item #004" in your inquiry.</p>
                   </div>  
 
@@ -410,7 +495,7 @@
                     <p>Item #005<p>
                     <p>"In the Smoke" Coffee Mug</p>
                     <p>$30.00</p> 
-                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/005.gif" alt="Zander Coffee Mug" onmouseover="this.src='img/shop/5.jpg';" onmouseout="this.src='img/shop/005.gif';" title="'Zander' Coffee Mug - $30.00"/></a>
+                    <a href="#" data-reveal-id="five"><img src="img/shop/005.gif" alt="Zander Coffee Mug" onmouseover="this.src='img/shop/5.jpg';" onmouseout="this.src='img/shop/005.gif';" title="'Zander' Coffee Mug - $30.00"/></a>
                     <p>Enjoy your morning Java with this special edition TBF coffee mug, featuring Zander "In the Smoke", Photography by Jessica Ramaker. To order me include "Item #005" in your inquiry.
                   </div>  
 
@@ -419,7 +504,7 @@
                     <p>Item #006<p>
                     <p>"Standing in Time" Clock</p>
                     <p>$35.00</p> 
-                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/006.gif" alt="Clock, Art by Zander" onmouseover="this.src='img/shop/6.jpg';" onmouseout="this.src='img/shop/006.gif';" title="'Standing in Time' Clock - $35.00"/></a>
+                    <a href="#" data-reveal-id="six"><img src="img/shop/006.gif" alt="Clock, Art by Zander" onmouseover="this.src='img/shop/6.jpg';" onmouseout="this.src='img/shop/006.gif';" title="'Standing in Time' Clock - $35.00"/></a>
                     <p>Enjoy this 8" diameter wall clock with featured artwork by Zander. It is sure to add character to any room you choose to display it. To order me include "Item #006" in your inquiry.</p>
                   </div>
 
@@ -428,7 +513,7 @@
                     <p>Item #007<p>
                     <p>"Awakening" Pillow Special Edition</p>
                     <p>$40.00</p> 
-                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/007.gif" alt="Awakening Pillow Special Edition" onmouseover="this.src='img/shop/7.jpg';" onmouseout="this.src='img/shop/007.gif';" title="Limited Edition 'Awakening' Pillow - $40.00"/></a>
+                    <a href="#" data-reveal-id="seven"><img src="img/shop/007.gif" alt="Awakening Pillow Special Edition" onmouseover="this.src='img/shop/7.jpg';" onmouseout="this.src='img/shop/007.gif';" title="Limited Edition 'Awakening' Pillow - $40.00"/></a>
                     <p>I am a special edition pillow featuring the album cover artwork of TBF's upcoming 2nd album, "Awakening". Photo by Jessica Ramaker Photography. To awaken with me, include "Item #007" in your inquiry.</p>
                   </div>
 
@@ -437,7 +522,7 @@
                     <p>Item #008<p>
                     <p>"Love" Limited Edition Mini Clutch Bag</p>
                     <p>$55.00</p> 
-                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/008.gif" alt="Mini Clutch, Art by Zander with TBF Lyrics" onmouseover="this.src='img/shop/8.jpg';" onmouseout="this.src='img/shop/008.gif';" title="Limited Edition 'Love' Mini Clutch Bag - $55.00"/></a>
+                    <a href="#" data-reveal-id="eight"><img src="img/shop/008.gif" alt="Mini Clutch, Art by Zander with TBF Lyrics" onmouseover="this.src='img/shop/8.jpg';" onmouseout="this.src='img/shop/008.gif';" title="Limited Edition 'Love' Mini Clutch Bag - $55.00"/></a>
                     <p>Wear your love everywhere you go with this limited edition "Love" mini clutch bag, which features artworks by TBF's Zander, as well as lyrics from "You Came To Me", off of our debut EP <i>Last Words</i>. To order, include "Item# 008" in your inquiry.</p>
                   </div>
 
@@ -446,9 +531,10 @@
                     <p>Item #009<p>
                     <p>12x16 TBF "Awakening" Poster</p>
                     <p>$25.00</p> 
-                    <a href="#" data-reveal-id="shopNote"><img src="img/shop/009.gif" alt="The Band Famous Awakening Poster 12x16" onmouseover="this.src='img/shop/9.jpg';" onmouseout="this.src='img/shop/009.gif';" title="12x16 TBF 'Awakening' Poster - $25.00"/></a>
+                    <a href="#" data-reveal-id="nine"><img src="img/shop/009.gif" alt="The Band Famous Awakening Poster 12x16" onmouseover="this.src='img/shop/9.jpg';" onmouseout="this.src='img/shop/009.gif';" title="12x16 TBF 'Awakening' Poster - $25.00"/></a>
                     <p>Are you excited for TBF's upcoming 2nd album, "Awakening"? We are, too! You can order your poster featuring all three members of the Band Famous, today! By request, we'd be happy to sign it for you with a personal message. Include "Item #009" in your inquiry!</p>
                   </div>
+                  <!-- END Shop Items -->
                  
                 </div>
                 <hr>
@@ -459,19 +545,19 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a data-icon="home" href="#home">Home</a>
+                            <a data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Band</a>
+                            <a data-icon="info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
                         </li>
 
                         <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
+                            <a class="ui-btn-active ui-state-persist" data-icon="forward" href="#shop">SHOP</a>
                         </li>
                     </ul>
                 </div>
@@ -581,69 +667,43 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a data-icon="home" href="#home">Home</a>
+                            <a data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Band</a>
+                            <a data-icon="info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
                         </li>
 
                         <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
+                            <a data-icon="forward" href="#shop">SHOP</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
+        <!-- Intro (Don't Be Afraid) Lyrics -->
 
-        <!-- You Came To Me Lyrics -->
-
-        <div data-add-back-btn="true" data-role="page" id="youcametome">
+        <div data-add-back-btn="true" data-role="page" id="intro">
             <div data-position="fixed" data-role="header" data-theme="b">
             </div>
 
             <div data-role="content">
-                <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
-                <br>
-                <hr>
+              <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+              <br>
+            <hr>
                 <div class="special">
                         <section>
-                            <img src="img/youcame.jpg" alt="You Came To Me" style="margin-top:10px;"/>
-                            <p style="color: black;">Everybody wants to be loved.</p>
-                            <p style="color: black;">Everybody wants to be loved.</p>
-                            <p style="color: black;">We all want the same thing, to be happy.</p>
-                            <p style="color: black;">To live our lives the way that we like.</p>
-                            <br>
-                            <p style="color: black;">You came for me, and you found love.</p>
-                            <p style="color: black;">And you found love...</p>
-                            <p style="color: black;" >Love to regain your soul...</p><p style="color: black;">Your soul, your soul.</p>
-                            <p style="color: black;">You came for me, and you found love.</p> 
-                            <p style="color: black;">And you found love...</p>
-                            <p style="color: black;">Love to regain your soul...</p><p style="color: black;">Your soul, your soul.</p>
-                            <br>
-                            <p style="color: black;">Yá Bahá'u'l-Abhá</p>
-                            <br>
-                            <p style="color: black;">Does it really matter?</p>
-                            <p style="color: black;">Does it really matter?</p>
-                            <p style="color: black;">Does it really matter now?</p>
-                            <p style="color: black;">Does it really matter, matter?</p>
-                            <br>
-                            <p style="color: black;">You came for me, and you found love.</p>
-                            <p style="color: black;">And you found love...</p>
-                            <p style="color: black;">Love to regain your soul...</p>
-                            <p style="color: black;">It's time for peace.</p>
-                            <p style="color: black;">Your soul - it's time for love - your soul.</p>
-                            <p style="color: black;">Come together - your soul - come together now.</p>
-                            <p style="color: black;">Your soul.</p>
-                            <p style="color: black;">I believe it all.</p>            
-                            
+                            <img src="img/intro.jpg" alt="Who You Are" style="margin-top:10px;"/>
+                             <p style="color: black;">Don't be afraid to stand up.</p>
+                             <p style="color: black;">Don't be afraid to revolutionize.</p>
+                             <p style="color: black;">Don't be afraid to standup.</p>
                         </section>
-                    
+                        
                 </div>
                 <hr>
                 <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
@@ -653,19 +713,19 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a data-icon="home" href="#home">Home</a>
+                            <a data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Band</a>
+                            <a data-icon="info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
                         </li>
 
                         <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
+                            <a data-icon="forward" href="#shop">SHOP</a>
                         </li>
                     </ul>
                 </div>
@@ -708,19 +768,19 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a data-icon="home" href="#home">Home</a>
+                            <a data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Band</a>
+                            <a data-icon="info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
                         </li>
 
                         <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
+                            <a data-icon="forward" href="#shop">SHOP</a>
                         </li>
                     </ul>
                 </div>
@@ -774,19 +834,19 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a data-icon="home" href="#home">Home</a>
+                            <a data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Band</a>
+                            <a data-icon="info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a data-icon="star" href="#news">MUSIC</a>
                         </li>
 
                         <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
+                            <a data-icon="forward" href="#contact">SHOP</a>
                         </li>
                     </ul>
                 </div>
@@ -800,52 +860,48 @@
             </div>
 
             <div data-role="content">
-            	<h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
-            	<br>
-    		    <hr>
+              <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+              <br>
+            <hr>
                 <div class="special">
                         <section>
-                            <img src="img/whoyouare.jpg" alt="Who You Are" style="margin-top:10px;"/>
-    					               <p style="color: black;">I don't even know who you are.</p>
-    			                   <p style="color: black;">Who you're supposed to be.</p>
-    			                   <p style="color: black;">Who you chose to be.</p>
-                              <p style="color: black;">Don't you know you're not very far?</p>
-                              <p style="color: black;">Be whoever you want to be.</p>
-                              <p style="color: black;">Who will you be?</p>
-                              <p style="color: black;">Who will you be?</p>
-                              <br>
-                              <p style="color: black;">You gotta make a decision,</p>
-                              <p style="color: black;">The world will keep on spinning.</p>
-                              <p style="color: black;">With or without you, it'll go on.</p>
-                              <br>
-                              <p style="color: black;">Where does your heart dwell?</p>
-                              <p style="color: black;">Where does your soul fly?</p>
-                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
-                              <p style="color: black;">That's the way, that's the way, that's the way... to go.</p>
-                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
-                              <p style="color: black;">That's the way, that's the way, that's the way to go.</p>
-                              <p style="color: black;">That's the way to go.</p>
-                              <br>
-                              <p style="color: black;">I don't even, I don't even - no, wait a minute.</p>
-                              <br>
-                              <p style="color: black;">I don't even know who you are.</p>
-                              <p style="color: black;">Who you're supposed to be.</p>
-                              <p style="color: black;">Who you chose to be.</p>
-                              <p style="color: black;">Don't you know you're not very far?</p>
-                              <p style="color: black;">Be whoever you want to be.</p>
-                              <p style="color: black;">Who will you be?</p>
-                              <p style="color: black;">Who will you be?</p>
-                              <br>
-                              <p style="color: black;">You have to choose, you have to make a choice.</p>
-                              <p style="color: black;">Make a decision, the world, it's spinning.</p>
-                              <p style="color: black;">With or without you - with or without you, it'll go on.</p>
-                              <br>
-                              <p style="color: black;">Where does your heart dwell?</p>
-                              <p style="color: black;">Where does your soul fly?</p>
-                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
-                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
-                              <p style="color: black;">That's the way, that's the way, that's the way to go...</p>
-                              <p style="color: black;">To go.</p>       
+                            <img src="img/whoyouare3.jpg" alt="Who You Are" style="margin-top:10px;"/>
+
+                            <p style="color: black;">I don't even know who you are.</p>
+                            <p style="color: black;">Who you're supposed to be, who you chose to be.</p>
+                            <p style="color: black;">Don't you know you're not very far?</p>
+                            <p style="color: black;">Be whoever you want to be.</p>
+                            <p style="color: black;">Who will you be?</p>
+                            <br>
+                            <p style="color: black;">You gotta make a decision, the world will keep on spinning.</p>
+                            <p style="color: black;">With or without you, it'll go on.</p>
+                            <br>
+                            <p style="color: black;">Where does your heart dwell?</p>
+                            <p style="color: black;">Where does your soul fly?</p>
+                            <p style="color: black;">That's the way, that's the way, that's the way...</p>
+                            <p style="color: black;">That's the way, that's the way to go.</p>
+                            <p style="color: black;">That's the way, that's the way, that's the way.</p>
+                            <p style="color: black;">That's the way, that's the way, that's the way to go.</p>
+                            <br>
+
+                            <p style="color: black;">I don't even know who you are.</p>
+                            <p style="color: black;">Who you're supposed to be, who you chose to be.</p>
+                            <p style="color: black;">Don't you know you're not very far?</p>
+                            <p style="color: black;">Be whoever you want to be.</p>
+                            <p style="color: black;">Who will you be?</p>
+                            <p style="color: black;">Who will you be?</p>
+                            <br>  
+                            <p style="color: black;">Make a choice.</p>
+                            <p style="color: black;">You've got to choose now.</p>
+                            <p style="color: black;">Make a choice - where do you fall?</p>
+                            <br>
+                            <p style="color: black;">Where does your heart dwell?</p>
+                            <p style="color: black;">Where does your soul fly?</p>
+                            <p style="color: black;">That's the way, that's the way, that's the way...</p>
+                            <p style="color: black;">Where does your heart dwell?</p>
+                            <p style="color: black;">Where does your soul fly?</p>
+                            <p style="color: black;">That's the way, that's the way to go.</p>
+                            <p style="color: black;">Fly. Fly. Dwell. Dwell. Where do you dwell? Fly away.</p>
                         </section>
                         
                 </div>
@@ -857,19 +913,90 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a data-icon="home" href="#home">Home</a>
+                            <a data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Band</a>
+                            <a data-icon="info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
                         </li>
 
                         <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
+                            <a data-icon="forward" href="#shop">SHOP</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- You Came To Me Lyrics -->
+
+        <div data-add-back-btn="true" data-role="page" id="youcametome">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+
+            <div data-role="content">
+                <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+                <br>
+                <hr>
+                <div class="special">
+                        <section>
+                            <img src="img/youcame.jpg" alt="You Came To Me" style="margin-top:10px;"/>
+                            <p style="color: black;">Everybody wants to be loved.</p>
+                            <p style="color: black;">Everybody wants to be loved.</p>
+                            <p style="color: black;">We all want the same thing, to be happy.</p>
+                            <p style="color: black;">To live our lives the way that we like.</p>
+                            <br>
+                            <p style="color: black;">You came for me, and you found love.</p>
+                            <p style="color: black;">And you found love...</p>
+                            <p style="color: black;" >Love to regain your soul...</p><p style="color: black;">Your soul, your soul.</p>
+                            <p style="color: black;">You came for me, and you found love.</p> 
+                            <p style="color: black;">And you found love...</p>
+                            <p style="color: black;">Love to regain your soul...</p><p style="color: black;">Your soul, your soul.</p>
+                            <br>
+                            <p style="color: black;">Yá Bahá'u'l-Abhá</p>
+                            <br>
+                            <p style="color: black;">Does it really matter?</p>
+                            <p style="color: black;">Does it really matter?</p>
+                            <p style="color: black;">Does it really matter now?</p>
+                            <p style="color: black;">Does it really matter, matter?</p>
+                            <br>
+                            <p style="color: black;">You came for me, and you found love.</p>
+                            <p style="color: black;">And you found love...</p>
+                            <p style="color: black;">Love to regain your soul...</p>
+                            <p style="color: black;">It's time for peace.</p>
+                            <p style="color: black;">Your soul - it's time for love - your soul.</p>
+                            <p style="color: black;">Come together - your soul - come together now.</p>
+                            <p style="color: black;">Your soul.</p>
+                            <p style="color: black;">I believe it all.</p>            
+                            
+                        </section>
+                    
+                </div>
+                <hr>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">NEWS</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#bio">BAND</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#shop">SHOP</a>
                         </li>
                     </ul>
                 </div>
@@ -926,25 +1053,194 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a data-icon="home" href="#home">Home</a>
+                            <a data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Band</a>
+                            <a data-icon="info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
                         </li>
 
                         <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
+                            <a data-icon="forward" href="#shop">SHOP</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
+        <!-- Who You Are Acoustic Lyrics -->
+
+        <div data-add-back-btn="true" data-role="page" id="whoyouareacoustic">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+
+            <div data-role="content">
+              <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+              <br>
+            <hr>
+                <div class="special">
+                        <section>
+                            <img src="img/whoyouare.jpg" alt="Who You Are" style="margin-top:10px;"/>
+                             <p style="color: black;">I don't even know who you are.</p>
+                             <p style="color: black;">Who you're supposed to be.</p>
+                             <p style="color: black;">Who you chose to be.</p>
+                              <p style="color: black;">Don't you know you're not very far?</p>
+                              <p style="color: black;">Be whoever you want to be.</p>
+                              <p style="color: black;">Who will you be?</p>
+                              <p style="color: black;">Who will you be?</p>
+                              <br>
+                              <p style="color: black;">You gotta make a decision,</p>
+                              <p style="color: black;">The world will keep on spinning.</p>
+                              <p style="color: black;">With or without you, it'll go on.</p>
+                              <br>
+                              <p style="color: black;">Where does your heart dwell?</p>
+                              <p style="color: black;">Where does your soul fly?</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way... to go.</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way to go.</p>
+                              <p style="color: black;">That's the way to go.</p>
+                              <br>
+                              <p style="color: black;">I don't even, I don't even - no, wait a minute.</p>
+                              <br>
+                              <p style="color: black;">I don't even know who you are.</p>
+                              <p style="color: black;">Who you're supposed to be.</p>
+                              <p style="color: black;">Who you chose to be.</p>
+                              <p style="color: black;">Don't you know you're not very far?</p>
+                              <p style="color: black;">Be whoever you want to be.</p>
+                              <p style="color: black;">Who will you be?</p>
+                              <p style="color: black;">Who will you be?</p>
+                              <br>
+                              <p style="color: black;">You have to choose, you have to make a choice.</p>
+                              <p style="color: black;">Make a decision, the world, it's spinning.</p>
+                              <p style="color: black;">With or without you - with or without you, it'll go on.</p>
+                              <br>
+                              <p style="color: black;">Where does your heart dwell?</p>
+                              <p style="color: black;">Where does your soul fly?</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way...</p>
+                              <p style="color: black;">That's the way, that's the way, that's the way to go...</p>
+                              <p style="color: black;">To go.</p>       
+                        </section>
+                        
+                </div>
+                <hr>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">NEWS</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#bio">BAND</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#shop">SHOP</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Machine Lyrics -->
+
+        <div data-add-back-btn="true" data-role="page" id="newmachine">
+            <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+
+            <div data-role="content">
+              <h1 style="margin-top: -20px; margin-right:-40px;" data-content="FAMOUS">FAMOUS</h1>
+              <br>
+            <hr>
+                <div class="special">
+                        <section>
+
+                            <img src="img/newmachine.jpg" alt="Who You Are" style="margin-top:10px;"/>
+                             <p style="color: black;">Always, always a war.</p>
+                             <p style="color: black;">Rage, rage war.</p>
+                             <p style="color: black;">Against, against machines.</p>
+                              <p style="color: black;">No escaping, no escape.</p>
+                              <p style="color: black;">No escape. They won't let you get away.</p>
+                              <br>
+                              <p style="color: black;">Tell me why? Does it liken you?</p>
+                              <p style="color: black;">Are you pleased? To see people hurt?</p>
+                              <p style="color: black;">Children cry? Fathers die? Tell me why?</p>
+                              <p style="color: black;">Tell me why...</p>
+                              <br>
+                              <p style="color: black;">Always rage against...</p>
+                              <p style="color: black;">Always rise against the machine.</p>
+                              <br>
+                              <p style="color: black;">Tell me why? Must people die?</p>
+                              <p style="color: black;">To satisfy? Tell me why? Tell me why?</p>
+                              <p style="color: black;">How does it make you feel inside?</p>
+                              <br>
+                              <p style="color: black;">Tell me why? Must people die?</p>
+                              <p style="color: black;">To satisfy your thirst for blood?</p>
+                              <p style="color: black;">You're all vampires!</p>
+                              <p style="color: black;">Beasts of the night.</p>
+                              <br>
+                              <p style="color: black;">Tell me why? Must people die?</p>
+                              <p style="color: black;">To satisfy your thirst for blood?</p>
+                              <p style="color: black;">You're all vampires!</p>
+                              <p style="color: black;">Beasts of the night.</p>
+                              <br>
+                              <p style="color: black;">Find the light, lock it in.</p>
+                              <p style="color: black;">Open your eyes, open your eyes...</p>
+                              <p style="color: black;">Look again.</p>
+                              <br>
+                              <p style="color: black;">Tell me why? Must people cry?</p>
+                              <p style="color: black;">Children die... Tell me why? Tell me why?</p>
+                              <p style="color: black;">No more war. Who does it feed anyway?</p>
+                              <p style="color: black;">Some thing must change.</p>
+                              <p style="color: black;">Things can't stay the same, or we're all doomed...</p>
+                              <p style="color: black;">We've got to come together!</p>
+                              <p style="color: black;">Let's take the power back.</p>
+                              <p style="color: black;">Knowledge can't be unknown.</p>
+                              <p style="color: black;">Knowledge can't be unknown.</p>
+                              <p style="color: black;">Peaceful Revolution.</p>
+     
+                        </section>
+                        
+                </div>
+                <hr>
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+            </div>
+
+            <div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">NEWS</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#bio">BAND</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#shop">SHOP</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <!-- Ink & Feather -->
 
@@ -975,7 +1271,7 @@
 
                         </section>
                         <br>
-                        <p style="font-size: 12px;">This song is dedicated to Willard Sam Hagey &amp; Aaron Maus.</p>
+                        <p style="font-size: 12px; color: black;">This song is dedicated to Willard Sam Hagey &amp; Aaron Maus.</p>
                 </div>
                 <hr>
                 <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
@@ -985,19 +1281,19 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a data-icon="home" href="#home">Home</a>
+                            <a data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Band</a>
+                            <a data-icon="info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
                         </li>
 
                         <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
+                            <a data-icon="forward" href="#shop">SHOP</a>
                         </li>
                     </ul>
                 </div>
@@ -1020,8 +1316,6 @@
                 <p style="color: white; text-align:left; margin-top: -8px; margin-left: 20px; font-family: 'Marcellus';">adjective</p>   
                 <img src="img/press/quotesJay.jpg" style="box-shadow: 8px 8px 5px #888888;"/>
                 <img src="images/theBandFamous.jpg" style="box-shadow: 8px 8px 5px #888888;"/>
-                <p style="margin-bottom: 15px;"><a data-icon="arrow-r" data-iconpos="right" data-role="button"
-                data-theme="a" href="#press"><img src="img/press/press.jpg" style="width: 100%; height:auto; margin-top: 2px; margin-bottom: 10px;"/><br>View EPK</a></p>
                 <p style="text-align: left; margin-bottom: 15px; color: black;">All three members are working diligently on the front and back-end development to cross-platform "The Band Famous" iTunes app to Android, along with recording and production of their 2nd album, “Awakening”, a tribute album. Expect some music videos in the near future, too.</p>
                  <!-- Live, Studio, Promo Galleries -->
                 <table class="gallery" style="margin-top:-20px;">
@@ -1330,20 +1624,20 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a data-icon="home" href="#home">Home</a>
+                            <a data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
                             <a class="ui-btn-active ui-state-persist" data-icon=
-                            "info" href="#bio">Band</a>
+                            "info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
                         </li>
 
                         <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
+                            <a data-icon="forward" href="#shop">SHOP</a>
                         </li>
                     </ul>
                 </div>
@@ -1372,20 +1666,19 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a data-icon="home" href="#home">Home</a>
+                            <a data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Band</a>
+                            <a data-icon="info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a data-icon="star" href="#playlist">MUSIC</a>
                         </li>
 
                         <li>
-                            <a class="ui-btn-active ui-state-persist" data-icon=
-                            "forward" href="#contact">Contact</a>
+                            <a data-icon="forward" href="#shop">SHOP</a>
                         </li>
                     </ul>
                 </div>
@@ -1430,13 +1723,73 @@
                         <br>
                     </div>
      
-                    <div>
-                      <p style="margin-top:20px; color: black;">Like what you hear? Get our full-length Debut EP "Last Words" when you download our Smart Album - The Band Famous - with videos, games, and so much more. Available on iOS, Android coming soon, go home for details.</p>
+                    <!-- Change Below to Collapsible ULs/Lis like in desktop version -->
+                    <div data-collapsed="true" data-role="collapsible" style="margin-bottom: 80px; margin-top: 20px;">
+                        <h3>Lyrics</h3>
+                        <p style="text-align: left;">Songs below are sampled from the Band Famous debut EP <i>Last Words</i>. The whole album is available for FREE in "The Band Famous" App for iOS.</p>
+                        <ul data-filter="true" data-inset="true" data-role="listview">
+                            <li data-role="list-divider"></li>
+                            <li>
+                              <a href="#intro"><img src="img/intro.jpg">Intro (Don't Be Afraid)</a>
+                            </li>
+                            <li data-role="list-divider"></li>
+                            <li>
+                               <a href="#climax"><img src="img/climax.jpg">Climax</a>
+                                
+                            </li>
+                            <li data-role="list-divider"></li>
+                            <li>
+                               <a href="#escape"><img src="img/escape.jpg">Escape</a>
+                                
+                            </li>
+                            <li data-role="list-divider"></li>
+                             <li>
+                               <a href="#whoyouare"><img src="img/whoyouare3.jpg">Who You Are</a>
+                                
+                            </li>
+                            <li data-role="list-divider"></li>
+                            <li>
+                               <a href="#youcametome"><img src="img/youcame.jpg">You Came To Me</a>
+                                
+                            </li>
+                            <li data-role="list-divider"></li>
+                            <li>
+                               <a href="#seaofwonder"><img src="img/wonder.jpg">Sea of Wonder (Live)</a>
+                                
+                            </li>
+                            <li data-role="list-divider"></li>
+                           <li>
+                               <a href="#whoyouareacoustic"><img src="img/whoyouare.jpg">Who You Are (Acoustic)</a>
+                                
+                            </li>
+                            <li data-role="list-divider"></li>
+                            <li>
+                               <a href="#newmachine"><img src="img/newmachine.jpg">New Machine</a>
+                                
+                            </li>
+                            <li data-role="list-divider"></li>
+                            <li>
+                               <a href="#inkfeather"><img src="img/inkfeather.jpg">Ink &amp; Feather</a>
+                                
+                            </li>
+                            <li data-role="list-divider"></li>
+                            <li>
+                              <p class="big">Get the full album and more for FREE today!</p>
+                              <center>
+                                <div>
+                                  <div>
+                                    <a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank"><img src="img/appstore.gif" style="width: 80%; height: auto; margin-bottom: 2px;" alt="Download The Band Famous on the App Store today!" title="Download The Band Famous on the App Store today!"/></a>
+                                  </div>           
+                                </div>
+                              </center>
+                            </li>
+                            
+                        </ul>
                     </div>
                   
                 </div>
 
-                <hr style="margin-top: 800px;">
+                <hr style="margin-top: 650px;">
                 <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous™</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
         
             </div>
@@ -1445,19 +1798,19 @@
                 <div data-role="navbar">
                     <ul>
                         <li>
-                            <a data-icon="home" href="#home">Home</a>
+                            <a data-icon="home" href="#home">NEWS</a>
                         </li>
 
                         <li>
-                            <a data-icon="info" href="#bio">Band</a>
+                            <a data-icon="info" href="#bio">BAND</a>
                         </li>
 
                         <li>
-                            <a data-icon="star" href="#news">News</a>
+                            <a class="ui-btn-active ui-state-persist" data-icon="star" href="#playlist">MUSIC</a>
                         </li>
 
                         <li>
-                            <a data-icon="forward" href="#contact">Contact</a>
+                            <a data-icon="forward" href="#shop">SHOP</a>
                         </li>
                     </ul>
                 </div>
