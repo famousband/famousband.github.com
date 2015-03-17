@@ -35,7 +35,7 @@
   var feed = new Instafeed({
     get: 'tagged',
     tagName: 'TheBandFamous',
-    limit: 9,
+    limit: 6,
     clientId: '361e764ecb3f4153baf84f49f0ab8d58'
   });
   feed.run();
@@ -237,15 +237,31 @@
 
           </ul>
 
-          <!-- Twitter, FB, Instagram -->
-          <span><a class="twitter-timeline" data-dnt="true" style="height:300px; width: 250px;" href="https://twitter.com/TheBandFamous"  data-widget-id="429406927588573184">Tweets by @TheBandFamous</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs")</script></span>
+          <ul id="preview">
+              <li>
+                <h2 class="headTitle"></h2>     
+                  <div id="scroll">
+                    <!-- Twitter, FB, Instagram -->
+                    <a class="twitter-timeline" data-dnt="true" style="height:300px; width: 250px;" href="https://twitter.com/TheBandFamous"  data-widget-id="429406927588573184">Tweets by @TheBandFamous</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs")</script>
+                    
+                  </div>
 
-          <!-- FB Newsfeed -->
-          <span><div style="width: 250px; background: white; margin-bottom: 10px;"><div class="fb-like-box" data-href="http://www.facebook.com/TheBandFamous" data-width="250px" data-height="300px" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div></div></span>
+              </li>
+              <li>
+                <div id="right">
+                  <h2 class="headTitle"></h2>
+                  <div id="scroll">
+                     <!-- FB Newsfeed -->
+                    <div style="width: 80%; background: white; margin-bottom: 10px;"><div class="fb-like-box" data-href="http://www.facebook.com/TheBandFamous" data-width="250px" data-height="300px" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div></div>
+                    <p>Follow TBF on Instagram!</p>
+                    <!-- Instafeed of instagram -->
+                    <span><div id="instafeed" style="width:80%;"></div></span>
 
-          <!-- Instafeed of instagram -->
-          <span><div id="instafeed" style="width:80%;"></div></span>
+                  </div>
+              </li>
+
+            </ul>
 
       </div> 
 </center>
