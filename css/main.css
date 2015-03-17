@@ -1071,3 +1071,13 @@ h1.modal {
     text-align: right;
 }
 /* END popup note on Contact page */
+
+/* bolding Qs and names in questionaire on band page */
+div#scroll p {
+  margin: 25px;
+}
+
+div#scroll p strong {
+  font-variant: bold;
+  font-size: 20px;
+}
