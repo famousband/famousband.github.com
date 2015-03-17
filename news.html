@@ -29,8 +29,30 @@
 </style>
 <script <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script type="text/javascript">stLight.options({publisher: "fd28c798-bbca-4c9f-8815-fe63e0a40b64", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+<!-- required for instagram callin -->
+<script type="text/javascript" src="js/instafeed.js"></script>
+<script type="text/javascript">
+  var feed = new Instafeed({
+    get: 'tagged',
+    tagName: 'TheBandFamous',
+    limit: 9,
+    clientId: '361e764ecb3f4153baf84f49f0ab8d58'
+  });
+  feed.run();
+</script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=492306967513697";
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <nav class="main-nav">
           <a href="shop.html"><img src="img/shop.png" alt="Shop Famous" style="position: absolute; top: 10px; left: 0px; width:150px; height:120px; margin-right:20px;"/></a>
           <ul>
@@ -70,13 +92,19 @@
                           <td><p>N/A</p></td>
                         </tr>
                         <tr>
-                          <td><p>04/15</p></td>
+                          <td><p>04/15/15</p></td>
+                          <td><p>Livestream</p></td>
+                          <td><p>YouTube</p></td>
+                          <td><p>FREE</p></td>
+                        </tr>
+                        <tr>
+                          <td><p>04/20/15</p></td>
                           <td><p>Union Square</p></td>
                           <td><p>NY, NY</p></td>
                           <td><p>FREE</p></td>
                         </tr>
                         <tr>
-                          <td><p>05/15</p></td>
+                          <td><p>05/15/15</p></td>
                           <td><p>Times Square</p></td>
                           <td><p>NY, NY</p></td>
                           <td><p>FREE</p></td>
@@ -87,24 +115,7 @@
                           <td><p>In-App Concert</p></td>
                           <td><p>TBD</p></td>
                         </tr>
-                        <tr>
-                          <td><p>TBD</p></td>
-                          <td><p>TBD</p></td>
-                          <td><p>Chicago, IL</p></td>
-                          <td><p>TBD</p></td>
-                        </tr>
-                        <tr>
-                          <td><p>TBD</p></td>
-                          <td><p>TBD</p></td>
-                          <td><p>Minneapolis, MN</p></td>
-                          <td><p>TBD</p></td>
-                        </tr>
-                        <tr>
-                          <td><p>TBD</p></td>
-                          <td><p>TBD</p></td>
-                          <td><p>Los Angeles, CA</p></td>
-                          <td><p>TBD</p></td>
-                        </tr>
+
                       </table>
                     </div>
                   </div>
@@ -226,6 +237,14 @@
 
           </ul>
 
+          <!-- Twitter, FB, Instagram -->
+
+
+          <!-- FB Newsfeed -->
+          <div style="width: 250px; background: white; margin-bottom: 10px;"><div class="fb-like-box" data-href="http://www.facebook.com/TheBandFamous" data-width="250px" data-height="300px" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div></div>
+
+          <!-- Instafeed of instagram -->
+          <div id="instafeed" style="width:80%;"></div>
 
       </div> 
 </center>

@@ -560,22 +560,23 @@ span img{
 
 /* for table of tour schedule */
 
-table {
+#scroll table {
   margin-top: 20px;
   margin-left: 10px;
 
 }
 
-table tr.title {
+#scroll table tr.title {
   text-decoration: underline;
   font-style: bold;
   font-variant: small-caps;
+  margin:auto;
 }
 
-table tr td p {
+#scroll table tr td p {
   margin-top:10px;
   margin-bottom:10px;
-  margin-right:10px;
+  margin-right:15px;
   margin-left: 0px;
 }
 
