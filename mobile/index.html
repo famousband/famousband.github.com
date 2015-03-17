@@ -214,14 +214,15 @@
     <script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
     <script type="mce-text/javascript" src="js/instafeed.js"></script>
     <script type="text/javascript">
-      var feed = new Instafeed ({
-      get: 'tagged',
-      tagName: 'TheBandFamous',
-      clientId: '361e764ecb3f4153baf84f49f0ab8d58'
+      var feed = new Instafeed({
+        get: 'user',
+        userId: TheBandFamous,
+        filter: function(image) {
+          return image.tags.indexOf('TheBandFamous') >= 0;
+        }
       });
       feed.run();
     </script>
-
             
 	</head>
 	<body>
