@@ -217,6 +217,7 @@
       var feed = new Instafeed({
           get: 'tagged',
           tagName: 'TheBandFamous',
+          limit: 1,
           clientId: '361e764ecb3f4153baf84f49f0ab8d58'
       });
       feed.run();
@@ -232,6 +233,7 @@
           js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=492306967513697";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
+
     <!--Home Page -->
         <div data-role="page" id="home">
         	<div data-position="fixed" data-role="header" data-theme="b">
@@ -255,6 +257,8 @@
                   <!-- FB Newsfeed -->
                 <center><div style="width: 250px; background: white; margin-bottom: 10px;"><div class="fb-like-box" data-href="http://www.facebook.com/TheBandFamous" data-width="250px" data-height="300px" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div></div>
                 </center>
+                <!-- Instafeed of instagram -->
+                <div id="instafeed"></div>
 
                 <center>     
                     <p class="big" style="text-align: left; color: black;">We're working to port our iPhone app "The Band Famous" to Android as quickly as we can while simultaneously working on our 2nd album, "Awakening", and more. Sign up for our montlhy newsletter to follow our progress on these and other creative ventures!</p>
@@ -262,8 +266,6 @@
                     <img src="img/bannertest.jpg" style="margin-bottom: -60px;"/>
 
                 </center>
-                <!-- Instafeed of instagram -->
-                <div id="instafeed"></div>
                 <br>
                 <hr style="border-top: 8px solid black; margin: 20px;">  
 
