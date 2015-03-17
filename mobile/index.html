@@ -16,6 +16,15 @@
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
 		<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'/>
+    <script type="mce-text/javascript" src="js/instafeed.js"></script>
+    <script type="text/javascript">
+        var userFeed = new Instafeed({
+            get: 'user',
+            userId: 1683121252,
+            accessToken: '1683121252.467ede5.8067019533cb4f989f1da36574a0215c'
+        });
+        userFeed.run();
+    </script>
 		<style>
 
             /* Overriding jquery mobile button styles */
@@ -254,6 +263,8 @@
                     <img src="img/bannertest.jpg" style="margin-bottom: -60px;"/>
 
                 </center>
+                <!-- Instafeed of instagram -->
+                <div id="instafeed"></div>
                 <br>
                 <hr style="border-top: 8px solid black; margin: 20px;">  
 
