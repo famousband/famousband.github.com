@@ -215,11 +215,9 @@
     <script type="text/javascript" src="js/instafeed.js"></script>
     <script type="text/javascript">
       var feed = new Instafeed({
-        get: 'user',
-        userId: 1683121252,
-        filter: function(image) {
-          return image.tags.indexOf('TheBandFamous') >= 0;
-        }
+          get: 'tagged',
+          tagName: 'TheBandFamous',
+          clientId: '361e764ecb3f4153baf84f49f0ab8d58'
       });
       feed.run();
     </script>
