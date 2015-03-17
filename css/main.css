@@ -659,7 +659,8 @@ h1:before {
   overflow: hidden;
   max-width: 5.3em;
   color: #3399FF;
-  -webkit-animation: loading 8s linear;
+  animation: loading 8s linear;
+  /*-webkit-animation: loading 8s linear;*/
 }
 
 h2 {
