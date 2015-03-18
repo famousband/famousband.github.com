@@ -6138,3 +6138,28 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+
+/* attempting to fix header problems this css file overrides for bio and shop pages */
+
+h1 {
+  position: absolute;
+  text-align: center;
+  color: #FFFF66;
+  font:700 9em 'Montserrat Subrayada', sans-serif; 
+  width: 100%;
+  min-width: 280px;
+}
+
+@keyframes loading {
+  from { max-width: 0; }
+}
+
+h1:before {
+  content: attr(data-content);
+  position: absolute;
+  overflow: hidden;
+  max-width: 5.3em;
+  color: #3399FF;
+    /*animation: loading 8s linear;*/
+  -webkit-animation: loading 8s linear;
+}
