@@ -544,8 +544,7 @@ span img{
 #right {
   max-width: 600px;
   min-width: 280px;
-  margin-top: -70px;
-  margin-left: -20px;
+
 }
 
 /* Scrollable div id="scroll" */
@@ -701,12 +700,11 @@ h2.headTitle {
   background: black;
   color: #3399FF;
   width: 90%;
-  max-width: 500px;
-  min-width: 100px;
-  height:20px;
+  max-width: auto;
+  min-width: auto;
+  height:relative;
   text-shadow: none;
-  border: 1px black solid;
-  margin-bottom:10px;
+  margin-bottom: auto;
 }
 
 
