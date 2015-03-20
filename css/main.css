@@ -582,12 +582,14 @@ span img{
 /* Table that holds scroll divs for press and events */
 table#homepage {
   width: 100%;
-  margin-left: 60px;
+  margin-left: 6%;
+  margin-bottom: 2px;
 }
 
 table#homepage tr td.size {
   display: inline-block;
   min-width: 280px;
+  max-width: 600px;
   width: 46%;
   height: 320px;
   margin-bottom: 83px;
@@ -716,9 +718,9 @@ h2.headTitle {
   color: #3399FF;
   width: 90%;
   font-size: 32px;
-  max-width: auto;
-  min-width: auto;
-  height:relative;
+  max-width: 650px;
+  min-width: 280px;
+  height:30px;
   text-shadow: none;
   margin-bottom: auto;
 }
