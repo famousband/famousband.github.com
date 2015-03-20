@@ -589,7 +589,7 @@ table#homepage {
 table#homepage tr td.size {
   display: inline-block;
   min-width: 280px;
-  max-width: 600px;
+  max-width: 80%;
   width: 46%;
   height: 320px;
   margin-bottom: 83px;
@@ -718,7 +718,7 @@ h2.headTitle {
   color: #3399FF;
   width: 90%;
   font-size: 32px;
-  max-width: 650px;
+  max-width: 80%;
   min-width: 280px;
   height:30px;
   text-shadow: none;
