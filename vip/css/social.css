@@ -1,0 +1,162 @@
+/* add to CSS for home page on bandfamous.com mobile & desktop */
+@import url(http://fonts.googleapis.com/css?family=Glass+Antiqua);
+
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+
+body {
+
+  color:#FFFFFF;
+  text-align:center;
+  margin:0px;
+  margin-top:10px;
+  
+}
+
+a {
+  text-decoration: none;
+  
+}
+
+
+.circle1 {
+  width:400px;
+  height:400px;
+  margin:auto;
+  border-radius:50%;
+  background:#00ACED;
+  font-size:60px;
+  border-style:solid;
+  border-color:#999999;
+  border-width:2px;
+   -webkit-box-shadow: 0px -9px 9px rgba(50, 50, 50, 0.50);
+    -moz-box-shadow:    0px -9px 9px rgba(50, 50, 50, 0.50);
+    box-shadow:         0px -9px 9px rgba(50, 50, 50, 0.50);
+  transition: all 0.2s ease-in-out;
+}
+
+.circle2 {
+  width:300px;
+  height:300px;
+  margin:auto;
+  border-radius:50%;
+  background:#3B5998;
+  font-size:50px;
+  border-style:solid;
+  border-color:#999999;
+  border-width:2px;
+  transition: all 0.6s ease-in-out;
+  margin-top:-340px;
+}
+
+.circle3 {
+  width:200px;
+  height:200px;
+  margin:auto;
+  border-radius:50%;
+  background:#F76700;
+  font-size:40px;
+  border-style:solid;
+  border-color:#999999;
+  border-width:2px;
+  margin-top:-245px;
+  transition: all 0.6s ease-in-out;
+}
+
+.circle4 {
+  width:0px;
+  height:0px;
+  margin:auto;
+  border-radius:50%;
+  font-size:30px;
+  background: transparent;
+  border-width:2px;
+  margin-top:-155px;
+  transition: all 0.6s ease-in-out;
+}
+
+
+
+.circle1:hover {background:#999999; color:#00ACED}
+
+.circle2:hover {background:#999999; color:#3B5998}
+
+.circle3:hover {background:#999999; color:#F76700;}
+
+
+.block {
+  border-radius:50%;
+  width:100%;
+  height:250px;
+  background:#33CC33;
+  margin:auto;
+  margin-top:-35px;
+  margin-bottom: 50px;
+
+}
+
+.block2 {
+  width:100%;
+  height:200px;
+  font-family: 'Glass Antiqua', cursive;
+  color:#333333;
+  font-size:50px;
+  text-align:center;
+  margin:auto;
+  background:#999999;
+  margin-top:-150px;
+  -webkit-box-shadow: 0px -9px 9px rgba(50, 50, 50, 0.50);
+    -moz-box-shadow:    0px -9px 9px rgba(50, 50, 50, 0.50);
+    box-shadow:         0px -9px 9px rgba(50, 50, 50, 0.50);
+padding-top:30px;
+}
+
+div#shop {
+  text-align: left;
+}
+
+
+div#shop img {
+  width: 100%;
+  height: auto;
+  box-shadow: 8px 8px 5px #888888;
+}
+
+div#shop img.plain {
+  box-shadow: none;
+}
+
+div#shop h4, p {
+  color: white;
+}
+
+ul#shop li {
+  display: inline;
+  list-style: none;
+}
+
+ul#shop li img {
+  box-shadow: none;
+  width:140px;
+  height: 140px;
+}
+
+div#shopNote p {
+  color:black;
+  text-align: left;
+}
+
+div#shopNote a {
+  font-size: 24px;
+}
+
+div a:hover{
+  
+}
+
