@@ -70,6 +70,9 @@
     if ((/ogg/i).test(extension) && audioElem.canPlayType('audio/ogg')) {
       return true;
     }
+    if ((/wav/i).test(extension) && audioElem.canPlayType('audio/wav')) {
+      return true;
+    }
     return false;
   };
 

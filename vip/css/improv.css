@@ -1,5 +1,6 @@
 body {
   margin:0 auto;
+  background: linear-gradient(#33CC33, #3399FF, #33CC33);
   font: 100%/40px "Marcellus", serif;
 }
 
@@ -17,13 +18,10 @@ canvas {
 }
 
 #control-panel {
-  background: #33CC33;
-  /*border: 15px solid #E68A8A;*/
+
+  /*border: 11px solid #3399FF;*/
   left: 15px;
   right: 15px;
-  /*padding: 10px 15px;*/
-  position: absolute;
-  top: 95px;
   z-index: 2;
   height: 455px;
   min-width: 280px;
@@ -186,7 +184,7 @@ button.bb-rewind {
 .bb-debug {
   height:10em;
   width: 32em;
-  border: 1px solid #DDD;
+  /*border: 1px solid #DDD;*/
   border-radius: 5px;
   margin: 10px;
   padding: 10px;

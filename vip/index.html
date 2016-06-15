@@ -1,167 +1,95 @@
 
 <!DOCTYPE html>
 <html class="no-js">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>TBF</title>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="themes/famousband.min.css" />
-        <link rel="stylesheet" href="css/foundation/foundation.css" />
-        <link rel="stylesheet" href="css/foundation.css" />
-        <script src="js/vendor/modernizr.js"></script>
-        <link rel="stylesheet" href="css/improv.css" type="text/css"/>
-        <link rel="stylesheet" href="css/social.css" type="text/css" />
-        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
-		<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'/>
-		<style>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="Designed By" content="Zander &amp; Norell">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'/>
+	<title>TBF</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/improv.css" type="text/css"/>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
+
+
+	<style>
 
       /* Overriding jquery mobile button styles */
-    
-			a{
-			  text-decoration: none;
-			}
-			a h2:hover{
-			  color:#E1DFD3;
-			}
+      div.bbplayer > button.bb-play {
+        display: inline-block;
+        vertical-align: middle;
+        height: 65px;
+        width:  65px;
+        border: 5px solid #CFCFCF;
+        border-radius: 50%; 
+        background: transparent; 
+        background-image: url('images/play_med.png');
+        background-repeat: no-repeat;
+        background-position: 7px center;
+        cursor: pointer;
+      }
 
-			p.big a:hover{
-			  color:#E1DFD3;
-			  font-size: 24px;
-			}
+      div.bbplayer > button.bb-playing {
+        vertical-align: middle;
+        background-image: url('images/pause.png');
+        background-position: center center;
+      }
+
+      div.bbplayer > button.bb-forward {
+        vertical-align: middle;
+        display: inline-block;
+        height: 32px;
+        width:  32px;
+        background: transparent;
+        background-image: url('images/forward.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      div.bbplayer > button.bb-rewind {
+        vertical-align: middle;
+        display: inline-block;
+        height: 32px;
+        width:  32px;
+        background: transparent;
+        background-image: url('images/rewind.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
 
 			img{
 				width: 100%;
 				height: auto;
 			}
-			h1 {
-			  position: absolute;
-        margin-bottom:-10px;
-        margin-left:-2.05em;
-			  left: 45%;
-			  color: #FFFF66;
-			  font:700 4em 'Montserrat Subrayada', sans-serif; 
-			}
 
-			@keyframes loading {
-			  from { max-width: 0; }
-			}
-
-			h1:before {
-			  content: attr(data-content);
-			  position: absolute;
-			  overflow: hidden;
-			  max-width: 100%;
-			  color: #3399FF;
-			  animation: loading 8s linear;
-			}
-
-      h1:after{
-        color: #3399FF;
-      }
-
-			h2 {
-			    background-color: #33CC33;
-			    text-align: center;
-			    color: black;
-			    border-color: indigo;
-			    letter-spacing: 2px;
-			    word-spacing: 2px;
-			    text-shadow: 1px 1px #3399FF;
-			    font-size: 150%;
-			    font-family: 'Marcellus', serif;
-			    padding: 1em;
-			    margin: -1em -1em 1em -1em;
-			    margin-bottom: -25px;
-			}
-
-			h1 + h2 {
-			    margin-top: 10px;
-			    padding-top: 0;
-			}
 
 			p.fancy{
-				font-size: 20px;
-				text-align: center;
-				color: #FFFF66;
-			    border-color: indigo;
-			    letter-spacing: 2px;
-			    word-spacing: 2px;
-			    text-shadow: 2px 2px #3399FF;
+			 font-size: 20px;
+			 text-align: center;
+			 color: #FFFF66;
+			 border-color: indigo;
+			 letter-spacing: 2px;
+			 word-spacing: 2px;
+			 text-shadow: 2px 2px #3399FF;
 			}
-			/* end nav bar */
-            h3{
-                font-size: 24px;
-                margin-bottom: -15px;
-            }
-            p{
-                font-size: 16px;
-            }
-
-      /* for table galleries on bio page */
-      table.gallery {
-        background: transparent;
-        border: none;
-        margin-top:20px;
-        margin-bottom:20px;
-        margin-left: 10px;
-        width: 100%;
-        min-width: 280px;
+			
+      h3{
+          font-size: 24px;
+          margin-bottom: -15px;
+      }
+      p{
+          font-size: 16px;
       }
 
-      table.gallery tr {
-        display: inline-block;
-        width: 100%;
-      }
-
-      table.gallery tr td {
-        margin-left: -20px;
-        padding: 0px;
-        width: 33.3%;
-        display: inline-table;
-        min-width: 300px;
-
-      }
-
-      ul.shop li {
-        list-style: none;
-      }
-
-      .reveal-modal h2 {
-        background: transparent;
-        color: black;
-        text-shadow: 1px 1px #3399FF;
-      }
-
-      .reveal-modal p {
-        text-align: left;
-        color: black;
-      }
-
-      /* Scrollable div id="scroll" */
-
-      #scroll{
-        background: #3399FF;
-        width: 90%;
-        min-height: 200px; 
-        height: 320px;
-        overflow-y: scroll;
-      }
-
-      /* Questionaire on Band page */
-      /* bolding Qs and names in questionaire on band page */
-      div#scroll p {
-        color: black;
-        margin: 25px;
-        text-align: left;
-      }
-
-      div#scroll p strong {
-        font-variant: bold;
-        font-size: 18px;
-      }
 
 		</style>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -170,51 +98,68 @@
             
 	</head>
 	<body>
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {https://www.youtube.com/embed/K_m_sU12qZE
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=492306967513697";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
 
-    <!--Home Page -->
-        <div data-role="page" id="home">
-        	<div data-position="fixed" data-role="header" data-theme="b">
-            </div>
-            <div data-role="content">
+    <!-- TBF Radio Feature-->
+  <center>
+    <div id="control-panel">
+      <div class="bbplayer">
+        <button class="bb-rewind" ontouchstart="pointer-events: none;"></button>
+        <button class="bb-play" ontouchstart="pointer-events: none;"></button>
+        <button class="bb-forward" ontouchstart="pointer-events: none;"></button>
+        <span class="bb-trackTime">--:--</span> 
+        <span class="bb-trackLength">--:--</span>
+        <br>
+        <span class="bb-trackTitle"></span>
+        <audio>
+          <source src="media/TBF - Lowtone.mp3" type="audio/mpeg"></source>
+          <source src="media/TBF - Happy New Year.mp3" type="audio/mpeg"></source>
+          <source src="media/TBF - Out Of Body.mp3" type="audio/mpeg"></source>
+          <source src="media/TBF - Adaptation (Remix).mp3" type="audio/mpeg"></source>
+          <source src="media/TBF - Do You Care.mp3" type="audio/mpeg"></source>
+          <source src="media/TBF - DnB.mp3" type="audio/mpeg"></source>
+          <source src="media/TBF - Follow Your Bliss.mp3" type="audio/mpeg"></source>
+          <source src="media/TBF - Magic is Real (Make Yourself).mp3" type="audio/mpeg"></source>
+          <source src="media/TBF - Reactions.mp3" type="audio/mpeg"></source>
+          <source src="media/TBF - Spaceship Earth.mp3" type="audio/mpeg"></source>
+          <source src="media/TBF - Share (Intro).mp3" type="audio/mpeg"></source>
+          <source src="media/TBF - You Are Love.mp3" type="audio/mpeg"></source>
 
-            		<iframe min-width="320" max-width="500" width="100%" height="311px" src="https://www.youtube.com/embed/vT_FFjW1igs" frameborder="0" allowfullscreen></iframe>
+          HTML5 Audio Not Available
+        </audio>
+        <br>
+          <p></p>
+          <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>  
+      </div>
 
-                <!-- donate -->
-              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="U6Y7QDVN9MLFS">
-                <input type="image" src="http://www.bandfamous.com/vip/img/Donations_ThankYou_HappyGrateful_.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-              </form>
+    <!-- End of TBF Radio -->
 
+    <!-- TBF TV Feature -->
+    <div data-role="content">
+      <iframe min-width="320" max-width="500" width="100%" height="311px" src="https://www.youtube.com/embed/vT_FFjW1igs" frameborder="0" allowfullscreen></iframe>
 
+      <!--Sponsorship Button -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="U6Y7QDVN9MLFS">
+        <input type="image" src="http://www.bandfamous.com/vip/img/Donations_ThankYou_HappyGrateful_.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 
+      </form>
 
-        </div>
+    </div>
+    <!-- End of TBF.TV Feature -->
 
-        
-
-        <!-- VIP Page -->
-
-       
+  </center>           
+<!-- End of Sponsorship Button -->
+<!-- VIP Page -->
 
         <script src="http://code.jquery.com/jquery.js"></script>
         <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
-        <script src="js/twitter.js" type="text/javascript"></script>
-		    <script type="text/javascript" src="js/text.js"></script>
-        <script src="js/vendor/jquery.js"></script>
-        <script src="js/foundation.min.js"></script>
-        <script>
-          $(document).foundation();
-        </script>
+        <script type="text/javascript" src="js/text.js"></script>
+        <script src="js/bbplayer.js"></script>
 
  
 
