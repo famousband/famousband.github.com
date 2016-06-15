@@ -2,7 +2,6 @@ body {
   margin:0 auto;
   background: linear-gradient(#33CC33, #3399FF, #33CC33);
   font: 100%/40px "Marcellus", serif;
-  height: 700px;
 }
 
 canvas {
