@@ -26,11 +26,10 @@ canvas {
   position: absolute;
   top: 20px;
   z-index: 2;
-  height: 455px;
-  min-width: 800px;
+  height: 325px;
+  min-width: 200px;
 
 }
-
 
 h1 {
   position: absolute center;
