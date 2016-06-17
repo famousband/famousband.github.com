@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- PhonixIntl.com -->
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -27,17 +26,7 @@
   } 
 
 </style>
-<!-- required for instagram callin -->
-<script type="text/javascript" src="js/instafeed.js"></script>
-<script type="text/javascript">
-  var feed = new Instafeed({
-    get: 'tagged',
-    tagName: 'TheBandFamous',
-    limit: 5,
-    clientId: '361e764ecb3f4153baf84f49f0ab8d58'
-  });
-  feed.run();
-</script>
+
 </head>
 <body>
 <div id="fb-root"></div>
@@ -50,7 +39,17 @@
       fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 </script>
-
+<!-- required for instagram callin -->
+<script type="text/javascript" src="js/instafeed.js"></script>
+<script type="text/javascript">
+  var feed = new Instafeed({
+    get: 'tagged',
+    tagName: 'TheBandFamous',
+    limit: 5,
+    clientId: '361e764ecb3f4153baf84f49f0ab8d58'
+  });
+  feed.run();
+</script>
 <nav class="main-nav">
           <ul>
           	<li><a href="shop.html">SHOP</a></li>
