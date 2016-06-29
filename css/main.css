@@ -1017,9 +1017,17 @@ h1.modal {
 }
 .btn.btn-big {
     font-size: 18px;
-    padding: auto;
+    padding: 15px;
+    margin: 8px;
     min-width: 100px;
+    width: 140px;
     font: bold 25px/1 "Marcellus", serif;
+    display: inline;
+     border-top: 1px solid indigo;
+  border-right: 1px solid indigo;
+  border-bottom: 1px solid indigo;
+  border-left: 1px solid indigo;
+  border-radius: 11px;
 }
 
 .btn-close {
