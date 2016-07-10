@@ -705,11 +705,13 @@ h3 {
 
   position: relative;
 
-  font: 150px Helvetica, Sans-Serif;
+  font: 111px Helvetica, Sans-Serif;
 
   letter-spacing: -5px;
 
-  color:  #eb2755;
+  color:  white;
+
+  margin-bottom: 40px;
 
 }
 
@@ -724,7 +726,7 @@ h2.headTitle {
   margin-bottom: auto;
 }
 
-
+/*
 h3:after {
 
   content: "TBF";
@@ -733,7 +735,7 @@ h3:after {
 
   color:  #E1DFD3; 
 
-}
+} */
 
 h4.tour{
   font-size: 26px;
