@@ -19,7 +19,22 @@
     <style>
 
             /* Overriding jquery mobile button styles */
+
             div.bbplayer > button.bb-play {
+              display: inline-block;
+              vertical-align: middle;
+              height: 65px;
+              width:  65px;
+              border: 5px solid #CFCFCF;
+              border-radius: 50%; 
+              background: transparent; 
+              background-image: url('images/play_med.png');
+              background-repeat: no-repeat;
+              background-position: 7px center;
+              cursor: pointer;
+            }
+            
+            div.bbplayer > button.bb-play.ui-btn-active {
               display: inline-block;
               vertical-align: middle;
               height: 65px;
@@ -38,6 +53,7 @@
               background-image: url('images/pause.png');
               background-position: center center;
             }
+
 
             div.bbplayer > button.bb-forward {
               vertical-align: middle;
