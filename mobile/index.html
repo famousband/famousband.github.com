@@ -5,79 +5,82 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TBF</title>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="css/foundation/foundation.css" />
-        <link rel="stylesheet" href="css/foundation.css" />
-        <script src="js/vendor/modernizr.js"></script>
-        <link rel="stylesheet" href="css/improv.css" type="text/css"/>
-        <link rel="stylesheet" href="css/social.css" type="text/css" />
-        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-        <link rel="stylesheet" href="themes/famousband.min.css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/foundation/foundation.css" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="css/improv.css" type="text/css"/>
+    <link rel="stylesheet" href="css/social.css" type="text/css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="themes/famousband.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'/>
     <style>
 
-            /* Overriding jquery mobile button styles */
+      /* Property © The Band Famous™ */
+      /* Musicians featured at TBF Radio include TBF, along with the artists featured in the Hall of Fame */
+      /* All rights reserved. */
 
-            div.bbplayer > button.bb-play {
-              display: inline-block;
-              vertical-align: middle;
-              height: 65px;
-              width:  65px;
-              border: 5px solid #CFCFCF;
-              border-radius: 50%; 
-              background: transparent; 
-              background-image: url('images/play_med.png');
-              background-repeat: no-repeat;
-              background-position: 7px center;
-              cursor: pointer;
-            }
+
+      div.bbplayer > button.bb-play {
+        display: inline-block;
+        vertical-align: middle;
+        height: 65px;
+        width:  65px;
+        border: 5px solid #CFCFCF;
+        border-radius: 50%; 
+        background: transparent; 
+        background-image: url('images/play_med.png');
+        background-repeat: no-repeat;
+        background-position: 7px center;
+        cursor: pointer;
+      }
             
-            div.bbplayer > button.bb-play.ui-btn-active {
-              display: inline-block;
-              vertical-align: middle;
-              height: 65px;
-              width:  65px;
-              border: 5px solid #CFCFCF;
-              border-radius: 50%; 
-              background: transparent; 
-              background-image: url('images/play_med.png');
-              background-repeat: no-repeat;
-              background-position: 7px center;
-              cursor: pointer;
-            }
+      div.bbplayer > button.bb-play.ui-btn-active {
+        display: inline-block;
+        vertical-align: middle;
+        height: 65px;
+        width:  65px;
+        border: 5px solid #CFCFCF;
+        border-radius: 50%; 
+        background: transparent; 
+        background-image: url('images/play_med.png');
+        background-repeat: no-repeat;
+        background-position: 7px center;
+        cursor: pointer;
+      }
 
-            div.bbplayer > button.bb-playing {
-              vertical-align: middle;
-              background-image: url('images/pause.png');
-              background-position: center center;
-            }
+      div.bbplayer > button.bb-playing {
+        vertical-align: middle;
+        background-image: url('images/pause.png');
+        background-position: center center;
+      }
 
 
-            div.bbplayer > button.bb-forward {
-              vertical-align: middle;
-              display: inline-block;
-              height: 32px;
-              width:  32px;
-              background: transparent;
-              background-image: url('images/forward.png');
-              background-position: center;
-              background-repeat: no-repeat;
-              cursor: pointer;
-            }
+      div.bbplayer > button.bb-forward {
+        vertical-align: middle;
+        display: inline-block;
+        height: 32px;
+        width:  32px;
+        background: transparent;
+        background-image: url('images/forward.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
 
-            div.bbplayer > button.bb-rewind {
-              vertical-align: middle;
-              display: inline-block;
-              height: 32px;
-              width:  32px;
-              background: transparent;
-              background-image: url('images/rewind.png');
-              background-position: center;
-              background-repeat: no-repeat;
-              cursor: pointer;
-            }
+      div.bbplayer > button.bb-rewind {
+        vertical-align: middle;
+        display: inline-block;
+        height: 32px;
+        width:  32px;
+        background: transparent;
+        background-image: url('images/rewind.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
 
       a{
         text-decoration: none;
@@ -2342,53 +2345,9 @@
               <br>
               <br>
               <hr>
-                <a href="http://bandfamous.com/radio" target="popup" 
-                    onclick="window.open('http://bandfamous.com/radio','popup','width=600,height=600'); return false;" class="ui-btn ui-btn-inline ui-corner-all"><img src="img/tbfradio.png" alt="Tap for TBF Radio"/></a>
+                <a href="radio.html" target="popup" 
+                    onclick="window.open('radio.html','popup','width=600,height=600'); return false;" class="ui-btn ui-btn-inline ui-corner-all"><img src="img/tbfradio.png" alt="Tap for TBF Radio" style="width: 90%; height: auto;" /></a>
 
-                <!--<div data-role="popup" id="myPopup">
-                    <div id="control-panel">
-                      <hr style="margin-top:-18px;">
-                    
-                      <div class="bbplayer">
-                        <button class="bb-rewind"></button>
-                        <button class="bb-play"></button>
-                        <button class="bb-forward"></button>
-                        <span class="bb-trackTime">--:--</span> 
-                        <span class="bb-trackLength">--:--</span>
-                        <p>Now Playing: </p><br>
-                        <p><span style="margin-top: -68px;" class="bb-trackTitle"></span></p>
-                        <audio>
-
-                          <source src="media/Carnage The Executioner - Minnesota Mean.mp3" type="audio/mpeg"></source>
-                          <source src="media/Dreamer and The Smoke Rings - Purple Dreaming.mp3" type="audio/mpeg"></source>
-                          <source src="media/The DROiDS - Satellite.mp3" type="audio/mpeg"></source>
-                          <source src="media/Kari Tribble - All We Want.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF Ft Gisselle - Lowtone.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF Ft Gisselle - Happy New Year.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF - Out Of Body.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF - Adaptation Remix.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF - Do You Care.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF - DnB.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF - Follow Your Bliss.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF - Magic is Real Make Yourself.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF - Reactions.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF - Spaceship Earth.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF - Share.mp3" type="audio/mpeg"></source>
-                          <source src="media/TBF - You Are Love.mp3" type="audio/mpeg"></source>
-
-                          HTML5 Audio Not Available
-                        </audio>
-                        <br>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p> 
-                          <br>
-                      </div> 
-                  </div>
-                </div> -->
 
                     <!-- Discography -->
                     <p style="font-size: 22px; margin-bottom: 10px; text-align: center; margin-top: 10px;">Discography:</p>

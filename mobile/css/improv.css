@@ -1,7 +1,3 @@
-body {
-  margin:0 auto;
-  font: 100%/40px "Marcellus", serif;
-}
 
 canvas {
   display: block;
@@ -17,7 +13,7 @@ canvas {
 }
 
 #control-panel {
-  background: #33CC33;
+  background: black;
   /*border: 15px solid #E68A8A;*/
   left: 15px;
   right: 15px;
