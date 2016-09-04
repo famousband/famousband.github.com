@@ -1,16 +1,4 @@
 
-canvas {
-  display: block;
-  height: 100%;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 5;
-  bottom: 5;
-  min-width: 280px;
-  width: 100%;
-}
 
 #control-panel {
   background: black;
@@ -23,6 +11,7 @@ canvas {
   z-index: 2;
   height: 455px;
   min-width: 280px;
+  bottom:95px;
 
 }
 
@@ -112,6 +101,7 @@ a {
   padding:10px;
   width: 100%;
   min-width: 280px;
+  margin-bottom: 20px;
 }
 
 button.bb-play {
