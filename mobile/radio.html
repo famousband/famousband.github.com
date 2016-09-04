@@ -20,16 +20,16 @@
   // BEFORE
   audio.addEventListener('canplay', function() {
       audio.play();
+      self.bbplayer.find('.bb-play').click(function () {
+      self.log('event: click .bb-play');
+        self.play;
+    });
   });
 
   // AFTER
   audio.play();
 
-  // Toggle play / pause
-    self.bbplayer.find('.bb-play').click(function () {
-      self.log('event: click .bb-play');
-        self.play;
-    });
+    
 </script>
 <style>
 
