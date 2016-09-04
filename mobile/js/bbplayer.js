@@ -2,13 +2,7 @@
 
 (function () {
 
-    // BEFORE
-  audio.addEventListener('canplay', function() {
-      audio.play();
-  });
 
-  // AFTER
-  audio.play();
 
   // Track multiple players on the page
   var bbplayers = [];
