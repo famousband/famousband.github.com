@@ -16,8 +16,15 @@
 <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'/>
 <link rel="stylesheet" href="css/social.css" type="text/css" />
 <link rel="stylesheet" href="css/improv.css" type="text/css"/>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "fd28c798-bbca-4c9f-8815-fe63e0a40b64", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+<script type="text/javascript">
+  // BEFORE
+  audio.addEventListener('canplay', function() {
+      audio.play();
+  });
+
+  // AFTER
+  audio.play();
+</script>
 <style>
 
       /* Property © The Band Famous™ */
@@ -254,6 +261,7 @@
     <button class="bb-rewind"></button>
     <button class="bb-play"></button>
     <button class="bb-forward"></button>
+    <br>
     <span class="bb-trackTime">--:--</span> 
     <span class="bb-trackLength">--:--</span>
     <p>Now Playing: </p><br>
