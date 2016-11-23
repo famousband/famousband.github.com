@@ -33,6 +33,7 @@ header {
 #wrapper {
   display: table;
   width: 80%;
+  min-width: 220px;
 }
 
 /* class of "wrapper" */
@@ -246,7 +247,7 @@ ul.topnav li a {
   
   color: white;
   padding: 11px;
-  font: bold px "Marcellus", serif;
+  font: bold 25px/1 "Marcellus", serif;
   margin-bottom: 8px;
   text-align: center;
   text-shadow: 0px -1px 1px indigo;
