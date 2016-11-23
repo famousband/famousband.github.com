@@ -18,7 +18,7 @@
 <link href="css/foundation/foundation.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
 <style>
-   /* Property © The Band Famous™ */
+  /* Property © The Band Famous™ */
   /* Musicians featured at TBF Radio include TBF, along with the artists featured in the Hall of Fame */
   /* All rights reserved. */
 
@@ -47,14 +47,24 @@
 
   /* end header "Famous" styling */
 
-  .main-nav{
-    background: url(images/Famous-0010.jpg) center;
-    background-size: 100%;
-    background-repeat: repeat;
-    height:160px;
-    width: 100%;
-    position: top left;
-  } 
+   /* Responsive Nav Bar */
+
+ul.topnav {
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  background: url(images/Famous-0010.jpg) center;
+  background-size: 100%;
+  background-repeat: repeat;
+  height:auto;
+  width: 100%;
+
+
+}
+
 
   center {
     background: url(img/face2.jpg) center;
@@ -71,21 +81,34 @@
 
 </style>
 </head>
-<body>
-  <nav class="main-nav">
-          <ul>
-          	<li><a href="shop.html">SHOP</a></li>
-            <li><a href="news.html">NEWS</a></li>
-            <li><a href="bio.html">BAND</a></li>
-            <li><a href="radio.html">MUSIC</a></li>
-            <li><a href="lyrics.html">LYRICS</a></li>
-            <li><a href="videos.html">VIDEOS</a></li>
-            <li><a href="esports.html">ESPORTS</a></li>
-          </ul>
-  </nav>
+<ul class="topnav" id="tbfnav">
+  <li><a href="news.html">HOME</a></li>
+  <li><a href="bio.html">BAND</a></li>
+  <li><a href="shop.html">SHOP</a></li>
+  <li><a href="radio.html">MUSIC</a></li>
+  <li><a href="lyrics.html">LYRICS</a></li>
+  <li><a href="videos.html">VIDEOS</a></li>
+  <li><a href="esports.html">ESPORTS</a></li>
+  <li><a href="contact.html">CONTACT</a></li>
+  <li><a href="halloffame.html">HALL OF FAME</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+    <script>
+      function myFunction(){
+        var x = document.getElementById("tbfnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </li>
+</ul>
+
 <header>
     <br>
-    <a href="contact.html"><h1 style="margin-top:-20px;" data-content="TBF">TBF</h1><img src="images/connect.png" alt="Contact the Band Famous" style="width: 300px; height:auto; margin-top: -35px;" title="Contact"/></a>
+    <h1 style="margin-top:-20px;" data-content="TBF">TBF</h1>
 </header>
 <center id="nav">
 	<hr style="border-top: 8px solid black; margin: 20px;">
@@ -99,7 +122,7 @@
           <img src="img/press/quotesJay.png" style="margin-bottom:10px; width: 100%; box-shadow: 8px 8px 5px #888888;"/>
         </td>
         <td>
-          <img src="img/theBandFamous.jpg" style="margin-bottom:10px; width: 54.7%; box-shadow: 8px 8px 5px #888888;"/>
+          <img src="img/theBandFamous.jpg" style="margin-bottom:10px; width: 54.7%; min-width: 280px; box-shadow: 8px 8px 5px #888888;"/>
         </td>
       </tr>
     </table>
@@ -468,7 +491,7 @@
 
   <!-- End Gallery Links -->
   <!-- EPK link to tumblr epk page -->
-  <div class="wrap" style="margin-top: -15px; margin-bottom: 15px; margin-left: 20px;"> <a href="http://bandfamous.tumblr.com/epk" target="_blank" class="btn btn-big" style="max-height:70px; height: 40%;">EPK</a>
+  <div class="wrap" style="margin-top: -15px; margin-bottom: 30px; margin-left: 20px; "><a href="epk.html" class="btn btn-big" style="">EPK</a>
 
   </div>
 
@@ -482,5 +505,6 @@
      <script>
       $(document).foundation();
     </script>
+
 </body>
 </html>

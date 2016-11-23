@@ -2,23 +2,22 @@ html, body {
   margin: 0;
   padding-top: 0px;
   border:0;
-  min-width: 300px;
+  min-width: 220px;
   width:auto;
   position: relative;
 }
 
-body {
-    font-family: "";
-    background: #33CC33;
-    background: linear-gradient(#33CC33, #3399FF, #33CC33);
-    border-radius: 6px;
-    height: auto;
-    max-width: auto;
-    min-width: auto;
-    line-height: 1.5em;
-    position: relative;
-    /*This just stops me getting horizontal scrolling if anything overflows the width*/
-    overflow-x: hidden;
+body {    
+  background: #33CC33;
+  background: linear-gradient(#33CC33, #3399FF, #33CC33);
+  border-radius: 6px;
+  height: auto;
+  max-width: auto;
+  min-width: 220px;
+  line-height: 1.5em;
+  position: relative;
+  /*This just stops me getting horizontal scrolling if anything overflows the width*/
+  overflow-x: hidden;
 
 }
 
@@ -41,6 +40,7 @@ header {
 .wrapper {
   margin:30px auto;
   width:80%;
+  min-width: 220px;
   font-family:sans-serif;
   color:#555;
   font-size:14px;
@@ -189,11 +189,7 @@ button a:active {color:blue;}  /* selected link */
     position: static;
 }
 
-center#nav{
-  margin-top:40px;
-  margin-bottom:40px;
-  
-}
+
 
 .getAutoHeight {
    position: relative;
@@ -213,70 +209,95 @@ input.punch2:hover{
   color:#25c655;
 }
 
-/* NAV BAR */
+/* Responsive Nav Bar */
 
-.main-nav{
-  display:inline-block;
-  position: top left;
+ul.topnav {
+
+  list-style-type: none;
+  margin: 11px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  background: url(images/Famous-0010.jpg) center;
+  background-size: 100%;
+  background-repeat: repeat;
+  height:auto;
+  width: 100%;
+
 
 }
 
-nav > ul {
-  margin-top: 2em;
-  margin-left: 130px;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 2em;
-  list-style: none;
-}
 
-nav > ul > li {
-  position: relative;
-  margin-right: 1em;
-  float: left;
-}
+/* Float list items side by side */
+ul.topnav li {float: left;}
 
-nav ul li a {
-  background: #3399FF;
+/* Style links inside list items */
+ul.topnav li a {
   border-top: 1px solid indigo;
-  border-right: 1px solid indigo;
+  border-right: 1px solid indigo; 
   border-bottom: 1px solid indigo;
   border-left: 1px solid indigo;
-  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+
+  /*
   -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 1px 10px 1px indigo, 0px 1px 0 indigo, 0 6px 0px indigo, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px indigo, 0px 1px 0 indigo, 0 6px 0px indigo, 0 8px 4px 1px #111111; */
+  
   color: white;
-  font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 10px;
+  padding: 11px;
+  font: bold px "Marcellus", serif;
+  margin-bottom: 8px;
   text-align: center;
   text-shadow: 0px -1px 1px indigo;
    -webkit-background-clip: padding-box; 
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 150px;
-  height: auto;
   cursor: pointer;
- 
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-nav > ul > li > a {
-  color:#25c625;
-  background: black;
-  -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  cursor: pointer;
-  font: bold 25px/1 "Marcellus", serif;
-  margin-bottom: 20px;
-  padding: 10px 0 12px 0;
-  text-align: center;
-  /* attempting to get buttons to resize accordingly with screen adjust */
-  width: 150px;
-  height: auto;
-  border-radius: 11px;
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+/* When screen is less than 680px wide, hide list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+
+
+
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
 }
 
-nav > ul > li > a:link {color: #3399FF; -moz-text-decoration-style: solid; padding: 11px 30px;}      /* unvisited link */
-nav > ul > li > a:visited {color:#3399FF;}  /* visited link */
-nav > ul > li > a:hover {
+/* The "responsive" class is added to topnav  with Javascript when the user clicks on the icon. This class makes the topnav look good on small screens */
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+ul.topnav li > a:link {color: #3399FF; -moz-text-decoration-style: solid; padding: 11px 22px;}   /* unvisited link */
+
+ul.topnav li > a:visited {color:#3399FF;}  /* visited link */
+
+ul.topnav li > a:hover {
   background: #3399FF;
   border-top: 1px solid #3399FF;
   border-right: 1px solid #3399FF;
@@ -284,19 +305,22 @@ nav > ul > li > a:hover {
   border-left: 1px solid #3399FF;
   border-radius: 11px;
   -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-  box-shadow: inset 0 1px 10px 1px black, 0px 1px 0 black, 0 6px 0px black, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px indigo, 0px 1px 0 indigo, 0 6px 0px indigo, 0 8px 4px 1px #111111;
   color: #fff;
   text-shadow: 0px -1px 1px #E1DFD3;
   -webkit-background-clip: padding-box; 
  }
- /* mouse over link */
-nav > ul > li > a:active {color:#33CC33; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-    /*margin-top: 58px; */
-    position: static;}  /* selected link */
+ 
 
-nav ul > li ul {
-  position: absolute;
+ /* mouse over link */
+ 
+ul.topnav li > a:active {color:#33CC33; -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    position: static;} */ /* selected link */
+
+
+ul.topnav li ul {
+
   width: 200px;
   background: #33cda7;
   border-radius: 5px;
@@ -307,72 +331,6 @@ nav ul > li ul {
   list-style: none;
 }
 
-nav ul > li ul:after {
-  content: "";
-  position: absolute;
-  top: -11px;
-  left: 1em;
-  height: 0; 
-  width: 0;
-  border: 6px solid transparent;
-  border-bottom-color: rgba(216,30,179,0.56); 
-}
-
-nav > ul li > ul > li {
-  position: relative;
-}
-
-nav > ul > li > ul > li > ul {
-  left: 105%;
-  top: -2.5em !important;
-  z-index: 1;
-  width: 180px;
-}
-
-nav > ul > li > ul > li > ul:hover {
-  width: 200px;
-}
-
-nav > ul > li > ul > li > ul:after {
-  content: "";
-  position: absolute;
-  top: 1em;
-  left: -12px;
-  heght: 0; width: 0;
-  border: 6px solid transparent;
-  border-right-color: rgba(216,30,179,0.56); 
-}
-
-nav > ul > li > ul > li:hover > ul {
-  top: 0 !important;
-}
-
-
-.drop,.dropp {
-  padding-right: 2em;
-}
-
-.drop:after,
-.dropp:after{
-  content: "";
-  position: absolute;
-  height: 0; width: 0;
-  border: 6px solid transparent;
-}
-
-.drop:after {
-  right: 8px;
-  top: 14px;
-  border-top-color: rgba(216,30,179,0.56); 
-}
-
-.dropp:after {
-  top: 12px;
-  right: 8px;
-  border-left-color: rgba(216,30,179,0.56); 
-}
-
-/* End Nav Bar */
 
 /* LINKS */
 
@@ -387,6 +345,34 @@ label a {
 label a:hover{
   color:indigo;
 }
+
+a.music:link {
+
+color: black; 
+
+}
+
+a.music:hover {
+  color: #fff;
+
+}
+
+a.music:active {
+  color:indigo;
+}
+
+a.music:visited{
+  color:#3399FF;
+}
+
+
+/*
+a img {
+  width: 85%;
+  min-width: 220px;
+  height: auto;
+}
+*/
 
 a#shop{
   font-size: 24px;
@@ -525,6 +511,8 @@ span img{
 }
 /* id of "two" */
 #two {
+  min-width: 220px;
+  min-height: auto;
   max-width: 670px;
   max-height: 400px;
   position: center fixed;
@@ -534,7 +522,7 @@ span img{
 
 #left {
   height: 300px; 
-  min-width:280px;
+  min-width:220px;
   max-width: 600px;
 
 }
@@ -543,7 +531,7 @@ span img{
 
 #right {
   max-width: 600px;
-  min-width: 280px;
+  min-width: 220px;
 
 }
 
@@ -552,7 +540,8 @@ span img{
 #scroll{
   background: #3399FF;
   width: 90%;
-  min-height: 200px; 
+  min-height: 300px; 
+  min-width: 220px;
   height: 320px;
   overflow-y: scroll;
 }
@@ -582,18 +571,24 @@ span img{
 /* Table that holds scroll divs for press and events */
 table#homepage {
   width: 100%;
-  margin-left: 6%;
+  min-width: 220px;
+  margin-left: 5%;
   margin-bottom: 2px;
 }
 
 table#homepage tr td.size {
   display: inline-block;
-  min-width: 280px;
-  max-width: 80%;
-  width: 46%;
+  min-width: 110px;
+  max-width: 50%;
+  width: 49%;
+  min-height: auto;
   height: 320px;
   margin-bottom: 83px;
   margin-left: 5px;
+}
+
+table#homepage tr td.size h2 {
+  
 }
 
 /* for table galleries on bio page */
@@ -602,7 +597,7 @@ table.gallery {
   margin-bottom:20px;
   margin-left: 20px;
   width: 100%;
-  min-width: 280px;
+  min-width: 220px;
 }
 
 table.gallery tr {
@@ -791,20 +786,22 @@ label {
 
 #content{
     height:auto;
-    min-width:640px;
+    min-width:220px;
+    width: 80%;
     position: center absolute;
     background-position: fixed;
 }
 #content img{
     max-width:100%;
+    min-width: 50%;
     height:auto;
 }
 
 #container {
     max-width: auto;
     max-height: auto;
-    width: 768px;
-    min-width: 30%;
+    width: auto;
+    min-width: 220px;
     position: center;
     background-position: absolute;
 }
@@ -1058,7 +1055,7 @@ h1.modal {
     z-index: 10;
 }
 .modal .modal-dialog {
-    background: #fefefe;
+    background: transparent;
     border: #333333 solid 1px;
     border-radius: 5px;
     margin-left: -200px;
@@ -1088,7 +1085,7 @@ h1.modal {
     padding: 10px 20px;
 }
 .modal-header {
-    border-bottom: #eeeeee solid 1px;
+    /*border-bottom: #eeeeee solid 1px; */
 }
 .modal-header h2 {
     font-size: 20px;
@@ -1107,4 +1104,44 @@ div#scroll p {
 div#scroll p strong {
   font-variant: bold;
   font-size: 20px;
+}
+
+/* columns on esports html page */
+.col-group {
+  overflow: hidden;
+}
+.col-group > div {
+  padding: 1em;
+}
+
+@media screen and (min-width: 44em) {
+  .col-group > div {
+    float: left;
+    width: 50%;
+  }
+  .col-group > div:nth-child(odd) {
+    clear: left;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .col-group > div {
+    float: left;
+    width: 33.3333333%;
+  }
+  .col-group > div:nth-child(3n+1) {
+    clear: left;
+  }
+  .col-group > div:nth-child(odd) {
+    clear: none;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  .col-group > div {
+    width: 20%;
+  }
+  .col-group > div:nth-child(odd), .col-group > div:nth-child(3n+1) {
+    clear: none;
+  }
 }

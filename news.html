@@ -21,14 +21,23 @@
   /* Property © The Band Famous™ */
   /* Musicians featured at TBF Radio include TBF, along with the artists featured in the Hall of Fame */
   /* All rights reserved. */
-  .main-nav{
+
+  /* Responsive Nav Bar */
+  ul.topnav {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
     background: url(images/Famous-0010.jpg) center;
     background-size: 100%;
     background-repeat: repeat;
-    height:160px;
+    height:auto;
     width: 100%;
-    position: top left;
-  } 
+
+
+  }
 
 </style>
 
@@ -55,26 +64,42 @@
   });
   feed.run();
 </script>
-<nav class="main-nav">
-          <ul>
-          	<li><a href="shop.html">SHOP</a></li>
-            <li><a href="news.html">NEWS</a></li>
-            <li><a href="bio.html">BAND</a></li>
-            <li><a href="radio.html">MUSIC</a></li>
-            <li><a href="lyrics.html">LYRICS</a></li>
-            <li><a href="videos.html">VIDEOS</a></li>
-            <li><a href="esports.html">ESPORTS</a></li>
-          </ul>
-</nav>
+
+<ul class="topnav" id="tbfnav">
+  <li><a href="news.html">HOME</a></li>
+  <li><a href="bio.html">BAND</a></li>
+  <li><a href="shop.html">SHOP</a></li>
+  <li><a href="radio.html">MUSIC</a></li>
+  <li><a href="lyrics.html">LYRICS</a></li>
+  <li><a href="videos.html">VIDEOS</a></li>
+  <li><a href="esports.html">ESPORTS</a></li>
+  <li><a href="contact.html">CONTACT</a></li>
+  <li><a href="halloffame.html">HALL OF FAME</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+    <script>
+      function myFunction(){
+        var x = document.getElementById("tbfnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </li>
+</ul>
+
 <header>
   <br>
-  <a href="contact.html"><h1 style="margin-top:-20px;" data-content="TBF">TBF</h1><img src="images/connect.png" alt="Contact the Band Famous" style="width: 300px; height:auto; margin-top: -35px;" title="Contact"/></a>
+  <h1 style="margin-top:-20px;" data-content="TBF">TBF</h1>
 </header>
-<center id="nav">
+<center>
   <hr style="border-top: 8px solid black; margin: 20px;">  
     <br>
+    <a href="halloffame.html"><img src="img/halloffame.jpg" alt="Hall of Fame" title="Check out the Hall of Fame" style="width: 75%; min-width: 180px; height:auto; margin-bottom:30px;"/></a>
     <div id="wrapper">
-      <a href="halloffame.html"><img src="img/halloffame.jpg" alt="Hall of Fame" title="Check out the Hall of Fame" style="width: 85%; height:auto; margin-bottom:30px;"/></a>
+
       <table id="homepage">
         <tr>
             <td class="size">
@@ -394,9 +419,9 @@
             </li>
             <li>
               <div id="right">
-                <iframe id="ytplayer" type="text/html" width="90%" max-height="320px" min-height="200px" height="320px;"
-        src="https://www.youtube.com/embed/OPp5yO8Ai3w"
-        frameborder="0" allowfullscreen style="box-shadow: 8px 8px 5px #888888;"></iframe>
+                <iframe id="ytplayer" type="text/html" width="90%" max-height="320px" min-height="auto" height="320px;" min-width="280px"
+                src="https://www.youtube.com/embed/OPp5yO8Ai3w"
+                frameborder="0" allowfullscreen style="box-shadow: 8px 8px 5px #888888;"></iframe>
               </div>
             </li>
 
@@ -431,6 +456,15 @@
 <script type="text/javascript" src="js/text.js"></script>
 <script type="text/javascript" src="js/tour.js"></script>
 <script type="text/javascript" src="js/tourTable.js"></script>
-
+<script>
+  function myFunction(){
+    var x = document.getElementById("tbfnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
 </body>
 </html>
