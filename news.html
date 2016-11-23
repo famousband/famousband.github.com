@@ -23,6 +23,7 @@
   /* All rights reserved. */
 
   /* Responsive Nav Bar */
+
     ul.topnav {
 
       list-style-type: none;
@@ -38,33 +39,40 @@
 
 
     }
+
+    /* Style links inside list items */
+ul.topnav li a {
+  border-top: 1px solid indigo;
+  border-right: 1px solid indigo; 
+  border-bottom: 1px solid indigo;
+  border-left: 1px solid indigo;
+  -webkit-box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 0px 20px 1px #8480D1, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+
+  /*
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px indigo, 0px 1px 0 indigo, 0 6px 0px indigo, 0 8px 4px 1px #111111; */
+  
+  color: white;
+  padding: 11px;
+  font: bold px "Marcellus", serif;
+  margin-bottom: 8px;
+  text-align: center;
+  text-shadow: 0px -1px 1px indigo;
+   -webkit-background-clip: padding-box; 
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
     
 
 </style>
 
 </head>
 <body>
-<div id="fb-root"></div>
-<script>
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=492306967513697";
-      fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
-<!-- required for instagram callin -->
-<script type="text/javascript" src="js/instafeed.js"></script>
-<script type="text/javascript">
-  var feed = new Instafeed({
-    get: 'tagged',
-    tagName: 'thebandfamous',
-    limit: 5,
-    clientId: '361e764ecb3f4153baf84f49f0ab8d58'
-  });
-  feed.run();
-</script>
+
 
 <ul class="topnav" id="tbfnav">
   <li><a href="news.html">HOME</a></li>
@@ -96,7 +104,7 @@
   <h1 style="margin-top:-20px;" data-content="TBF">TBF</h1>
 </header>
 <center>
-  <hr style="border-top: 8px solid black; margin: 20px;">  
+  <hr style="border-top: 8px solid black; margin-top: 20px; margin-bottom: 20px;">
     <br>
     <a href="halloffame.html"><img src="img/halloffame.jpg" alt="Hall of Fame" title="Check out the Hall of Fame" style="width: 75%; min-width: 180px; height:auto; margin-bottom:30px;"/></a>
     <div id="wrapper">
@@ -457,15 +465,26 @@
 <script type="text/javascript" src="js/text.js"></script>
 <script type="text/javascript" src="js/tour.js"></script>
 <script type="text/javascript" src="js/tourTable.js"></script>
+<div id="fb-root"></div>
 <script>
-  function myFunction(){
-    var x = document.getElementById("tbfnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=492306967513697";
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- required for instagram callin -->
+<script type="text/javascript" src="js/instafeed.js"></script>
+<script type="text/javascript">
+  var feed = new Instafeed({
+    get: 'tagged',
+    tagName: 'thebandfamous',
+    limit: 5,
+    clientId: '361e764ecb3f4153baf84f49f0ab8d58'
+  });
+  feed.run();
 </script>
 </body>
 </html>
