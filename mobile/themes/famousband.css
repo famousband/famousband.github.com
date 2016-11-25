@@ -16,6 +16,9 @@
 html {
 	font-size: 100%;
 }
+body {
+	background: linear-gradient(#33CC33, #3399FF, #33CC33);
+}
 body,
 input,
 select,
@@ -440,7 +443,7 @@ html body .ui-group-theme-b .ui-bar-inherit {
 .ui-overlay-b,
 .ui-page-theme-b,
 .ui-page-theme-b .ui-panel-wrapper {
-	background: #33CC33 /*{b-page-background-color}*/;
+	background: linear-gradient(#33CC33, #3399FF, #33CC33); /*{b-page-background-color}*/;
 	border-color: #00ca5e /*{b-page-border}*/;
 	color: #ffffff /*{b-page-color}*/;
 	text-shadow: 0 /*{b-page-shadow-x}*/ 1px /*{b-page-shadow-y}*/ 0 /*{b-page-shadow-radius}*/ #444444 /*{b-page-shadow-color}*/;
