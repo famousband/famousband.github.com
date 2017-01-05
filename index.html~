@@ -52,7 +52,7 @@ body{
 					 </li>
 					<li>
 						<form method="link" action="http://www.bandfamous.com/mobile">
-					        <input type="submit" value="Enter Site On Phone" class="punch" title="On a phone? Enter Here.">
+					        <input type="submit" value="Enter Site On Phone" class="punch" title=""On a phone? Enter Here.>
 						</form>
 					</li>
 					<li>
