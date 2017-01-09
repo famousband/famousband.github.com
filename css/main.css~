@@ -4,6 +4,7 @@ html,  {
   border:0;
   min-width: 220px;
   position: relative;
+  overflow-x: hidden;
 }
 
 body {    
@@ -13,8 +14,13 @@ body {
   min-width: 220px;
   line-height: 1.5em;
   position: relative;
+  margin: 0;
+  padding-top: 0px;
+  padding: 0;
+  border:0;
   /*This just stops me getting horizontal scrolling if anything overflows the width*/
   overflow-x: hidden;
+  
   /* overflow-y: hidden; */
 
 }
@@ -208,6 +214,65 @@ input.punch:active{
 input.punch2:hover{
   color:#25c655;
 }
+
+/* FAQ Hall of Fame */
+
+div#faq {
+  font-family: 'Marcellus', sans-serif;
+  font-size: 1em;
+  overflow-x: hidden;
+  padding: 0 1.5em;
+}
+
+.faq-header{
+  font-size: 2em;
+  font-family: 'Marcellus', sans-serif;
+  border-bottom: 1px dotted #777;
+  padding: 1em 0;
+}
+
+.faq-c {
+  border-bottom: 1px dotted #777;
+  padding: 1em 0;
+}
+
+.faq-t {
+  line-height: 1em;
+  color: #aaa; 
+  font-family: 'Marcellus', sans-serif;
+  float:left; 
+  font-weight: 700; 
+  padding-right: 0.3em; 
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.faq-o {
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+  -ms-transform: rotate(-45deg);
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform: rotate(-45deg);
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.faq-q {
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+.faq-a {
+  clear: both;
+  color: black;
+  display: none;
+  padding-left: 1.5em;
+}
+
 
 /* Responsive Nav Bar */
 
