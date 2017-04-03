@@ -79,19 +79,8 @@
 <center id="nav">
 	<hr style="border-top: 8px solid black; margin-top: 20px; margin-bottom: 20px;">
 
-  <script>
-    function learnAboutHallOfFame() {
-      // trigger by event
-      $('a.reveal-link').trigger('click');
-
-      // or directly on the modal
-      $('#one').foundation('reveal', 'open');
-      $('#one').foundation('reveal', 'close');
-    }
-  </script>
-
   <ul id="shop">
-      <li><a href="#" data-reveal-id="one"><h3 title="About the Hall of Fame" style="width:300px; height: auto; color: white;">Hall of Fame</h3></a></li>
+      <li><a href="#" data-reveal-id="one" onload="learnAboutHallOfFame()"><h3 title="About the Hall of Fame" style="width:300px; height: auto; color: white;">Hall of Fame</h3></a></li>
   </ul>
 
   <div id="one" class="reveal-modal" data-reveal style="max-height:700px; height: auto; min-height: 300px;">
@@ -179,7 +168,7 @@
   <hr style="border-top: 8px solid black; margin: 20px; margin-top: 70px;">
 </center>
 
-<footer class="homeFoot"><h2>The Band Famous™</h2><a href="http://www.phonixintl.com" target="_blank"><h2 style="font-size: 16px; margin-top: -20px;">Website by Phönix LLC</h2></a></footer>
+<footer class="homeFoot"><h2>The Band Famous™</h2><a href="http://www.phonixintl.com" target="_blank" title="Visit PhonixIntl.com"><h2 style="font-size: 16px; margin-top: -20px;">Website by Phönix LLC</h2></a></footer>
 <script>$("header").wrap("<div></div>");</script>
 <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
