@@ -82,9 +82,6 @@
   <ul id="shop">
       <li><a href="#" data-reveal-id="one" onload="learnAboutHallOfFame()"><h3 title="About the Hall of Fame" style="width:300px; height: auto; color: white;">Hall of Fame</h3></a></li>
   </ul>
-  <script type="text/javascript">
-    $(document).ready(function(){$('#one').foundation('reveal', 'open')});
-  </script>
 
   <div id="one" class="reveal-modal" data-reveal style="max-height:700px; height: auto; min-height: 300px;">
     <img src="img/halloffame.jpg" alt="Hall of Fame" title="Check out the Hall of Fame" style="width: 100%; min-width: 180px; height:auto; margin-bottom:30px;"/>
@@ -184,6 +181,7 @@
 <script src="js/foundation.min.js"></script>
 <script>
   $(document).foundation();
+  $(document).ready(function(){$('#one').foundation('reveal', 'open')});
 </script>
 
 </body>
