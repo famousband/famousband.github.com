@@ -358,6 +358,7 @@ ul.topnav li.icon {display: none;}
   }
 }
 
+
 ul.topnav li > a:link {color: #3399FF; -moz-text-decoration-style: solid; padding: 11px 22px;}   /* unvisited link */
 
 ul.topnav li > a:visited {color:#3399FF;}  /* visited link */
