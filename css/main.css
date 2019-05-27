@@ -709,6 +709,88 @@ table.bio tr td {
 
 }
 
+
+/* for table of sponsors */
+
+table.sponsoredby {
+  width: 100%;
+  min-width: 280px;
+  margin-left: 12%;
+
+}
+
+table.sponsoredby tr {
+  display: inline-block;
+  min-width: 280px;
+  padding: 0px;
+}
+
+table.sponsoredb tr td {
+  margin-left: -20px;
+  padding: 0px;
+  width: 25%;
+  display: inline-block;
+  min-width: 280px;
+
+}
+
+table.sponsoredb tr td img {
+
+}
+
+blockquote {
+
+  width: 65%; 
+  margin-top:10px; 
+  text-shadow: none; 
+  color: white; 
+  text-align:center;
+
+}
+
+blockquote p {
+  /*font-family: The Girl Next Door;*/
+  color: white;
+}
+
+blockquote footer {
+  font-family: 'Marcellus', serif;
+  text-align: right;
+}
+
+
+blockquote footer a {
+
+color: black; 
+cursor: pointer; 
+text-decoration: underline;
+
+}
+
+
+blockquote footer a:link {
+
+color: black; 
+
+}
+
+blockquote footer a:hover {
+  color: indigo;
+  cursor: pointer; 
+  text-decoration: underline;
+
+}
+
+blockquote footer a:active {
+  color:indigo;
+}
+
+blockquote footer a:visited{
+  /*color:#3399FF;*/
+  -webkit-text-stroke: 1px indigo;
+}
+
+
 /* h1, h2, h3, h4, p */
 
 
