@@ -706,6 +706,8 @@
 
               <!--<p style="color: white;">Instagram:</p> -->
               <!-- Instafeed of instagram -->
+              <span><div id="instafeed"></div></span>
+
               <script src="https://apps.elfsight.com/p/platform.js" defer></script>
               <div class="elfsight-app-0f7e8dad-9ae9-42fa-aa9a-dd2d93112bc2"></div>
             </center>
@@ -737,8 +739,8 @@
 <script type="text/javascript" src="js/instafeed.js"></script>
 <script type="text/javascript">
   var feed = new Instafeed({
-    get: 'tagged',
-    tagName: 'thebandfamous',
+    get: 'user',
+    userId: 'the_band_famous',
     limit: 5,
     clientId: '361e764ecb3f4153baf84f49f0ab8d58'
   });
