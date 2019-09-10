@@ -14,6 +14,7 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/foundation.css" />
 <link rel="stylesheet" href="css/main.css" type="text/css"/>
 <style>
 
@@ -32,9 +33,27 @@ body{
 </head>
 <body>
 	<div>
+
+		<ul id="shop">
+	      <li><a href="#" data-reveal-id="one" onload="learnAboutHallOfFame()"><h3 title="Vote for Norell of The Band Famous to be on the cover of Maxim!" style="-webkit-text-stroke-width: 1px;
+	   -webkit-text-stroke-color: indigo; width:300px; height: auto; color: white;">TBF on Maxim!</h3></a></li>
+	  	</ul>
+
+	  	<div id="one" class="reveal-modal" data-reveal style="height: auto; min-height: 300px;">
+		    <center><a href="https://maximcovergirl.com/2019/norell-lead-singer-and-co-producer-of-the-band-famous" target="_blank"><img src="img/NorellOnMaxim.jpeg" alt="Norell of The Band Famous on the cover of Maxim" title="Vote for Norell of The Band Famous to be on the cover of Maxim!" style="width: 70%; min-width: 180px; height:auto; margin-bottom:30px;"/></center>
+		    <h2 style="color: indigo;">The Band Famous on the cover of Maxim!</h2>
+			<br>
+			<center><a href="https://maximcovergirl.com/2019/norell-lead-singer-and-co-producer-of-the-band-famous" target="_blank"><button>Vote Now</button></a></center>
+		    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: left;">With YOUR help! You may vote every 24 hours, or more with Warrior Votes. When you vote with a Warrior Vote, it is a minimum donation of $10 and a maximum donation of $500 dollars per day you may contribute, with proceeds benefiting Wounded Warriors - they will be building houses for wounded soldiers who served for our country. <br><br>Currently Norell is in 2nd place in her group! Let's get her to 1st! After September 12th, the Top 20 girls from every group move on to the next stage of voting. <br><br>Sharing is absolutely caring, so please feel free to share the link to vote for Norell of The Band Famous to be on the cover of Maxim magazine on your social media (Facebook, Instagram, Snapchat, etc.), and text the link to your friends, and coworkers. Thank you for voting every 24 hours! Free votes, Warrior Votes, all votes are appreciated and add up. Your support means the world! <br><br>We have managed to produce some amazing benefit shows for good causes with our Hall Of Fame comrades, and are looking forward to bringing you more great music for great causes soon. Win or lose, we are already winning with fans and friends like you. Thank you, familia!</p>
+		    <br>
+			 
+		    <a class="close-reveal-modal">&#215;</a>
+	  	</div>
+
+
 			
-		<!-- Implementing tabs-->
-			<ul style="min-width: 250px; margin-left:-40px; margin-bottom:0px;">
+		<!-- Implementing tabs  - without popup and foundation margin-left at -40px -->
+			<ul style="min-width: 250px; margin-left:10px; margin-bottom:0px;">
 
 				<li>
 					<form method="link" action="https://www.bandfamous.com/news">
@@ -90,6 +109,13 @@ body{
 </script>
 
 End Google Ads -->
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+  $(document).ready(function(){$('#one').foundation('reveal', 'open')});
+</script>
 
 </body>
 </html>
