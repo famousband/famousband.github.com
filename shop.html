@@ -86,6 +86,45 @@
     <br>
     <h3 style="font: 4em Helvetica, Sans-Serif; letter-spacing: -5px; color: white; margin-bottom: 0px;">Shop</h3>
 
+      <p style="font-size: 22px; width: 80%; margin-top:11px; text-shadow: none; color: white;">The full-length 2nd album <i>Awakening</i> is on the way, date TBA. In the meanwhile, you can purchase the six-track EP for <i>Awakening</i>. We have a limited quantity of CDs made that are available to ship anywhere in the United States for $10, or anywhere in the world for $10 plus S&amp;H!</p>
+      <p style="font-size: 22px; width: 70%; margin-top:11px; text-shadow: none; color: white;">Get TBF's first CD ever made, the EP for the upcoming full length album, <i>Awakening</i>!</p>
+      <ul id="shop">
+        <li><img src="img/shop/AwakeningEP.jpg" alt="Get your limited edition CD, the EP for Awakening by The Band Famous!" style="width: 45%; height: auto; box-shadow: none;" /></li>
+        <li><img src="img/shop/epCD.jpg" alt="Get your limited edition CD, the EP for Awakening by The Band Famous!" style="width: 23%; height: auto; box-shadow: none;" /></li>
+      </ul>
+      <br>
+
+      <div id="paypal-button-container"></div>
+      <script src="https://www.paypal.com/sdk/js?client-id=ATtJgg5kol_SeFJvr4t1wSAqCf8QLa29juN6NmvLYbIAFBTzcgYmaj0AD9u_AQE37NxKWOGO6ufoxv_d&currency=USD" data-sdk-integration-source="button-factory"></script>
+      <script>
+        paypal.Buttons({
+        style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'buynow',
+                                    
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+                purchase_units: [{
+                amount: {
+                value: '10.00'
+              }
+            }]
+          });
+         },
+            onApprove: function(data, actions) {
+              return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+            });
+          }
+        }).render('#paypal-button-container');
+      </script>                                                                                                                                   
+                                                                                                                                                                            
+
+
+
       <p style="font-size: 22px; width: 70%; margin-top:11px; text-shadow: none; color: white;">Get TBF's Debut Album <i>Last Words</i> FREE!</p>
       <span><a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank" title="Have an iPhone, iPad, or iPod Touch? Download our iOS app for free!"><img src="img/appstore.gif" style="width: 320px; height: auto; vertical-align: center; margin-top: -20px; margin-bottom: 10px;" alt="Download The Band Famous on the App Store today!"/></a></span>
       <span><a href="https://play.google.com/store/apps/details?id=com.bandfamous.famous" target="_blank" title="Have an Android phone or tablet? Download our Android app for free!"><img src="img/googleplay.png" style="width: 318px; height: auto; vertical-align: center; margin-left: 5px; margin-top: -25px; margin-bottom: 10px;" alt="Download The Band Famous on Google Play today!"/></a></span>
@@ -148,7 +187,7 @@
           <img src="img/shop/1.jpg" alt="iPhone Case Option 1 Reincarnation" title="iPhone 'Reincarnation' Pouch Case - $50.00" onmouseover="this.src='img/shop/001.gif';" onmouseout="this.src='img/shop/1.jpg';" style="width:60%; height:auto; margin-bottom: 20px;"/>
           <div style="width:60%; height:auto; margin-bottom: 20px;">
           <h2>$50.00</h2>
-          <p style="text-shadow: none;">I am a divine pouch for your iPhone. Allow me to keep your iPhone case safe.</p>
+          <p style="text-shadow: none;">I am a divine pouch for your iPhone. Allow me to keep your iPhone safe.</p>
           <!-- add to cart -->
           <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
           <input type="hidden" name="cmd" value="_s-xclick">
@@ -318,7 +357,7 @@
           <img src="img/shop/9.jpg" alt="The Band Famous Awakening Poster 12x16" onmouseover="this.src='img/shop/009.gif';" onmouseout="this.src='img/shop/9.jpg';" title="12x16 TBF 'Awakening' Poster - $25.00" style="width:60%; height:auto; margin-bottom: 20px;"/>
           <div style="width:60%; height:auto; margin-bottom: 20px;">
               <h2>$25.00</h2>
-              <p style="text-shadow: none;">Are you excited for TBF's upcoming 2nd album, "Awakening"? We are, too! You can order your poster featuring all three members of TBF, today! We'll autograph the front or back of it, your choice.</p>
+              <p style="text-shadow: none;">Are you excited for TBF's full-length 2nd album, <i>Awakening</i>? We are, too! You can order your poster featuring all three founding members of TBF, today! We'll autograph the front or back of it, your choice.</p>
               <br>
               <!-- add to cart -->
               <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -359,7 +398,11 @@
         <li>
 
           
-          <a href="https://paypal.me/TheBandFamous" target="_blank" title="Purchase an autographed poster of The Band Famous® for $35!"><img src="img/shop/The Band Famous Poster.jpg" alt="Get your personalized poster, autographed by The Band Famous!" style="width: 25%; height: auto; box-shadow: none;" /></a>
+          <!--<a href="https://paypal.me/TheBandFamous" target="_blank" title="Purchase an autographed poster of The Band Famous® for $35!">-->
+
+            <img src="img/shop/The Band Famous Poster.jpg" alt="Get your personalized poster, autographed by The Band Famous!" style="width: 25%; height: auto; box-shadow: none;" />
+
+          <!--</a> -->
           
 
         </li>
@@ -373,14 +416,22 @@
       <div style="width:47%; height: auto; float: left;">
         <br>
         <br>
-        <p style="font-size: 22px; width: 75%; margin-top:10px; text-shadow: none; color: white;">Step 1. Send $35 payment - price is including shipping &amp; handling - via CashApp at $TheBandFamous or <br><br><a href="https://www.paypal.me/TheBandFamous" target="_blank"><img src="img/shop/paypal.png" style="min-width: 150px; width: 22%; height: auto; box-shadow: none;" alt="Paypal"></a></p>
+        <p style="font-size: 22px; width: 75%; margin-top:10px; text-shadow: none; color: white;">Step 1. Send $35 payment - price is including shipping &amp; handling - via CashApp at $TheBandFamous or with secure checkout via
+        <a href="https://www.paypal.me/TheBandFamous" target="_blank"><img src="img/shop/paypal.png" style="min-width: 150px; width: 69%; height: auto; box-shadow: none;" alt="Paypal"></a>
+        <br>
+        <br>
+        </p>
+
+      
         <p style="font-size: 22px; width: 75%; margin-top:10px; text-shadow: none; color: white;">Step 2. Send us your name and shipping address to send the poster to.</p>
       </div>
+
+
 
       <div style="width:47%; height: auto; float: right;">
         <br>
         <br>
-        <p style="font-size: 22px; width: 75%; margin-top:10px; text-shadow: none; color: white;">Have no room for a poster but still want to show love to TBF? You can also support The Band Famous® by purchasing your favorite photography sets! <br><br>Shop wallpapers, find your new computer desktop background, or simply add some art to your personal collection. Check out the digital prints available: <br><br><a href="https://bentbox.co/theartistzander" target="_blank"><img src="img/shop/bentbox.png" style="min-width: 150px; width: 22%; height: auto; box-shadow: none;" alt="Bentbox"></a></p>
+        <p style="font-size: 22px; width: 75%; margin-top:10px; text-shadow: none; color: white;">Have no room for a poster but still want to show love to TBF? You can also support The Band Famous® by purchasing your favorite photography sets! <br><br>Shop wallpapers, find your new computer desktop background, or simply add some art to your personal collection. Check out the digital prints available: <br><br><a href="https://bentbox.co/theartistzander" target="_blank"><img src="img/shop/bentbox.png" style="min-width: 250px; width: 40%; height: auto; box-shadow: none;" alt="Bentbox"></a></p>
       </div>
 
 
@@ -389,7 +440,7 @@
 
 
 
-      <p style="font-size: 22px; width: 75%; margin-top:10px; text-shadow: none; color: white;">We have everything made custom to order and promise to get you your order as soon as we possibly can. The profits from our merchandising funnel into our creative projects. <br>Your support helps us continue to make music, art, and apps.</p>
+      <p style="font-size: 22px; width: 75%; margin-top:10px; text-shadow: none; color: white;">We have most items made custom to order and promise to get you your order as soon as we possibly can. The profits from our merchandising funnel into our creative projects. <br>Your support helps us continue to make music, art, and apps, and produce benefit shows with our team of wonderful human beings.</p>
 
       <!--<img src="images/separater.png" alt="The Band Famous" style="width: 69%; height: auto; box-shadow: none;" /> -->
 
