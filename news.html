@@ -13,6 +13,7 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/foundation.css" />
 <link rel="stylesheet" href="css/main.css" type="text/css"/>
 
 <style>
@@ -84,6 +85,95 @@
 
 <center>
   <hr style="border-top: 8px solid black; margin-top: 20px; margin-bottom: 20px;">
+
+  <!-- TBF pop-up we need you now more than ever -->
+
+  <ul id="shop">
+    <li><a href="#" data-reveal-id="one" onload="learnAboutHallOfFame()"><h3 title="Support The Band Famous!" style="-webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: indigo; width:280px; height: auto; color: white;">SPONSOR</h3></a></li>
+  </ul>
+
+   <div id="one" class="reveal-modal" data-reveal style="max-height:2000px; height: auto; min-height: 300px;">
+
+    <h2 style="color: indigo;">Consider Sponsoring <br> The Band Famous</h2>
+    <br>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">We need you now more than ever. <br>Our small business has been impacted and is limited at the time being, <br>but we will continue to work on producing live streams. <br>We just have to postpone allowing guests into our venue during these shows for the time being.<br>We will also continue adding musicians to the Hall Of Fame and TBF Radio, and continue our music and creative productions. We are grateful to our fans who are able to continue supporting our ability to keep producing on every level. We are grateful for your support and offer a variety of platforms for your convenience:
+
+    </p>  
+    <br>
+
+    <CENTER>
+      <table style="background: transparent; margin-left: 14%; border: none;">
+
+        <tr class="title" style="background: transparent;">
+          <td></td>
+          <td><a href="https://www.paypal.me/thebandfamous" target="_blank" title="Make a donation to The Band Famous via Paypal today!"><img src="img/sponsors/paypal.png" alt="Donate to The Band Famous with PayPal" style="width: 100%; max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
+          <td></td>
+        </tr>
+
+        
+    
+        <tr style="background: transparent;">
+          <td></td>
+          <td><a href="gf.me/u/xfcsmk" target="_blank" title="Make a donation to The Band Famous via GoFundMe today!"><img src="img/sponsors/gofundme.png" alt="Donate to The Band Famous on GoFundMe" style="width: 100%; max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
+          <td></td>
+                
+        </tr>
+
+
+
+        <tr style="background: transparent;">
+          <td></td>
+          <td><a href="https://venmo.com/code?user_id=1963585781628928023" target="_blank" title="Make a donation to The Band Famous via Venmo today!"><img src="img/sponsors/venmo.png" alt="Donate to The Band Famous with Venmo" style="width: 100%; max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
+          <td></td>
+                
+        </tr>
+
+        <tr style="background: transparent;">
+          <td></td>
+          <td><a href="https://cash.app/$TheBandFamous" target="_blank" title="Make a donation to The Band Famous via Cash App today!"><img src="img/sponsors/cashapp.jpg" alt="Donate to The Band Famous with Cash App" style="width: 100%; height: auto; box-shadow: none;  max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
+          <td></td>
+                       
+        </tr>    
+
+        <tr class="title" style="background: transparent;">
+          <td></td>
+          <td><a href="https://www.patreon.com/bePatron?u=637376" target="_blank" title="Become a Patreon for The Band Famous today!"><img src="img/sponsors/patreon.png" alt="Become a Patreon for The Band Famous" style="width: 100%; max-width: 600px; height: auto; box-shadow: none; min-width:120px; margin-left: -30px;"/></a></td>
+          <td></td>
+        </tr>
+
+
+
+      </table> 
+
+     
+    </CENTER>
+
+
+
+
+    <br>
+    <br>
+   <center>
+
+    
+
+    <a href="sponsors.html">
+      <button style="width: auto; height: auto;margin-left: -7%; ">Learn More</button>
+    </a>
+
+
+   </center>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+
+   
+        
+
+
+<!-- end pop-up -->
+
     
     <!-- The Venue -->
     <h2 id="tbftv" style="background: white; width: 80%; height: 40px; font-size: 2.11em; margin-bottom:-17px; margin-top:-20px;">THE VENUE</h2>
@@ -1739,6 +1829,16 @@
 <script type="text/javascript" src="js/tour.js"></script>
 <script type="text/javascript" src="js/tourTable.js"></script>
 <div id="fb-root"></div>
+
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+  $(document).ready(function(){$('#one').foundation('reveal', 'open')});
+</script>
+
+
 <script>
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
