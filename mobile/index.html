@@ -22,6 +22,7 @@
       /* Musicians featured at TBF Radio include TBF, along with the artists featured in the Hall of Fame */
       /* All rights reserved. */
 
+
       div.bbplayer > button.bb-play {
         display: inline-block;
         vertical-align: middle;
@@ -2545,6 +2546,9 @@
             <h3 style="font: 2em Helvetica, Sans-Serif; letter-spacing: 2px; color: white; margin-bottom: 0px; text-align: center;  text-shadow: 2px 2px #3399FF;">TBF.TV</h3>
 
             <iframe src="https://player.twitch.tv/?channel=bandfamous" frameborder="0" scrolling="no" width="90%" max-height="320px" min-height="200px" height="320px;" style=" margin-bottom: 10px;" ></iframe><a href="https://www.twitch.tv/bandfamous?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:underline;">Subscribe on Twitch</a>
+            
+
+           
             <!--
             <h3 style="font: 1em Helvetica, Sans-Serif; letter-spacing: -2px; color: white; margin-bottom: 0px; text-align: center;"><p style="text-shadow: none; font-size: 16pt; margin-bottom: 4px; margin-top: 4px; color: white;">Welcome to TBF <a href="https://en.wikipedia.org/wiki/ESports" target="_blank">eSports</a>!</p></h3>
             -->
@@ -5906,57 +5910,27 @@
             </div>
         </div>
         <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <!--<script type="text/javascript" src="js/tabs.js"></script>
+        <!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <!-- 
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://code.jquery.com/jquery-2.0.0.js"></script> 
+        -->
+        <script type="text/javascript" src="js/tabs.js"></script>
         <script type="text/javascript" src="js/text.js"></script>
-        <script src="js/bbplayer.js"></script> -->
+        <script src="js/bbplayer.js"></script>
         <script src="js/vendor/modernizr.js" async></script>
         <script src="js/vendor/jquery.js"></script>
         <script src="js/foundation.min.js"></script>
         <script>
           $(document).foundation();
         </script>
-        
-      <!-- testing link issues 
-        <script>      
-          // Define a click binding for all anchors in the page
-          $( "a" ).on( "click", function( event ) {
+        <script type="text/javascript" src="js/pages.js"></script>
 
-            // Prevent the usual navigation behavior
-            event.preventDefault();
-
-            // Alter the url according to the anchor's href attribute, and
-            // store the data-foo attribute information with the url
-            $.mobile.navigate( $(this).attr( "href" ), {
-              foo: $(this).attr("home")
-            });
-
-            $.mobile.navigate( $(this).attr( "href" ), {
-              foo: $(this).attr("bio")
-            });
-
-
-            $.mobile.navigate( $(this).attr( "href" ), {
-              foo: $(this).attr("radio")
-            });
-
-
-            $.mobile.navigate( $(this).attr( "href" ), {
-              foo: $(this).attr("shop")
-            });
-
-
-
-            // Hypothetical content alteration based on the url. E.g, make
-            // an Ajax request for JSON data and render a template into the page.
-            alterContent( $(this).attr("href") );
-          });
-        </script>
-
-      -->
-
- 
+     
 
   </body>
 </html>
