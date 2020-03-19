@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TBF</title>
+
+    <meta name="keywords" content="The Band Famous, Band Famous, The Band Famous music, Band Famous music, famous, band, the band famous, famous band, famous music, music, Norell, Zander, improv, soul, electronic, industrial, alternative, pop metal, pop alternative, pop, alternative music, The Band Famous apps, Band Famous apps, famous, band, the band famous, band famous, famous band, famous music, music, Norell, Zander, improv, soul, electronic, industrial, famous last words, last words, famous album, famous singer, star, stars, celebrity, famous words, famous lyrics, lyrics, Norell Famous, Zander Famous, Jacob Alexander Figueroa, Mary Norell Jackson, Zander Figueroa, Norell Figueroa">
+    <meta name="description" content="fa·mous 1. The Band Famous&#174; aka TBF is the first band in the world to release a debut album of improv music in the form of an interactive app that they programmed and deployed themselves. The Band Famous&#174; apps include their debut album, a game, videos, free in-app concerts, and more! Support them when you download their app today, free on the iPhone App Store and Android Google Play. When you write a review, you help make the band famous, too. 2. A band of artists, musicians, &amp; developers i.e., The Band Famous&#174; makes music, art, &amp; apps. 3. The Band Famous&#174; is constructed of lyrical content &amp; improv sound. 4. While you're at the official TBF website, BandFamous.com, check out the Hall Of Fame and stream commercial-free music at TBF Radio!">
+
+    
+    <link rel="stylesheet" href="css/foundation/foundation.css" media="screen"/>
+    <link rel="stylesheet" href="css/foundation.css" media="screen" />
+    <link rel="stylesheet" href="css/improv.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/social.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" media="screen" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" media="screen" />
+    <link rel="stylesheet" href="themes/famousband.min.css" media="screen" />
+    <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- test below scripts up here -->
+
+	<!--<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+
+
+    <!--<script src="js/bbplayer.js"></script>-->
+    <script src="js/vendor/modernizr.js" async></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+
+
+    <style>
+
+      /* Property © The Band Famous® */
+      /* Musicians featured at TBF Radio include TBF, along with the artists featured in the Hall of Fame */
+      /* All rights reserved. */
+
+
+      div.bbplayer > button.bb-play {
+        display: inline-block;
+        vertical-align: middle;
+        height: 65px;
+        width:  65px;
+        border: 5px solid #CFCFCF;
+        border-radius: 50%; 
+        background: transparent; 
+        background-image: url('images/play_med.png');
+        background-repeat: no-repeat;
+        background-position: 7px center;
+        cursor: pointer;
+      }
+            
+      div.bbplayer > button.bb-play.ui-btn-active {
+        display: inline-block;
+        vertical-align: middle;
+        height: 65px;
+        width:  65px;
+        border: 5px solid #CFCFCF;
+        border-radius: 50%; 
+        background: transparent; 
+        background-image: url('images/play_med.png');
+        background-repeat: no-repeat;
+        background-position: 7px center;
+        cursor: pointer;
+      }
+
+      div.bbplayer > button.bb-playing {
+        vertical-align: middle;
+        background-image: url('images/pause.png');
+        background-position: center center;
+      }
+
+
+      div.bbplayer > button.bb-forward {
+        vertical-align: middle;
+        display: inline-block;
+        height: 32px;
+        width:  32px;
+        background: transparent;
+        background-image: url('images/forward.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      div.bbplayer > button.bb-rewind {
+        vertical-align: middle;
+        display: inline-block;
+        height: 32px;
+        width:  32px;
+        background: transparent;
+        background-image: url('images/rewind.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      a{
+        text-decoration: none;
+      }
+      a h2:hover{
+        color:#E1DFD3;
+      }
+
+      p.big a:hover{
+        color:#E1DFD3;
+        font-size: 24px;
+      }
+
+      hr{
+        border-top: 8px solid black
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+      h1 {
+        position: absolute;
+        margin-bottom:-10px;
+        margin-left:-2.05em;
+        left: 45%;
+        color: #FFFF66;
+        font:700 4em 'Montserrat Subrayada', sans-serif; 
+      }
+
+      @keyframes loading {
+        from { max-width: 0; }
+      }
+
+      h1:before {
+        content: attr(data-content);
+        position: absolute;
+        overflow: hidden;
+        max-width: 100%;
+        color: #3399FF;
+        animation: loading 8s linear;
+      }
+
+      h1:after{
+        color: #3399FF;
+      }
+
+      h2 {
+          background-color: #33CC33;
+          text-align: center;
+          color: black;
+          border-color: indigo;
+          letter-spacing: 2px;
+          word-spacing: 2px;
+          text-shadow: 1px 1px #3399FF;
+          font-size: 150%;
+          font-family: 'Marcellus', serif;
+          padding: 1em;
+          margin: -1em -1em 1em -1em;
+          margin-bottom: -25px;
+      }
+
+      h1 + h2 {
+          margin-top: 10px;
+          padding-top: 0;
+      }
+
+
+
+      p.fancy{
+        font-size: 20px;
+        text-align: center;
+        color: #FFFF66;
+          border-color: indigo;
+          letter-spacing: 2px;
+          word-spacing: 2px;
+          text-shadow: 2px 2px #3399FF;
+      }
+      /* end nav bar */
+            h3{
+                font-size: 24px;
+                margin-bottom: -15px;
+            }
+            p{
+                font-size: 16px;
+            }
+
+      /* for table galleries on bio page */
+      table.gallery {
+        background: transparent;
+        border: none;
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-left: 10px;
+        width: 100%;
+        min-width: 280px;
+      }
+
+      table.gallery tr {
+        display: inline-block;
+        width: 100%;
+      }
+
+      table.gallery tr td {
+        margin-left: -20px;
+        padding: 0px;
+        width: 33.3%;
+        display: inline-table;
+        min-width: 300px;
+
+      }
+
+      ul.shop li {
+        list-style: none;
+      }
+
+      .reveal-modal h2 {
+        background: transparent;
+        color: black;
+        text-shadow: 1px 1px #3399FF;
+      }
+
+      .reveal-modal p {
+        text-align: left;
+        color: black;
+      }
+
+      /* Scrollable div id="scroll" */
+
+      #scroll{
+        background: #3399FF;
+        width: 90%;
+        min-height: 200px; 
+        /*height: 420px; */
+        height:100%;
+        overflow-y: scroll;
+      }
+
+      /* Questionaire on Band page */
+      /* bolding Qs and names in questionaire on band page */
+      div#scroll p {
+        color: black;
+        margin: 25px;
+        text-align: left;
+      }
+
+      div#scroll p strong {
+        font-variant: bold;
+        font-size: 18px;
+      }
+
+
+      ul.esports li {
+        list-style: none;
+        display: inline-block;
+        margin: auto;
+      }
+
+      #mc_embed_signup{background:transparent; clear:left; font:14px Marcellus; width: 80%;}
+      h4.tbf {font-family: Stalemate; font-size: 43px; color:white;}
+      label {font-size: 18px; font-family: Marcellus; color: white;}
+
+
+      /* epk bio adjustments across screen sizes */
+
+      #epk {
+        /* background: #3399FF; */
+        background: white;
+        width: 80%;
+        /*padding: 20px;*/
+      }
+
+      article#epk {
+        background: white;
+        width:90%;
+        /*padding: 20px; */
+      }
+
+      article#epk p {
+        text-shadow:none;
+        color: black;
+        margin:10px;
+        margin-bottom: 17px;
+      }
+
+      ul.tbf {
+        list-style: none;
+      }
+
+      ul.tbf li {
+        margin: 2px;
+        margin-left: -20px;
+        display: inline-block;
+      }
+
+      /* for sponsors and testimonials pages */
+
+      table.sponsoredby {
+        width: 100%;
+        min-width: 280px;
+        margin-left: 12%;
+
+      }
+
+      table.sponsoredby tr {
+        display: inline-block;
+        min-width: 280px;
+        padding: 0px;
+      }
+
+      table.sponsoredb tr td {
+        margin-left: -20px;
+        padding: 0px;
+        width: 25%;
+        display: inline-block;
+        min-width: 280px;
+
+      }
+
+      table.sponsoredb tr td img {
+
+      }
+
+      blockquote {
+
+        width: 95%; 
+        margin-top:10px; 
+        text-shadow: none; 
+        color: white; 
+        text-align:center;
+
+      }
+
+      blockquote p {
+        /*font-family: The Girl Next Door;*/
+        color: white;
+      }
+
+      blockquote footer {
+        font-family: 'Marcellus', serif;
+        text-align: right;
+      }
+
+
+      blockquote footer a {
+
+      color: black; 
+      cursor: pointer; 
+      text-decoration: underline;
+
+      }
+
+
+      blockquote footer a:link {
+
+      color: black; 
+
+      }
+
+      blockquote footer a:hover {
+        color: indigo;
+        cursor: pointer; 
+        text-decoration: underline;
+
+      }
+
+      blockquote footer a:active {
+        color:indigo;
+      }
+
+      blockquote footer a:visited{
+        /*color:#3399FF;*/
+        -webkit-text-stroke: 1px indigo;
+      }
+
+
+
+    } @media only screen and (max-width: 480px){
+        body,table,td,p,a,li,blockquote{
+          -webkit-text-size-adjust:none !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        body{
+          width:100% !important;
+          min-width:100% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #bodyCell{
+          padding-top:10px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .columnWrapper{
+          max-width:100% !important;
+          width:100% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImage{
+          width:100% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnCartContainer,.mcnCaptionTopContent,.mcnRecContentContainer,.mcnCaptionBottomContent,.mcnTextContentContainer,.mcnBoxedTextContentContainer,.mcnImageGroupContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionLeftImageContentContainer,.mcnCaptionRightImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightTextContentContainer{
+          max-width:100% !important;
+          width:100% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnBoxedTextContentContainer{
+          min-width:100% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageGroupContent{
+          padding:9px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{
+          padding-top:9px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageCardTopImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent{
+          padding-top:18px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageCardBottomImageContent{
+          padding-bottom:9px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageGroupBlockInner{
+          padding-top:0 !important;
+          padding-bottom:0 !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageGroupBlockOuter{
+          padding-top:9px !important;
+          padding-bottom:9px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnTextContent,.mcnBoxedTextContentColumn{
+          padding-right:18px !important;
+          padding-left:18px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{
+          padding-right:18px !important;
+          padding-bottom:0 !important;
+          padding-left:18px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcpreview-image-uploader{
+          display:none !important;
+          width:100% !important;
+        }
+
+    } 
+
+    } @media only screen and (max-width: 480px){
+        .mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p{
+          font-size:14px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templatePreheader{
+          display:block !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templatePreheader .mcnTextContent,#templatePreheader .mcnTextContent p{
+          font-size:14px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templateHeader .mcnTextContent,#templateHeader .mcnTextContent p{
+          font-size:16px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templateUpperBody .mcnTextContent,#templateUpperBody .mcnTextContent p{
+          font-size:16px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templateColumns .columnContainer .mcnTextContent,#templateColumns .columnContainer .mcnTextContent p{
+          font-size:16px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templateLowerBody .mcnTextContent,#templateLowerBody .mcnTextContent p{
+          font-size:16px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templateFooter .mcnTextContent,#templateFooter .mcnTextContent p{
+          font-size:14px !important;
+          line-height:150% !important;
+        }
+
+    }
+
+    /* end epk  / bio page adjustments */
+    .ui-page { -webkit-backface-visibility: hidden; } 
+
+    </style>
+
+
+</head>
+
+<body>
+
+<!-- Start of first page: #home -->
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		 <div data-position="fixed" data-role="header" data-theme="b">
+            </div>
+            <div data-role="content">
+              <span><a href="https://phonixintl.com/apps" target="_blank"><img src="img/famousapps.png" style="height: 72px; width: 72px; margin-top:-7px; margin-bottom: 7px; float: left;" alt="The Band Famous Apps"/></a></span>
+              <span><h1 style="margin-top: -13px; margin-left: -40px;" data-content="TBF">TBF</h1></span>
+              <span><a href="#contact"><img src="images/connect2.png" style="height: 75px; width: 75px; margin-top:-7px; margin-bottom: 7px; float: right;" alt="Contact The Band Famous&#174;"/></a></span>
+              <br>
+              <br>
+              <hr>
+
+
+              <center><img src="img/tbf_halloffame.png" alt="The Band Famous®" style="width: 100%; height: auto; margin-bottom: -2px;" title="The Band Famous®"/></center>
+               <br>
+
+              
+              <h2 style="background: black; color: #3399FF;">Latest Headlines:</h2>
+              <br>
+              <br>
+              <!--<a href="#halloffame"><img src="img/halloffame.jpg" alt="Hall of Fame" style="width: 100%; min-width: 100%;"/></a>-->
+              <!--<img src="img/header.png"/>-->
+
+
+              <!-- Link to Latest Headlines - News Page -->
+              <p style="margin-bottom: 5px; margin-top: -5px; font-size: 21px;"><a data-icon="arrow-r" data-iconpos="right" data-role="button"
+                data-theme="a" href="#news"><img src="img/press/press.jpg" style="width: 100%; height:auto; margin-top: 2px; margin-bottom: 10px;"/><br>TBF NEWS</a></p>
+
+              <!-- Link to Sponsors Page -->
+              <p style="margin-bottom: 5px; margin-top: -5px; font-size: 21px;"><a data-icon="arrow-r" data-iconpos="right" data-role="button"
+                data-theme="a" href="#sponsors"><img src="img/sponsors/malibustrings.gif" alt="sponsors" style="width: 100%; height: auto;" /><br><img src="img/sponsors/805 Buddha Bliss.png" alt="sponsors" style="width: 25%; height: auto;"/></br>SPONSORS</a></p>
+
+              <!-- Link to Testimonials Page -->
+              <p style="margin-bottom: 5px; margin-top: -5px; font-size: 21px;"><a data-icon="arrow-r" data-iconpos="right" data-role="button"
+                data-theme="a" href="#testimonials"><img src="img/testimonials/alieno.png" alt="testimonials"/><br><img src="img/testimonials/gregdeocampo.png" alt="testimonials" style="width: 25%; height: auto;"/><br>TESTIMONIALS</a></p>
+
+
+              <!-- Link to TBF.TV Page -->
+              <p style="margin-bottom: 5px; margin-top: -5px; font-size: 21px;"><a data-icon="arrow-r" data-iconpos="right" data-role="button"
+                data-theme="a" href="#tv"><img src="img/tbftv.png" alt="testimonials" style="width: 30%; height: auto;"/><br>TBF.TV</a></p>
+
+              <!-- Link to Sign Up For Newsletter / Submit to Hall Of Fame / Contact The Band Famous -->
+              <p style="margin-bottom: 5px; margin-top: -5px; font-size: 21px;"><a data-icon="arrow-r" data-iconpos="right" data-role="button"
+                data-theme="a" href="#contact"><img src="images/connect.png" alt="Contact The Band Famous, submit to the Hall Of Fame, or sign up for their monthly newsletter." style="margin-bottom: -5px;"/><br>CONTACT TBF</a></p>
+
+                <br>
+
+               
+                <center>     
+                  
+                    
+                    <img src="img/bannertest.jpg" style="margin-bottom: -60px; margin-top: -10px;"/>
+
+                </center>
+                <br>
+                <br>
+                <hr style="border-top: 8px solid black; margin: 20px;">  
+
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous&#174;</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>
+            </div>
+
+		<p><a href="#two" class="ui-btn ui-shadow ui-corner-all">Show page "two"</a></p>
+		<p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
+	</div><!-- /content -->
+
+	<div data-id="home" data-position="fixed" data-role="footer">
+
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a class="ui-btn-active ui-state-persist" data-icon="home" href="#home">HOME</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#bio">BAND</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="star" href="#radio">MUSIC</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#shop">SHOP</a>
+                        </li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+</div><!-- /page home -->
+
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header">
+		<h1>Two</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2>Two</h2>
+		<p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>
+		<p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>
+		<p><a href="#home" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page "home"</a></p>
+
+	</div><!-- /content -->
+
+
+
+
+
+
+
+	
+	<div data-id="home" data-position="fixed" data-role="footer">
+
+        <div data-role="navbar">
+            <ul>
+                <li>
+                    <a class="ui-btn-active ui-state-persist" data-icon="home" href="#home">HOME</a>
+               	</li>
+
+                <li>
+                    <a data-icon="info" href="#bio">BAND</a>
+                </li>
+
+                <li>
+                    <a data-icon="star" href="#radio">MUSIC</a>
+                </li>
+
+                <li>
+                    <a data-icon="forward" href="#shop">SHOP</a>
+                </li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+</div><!-- /page two -->
+
+
+
+<!-- Start of #popup -->
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="b">
+		<h1>Dialog</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		    <h2 style="color: indigo;">Consider Sponsoring <br> The Band Famous</h2>
+    <br>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">We need you now more than ever. <br>Our small business has been impacted and is limited at the time being, <br>but we will continue to work on producing live streams. <br>We just have to postpone allowing guests into our venue during these shows for the time being.<br>We will also continue adding musicians to the Hall Of Fame and TBF Radio, and continue our music and creative productions. We are grateful to our fans who are able to continue supporting our ability to keep producing on every level. We are grateful for your support and offer a variety of platforms for your convenience:
+
+    </p>  
+    <br>
+
+    <CENTER>
+      <table style="background: transparent; margin-left: 14%; border: none;">
+
+        <tr class="title" style="background: transparent;">
+          <td></td>
+          <td><a href="https://www.paypal.me/thebandfamous" target="_blank" title="Make a donation to The Band Famous via Paypal today!"><img src="img/sponsors/paypal.png" alt="Donate to The Band Famous with PayPal" style="width: 100%; max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
+          <td></td>
+        </tr>
+
+        
+    
+        <tr style="background: transparent;">
+          <td></td>
+          <td><a href="gf.me/u/xfcsmk" target="_blank" title="Make a donation to The Band Famous via GoFundMe today!"><img src="img/sponsors/gofundme.png" alt="Donate to The Band Famous on GoFundMe" style="width: 100%; max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
+          <td></td>
+                
+        </tr>
+
+
+
+        <tr style="background: transparent;">
+          <td></td>
+          <td><a href="https://venmo.com/code?user_id=1963585781628928023" target="_blank" title="Make a donation to The Band Famous via Venmo today!"><img src="img/sponsors/venmo.png" alt="Donate to The Band Famous with Venmo" style="width: 100%; max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
+          <td></td>
+                
+        </tr>
+
+        <tr style="background: transparent;">
+          <td></td>
+          <td><a href="https://cash.app/$TheBandFamous" target="_blank" title="Make a donation to The Band Famous via Cash App today!"><img src="img/sponsors/cashapp.jpg" alt="Donate to The Band Famous with Cash App" style="width: 100%; height: auto; box-shadow: none;  max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
+          <td></td>
+                       
+        </tr>    
+
+        <tr class="title" style="background: transparent;">
+          <td></td>
+          <td><a href="https://www.patreon.com/bePatron?u=637376" target="_blank" title="Become a Patreon for The Band Famous today!"><img src="img/sponsors/patreon.png" alt="Become a Patreon for The Band Famous" style="width: 100%; max-width: 600px; height: auto; box-shadow: none; min-width:120px; margin-left: -30px;"/></a></td>
+          <td></td>
+        </tr>
+
+	</div><!-- /content -->
+
+	<div data-id="home" data-position="fixed" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" href="#home">HOME</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="info" href="#bio">BAND</a>
+                        </li>
+
+                        <li>
+                            <a class="ui-btn-active ui-state-persist" data-icon="star" href="#radio">MUSIC</a>
+                        </li>
+
+                        <li>
+                            <a data-icon="forward" href="#shop">SHOP</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- /footer -->
+	</div><!-- /page popup -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+
+<!-- test below scripts up here -->
+
+	<!--<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+
+
+    <!--<script src="js/bbplayer.js"></script>-->
+    <script src="js/vendor/modernizr.js" async></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+
+</body>
+</html>

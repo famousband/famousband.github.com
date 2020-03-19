@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TBF</title>
+
+
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="The Band Famous, Band Famous, The Band Famous music, Band Famous music, famous, band, the band famous, famous band, famous music, music, Norell, Zander, improv, soul, electronic, industrial, alternative, pop metal, pop alternative, pop, alternative music, The Band Famous apps, Band Famous apps, famous, band, the band famous, band famous, famous band, famous music, music, Norell, Zander, improv, soul, electronic, industrial, famous last words, last words, famous album, famous singer, star, stars, celebrity, famous words, famous lyrics, lyrics, Norell Famous, Zander Famous, Jacob Alexander Figueroa, Mary Norell Jackson, Zander Figueroa, Norell Figueroa">
+    <meta name="description" content="fa·mous 1. The Band Famous&#174; aka TBF is the first band in the world to release a debut album of improv music in the form of an interactive app that they programmed and deployed themselves. The Band Famous&#174; apps include their debut album, a game, videos, free in-app concerts, and more! Support them when you download their app today, free on the iPhone App Store and Android Google Play. When you write a review, you help make the band famous, too. 2. A band of artists, musicians, &amp; developers i.e., The Band Famous&#174; makes music, art, &amp; apps. 3. The Band Famous&#174; is constructed of lyrical content &amp; improv sound. 4. While you're at the official TBF website, BandFamous.com, check out the Hall Of Fame and stream commercial-free music at TBF Radio!">
+
+    
+    <link rel="stylesheet" href="css/foundation/foundation.css" media="screen"/>
+    <link rel="stylesheet" href="css/foundation.css" media="screen" />
+    <link rel="stylesheet" href="css/improv.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/social.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" media="screen" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" media="screen" />
+    <link rel="stylesheet" href="themes/famousband.min.css" media="screen" />
+    <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+
+      /* Property © The Band Famous® */
+      /* Musicians featured at TBF Radio include TBF, along with the artists featured in the Hall of Fame */
+      /* All rights reserved. */
+
+
+      div.bbplayer > button.bb-play {
+        display: inline-block;
+        vertical-align: middle;
+        height: 65px;
+        width:  65px;
+        border: 5px solid #CFCFCF;
+        border-radius: 50%; 
+        background: transparent; 
+        background-image: url('images/play_med.png');
+        background-repeat: no-repeat;
+        background-position: 7px center;
+        cursor: pointer;
+      }
+            
+      div.bbplayer > button.bb-play.ui-btn-active {
+        display: inline-block;
+        vertical-align: middle;
+        height: 65px;
+        width:  65px;
+        border: 5px solid #CFCFCF;
+        border-radius: 50%; 
+        background: transparent; 
+        background-image: url('images/play_med.png');
+        background-repeat: no-repeat;
+        background-position: 7px center;
+        cursor: pointer;
+      }
+
+      div.bbplayer > button.bb-playing {
+        vertical-align: middle;
+        background-image: url('images/pause.png');
+        background-position: center center;
+      }
+
+
+      div.bbplayer > button.bb-forward {
+        vertical-align: middle;
+        display: inline-block;
+        height: 32px;
+        width:  32px;
+        background: transparent;
+        background-image: url('images/forward.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      div.bbplayer > button.bb-rewind {
+        vertical-align: middle;
+        display: inline-block;
+        height: 32px;
+        width:  32px;
+        background: transparent;
+        background-image: url('images/rewind.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      a{
+        text-decoration: none;
+      }
+      a h2:hover{
+        color:#E1DFD3;
+      }
+
+      p.big a:hover{
+        color:#E1DFD3;
+        font-size: 24px;
+      }
+
+      hr{
+        border-top: 8px solid black
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+      h1 {
+        position: absolute;
+        margin-bottom:-10px;
+        margin-left:-2.05em;
+        left: 45%;
+        color: #FFFF66;
+        font:700 4em 'Montserrat Subrayada', sans-serif; 
+      }
+
+      @keyframes loading {
+        from { max-width: 0; }
+      }
+
+      h1:before {
+        content: attr(data-content);
+        position: absolute;
+        overflow: hidden;
+        max-width: 100%;
+        color: #3399FF;
+        animation: loading 8s linear;
+      }
+
+      h1:after{
+        color: #3399FF;
+      }
+
+      h2 {
+          background-color: #33CC33;
+          text-align: center;
+          color: black;
+          border-color: indigo;
+          letter-spacing: 2px;
+          word-spacing: 2px;
+          text-shadow: 1px 1px #3399FF;
+          font-size: 150%;
+          font-family: 'Marcellus', serif;
+          padding: 1em;
+          margin: -1em -1em 1em -1em;
+          margin-bottom: -25px;
+      }
+
+      h1 + h2 {
+          margin-top: 10px;
+          padding-top: 0;
+      }
+
+
+
+      p.fancy{
+        font-size: 20px;
+        text-align: center;
+        color: #FFFF66;
+          border-color: indigo;
+          letter-spacing: 2px;
+          word-spacing: 2px;
+          text-shadow: 2px 2px #3399FF;
+      }
+      /* end nav bar */
+            h3{
+                font-size: 24px;
+                margin-bottom: -15px;
+            }
+            p{
+                font-size: 16px;
+            }
+
+      /* for table galleries on bio page */
+      table.gallery {
+        background: transparent;
+        border: none;
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-left: 10px;
+        width: 100%;
+        min-width: 280px;
+      }
+
+      table.gallery tr {
+        display: inline-block;
+        width: 100%;
+      }
+
+      table.gallery tr td {
+        margin-left: -20px;
+        padding: 0px;
+        width: 33.3%;
+        display: inline-table;
+        min-width: 300px;
+
+      }
+
+      ul.shop li {
+        list-style: none;
+      }
+
+      .reveal-modal h2 {
+        background: transparent;
+        color: black;
+        text-shadow: 1px 1px #3399FF;
+      }
+
+      .reveal-modal p {
+        text-align: left;
+        color: black;
+      }
+
+      /* Scrollable div id="scroll" */
+
+      #scroll{
+        background: #3399FF;
+        width: 90%;
+        min-height: 200px; 
+        /*height: 420px; */
+        height:100%;
+        overflow-y: scroll;
+      }
+
+      /* Questionaire on Band page */
+      /* bolding Qs and names in questionaire on band page */
+      div#scroll p {
+        color: black;
+        margin: 25px;
+        text-align: left;
+      }
+
+      div#scroll p strong {
+        font-variant: bold;
+        font-size: 18px;
+      }
+
+
+      ul.esports li {
+        list-style: none;
+        display: inline-block;
+        margin: auto;
+      }
+
+      #mc_embed_signup{background:transparent; clear:left; font:14px Marcellus; width: 80%;}
+      h4.tbf {font-family: Stalemate; font-size: 43px; color:white;}
+      label {font-size: 18px; font-family: Marcellus; color: white;}
+
+
+      /* epk bio adjustments across screen sizes */
+
+      #epk {
+        /* background: #3399FF; */
+        background: white;
+        width: 80%;
+        /*padding: 20px;*/
+      }
+
+      article#epk {
+        background: white;
+        width:90%;
+        /*padding: 20px; */
+      }
+
+      article#epk p {
+        text-shadow:none;
+        color: black;
+        margin:10px;
+        margin-bottom: 17px;
+      }
+
+      ul.tbf {
+        list-style: none;
+      }
+
+      ul.tbf li {
+        margin: 2px;
+        margin-left: -20px;
+        display: inline-block;
+      }
+
+      /* for sponsors and testimonials pages */
+
+      table.sponsoredby {
+        width: 100%;
+        min-width: 280px;
+        margin-left: 12%;
+
+      }
+
+      table.sponsoredby tr {
+        display: inline-block;
+        min-width: 280px;
+        padding: 0px;
+      }
+
+      table.sponsoredb tr td {
+        margin-left: -20px;
+        padding: 0px;
+        width: 25%;
+        display: inline-block;
+        min-width: 280px;
+
+      }
+
+      table.sponsoredb tr td img {
+
+      }
+
+      blockquote {
+
+        width: 95%; 
+        margin-top:10px; 
+        text-shadow: none; 
+        color: white; 
+        text-align:center;
+
+      }
+
+      blockquote p {
+        /*font-family: The Girl Next Door;*/
+        color: white;
+      }
+
+      blockquote footer {
+        font-family: 'Marcellus', serif;
+        text-align: right;
+      }
+
+
+      blockquote footer a {
+
+      color: black; 
+      cursor: pointer; 
+      text-decoration: underline;
+
+      }
+
+
+      blockquote footer a:link {
+
+      color: black; 
+
+      }
+
+      blockquote footer a:hover {
+        color: indigo;
+        cursor: pointer; 
+        text-decoration: underline;
+
+      }
+
+      blockquote footer a:active {
+        color:indigo;
+      }
+
+      blockquote footer a:visited{
+        /*color:#3399FF;*/
+        -webkit-text-stroke: 1px indigo;
+      }
+
+
+
+    } @media only screen and (max-width: 480px){
+        body,table,td,p,a,li,blockquote{
+          -webkit-text-size-adjust:none !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        body{
+          width:100% !important;
+          min-width:100% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #bodyCell{
+          padding-top:10px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .columnWrapper{
+          max-width:100% !important;
+          width:100% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImage{
+          width:100% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnCartContainer,.mcnCaptionTopContent,.mcnRecContentContainer,.mcnCaptionBottomContent,.mcnTextContentContainer,.mcnBoxedTextContentContainer,.mcnImageGroupContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionLeftImageContentContainer,.mcnCaptionRightImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightTextContentContainer{
+          max-width:100% !important;
+          width:100% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnBoxedTextContentContainer{
+          min-width:100% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageGroupContent{
+          padding:9px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{
+          padding-top:9px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageCardTopImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent{
+          padding-top:18px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageCardBottomImageContent{
+          padding-bottom:9px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageGroupBlockInner{
+          padding-top:0 !important;
+          padding-bottom:0 !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageGroupBlockOuter{
+          padding-top:9px !important;
+          padding-bottom:9px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnTextContent,.mcnBoxedTextContentColumn{
+          padding-right:18px !important;
+          padding-left:18px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{
+          padding-right:18px !important;
+          padding-bottom:0 !important;
+          padding-left:18px !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        .mcpreview-image-uploader{
+          display:none !important;
+          width:100% !important;
+        }
+
+    } 
+
+    } @media only screen and (max-width: 480px){
+        .mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p{
+          font-size:14px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templatePreheader{
+          display:block !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templatePreheader .mcnTextContent,#templatePreheader .mcnTextContent p{
+          font-size:14px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templateHeader .mcnTextContent,#templateHeader .mcnTextContent p{
+          font-size:16px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templateUpperBody .mcnTextContent,#templateUpperBody .mcnTextContent p{
+          font-size:16px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templateColumns .columnContainer .mcnTextContent,#templateColumns .columnContainer .mcnTextContent p{
+          font-size:16px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templateLowerBody .mcnTextContent,#templateLowerBody .mcnTextContent p{
+          font-size:16px !important;
+          line-height:150% !important;
+        }
+
+    } @media only screen and (max-width: 480px){
+        #templateFooter .mcnTextContent,#templateFooter .mcnTextContent p{
+          font-size:14px !important;
+          line-height:150% !important;
+        }
+
+    }
+
+    /* end epk  / bio page adjustments */
+    .ui-page { -webkit-backface-visibility: hidden; } 
+
+    </style>
+
+</head>
+<body>
+
+<div data-role="page">
+
+	<div data-role="header">
+
+	</div><!-- /header -->
+
+	<div data-role="main" class="ui-content">
+
+		 <!-- About Page -->
+
+              <span><a href="https://phonixintl.com/apps" target="_blank"><img src="img/famousapps.png" style="height: 72px; width: 72px; margin-top:-7px; margin-bottom: 7px; float: left;" alt="The Band Famous Apps"/></a></span>
+              <span><h1 style="margin-top: -13px; margin-left: -40px;" data-content="TBF">TBF</h1></span>
+              <span><a href="#contact"><img src="images/connect2.png" style="height: 75px; width: 75px; margin-top:-7px; margin-bottom: 7px; float: right;" alt="Contact The Band Famous&#174;"/></a></span>
+                <br>
+                <br>
+                <hr>
+
+                <h3 style="text-align:left; color: white; font-family: 'Marcellus'; text-shadow: 2px 2px #3399FF;">fa·mous</h3>
+                <p style="color: white; text-align:left; margin-top: -8px; margin-left: 20px; font-family: 'Marcellus';">adjective</p>   
+                <img src="img/press/quotesJay.jpg" style="box-shadow: 8px 8px 5px #888888;"/>
+                <img src="images/theBandFamous.jpg" style="box-shadow: 8px 8px 5px #888888;"/>
+           
+                <!-- EPK -->
+                <div id="scroll" style="margin-bottom: 20px; margin-left:5%;">
+                  
+                <center>
+                  <div style="width: 90%; height: auto;">
+                    <br>
+                        <!--[if mso]>
+                      <td valign="top" width="600" style="width:600px;">
+                      <![endif]-->
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%; border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%" class="mcnTextContentContainer">
+                          <tbody>
+                            <tr>          
+                              <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-size: 16px;line-height: 150%;text-align: left; min-width: 40%;"><p style="text-shadow:none;">Actor, comedian, filmmaker and musician <a href="https://www.instagram.com/p/BCOmQ26E5au/" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal;text-decoration: underline;">Tom Green</a> talked about TBF with singer Norell on his CBS Radio Show The Tom Green Radio Show: “<em>Your band is exciting, you have an exciting - would you call it an industrial metal band? What is it more of a pop, pop industrial alternative band?</em>”</p>
+                              <p style="text-shadow:none;">Grammy winning recording and performing artist <a href="https://en.wikipedia.org/wiki/B._J._Thomas" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal;text-decoration: underline; min-width: 40%;">BJ Thomas</a> calls "<em>Band Famous!! This is my favorite new music. This girl just steps up and sings her heart out. I love that. BJ</em>" – take a listen at this location: <a href="https://youtube.com/theefamousband" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal;text-decoration: underline;">YouTube.com/TheBandFamousTM</a></p>
+                              </td>
+                            </tr>
+                          </tbody>
+
+                          <tbody class="mcnImageCardBlockOuter">
+                            <tr>
+                              <td class="mcnImageCardBlockInner" valign="top" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                      
+                              <table align="center" border="0" cellpadding="0" cellspacing="0" class="mcnImageCardBottomContent" width="100%" style="background-color: transparent;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <tbody><tr>
+                                  <td class="mcnImageCardBottomImageContent" align="left" valign="top" style="padding-top: 0px;padding-right: 0px;padding-bottom: 0;padding-left: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                              
+                                  
+
+                                  <a href="halloffame.html" title="Head over to the TBF Hall of Fame"><img alt="" src="https://gallery.mailchimp.com/d82c6182b77ef1587c50e5537/images/f4a21f6f-1214-4a03-8a93-848ec4873ed6.jpg" width="100%" style="max-width: 1536px;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage"></a>
+                                  
+                              
+                                  </td>
+                              </tr>
+                              <tr>
+                                <td class="mcnTextContent" valign="top" style="padding: 9px 18px;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;" width="546">
+                                  <a href="radio.html" title="Check Out TBF Radio" target="_blank"><div style="text-align: left;"><p style="text-shadow:none; margin: 2px; color:black;">TBF is now&nbsp;streaming some never-before-heard "B-Tracks", songs which didn't make our debut album, or our 2nd album in the works. Head over to the Music tab where you may also enjoy songs by select artists featured in the Hall Of Fame, available for your free listening pleasure 24/7 - 365 days a year via&nbsp;TBF <em>Radio</em>.
+                                  <br>
+                                  We are not a label. We are musicians who share musicians we like because we care. We have their permission to feature and promote them indefintely on our own platform. We also have produced and showcased  and perform benefit shows with select artists in the Hall Of Fame.</p></div></a>
+
+                              </td>
+                            </tr>
+                            </tbody>
+                          </table>
+                          </td>
+                          </tr>
+                        </tbody>
+
+
+                        <tbody>
+                          <tr>
+                          <td align="center" valign="top" id="templateColumns" style="background:#FFFFFF none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 0;padding-bottom: 0; width: 100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 800px !important;">
+                                  <tbody><tr>
+                                      <td valign="top" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                                      <p style="text-shadow:none;">The music video for "Autotune Appreciation" has officially been released on the seven year wedding anniversary of TBF members and featuring actual footage from the wedding of Norell and Zander, starring now Mayor of Minneapolis, Jacob Frey. Check it out:</p>
+
+                                      <a href="https://youtu.be/1OjklxNY38A" title="Check it out!" class="" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                              
+
+                                      <img alt="Autotune Appreciation" src="img/AutotuneAppreciation.jpg" width="90%" style="max-width: 944px;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
+                                      </a>
+
+
+                                      <p style="text-shadow:none;">Check out the latest self-produced music video by The Band Famous, "Emotional Scatter", premiered by City Pages Music:</p>
+
+                                      <a href="http://www.citypages.com/music/gnome-butts-isolation-rituals-and-tijuana-drug-deals-in-this-weeks-top-5-mn-music-videos/563566641" title="Check it out!" class="" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                              
+
+                                      <img alt="Emotional Scatter" src="img/maxresdefaultEmotionalScatter.jpg" width="90%" style="max-width: 944px;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
+                                      </a>
+
+
+                                      <!--[if gte mso 9]>
+                                      <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+                                      <tr>
+                                      <td align="center" valign="top" width="300" style="width:300px;">
+                                      <![endif]-->
+                                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="400" class="columnWrapper" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                        <tbody><tr>
+                                          <td valign="top" class="columnContainer" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageCardBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                  <tbody class="mcnImageCardBlockOuter">
+                      <tr>
+                          <td class="mcnImageCardBlockInner" valign="top" style="padding-top: 3px;padding-right: 6px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                              
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="mcnImageCardBottomContent" width="100%" style="background-color: #404040;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                  <tbody><tr>
+                      <td class="mcnImageCardBottomImageContent" align="left" valign="top" style="padding-top: 0px;padding-right: 0px;padding-bottom: 0;padding-left: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                      
+                          
+                          <a href="https://www.youtube.com/watch?v=1s_RU05AqjA" title="Watch Now!" class="" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                          
+
+                          <img alt="" src="https://gallery.mailchimp.com/d82c6182b77ef1587c50e5537/images/6d0b74ca-a490-4844-9afd-7d6f7994ffc4.jpg" width="100%" style="max-width: 944px;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
+                          </a>
+                      
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="mcnTextContent" valign="top" style="padding: 3px 6px;color: black;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;" width="246">
+                          <p style="color:black; text-shadow: none; margin: 17px;">Check out TBF's DIY production for their single "Promises" off their upcoming 2nd album, <em>Awakening</em>.&nbsp;<br>
+              *Disclaimer: NSFW*<br>
+              <br>
+                One fan, artist Brant Kingman describes the music video, “Ambitious production! Basically a feature film reduced to a music video. Good work you guys!”<br>
+              </p>
+                      </td>
+                  </tr>
+              </tbody></table>
+
+
+                          </td>
+                      </tr>
+                  </tbody>
+              </table></td>
+               </tr>
+              </tbody></table>
+                  <!--[if gte mso 9]>
+                  </td>
+                  <td align="center" valign="top" width="300" style="width:300px;">
+                  <![endif]-->
+                  <table align="left" border="0" cellpadding="0" cellspacing="0" width="400" class="columnWrapper" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                     <tbody><tr>
+                      <td valign="top" class="columnContainer" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageGroupBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                  <tbody class="mcnImageGroupBlockOuter">
+                      
+                          <tr>
+                              <td valign="top" style="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageGroupBlockInner">
+                                  
+                                  <table align="left" width="364" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                          <tbody><tr>
+                                              <td class="mcnImageGroupContent" valign="top" style="padding-left: 9px;padding-top: 0;padding-bottom: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                  <h4 style="font-family: Galindo; font-size: 20px; text-align: center;">Shop TBF!</h4>
+                                                  <a href="shop.html" title="Shop TBF!" class="" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                      <img alt="" src="https://gallery.mailchimp.com/d82c6182b77ef1587c50e5537/images/cad014e5-36b3-4398-a524-82b4c9ef9f96.jpg" width="100%" style="max-width: 1141px;padding-bottom: 0;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
+                                                  </a>
+                                              
+                                              </td>
+                                          </tr>
+                                      </tbody></table>
+                                  
+                              </td>
+                          </tr>
+                      
+                          <tr>
+                              <td valign="top" style="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageGroupBlockInner">
+                                  
+                                  <table align="left" width="173" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                          <tbody><tr>
+                                              <td class="mcnImageGroupContent" valign="top" style="padding-left: 9px;padding-top: 0;padding-bottom: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                              
+                                                  <a href="shop.html" title="Shop TBF!" class="" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                      <img alt="" src="https://gallery.mailchimp.com/d82c6182b77ef1587c50e5537/images/16b5454c-e15a-471a-bf7a-936d96c7a3be.gif" width="100%" style="max-width: 400px;padding-bottom: 0;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
+                                                  </a>
+                                              
+                                              </td>
+                                          </tr>
+                                      </tbody></table>
+                                  
+                                  <table align="right" width="173" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                          <tbody><tr>
+                                              <td class="mcnImageGroupContent" valign="top" style="padding-right: 9px;padding-top: 0;padding-bottom: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                              
+                                                  <a href="shop.html" title="Shop TBF!" class="" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                      <img alt="" src="https://gallery.mailchimp.com/d82c6182b77ef1587c50e5537/images/10ff0a9b-9c45-4c97-9028-684678d1c88a.gif" width="100%" style="max-width: 400px;padding-bottom: 0;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
+                                                  </a>
+                                              
+                                              </td>
+                                          </tr>
+                                      </tbody></table>
+                                  
+                              </td>
+                          </tr>
+                      
+                          <tr>
+                              <td valign="top" style="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageGroupBlockInner">
+                                  
+                                  <table align="left" width="173" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                          <tbody><tr>
+                                              <td class="mcnImageGroupContent" valign="top" style="padding-left: 9px;padding-top: 0;padding-bottom: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                              
+                                                  <a href="shop.html" title="Shop TBF!" class="" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                      <img alt="" src="https://gallery.mailchimp.com/d82c6182b77ef1587c50e5537/images/65d6c6dc-6739-4bfd-9137-808e63a9a256.gif" width="100%" style="max-width: 400px;padding-bottom: 0;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
+                                                  </a>
+                                              
+                                              </td>
+                                          </tr>
+                                      </tbody></table>
+                                  
+                                  <table align="right" width="173" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                          <tbody><tr>
+                                              <td class="mcnImageGroupContent" valign="top" style="padding-right: 9px;padding-top: 0;padding-bottom: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                              
+                                                  <a href="shop.html" title="Shop TBF!" class="" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                      <img alt="" src="https://gallery.mailchimp.com/d82c6182b77ef1587c50e5537/images/a920e202-66c7-40b2-87a7-832ef70661e7.gif" width="100%" style="max-width: 400px; padding-bottom: 0;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
+                                                  </a>
+                                              
+                                              </td>
+                                          </tr>
+                                      </tbody></table>
+                                  
+                              </td>
+                          </tr>
+                      
+                  </tbody>
+              </table></td>
+                                        </tr>
+                                      </tbody></table>
+                                      <!--[if gte mso 9]>
+                                      </td>
+                                      </tr>
+                                      </table>
+                                      <![endif]-->
+                                    </td>
+                                  </tr>
+                                </tbody></table>
+                              </td>
+                            </tr>
+                        </tbody>
+
+
+                      </table>
+                      
+
+
+              </div>
+
+
+                  <article id="epk">
+                  <p style="text-align: center; margin-top:20px;">TBF aka the Band Famous is an alternative rock group with soul EDM infusions. Most recently, the Band Famous has been labeled a trip hop duo with their release "Emotional Scatter". &nbsp;</p>
+                  <p style="margin-top:30px;"><span style="font-size: 24px; vertical-align: baseline; white-space: pre-wrap;">Band Bio</span></p>
+                  <br>
+                  <p style="text-align: center;"><span style="vertical-align: baseline; white-space: pre-wrap;">The Band Famous came to life in 2013 when they filmed their own birth featuring spontaneous improvised music at the first meeting of founding members Jacob Alexander Figueroa aka <a href="https://phonixintl.com/zander" target="_blank" style="text-decoration: underline;">Zander</a> and Mary Norell Jackson aka <a href="https://phonixintl.com/norell" target="_blank" style="text-decoration: underline;">Norell</a> with <a href="http://jambots.com" target="_blank" style="text-decoration: underline;">Terrance Clifford</a>. Their debut album </span><span style="font-style: italic; vertical-align: baseline; white-space: pre-wrap;">Last Words </span><span style="vertical-align: baseline; white-space: pre-wrap;">is an album of entirely improvised material.</span><span style="vertical-align: baseline; white-space: pre-wrap;"> </span></p>
+                  <p style="text-align: center;"><span style="font-weight: bold; vertical-align: baseline; white-space: pre-wrap;">Music Reporter Jay Gabler of Minnesota Public Radio and 89.3 FM The Current, says:</span></p>
+                  <br>
+                  <p style="text-align: center;"><span style="font-style: italic; vertical-align: baseline; white-space: pre-wrap; font-size:18px;">&ldquo;The more I read, the more surprised I was&hellip; They came together a couple of years ago in MN, they were all here in MN, and they all play music, they all make art, they also are all software developers&hellip; &nbsp;and actually some of the music from that initial jam session went on their debut EP &lsquo;Last Words&rsquo; which was released - wait for it - not on vinyl or via iTunes or any of the conventional ways of releasing music, but via an app - because they&rsquo;re all software developers, right? They made an interactive app by which they released their album&hellip;..It&rsquo;s dreamy, it&rsquo;s spacey&hellip;. I think people&hellip; will find a lot to enjoy, a lot of familiar, and ambient sounds&hellip; the whole thing is improvised by the way, all of their music to date has been entirely improvised&hellip;&rdquo; </span></p>
+                  <p style="text-align: center;"><span style="vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+                  <p style="text-align: center;"><span style="vertical-align: baseline; white-space: pre-wrap;"><i>Awakening</i></span><span style="vertical-align: baseline; white-space: pre-wrap;"> is their most focused and steadfast material yet!</span></p>
+                  <br>
+
+                <!-- Jerard Fagerberg, City Pages Local Frames -->
+
+
+
+                <p style="text-align: center;"><span style="font-weight: bold; vertical-align: baseline; white-space: pre-wrap;">Writer Jerard Fagerberg of City Pages, says:</span></p>
+                <br>
+                <p style="text-align: center;"><span style="font-style: italic; vertical-align: baseline; white-space: pre-wrap; font-size:18px;"><b>The Band Famous – “Emotional Scatter” (PREMIERE)</b><br>&ldquo;Self-produced trip-hop group the Band Famous exist to uplift you, even if they sound a bit wacky when they do. They may not be self-actualized enough to dispense good advice, but their new single “Emotional Scatter” tries, dammit. Directed by TBF members Norell and Zander, the video tries to play motivational speaker, but when the band mixes in goofy lyrics and a mooning gnome toy, it’s hard to take them totally seriously. Which might be the point: Stop taking yourself so seriously and enjoy the jam.&ldquo;</span>
+                <p style="text-align: center;"><span style="vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+                <p style="text-align: center;"><span style="vertical-align: baseline; white-space: pre-wrap;"></span><span style="vertical-align: baseline; white-space: pre-wrap;"></span></p>
+
+<!--
+                <a href="http://www.citypages.com/music/gnome-butts-isolation-rituals-and-tijuana-drug-deals-in-this-weeks-top-5-mn-music-videos/563566641" target="_blank"><img src="img/press/CityPagesMusic.jpeg" alt="City Pages" title="Check out the premiere on City Pages" style="width: 100%; min-width: 180px; height:auto; margin-bottom:30px; margin-top: -20px;"/></a>
+                <a href="http://www.citypages.com/music/gnome-butts-isolation-rituals-and-tijuana-drug-deals-in-this-weeks-top-5-mn-music-videos/563566641" target="_blank"><img src="img/press/CityPagesLocalFrames.jpeg" alt="City Pages" title="Check out the premiere on City Pages" style="width: 100%; min-width: 180px; height:auto; margin-bottom:30px;"/></a>
+              -->
+
+
+                <p style="font-size: 17px; text-align: center; margin-top:-10px;">The full-length 2nd album is coming soon; the six-track <i>Awakening - EP</i> is now available on disc and digital format!</p>
+                <a href="#shop" target="_blank">
+                  <ul id="shop">
+                    <li><img src="img/shop/AwakeningEP.jpg" alt="Get your limited edition CD, the EP for Awakening by The Band Famous!" style="width: 45%; height: auto; box-shadow: none;" /></li>
+                    <li><img src="img/shop/epCD.jpg" alt="Get your limited edition CD, the EP for Awakening by The Band Famous!" style="width: 23%; height: auto; box-shadow: none;" /></li>
+                  </ul>
+                </a>
+                <span><a href="https://music.apple.com/us/album/awakening-ep/1499420168" title="TBF's 'Emotional Scatter' Available on iTunes Apple Music!" target="_blank"><img src="img/shop/apple-music.png" style="max-height: 125px; width: 10%; vertical-align: center; margin-top: -70px; margin-bottom: -20px;" alt="Buy The Band Famous new Awakening - EP on iTunes Apple Music today!"/></a></span>
+               
+                <span><a href="https://open.spotify.com/album/7mgZaQPh1XgWJ6OrYUeno8"  title="Stream The Band Famous new Awakening - EP on Spotify!" target="_blank"><img src="img/shop/spotify.png" style="max-height: 125px; width: 10%; margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="The Band Famous new Awakening - EP on Spotify!"/></a></span>
+                <!--span><a href="https://www.amazon.com/dp/B07Z2VSW5J/ref=cm_sw_r_tw_dp_U_x_f8rQDb2H3JQRY"  title="TBF's 'Emotional Scatter' Available on Amazon!" target="_blank"><img src="img/shop/amazon.png" style="max-height: 85px; width: 6%; margin-top: -70px; vertical-align: center; margin-bottom: -17px;" alt="Buy The Band Famous new single 'Emotional Scatter' on Amazon today!"/></a></span> -->
+                <span><a href="https://play.google.com/store/music/album/The_Band_Famous_Awakening?id=Bylv6w7spn32bzfbwslcxps7fzu"  title="TBF's new Awakening - EP on Google Play!" target="_blank"><img src="img/shop/google-play.png" style="max-height: 115px; width: 9%;  margin-top: -25px; vertical-align: center; margin-bottom: -16px;" alt="Buy TBF's new Awakening - EP on on Google Play today!"/></a></span>
+
+                
+                <!--<span><a href="https://www.youtube.com/watch?v=ZhRKBL8oKJ4" title="View the official music video for TBF's 'Emotional Scatter' on YouTube - don't forget to like, comment, and subscribe!" target="_blank"><img src="img/shop/youtube.png" style="max-height: 90px; width: 7%;  margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="Watch the Official Music Video and Listen to The Band Famous new single 'Emotional Scatter' on YouTube today!"/></a></span> -->
+                <br>
+                <br>
+                <center><img src="img/events/unity.png" alt="Gratitude" style="width: 90%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+
+
+
+
+                <!-- Buy "Autotune Appreciation on iTunes, Google Play, and Amazon -->
+
+                <p <p style="text-align: center;">Purchase or Stream TBF's Single "Autotune Appreciation", from the upcoming 2nd album, <i>Awakening</i>.</p>
+                <br>
+
+                <span><a href="https://www.youtube.com/watch?v=1OjklxNY38A" target="_blank" title="Check out the music video by The Band Famous, 'Autotune Appreciation'"><img src="img/appreciation.jpg" style="max-height: 120px; max-width:120px; width: 10%; vertical-align: center; margin-top: -20px; margin-bottom: -20px;" alt="Watch and listen to the new music video by The Band Famous, 'Autotune Appreciation'."/>:</a></span>
+
+                 <!--<span><a href="radio.html" target="_blank" title="Listen to Emotional Scatter on TBF Radio for free!"><img src="img/tbfradio.png" style="max-height: 93px; width: 6.5%; vertical-align: center; margin-top: -20px; margin-bottom: -20px; box-shadow: none;" alt="Listen to Emotional Scatter on TBF Radio for free!"/></a></span>-->
+                
+                <span><a href="https://music.apple.com/us/album/autotune-appreciation-single/1487902545" title="TBF's 'Autotune Appreciation' Available on iTunes Apple Music!" target="_blank"><img src="img/shop/apple-music.png" style="max-height: 120px; max-width:120px; width: 10%; vertical-align: center; margin-top: -70px; margin-bottom: -20px;" alt="Buy The Band Famous new single 'Autotune Appreciation' on iTunes Apple Music today!"/></a></span>
+                <span><a href="https://www.shazam.com/track/503195575/autotune-appreciation" title="TBF's 'Autotune Appreciation' now on Shazam!"><img src="img/shop/shazam.png" style="max-height: 120px; max-width:120px; width: 10%; margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="Listen to The Band Famous new single 'Autotune Appreciation' on Shazam today!"/></a></span>
+                <span><a href="https://open.spotify.com/album/5JtneFRlCE91ZjlAGIVJJB"  title="TBF's 'Autotune Appreciation' Coming Soon to Spotify!" target="_blank"><img src="img/shop/spotify.png" style="max-height: 120px; max-width:120px; width: 10%;   margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="Listen to The Band Famous new single 'Autotune Appreciation' on Spotify today!"/></a></span>
+                <span><a href="https://www.amazon.com/dp/B081J1WFK1/ref=sr_1_1?keywords=The+Band+Famous+Autotune+Appeciation&qid=1573868632&s=dmusic&sr=1-1-spell"  title="TBF's 'Autotune Appreciation' Available on Amazon!" target="_blank"><img src="img/shop/amazon.png" style="max-height: 108px; max-width: 108px; width: 9%; margin-top: -70px; vertical-align: center; margin-bottom: -17px;" alt="Buy The Band Famous new single 'Autotune Appreciation' on Amazon today!"/></a></span>
+                <span><a href="https://play.google.com/store/music/album?id=B4vj6efddig64mllaiazyv3am54&tid=song-T36wgamsrfxoc5gufwalg6b3ase"  title="TBF's 'Autotune Appreciation Scatter' on Google Play!" target="_blank"><img src="img/shop/google-play.png" style="max-height: 108px; max-width: 108px; width: 9%;  margin-top: -15px; vertical-align: center; margin-bottom: -16px;" alt="Buy The Band Famous new single 'Autotune Appreciation' on Google Play today!"/></a></span>
+                <span><a href="https://youtu.be/1OjklxNY38A" title="View the official music video for TBF's 'Autotune Appreciation' on YouTube - don't forget to like, comment, and subscribe!" target="_blank"><img src="img/shop/youtube.png" style="max-height: 110px; max-width: 110px; width: 10%;  margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="Watch the Official Music Video and Listen to The Band Famous new single 'Autotune Appreciation' on YouTube today!"/></a></span>
+                <br>
+                <br>
+                <center><img src="img/events/unity.png" alt="Gratitude" style="width: 90%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+
+
+                <!-- Buy "Emotional Scatter" on iTunes, Google Play, and Amazon -->
+
+                <p <p style="text-align: center;">Purchase or Stream TBF's Single "Emotional Scatter", from the upcoming 2nd album, <i>Awakening</i>.</p>
+                <br>
+
+                <span><a href="https://www.youtube.com/watch?v=ZhRKBL8oKJ4" target="_blank" title="Check out the music video self-directed and produced by The Band Famous, 'Emotional Scatter'"><img src="img/Emotional Scatter.jpg" style="max-height: 120px; max-width:120px; width: 10%; vertical-align: center; margin-top: -20px; margin-bottom: -20px;" alt="Watch and listen to the new music video by The Band Famous, 'Emotional Scatter'."/>:</a></span>
+                <!-- Buy "Emotional Scatter" on iTunes, Google Play, and Amazon -->
+                     
+                         
+                                
+                <!--<span><a href="radio.html" target="_blank" title="Listen to Emotional Scatter on TBF Radio for free!"><img src="img/tbfradio.png" style="max-height: 93px; width: 6.5%; vertical-align: center; margin-top: -20px; margin-bottom: -20px; box-shadow: none;" alt="Listen to Emotional Scatter on TBF Radio for free!"/></a></span>-->
+                <span><a href="https://music.apple.com/us/album/emotional-scatter-single/1482306594" title="TBF's 'Emotional Scatter' Available on iTunes Apple Music!" target="_blank"><img src="img/shop/apple-music.png" style="max-height: 120px; max-width:120px; width: 10%; vertical-align: center; margin-top: -70px; margin-bottom: -20px;" alt="Buy The Band Famous new single 'Emotional Scatter' on iTunes Apple Music today!"/></a></span>
+                <span><a href="https://www.shazam.com/track/498779585/emotional-scatter" title="TBF's 'Emotional Scatter' now on Shazam!"><img src="img/shop/shazam.png" style="max-height: 120px; max-width:120px; width: 10%; margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="Listen to The Band Famous new single 'Emotional Scatter' on Shazam today!"/></a></span>
+                <span><a href="https://open.spotify.com/album/08YnxrBVS04YYpJQ7cqKHn"  title="TBF's Emotional Scatter' Coming Soon to Spotify!" target="_blank"><img src="img/shop/spotify.png" style="max-height: 120px; max-width:120px; width: 10%;   margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="Listen to The Band Famous new single 'Emotional Scatter' on Spotify today!"/></a></span>
+                <span><a href="https://www.amazon.com/dp/B07Z2VSW5J/ref=cm_sw_r_tw_dp_U_x_f8rQDb2H3JQRY"  title="TBF's 'Emotional Scatter' Available on Amazon!" target="_blank"><img src="img/shop/amazon.png" style="max-height: 108px; max-width: 108px; width: 9%; margin-top: -70px; vertical-align: center; margin-bottom: -17px;" alt="Buy The Band Famous new single 'Emotional Scatter' on Amazon today!"/></a></span>
+                <span><a href="https://play.google.com/store/music/album?id=Bplslrgdtjpk66u4tlksm54wvpa&tid=song-Tcvllr43kdkwda2iccp2rki3bsi"  title="TBF's 'Emotional Scatter' on Google Play!" target="_blank"><img src="img/shop/google-play.png" style="max-height: 108px; max-width: 108px; width: 9%;  margin-top: -15px; vertical-align: center; margin-bottom: -16px;" alt="Buy The Band Famous new single 'Emotional Scatter' on Google Play today!"/></a></span>
+                <span><a href="https://youtu.be/ZhRKBL8oKJ4" title="View the official music video for TBF's 'Emotional Scatter' on YouTube - don't forget to like, comment, and subscribe!" target="_blank"><img src="img/shop/youtube.png" style="max-height: 110px; max-width: 110px; width: 10%;  margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="Watch the Official Music Video and Listen to The Band Famous new single 'Emotional Scatter' on YouTube today!"/></a></span>
+                <br>
+                <br>
+                <center><img src="img/events/unity.png" alt="Gratitude" style="width: 90%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+
+                  <!-- Lazer Eyes -->
+                  <p <p style="text-align: center;">TBF released &ldquo;Lazer Eyes&rdquo; free as a tribute to musical inspiration and legend, Prince Rogers Nelson on his birthday, June 7th, 2017. Now available from <i>Awakening,</i> &ldquo;Lazer Eyes&rdquo; is out now:</p>
+
+                  <!-- Listen to "Lazer Eyes" on TBF Radio and on our YouTube  -->
+      
+                  <span><a href="https://www.youtube.com/watch?v=4Yng26YzsrA" target="_blank" title="Check out the music video self-directed and produced by The Band Famous, 'Lazer Eyes'"><img src="img/LazerEyes.jpg" style="max-height: 120px; max-width:120px; width: 10%; vertical-align: center; margin-top: -20px; margin-bottom: -20px;" alt="Check out 'Lazer Eyes'"/>:</a></span>
+                  <span><a href="radio.html" target="_blank" title="Listen to TBF's 'Lazer Eyes' on TBF Radio"><img src="img/tbfradio.png" style="max-height: 110px; width: 10%; vertical-align: center; margin-top: -70px; margin-bottom: -20px;" alt="Listen to The Band Famous new single 'Lazer Eyes' on TBF Radio today!"/></a></span>
+                  <span><a href="https://youtu.be/4Yng26YzsrA" target="_blank" title="Listen to TBF's 'Lazer Eyes' on YouTube - don't forget to like, comment, and subscribe!"><img src="img/shop/youtube.png" style="max-height: 110px; width: 10%;  margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="Listen to The Band Famous new single 'Lazer Eyes' on YouTube today!"/></a></span>
+
+                  <br>
+                  <br>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 90%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+
+                  <p style="text-align: center;">Purchase or stream TBF&rsquo;s first official commercial release, from their upcoming 2nd album&nbsp;<i>Awakening,</i> &ldquo;Promises&rdquo; - please be advised the music video for "Promises" is intended for mature audiences:</p>
+                  <br>
+                  <!-- Buy "Promises" on iTunes, Google Play, and Amazon -->
+                  
+                  <span><a href="https://www.youtube.com/watch?v=1s_RU05AqjA" target="_blank" title="Check out the music video self-directed and produced by The Band Famous, 'Promises' (Disclaimer: NSFW)"><img src="img/promises.jpg" style="max-height: 120px; max-width:120px; width: 10%; vertical-align: center; margin-top: -20px; margin-bottom: -20px;" alt="Check out 'Promises' (Disclaimer: NSFW)"/>:</a></span>
+                  <span><a href="https://itunes.apple.com/us/album/promises-single/id1129163577" target="_blank" title="Buy TBF's 'Promises' on iTunes Apple Music!"><img src="img/shop/apple-music.png" style="max-height: 120px; width: 10%; vertical-align: center; margin-top: -70px; margin-bottom: -20px;" alt="Buy The Band Famous new single 'Promises' on iTunes Apple Music today!"/></a></span>
+                  <span><a href="hhttp://www.shazam.com/track/322767260/promises#referrer=shz.am" target="_blank" title="Listen to TBF's 'Promises' on Shazam!"><img src="img/shop/shazam.png" style="max-height: 120px; width: 10%; margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="Listen to The Band Famous new single 'Promises' on Shazam today!"/></a></span>
+                  <span><a href="https://play.spotify.com/artist/4Rjo7MM8sHnXPY5DyVTYiZ?play=true&utm_source=open.spotify.com&utm_medium=open" target="_blank" title="Listen to TBF's 'Promises' on Spotify!"><img src="img/shop/spotify.png" style="max-height: 120px; width: 10%;   margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="Listen to The Band Famous new single 'Promises' on Spotify today!"/></a></span>
+                  <span><a href="https://www.amazon.com/Promises/dp/B01HTQ4UP8/ref=sr_1_3?ie=UTF8&qid=1467681013&sr=8-3&keywords=the+band+famous+promises" target="_blank" title="Buy TBF's 'Promises' on Amazon!"><img src="img/shop/amazon.png" style="max-height: 110px; width: 9%; margin-top: -70px; vertical-align: center; margin-bottom: -17px;" alt="Buy The Band Famous new single 'Promises' on Amazon today!"/></a></span>
+                  <span><a href="https://play.google.com/store/music/album?id=Bwbcxviuja4jvis2455woka46sa" target="_blank" title="Buy TBF's 'Promises' on Google Play!"><img src="img/shop/google-play.png" style="max-height: 110px; width: 9%;  margin-top: -15px; vertical-align: center; margin-bottom: -16px;" alt="Buy The Band Famous new single 'Promises' on Google Play today!"/></a></span>
+                  <span><a href="https://www.youtube.com/watch?v=1s_RU05AqjA" target="_blank" title="Listen to TBF's 'Promises' on YouTube - don't forget to like, comment, and subscribe!"><img src="img/shop/youtube.png" style="max-height: 110px; width: 10%;  margin-top: -20px; vertical-align: center; margin-bottom: -20px;" alt="Listen to The Band Famous new single 'Promises' on YouTube today!"/></a></span>
+                  <br>
+                  <br>
+
+                  <br>
+                  <br>
+                  <br>
+              </article>
+                  <p><iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/1OjklxNY38A" frameborder="0" allowfullscreen></iframe></p>
+                  <p><iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/ZhRKBL8oKJ4" frameborder="0" allowfullscreen></iframe></p>
+                  <p><iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/4Yng26YzsrA" frameborder="0" allowfullscreen></iframe></p>
+                  <p><iframe frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/1s_RU05AqjA" width="100%"></iframe></p>
+                  <p><iframe frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/4iVrlY-ap98" width="100%"></iframe></p>
+                  <p style="line-height: 19.6px;"><span style="line-height: 1.4;"><iframe frameborder="no" width="100%" height="385" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/134366596&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></span></p>
+
+                  <article id="epk">
+
+                  <center><img src="img/press/press.jpg" style="width: 90%; height:auto; margin-top: -20px; margin-bottom: 20px; box-shadow: 8px 8px 5px #888888;"/></center>
+
+                  <div class="page_object_press_item" style=" margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;Today we’d like to introduce you to Jacob Alexander Figueroa and Mary Norell Jackson.&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="http://voyagela.com/interview/meet-jacob-alexander-figueroa-mary-norell-jackson-of-the-band-famous/" target="_blank" style="margin: 7px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Stephanie Rodriguez - VoyageLA</a></div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style=" margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;I have to ask. I absolutely loved you, Norell and Zander, in that video that you did with the couples where Zander was finding these other women and making love to them, and you were in the background and you were, you were like this vision. What was the concept of that? I absolutely love that thing, and if that was a short film or movie, I'd watch that!&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="https://www.youtube.com/watch?v=cbmrqf72EKs" target="_blank" style="margin: 7px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Lawrence the Blue Eyed Emperor</a></div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style=" margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;Self-produced trip-hop group the Band Famous exist to uplift you, even if they sound a bit wacky when they do. They may not be self-actualized enough to dispense good advice, but their new single “Emotional Scatter” tries, dammit. Directed by TBF members Norell and Zander, the video tries to play motivational speaker, but when the band mixes in goofy lyrics and a mooning gnome toy, it’s hard to take them totally seriously. Which might be the point: Stop taking yourself so seriously and enjoy the jam.&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="http://www.citypages.com/music/gnome-butts-isolation-rituals-and-tijuana-drug-deals-in-this-weeks-top-5-mn-music-videos/563566641" target="_blank" style="margin: 7px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Jerard Fagerberg - City Pages</a></div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style=" margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;Zander gives a food review with Norell at his side on CCTV aka China Central Television.&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="http://tv.cctv.com/2019/06/14/VIDENDuvn4pdtNX48sSKDQm0190614.shtml" target="_blank" style="margin: 7px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">CCTV | China Central Television</a></div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style=" margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;&hellip; you give a more intimate experience to the fans&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="http://www.appmasters.co/the-band-famous/" target="_blank" style="margin: 0px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Steve Young, Lakshmi Parvathy - App Masters</a></div>
+                  </div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style="margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;Their art is now gaining traction nationwide&hellip;This spring, TBF was on the Tom Green Show and other L.A.-based podcasts, following the fall Android release of their album, Last Words. Their second album, Awakening, is being released soon.&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="http://plymouthmag.com/update-band-famous" target="_blank" style="margin: 0px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Laura Haraldson - Plymouth Magazine</a></div>
+                  </div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style="margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;Sold by innovation.&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="http://www.inetsolutions.org/11-marketing-experts-try-sell-products/" target="_blank" style="margin: 0px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Doncho Karaivanov - Inet Solutions</a></div>
+                  </div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style="margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 7px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;Your band is exciting, you have an exciting - would you call it an industrial metal band? What is it more of a pop, pop industrial alternative band?&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="https://itunes.apple.com/us/podcast/episode-21-is-tom-mean/id1034003086?i=363075836&amp;mt=2" target="_blank" style="margin: 0px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Tom Green - The Tom Green Radio Show on CBS Radio</a></div>
+                  </div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style="margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 7px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;Their multi-media performances include body paint and synth-driven grooves, and they have even developed their own app to broadcast these shows.&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="http://news.musicpage.com/post/128205924888/final-contest-winners" target="_blank" style="margin: 0px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Erik Jarvis - Music Industry News, Powered by MusicPage.com</a></div>
+                  </div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style="margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 7px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;I just had to have them on the show immediately because they were one of those teams that you may come across, or individuals you come across at any entertainment function that was genuine&hellip; everything about them was about their business&hellip; I saw a humanitarian part of them as well&hellip; these are genuine individuals&hellip; Wowww - that there is really interesting&hellip; That&rsquo;s an upgrade! &hellip;That there is really something that&rsquo;s ingenious&hellip;&hellip;. you actually bring the folks great tunes, you actually have fantastic artistic ability when it comes to body painting, and there&rsquo;s a host of other things that you do&hellip;you guys were actually created through live-streaming, which is one of the biggest things and benefits that we have today in the entertainment industry&hellip;&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="https://www.youtube.com/watch?v=d64e1m4_MJA" target="_blank" style="margin: 0px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Poppa T - JCTtv</a></div>
+                  </div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style="margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 7px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;You&rsquo;re a group of collaborators, I mean musicians, developers, and people who are very creative, body painters, writers - I mean you have a little bit of everything and when you put everyone together, its like &lsquo;we create the band famous&rsquo;&hellip;&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="https://www.mixcloud.com/WEEKONradio/week-on-radio-show-season-2-07-nov-24-alvaro-duran-the-band-famous-and-ramsey-w-jack-bianka/" target="_blank" style="margin: 7px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Bianka Gomez - WeekOnLARadio</a></div>
+                  </div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style="margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 7px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;And the technology nowadays&hellip;You just have it in your pocket because everybody - everyone right now has a smartphone, so if you say you don&rsquo;t have a smartphone, please c&rsquo;mon. You know how to connect even with WiFi in your house&hellip; This is an amazing and huge idea, I love it. Let&rsquo;s talk a little bit about you&rsquo;re music - we&rsquo;re listening right now, it&rsquo;s very nice, relaxed.&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="https://www.mixcloud.com/WEEKONradio/week-on-radio-show-season-2-07-nov-24-alvaro-duran-the-band-famous-and-ramsey-w-jack-bianka/" target="_blank" style="margin: 7px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Jack Ramos - WeekOnLARadio</a></div>
+                  </div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style="margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 7px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;&hellip;the band famous, who somehow managed to form live on the internet..that&rsquo;s right&hellip;it&rsquo;s like they filmed their own birth&hellip;they made an interactive app by which they released their album&hellip; The more I read, the more surprised I was&hellip; They came together a couple of years ago in MN, they were all here in MN, and they all play music, they all make art, they also are all software developers&hellip; and actually some of the music from that initial jam session went on their debut EP &lsquo;Last Words&rsquo; which was released - wait for it - not on vinyl or via iTunes or any of the conventional ways of releasing music, but via an app - because they&rsquo;re all software developers, right? They made an interactive app by which they released their album&hellip;..[The music?] It&rsquo;s dreamy, it&rsquo;s spacey&hellip;. I think people&hellip; will find a lot to enjoy, a lot of familiar, and ambient sounds&hellip; the whole thing is improvised by the way, all of their music to date has been entirely improvised&hellip;&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="http://www.thecurrent.org/programs/local-show/2014/11/23" target="_blank" style="margin: 0px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">David Campell, Jay Gabler - The Local Show on 89.3 FM The Current</a></div>
+                  </div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style="margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 7px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;'Climax,&rsquo; a track on the Band Famous&rsquo;s debut EP Last Words, was taken from that initial improv session. The band finished their initial release over a subsequent series of improv sessions&mdash;with Norell singing, Terry largely handling production duties, and all three members playing multiple instruments&mdash;and released the dreamy, synth-laden EP as a &lsquo;smart album&rsquo; in the form of an app. The app, which also features a game and videos, can now be downloaded for free on your iPhone or iPad (search &ldquo;Band Famous&rdquo; in the app store)&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="http://blog.thecurrent.org/2014/11/music-body-painting-web-development-meet-the-band-famous/" target="_blank" style="margin: 0px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Jay Gabler - MPR | The Current</a></div>
+                  </div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style="margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 7px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;He is also a contributing member in The Band Famous, adding violin to synthesizers to their EDM sound, and unveiled a new body art installment for their debut performance, body painting at the Love Monster Famous App Release Party on Friday the 13th, this June.&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="http://www.ilovebodyart.com/jacob-alexander-figueroa-artist-zander/" target="_blank" style="margin: 0px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">ILoveBodyArt</a></div>
+                  </div>
+                  <center><img src="img/events/unity.png" alt="Gratitude" style="width: 70%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+                  <div class="page_object_press_item" style="margin: 7px; padding: 0px 0px 20px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: #333333; font-family: Roboto, Helvetica, Arial, sans-serif; line-height: 18px; background: transparent;">
+                  <p style="margin: 7px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: bold; background: transparent;">&ldquo;Lavender Magazine printed our debut live performance and App Release (Album Release) Party on Page 19 of their May 29-June 11 2014 issue.&rdquo;</p>
+                  <div class="press_item_author" style="margin: 7px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"><a href="http://epagepub.com/publication/?i=211229&amp;p=19" target="_blank" style="margin: 0px; padding: 0px; vertical-align: baseline; color: #2c9ce9; text-decoration: none; cursor: pointer; background: transparent;">Lavender Magazine</a></div>
+                  <div class="press_item_author" style="margin: 0px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;"></div>
+                  <div class="press_item_author" style="margin: 0px; padding: 0px 0px 0px 20px; border: 0px; outline: 0px; vertical-align: baseline; font-style: italic; background: transparent;">
+                </article>
+
+                <br>
+
+                <article id="epk">
+
+                  <p style="font-size: 20px; width: 90%; margin-top:10px; text-shadow: none; color: black;">What makes the Band Famous (TBF) different from other bands?&nbsp;</p>
+                  <p style="text-shadow: none; color: black;">They are arguably:</p>
+                  <p style="text-shadow: none; color: black;">The first band in the world who can say one of their band members is a renowned artist and body painter.</p>
+                  <p style="text-shadow: none; color: black;">The first band in the world to release a debut album of completely improvised material.</p>
+                  <p style="text-shadow: none; color: black;">The first band in the world to have their birth live streamed on the internet.</p>
+                  <p style="text-shadow: none; color: black;">The first band in the world to self-release their debut album in the form of a &ldquo;smart album&rdquo;, their own virtual venue and record store.</p>
+
+                  <p style="text-shadow: none; color: black;"><span style="color: #000000; font-family: Marcellus, serif; font-size: 18px; line-height: 24px;">TBF has proudly been endorsed by: Greg Deocampo, Atmosphere, Jack Ramos, Jay Gabler, Kim Dotcom, Emre Erturk, and Tom Green.</span></p>
+                 <ul class="tbf">
+                  <li>
+                    <p style="text-shadow: none; color: black;"><img src="img/xzander.jpg" style="max-width: 300px; width:100%;" /></p>
+                    <p style="font-size: 10px;"><em>Photo by Jessica Ramaker Photography.</em></p>
+                  </li>
+                  <li>
+                    <p><img src="https://66.media.tumblr.com/4e19d5c84e1dff7151808b8af8b997b1/tumblr_inline_nll2up96CE1t9jjt0_500.jpg" style="max-width: 300px; width:100%;" /></p>
+                    <p style="font-size: 10px;"><em>Photo/Style/Set/Makeup/Hair/Edit by Zander.</em></p>
+                  </li>
+
+                </ul>
+
+                  <p style="text-shadow: none; color: black;">Lady Gaga and Bj&ouml;rk are both talented singers and entertainers that have an app, but they hired others to build it.</p>
+                  <p style="text-shadow: none; color: black;">Not TBF! They not only programmed and released the smart album, but they are also &ldquo;fine-tuning&rdquo; the new technology to cater to their fan base.&nbsp;In other words, the &ldquo;downloadees&rdquo; are going to determine the future of TBF&rsquo;s apps.</p>
+
+                  <!-- possibly causing error so commenting out
+                  <p style="text-shadow: none; color: black;">Sample three private tracks on Soundcloud from TBF's debut album <i>Last Words</i>:</p>
+                  <p style="text-shadow: none; color: black;"><iframe frameborder="no" height="350" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/91512094%3Fsecret_token%3Ds-fqs5O&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" width="100%"></iframe></p>
+                -->
+                  <p><span style="line-height: 1.4;">Get their nine-track improvised debut album <i>Last Words</i> when you download The Band Famous® app.</p>
+                  <p><span style="line-height: 1.4;">They write all their own music, lyrics and do all of their own compositions and mastering to their videos and programming and everything in between.</span><span style="line-height: 1.4;">The band formed over a spontaneous improv and&nbsp;</span>livestreamed<span style="line-height: 1.4;">&nbsp;recording session in Saint Paul, MN, on July 26th, 2013.</span></p>
+                  <p><img src="images/behindthescenes.gif" style="width: 100%;" /></p>
+                  <p style="font-size: 10px;"><em>Photos by Jessica Ramaker Photography.</em></p>
+                  <p><span style="line-height: 1.4;">From self-recording their debut album of complete improvisation, to programming their smart album, an interactive app, and releasing it on the iPhone App Store and Android Google Play for free, TBF has proven to be a very capable group of pushing artistic and musical content.</span></p>
+
+                  <p>Their current active members include renowned artist and body painter, <a href="http://en.wikipedia.org/wiki/Jacob_Alexander_Figueroa" title="Jacob Alexander Figueroa" target="_blank">Zander</a> aka Jacob Alexander Figueroa, and soulful singer and lyricist Norell, who is working on her first autobiography. Both co-produce everything to do with The Band Famous®; both members are multifaceted artists and entrepreneurs.&nbsp;</span></p>
+
+                  <p>Past members and honorable mention to app expert Terry aka Terrance Clifford aka <a href="https://www.jambots.com" target="_blank">Jambots</a>, who - also the creator of <a href="http://madeheremn.org/blog/brilliance2014" title="Terrance Schubring, &quot;TV Machines&quot;" target="_blank">&ldquo;TV Machines&rdquo;</a> -<span style="line-height: 1.4;">&nbsp;has over six apps on both iTunes and Google Play App Stores, including having programmed the Radio K app! Shout out to MN guitarist <a href="https://soundcloud.com/edwin-p-scherr/tracks" target="_blank">Edwin P. Scherr</a>, who collaborated on the acoustic tracks heard in <i>Last Words</i>, as well as the guitar heard in "Lazer Eyes".</p>
+                  <p><img src="https://66.media.tumblr.com/a77fdfd5d55487997eb6025918d77769/tumblr_inline_nllg8xPzsS1t9jjt0_500.jpg" style="width: 100%;" /></p>
+                  <p style="font-size: 10px;"><em>Photo by Jessica Ramaker Photography.</em><span style="line-height: 1.4;">&nbsp;</span></p>
+                  <p><img src="https://66.media.tumblr.com/18774de34b4054e53fb51f948dbee465/tumblr_inline_nllfudGVma1t9jjt0_500.png" style="width: 100%;" /></p>
+
+                  <p style="font-size: 22px;">Select an image below to open gallery.</p>
+                  <br>
+
+                  
+              <!-- Live, Studio, Promo Galleries -->
+                  <table class="gallery" style="margin-top:-20px; margin-left: -20px;">
+                    <tr>
+                      <td>
+                        <p style="margin-left: 45%;">TBF Live</p>
+                          <!-- Gallery of live images. -->
+
+                          <ul class="clearing-thumbs clearing-feature" data-clearing="">
+                              <li class="clearing-featured-img">
+                                <a href="img/live/7.jpg"><img alt="TBF" src="img/live/7.jpg" style=
+                                  "width: 100%; height:auto; margin-bottom: 20px; box-shadow: 8px 8px 5px #888888;"
+                                  title="Click to view live performance images."></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/2.jpg"><img alt="TBF" src="img/live/2.jpg"></a>
+                              </li> 
+
+                              <li>
+                                  <a href="img/live/17.jpg"><img alt="TBF" src="img/live/17.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/14.jpg"><img alt="TBF" src="img/live/14.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/15.jpg"><img alt="TBF" src="img/live/15.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/3.jpg"><img alt="TBF" src="img/live/3.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/4.jpg"><img alt="TBF" src="img/live/4.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/6.jpg"><img alt="TBF" src="img/live/6.jpg"></a>
+                              </li>
+
+                              <!--<li>
+                                  <a href="img/live/7.jpg"><img alt="TBF" data-caption="" src=
+                                  "img/live/7.jpg"></a>
+                              </li>-->
+
+                              <li>
+                                  <a href="img/live/8.jpg"><img alt="TBF" src="img/live/8.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/16.jpg"><img alt="TBF" src="img/live/16.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/18.jpg"><img alt="TBF" src="img/live/18.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/9.jpg"><img alt="TBF" src="img/live/9.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/28.jpg"><img alt="TBF" src="img/live/28.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/10.jpg"><img alt="TBF" src="img/live/10.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/11.jpg"><img alt="TBF" src="img/live/11.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/12.jpg"><img alt="TBF" src="img/live/12.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/19.jpg"><img alt="TBF" src="img/live/19.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/20.jpg"><img alt="TBF" src="img/live/20.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/21.jpg"><img alt="TBF" src="img/live/21.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/22.jpg"><img alt="TBF" src="img/live/22.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/13.jpg"><img alt="TBF" src="img/live/13.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/23.jpg"><img alt="TBF" src="img/live/23.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/live/24.jpg"><img alt="TBF" src="img/live/24.jpg"></a>
+                              </li>
+                              <li>
+                                  <a href="img/live/1.jpg"><img alt="TBF" src="img/live/1.jpg"></a>
+                              </li>
+
+                          </ul>
+                        </td>
+
+                        <td><p style="margin-left: 40%;">TBF in Studio</p>
+                            <!-- Gallery of studio images -->
+
+                            <ul class="clearing-thumbs clearing-feature" data-clearing="">
+                                <li class="clearing-featured-img">
+                                    <a href="img/studio/Famous-0022.jpg"><img alt="TBF" src="img/studio/Famous-0022.jpg" style=
+                                    "width: 100%; height:auto; margin-bottom: 20px; box-shadow: 8px 8px 5px #888888;"
+                                    title="Click to view images of TBF in studio."></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/bw-0035.jpg"><img alt="TBF" src="img/studio/bw-0035.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/Famous-0017.jpg"><img alt="TBF" src="img/studio/Famous-0017.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/Famous-0012.jpg"><img alt="TBF" src="img/studio/Famous-0012.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/bw-0038.jpg"><img alt="TBF" src="img/studio/bw-0038.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/Famous-0018.jpg"><img alt="TBF" src="img/studio/Famous-0018.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/Famous-0013.jpg"><img alt="TBF" src="img/studio/Famous-0013.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/Famous-0016.jpg"><img alt="TBF" src="img/studio/Famous-0016.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/Famous-0023.jpg"><img alt="TBF" src="img/studio/Famous-0023.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/Famous-0026.jpg"><img alt="TBF" src="img/studio/Famous-0026.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/Famous-0014.jpg"><img alt="TBF" src="img/studio/Famous-0014.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/Famous-0019.jpg"><img alt="TBF" src="img/studio/Famous-0019.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/bw-0047.jpg"><img alt="TBF" src="img/studio/bw-0047.jpg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="img/studio/bw-0046.jpg"><img alt="TBF" src="img/studio/bw-0046.jpg"></a>
+                                </li>
+
+                                <!--<li>
+                                    <a href="img/studio/Famous-0010.jpg"><img alt="TBF"
+                                     src="img/studio/Famous-0010.jpg"></a>
+                                </li>-->
+
+
+                            </ul>
+                          </td>
+
+                          <td><p style="margin-left: 40%;">TBF Promo</p>
+
+                          <!-- Gallery of promo images -->
+
+                          <ul class="clearing-thumbs clearing-feature" data-clearing="">
+                              <li class="clearing-featured-img">
+                                  <a href="img/promo/face5.jpg"><img alt="TBF" src="img/promo/face5.jpg" style=
+                                  "width: 100%; height:auto; margin-bottom: 20px; box-shadow: 8px 8px 5px #888888;"
+                                  title="Click to view TBF promo images."></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/promo/face4.jpg"><img alt="TBF" src="img/promo/face4.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/promo/face.jpg"><img alt="TBF" src="img/promo/face.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/promo/face2.jpg"><img alt="TBF" src="img/promo/face2.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/promo/face3.jpg"><img alt="TBF" src="img/promo/face3.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/promo/face6.jpg"><img alt="TBF" src="img/promo/face6.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/promo/face7.jpg"><img alt="TBF" src="img/promo/face7.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/promo/face8.jpg"><img alt="TBF" src="img/promo/face8.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/promo/face9.jpg"><img alt="TBF" src="img/promo/face9.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/promo/face10.jpg"><img alt="TBF" src="img/promo/face10.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/promo/faceTerry.jpg"><img alt="TBF" src="img/promo/faceTerry.jpg"></a>
+                              </li>
+
+                              <li>
+                                  <a href="img/promo/faceZander.jpg"><img alt="TBF" src="img/promo/faceZander.jpg"></a>
+                              </li>
+
+
+                          </ul>
+                        </td>
+                      </tr>
+                
+                </table>
+
+                <p>Images available for download. If you share, please credit and tag us as appropriate: @the_band_famous on Instagram, @thebandfamous on Twitter and Facebook.</p>
+
+                <p>Special thanks to Jessica Ramaker Photography, Page Photographics, and Dale Lotts for capturing our debut app album release party for The Band Famous® apps on June 13, 2014, live at Gay 90s in Minneapolis, MN.</p>
+
+                <!-- End Gallery Links -->
+
+                  <p><span style="font-size: 13.3333px; vertical-align: baseline; white-space: pre-wrap;">Please get in touch with TBF staff at <a href="mailto:info@bandfamous.com" target="_blank" style="color: #1155cc;">info@bandfamous.com</a> for guest list, interviews, or promo copies of </span><span style="font-size: 13.3333px; font-style: italic; vertical-align: baseline; white-space: pre-wrap;">Awakening</span><span style="font-size: 13.3333px; vertical-align: baseline; white-space: pre-wrap;">, or any other inquiries.</span></p>
+                  <br>
+
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+
+              </article>
+
+              </center>
+              <br>
+                      
+                </div>
+
+                
+                <!--Company Information below -->
+
+                <hr style="margin-top: 40px;">
+                <center><ul style="list-style: none;"><li style="text-align: center; font-size: 8px; display: inline; margin-right: 20px; margin-left: -30px;">The Band Famous&#174;</li><li style="text-align: center; font-size: 8px; display: inline;">Website by Phönix LLC</li></ul></center>             
+
+            </div>
+
+            
+  
+
+	</div>
+
+	<!-- /content -->
+
+</div>
+<!-- /page -->
+
+
+	<div data-id="home" data-position="fixed" data-role="footer">
+        <div data-role="navbar">
+            <ul>
+                <li>
+                   	<a data-icon="home" href="news.html">HOME</a>
+                </li>
+				<li>
+                    <a class="ui-btn-active ui-state-persist" data-icon=
+                            "info" href="bio.html">BAND</a>
+                </li>
+
+                <li>
+                    <a data-icon="star" href="music.html">MUSIC</a>
+                </li>
+
+                <li>
+                    <a data-icon="forward" href="shop.html">SHOP</a>
+                </li>
+           	</ul>
+        </div>
+    </div>
+    <!-- /footer -->
+
+
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+        <script src="js/bbplayer.js"></script>
+        <script src="js/vendor/modernizr.js" async></script>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/foundation.min.js"></script>
+        <script>
+          $(document).foundation();
+        </script>
+        
+
+
+</body>
+</html>
