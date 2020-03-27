@@ -513,17 +513,40 @@
       max-width: 500px;
       min-width: 220px;
       background: url(media/DiscoLightsVidevo.mov) center;
+      display: inline-block;
       height: auto;
 
     }
 
 
+    span.LIVE {
+      display: inline-block;
+      width: 80%;
+      max-width: 1600px;
+      min-width: 220px;
+      background: url(media/DiscoLightsVidevo.mov) center;
+      height: auto;
+      background-image: url(media/DiscoLightsVidevo.mov) center; 
+
+    }
+
+
+
     @media only screen and (max-width: 500px) {
+      span.LIVE {
+
+        display: inline-block;
+        background: url(media/DiscoLightsVidevo.mov) center;
+        background-image: url(img/DiscoLightsVidevo.mov) center; 
+
+      }
+
       table.LIVE {
         width: 110%;
         max-width: 350px;
         min-width: 220px;
         background: url(media/DiscoLightsVidevo.mov) center;
+        background-image: url(img/DiscoLightsVidevo.mov) center; 
         height: auto;
 
       }
@@ -576,20 +599,21 @@
               <h3 style="font: 2em Helvetica, Sans-Serif; letter-spacing: 2px; color: white; margin-bottom: 0px; text-align: center;  text-shadow: 2px 2px #3399FF;">TBF.TV</h3>
 
               <center>
+                <span class="LIVE">
+                  <table class="LIVE">
+                    <tr>
+                      <td>
+                        <!-- TBF twitch stream -->
+                        <center style="width: 100%"><iframe src="https://player.twitch.tv/?channel=bandfamous" frameborder="0" scrolling="no" height="378" width="100%" min-width="220px" allowfullscreen="true"></iframe><a href="https://www.twitch.tv/bandfamous?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:none;"><h4 style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 34px; min-width: 80%;">STAGE ONE</h4><br>Brought to you by The Band Famous - Subscribe on Twitch</a></center>
+                      </td>
+                      <td>
+                        <!-- Astrolex twitch stream -->
+                        <center style="width: 100%"><iframe src="https://player.twitch.tv/?channel=imnotassmartasithinkiam" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%" min-width="220px"></iframe><a href="https://www.twitch.tv/imnotassmartasithinkiam?tt_content=text_link&tt_medium=live_embed" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:none;"><h4 style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 34px; min-width: 80%;">STAGE TWO</h4><br>Brought to you by imnotassmartasithinkiam - Subscribe on Twitch</a></center>
 
-                <table class="LIVE">
-                  <tr>
-                    <td>
-                      <!-- TBF twitch stream -->
-                      <center style="width: 100%"><iframe src="https://player.twitch.tv/?channel=bandfamous" frameborder="0" scrolling="no" height="378" width="100%" min-width="220px" allowfullscreen="true"></iframe><a href="https://www.twitch.tv/bandfamous?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:none;"><h4 style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 34px; min-width: 80%;">STAGE ONE</h4><br>Brought to you by The Band Famous - Subscribe on Twitch</a></center>
-                    </td>
-                    <td>
-                      <!-- Astrolex twitch stream -->
-                      <center style="width: 100%"><iframe src="https://player.twitch.tv/?channel=imnotassmartasithinkiam" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%" min-width="220px"></iframe><a href="https://www.twitch.tv/imnotassmartasithinkiam?tt_content=text_link&tt_medium=live_embed" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:none;"><h4 style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 34px; min-width: 80%;">STAGE TWO</h4><br>Brought to you by imnotassmartasithinkiam - Subscribe on Twitch</a></center>
-
-                    </td>
-                  </tr>
-                </table>
+                      </td>
+                    </tr>
+                  </table>
+                </span>
               </center>
 
               <!-- TBF twitch feed -->
