@@ -510,10 +510,11 @@
     /* Original Live-Stream Band Since 2013 */
     table.LIVE {
       border: none;
-      width: 90%;
+      width: 100%;
       max-width: 500px;
       min-width: 220px;
-      background: url(media/DiscoLightsVidevo.mov) center;
+      background: transparent;
+      /*background: url(media/DiscoLightsVidevo.mov) center;*/
       display: inline-block;
       height: auto;
 
@@ -522,23 +523,28 @@
 
     span.LIVE {
       display: inline-block;
-      width: 80%;
+      width: 100%;
       max-width: 1600px;
       min-width: 220px;
-      background: url(media/DiscoLightsVidevo.mov) center;
+      background: url(media/DiscoLightsVidevo.mp4) center;
       height: auto;
-      background-image: url(media/DiscoLightsVidevo.mov) center; 
+      background-image: url(media/DiscoLightsVidevo.mp4) center; 
 
     }
 
 
 
     @media only screen and (max-width: 500px) {
-      span.LIVE {
+      center {
+        margin-left: -5px;
+      }
 
+      span.LIVE {
+        margin-left: -5px;
+        width: 105%;
         display: inline-block;
-        background: url(media/DiscoLightsVidevo.mov) center;
-        background-image: url(img/DiscoLightsVidevo.mov) center; 
+        background: url(media/DiscoLightsVidevo.mp4) center;
+        background-image: url(img/DiscoLightsVidevo.mp4) center; 
 
       }
 
@@ -547,15 +553,15 @@
         width: 110%;
         max-width: 350px;
         min-width: 220px;
-        background: url(media/DiscoLightsVidevo.mov) center;
-        background-image: url(img/DiscoLightsVidevo.mov) center; 
+        /*background: url(media/DiscoLightsVidevo.mov) center;
+        background-image: url(img/DiscoLightsVidevo.mov) center; */
         height: auto;
 
       }
 
       table.LIVE tr {
         display: inline-block;
-        width: 94%;
+        width: 98%;
         text-align: center;
 
       }
@@ -609,14 +615,49 @@
                         <center style="width: 100%"><iframe src="https://player.twitch.tv/?channel=bandfamous" frameborder="0" scrolling="no" height="378" width="100%" min-width="220px" allowfullscreen="true"></iframe><a href="https://www.twitch.tv/bandfamous?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:none;"><h4 style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 34px; min-width: 80%;">STAGE ONE</h4><br>Brought to you by The Band Famous - Subscribe on Twitch</a></center>
                       </td>
                       <td>
+                        <!-- mixer bandfamous -->
+                      <center>
+                        <iframe title="BandFamous's player frame" i18n-title="channel#ShareDialog:playerEmbedFrame|Embed player Frame copied from share dialog" allowfullscreen="true" src="https://mixer.com/embed/player/BandFamous?disableLowLatency=1" width="100%" height="378" min-width="220px"> </iframe><a href="https://www.twitch.tv/imnotassmartasithinkiam?tt_content=text_link&tt_medium=live_embed" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:none;"><h4 style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 34px; min-width: 80%;">STAGE TWO</h4><br>Brought to you by The Band Famous - Subscribe on Mixer</a></center>
+                        <!-- 
+
+                          Astrolex twitch stream - wish you the best
+                          <center style="width: 100%"><iframe src="https://player.twitch.tv/?channel=imnotassmartasithinkiam" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%" min-width="220px"></iframe><a href="https://www.twitch.tv/imnotassmartasithinkiam?tt_content=text_link&tt_medium=live_embed" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:none;"><h4 style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 34px; min-width: 80%;">STAGE TWO</h4><br>Brought to you by imnotassmartasithinkiam - Subscribe on Twitch</a></center>
+
+                        -->
+
+                      </td>
+                      <td>
+                        <!-- TBF twitch stream -->
+                        <center>      
+                          <!-- twitch chat -->
+                          <iframe 
+                            frameborder="0"
+                            scrolling="no"
+                            id="chat_embed"
+                            src="https://www.twitch.tv/embed/bandfamous/chat?parent=bandfamous.com"
+                            width="100%" 
+                            height="378" 
+                            min-width="220px"
+                            >
+                          </iframe>
+                          <a href="https://www.twitch.tv/bandfamous?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:none;"><h4 style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 34px; min-width: 80%;">CHAT</h4><br></a>
+                        </center>
+                      </td>
+                      <td>
                         <!-- Astrolex twitch stream -->
-                        <center style="width: 100%"><iframe src="https://player.twitch.tv/?channel=imnotassmartasithinkiam" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%" min-width="220px"></iframe><a href="https://www.twitch.tv/imnotassmartasithinkiam?tt_content=text_link&tt_medium=live_embed" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:none;"><h4 style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 34px; min-width: 80%;">STAGE TWO</h4><br>Brought to you by imnotassmartasithinkiam - Subscribe on Twitch</a></center>
+                        <center>
+                          <!-- mixer chat -->
+                          <iframe title="BandFamous's chat frame" i18n-title="channel#ShareDialog:chatEmbedFrame|eEmbedmbed chat frame copied from share dialog" allowfullscreen="true" src="https://mixer.com/embed/chat/BandFamous" width="100%" height="378" min-width="220px"> </iframe>
+                          <a href="hhttps://mixer.com/bandfamous" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:none;"><h4 style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 34px; min-width: 80%; margin-bottom: -20px;">ROOMS</h4><br></a>
+                        </center>
 
                       </td>
                     </tr>
+
                   </table>
                 </span>
               </center>
+  
 
               <!-- TBF twitch feed -->
               <!--
@@ -630,7 +671,7 @@
               -->
 
 
-              <!-- twitch chat -->
+              <!-- twitch chat 
               
               <iframe frameborder="0"
                 scrolling="no"
@@ -641,7 +682,7 @@
               </iframe>
 
               <br>
-              <br>
+              <br> -->
 
               <!-- mixer feed -->
 
@@ -657,6 +698,7 @@
               <!--
               <h3 style="font: 1em Helvetica, Sans-Serif; letter-spacing: -2px; color: white; margin-bottom: 0px; text-align: center;"><p style="text-shadow: none; font-size: 16pt; margin-bottom: 4px; margin-top: 4px; color: white;">Welcome to TBF <a href="https://en.wikipedia.org/wiki/ESports" target="_blank">eSports</a>!</p></h3>
               -->
+              <br>
               <p style="text-align: center;">Brought to you by The Band Famous&#174;</p>
        
                 <!-- Ads by Google -->
@@ -999,6 +1041,26 @@
                     <h4 style="font-family: Stalemate; font-size: 70px; color: white;">The Band Famous® ebay:</h4> 
                     <a href="https://www.ebay.com/usr/thebandfamous" target="_blank"><img src="img/shop/ebay.jpeg" alt="The Band Famous is on Ebay" style="width: 100%; min-width: 220px;"/></a>
                     <p style="font-size: 18px; margin-top:10px; text-shadow: none; color: white; text-align:center; text-shadow: 1px 1px #3399FF;">Shop at our Ebay Store!</p>
+
+                    <br>
+                    <img src="images/separater.png" alt="Read what people are saying about The Band Famous" style="width: 69%; height: auto; box-shadow: none;" />
+                    <br>
+                    <!-- Buy Coffee and support The Band Famous -->
+
+                       <!-- Buy Coffee and support The Band Famous -->
+                    <h4 style="font-family: Stalemate; font-size: 70px; color: white;">Band Famous Coffee:</h4> 
+                   
+                    <!--<a href="https://streambeans.gg/order?token=jWVqWWbVwmdpRXBdqXvPDPMQ" target="_blank"><img src="img/shop/BandFamousCoffee.png" alt="Drink The Band Famous Coffee to get you through your work days." style="width: auto; min-width: 220px; min-height: 200px; height: 565px;"/></a> -->
+                    <a href="https://streambeans.gg/order?token=jWVqWWbVwmdpRXBdqXvPDPMQ" target="_blank" title="Buy Band Famous Coffee!"><img src="img/shop/TBFCoffee.JPEG" alt="Drink The Band Famous Coffee to get you through your work days." /></a>
+                    <p style="font-size: 18px; margin-top:10px; text-shadow: none; color: white; text-align:center; text-shadow: 1px 1px #3399FF;">Shop Band Famous Coffee!</p>
+                    <p style="font-size: 14px; margin-top:10px; text-shadow: none; color: white; text-align:center; text-shadow: 1px 1px #3399FF;">Band Famous <br>$16.00 (shipping included) <br>Pricing Transparency <br>$7 // coffee, label, bag <br>$2 // shipping <br>$5 // streamer (The Band Famous) <br>$2 // us (streambeans.gg)</p>
+                    <p style="font-size: 14px; margin-top:10px; text-shadow: none; color: white; text-align:center; text-shadow: 1px 1px #3399FF;">This coffee comes to us from Nicaragua <br>and is SHG (super hard grade) and EP <br>(hand sorted "European Process). <br>It is perfect for your traditional drip coffee maker <br>or as a pour over.  The flavors will amaze you!</p>
+                    <p style="font-size: 14px; margin-top:10px; text-shadow: none; color: white; text-align:center; text-shadow: 1px 1px #3399FF;">Origin: Nicaragua <br>Process: Wet processed. <br>Flavor Profile: Floral and Citrus.  <br>A bright cup. <br>Roast level: Medium (City+)</p>
+                        
+                    
+                
+
+
 
                   </center>
 
