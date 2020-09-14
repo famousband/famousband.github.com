@@ -22,7 +22,7 @@
   /* Musicians featured at TBF Radio include TBF, along with the artists featured in the Hall of Fame */
   /* All rights reserved. */
 
- /* Responsive Nav Bar */
+  /* Responsive Nav Bar */
   ul.topnav {
 
     list-style-type: none;
@@ -41,24 +41,35 @@
   }
 
 
-  ul.esports li {
-    list-style: none;
+  ul.lyrics {
     display: inline-block;
-    margin: auto;
   }
-  
 </style>
 
+<!-- media net ad revenue -->
 <script type="text/javascript">
-<!--
-
-document.location = "news.html";
-
-//-->
+    window._mNHandle = window._mNHandle || {};
+    window._mNHandle.queue = window._mNHandle.queue || [];
+    medianet_versionId = "3121199";
 </script>
-
+<script src="https://contextual.media.net/dmedianet.js?cid=8CUX547G8" async="async"></script>
+<!-- media net ad revenue -->
 </head>
 <body>
+
+<ul style="overflow: hidden;
+    background-color: black;
+    background-size: 100%;
+    background-repeat: repeat;
+    min-height: 64px; margin: 0;"> 
+  <li>
+    <h3 style="margin-top:30px; margin-bottom: -20px; margin-left: 10px; margin-right: 10px; font: 1em Helvetica, Sans-Serif; letter-spacing: 3px; color: white; text-shadow: 1px 1px indigo; text-decoration: bold; ">Take The Band Famous with you everywhere you go!</h3>
+    <span><a href="http://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank" title="Have an iPhone, iPad, or iPod Touch? Download our iOS app for free!"><img src="img/appstore.gif" style="width: auto; height: 44px; margin-top:10px; margin-bottom: -20px; vertical-align: center;" alt="Download The Band Famous on the App Store today!"/></a></span>
+         
+    <span><a href="https://play.google.com/store/apps/details?id=com.bandfamous.famous" target="_blank" title="Have an Android phone or tablet? Download our Android app for free!"><img src="img/googleplay.png" style="width: auto; height: 44px; margin-top:10px; margin-bottom: -20px; vertical-align: center; margin-left: 5px;" alt="Download The Band Famous on Google Play today!"/></a></span>
+  </li>
+</ul>
+
 <ul class="topnav" id="tbfnav">
   <li><a href="https://phonixintl.com/apps" target="_blank"><img src="img/famousapps.png" style="height: 72px; width: 72px; margin:0;" alt="The Band Famous Apps"/></a></li>
   <li><a href="news.html">HOME</a></li>
@@ -67,11 +78,15 @@ document.location = "news.html";
   <li><a href="music.html">MUSIC</a></li>
   <li><a href="lyrics.html">LYRICS</a></li>
   <li><a href="videos.html">VIDEOS</a></li>
-  <li><a href="tv.html">TBF.TV</a></li>
+  <!--<li><a href="tv.html">TBF.TV</a></li>-->
   <li><a href="contact.html">CONTACT</a></li>
+  <!--<li><a href="esports.html">ESPORTS</a></li>-->
   <li><a href="halloffame.html">HALL OF FAME</a></li>
   <li><a href="sponsors.html">SPONSORS</a></li>
   <li><a href="testimonials.html">TESTIMONIALS</a></li>
+  <li><a href="latest.html">NEWS</a></li>
+  <li><a href="press.html">PRESS</a></li>
+  <li><a href="https://phonixintl.com/events" target="_blank">VENUE</a></li>
   <li><a href="radio.html" title="Listen Now" target="popup" onclick="window.open('radio.html','popup','width=700,height=700'); return false;" class="ui-btn ui-btn-inline ui-corner-all"><img src="img/tbfradio.png" style="height: 72px; width: 72px; margin:0;" alt="TBF Radio"/></a></li>
   <li class="icon">
     <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
@@ -89,193 +104,275 @@ document.location = "news.html";
 </ul>
 <header>
   <br>
-	<h1 style="margin-top:-20px;" data-content="TBF">TBF</h1>
+  <h1 style="margin-top:-20px;" data-content="TBF">TBF</h1>
 </header>
 <center id="nav">
-	<hr style="border-top: 8px solid black; margin-top: 20px; margin-bottom: 20px;">
-    <h2 id="tbftv" style="background: white; width: 80%; height: 100px; font-size: 2.11em; margin-bottom:-17px; margin-top:-20px;">TBF.TV</h2>
-  <ul class="lyrics">
-    <li>
-      <iframe src="https://player.twitch.tv/?channel=bandfamous" frameborder="0" scrolling="no" height="378" width="70%"></iframe><a href="https://www.twitch.tv/bandfamous?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:underline;">Brought to you by The Band Famous - Subscribe on Twitch</a>
+  <hr style="border-top: 8px solid black; margin-top: 20px; ">
+
+    <ul id="shop" style="margin-bottom: -75px; margin-top: -75px;">
+      <li>
+        <a href="#" data-reveal-id="one" onload="learnAboutHallOfFame()">
+          <h3 title="About the Hall Of Fame" style="-webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: indigo; width:300px; height: auto; color: white; height: ">
+
+     
 
 
-      <!-- Ads by Google -->
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-3229914950091766"
-             data-ad-slot="6137738733"
-             data-ad-format="auto"></ins>
-      <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-      <!-- End Ads by Google -->
+          </h3>
+        </a>
+      </li>
 
-      <!--
-
-      <p style="text-shadow: none; font-size: 18pt; margin-bottom: 4px; margin-top: 4px; color: white;">Welcome to TBF <a href="https://en.wikipedia.org/wiki/ESports" target="_blank">eSports</a>!</p>
-      <p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px; color: white; width: 80%;">What are eSports? Think of it as a sort of competitive playing ground but in the virtual sense. Specifically, eSports are a form of competition using video games, namely multiplayer video game competitions, with some of the most common game genres including strategy, first-person shooter, and multiplayer online battle arena.</p>
-      <p style="text-shadow: none; font-size: 18pt; margin-bottom: 4px; margin-top: 4px; color: white;">Why eSports?</p>
-      <p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px; color: white; width: 80%;"> We feel that eSports are relevant, but it goes deeper than that. It's an entire community. On a more personal level, TBF is responsible for all of our own music production and distribution, and we also manage and maintain all of The Band Famous&#174; software. At times we find ourselves facing mental and/or creative roadblocks, be it troubleshooting updates to software, or trying to get a beat just right for a new song we're producing. If we don't walk away sometimes and trouble-shoot in increments, we risk getting too much inside our own heads, and further down the rabbit hole we'd fall.</p> 
-      <p style="text-shadow: none; font-size: 18pt; margin-bottom: 4px; margin-top: 4px; color: white;">Enter: eSports</p>
-      <p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px; color: white; width: 80%;">We're an app forward band sharing our musical and artistic pursuits via our own free software. As makers of free software, we also enjoy using other free software. We take pride knowing that some of our extracurricular activities include supporting free software and our fellow developer teams. We are regulars in the Rift, Halcyon Fold as well as frequently battling and holding gyms in the world of Pokémon Go!</p> 
-      <p style="text-shadow: none; font-size: 18pt; margin-bottom: 4px; margin-top: 4px; color: white;">How We Participate in eSports</p>
-      <p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px; color: white; width: 80%;">We will be live-streaming games, and uploading videos to our YouTube, and aspire to compete in tournaments in the near future.</p>
-      <p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px; color: white; width: 80%;">As there are already World Championships for eSports built around LoL and app-only games like Vainglory, we know anything is possible. There are already Pokémon World Championships built around all aspects of the Pokémon franchise (currently a pinnacle of competitive Pokémon play). While Pokémon Go is not yet considered an eSport, we believe that with the coming additions of PvP experience to the game, that is all about to change. Level Up with Band Famous and join us in the action!</p> -->
-
-      <!-- possibly a span of gamer twitter accounts, similar to as on band page -->
-      <!--
-      <ul class="esports">
-        <li><a class="twitter-timeline" data-min-width="300" data-width="420" data-height="560" data-theme="dark" data-link-color="#19CF86" href="https://twitter.com/TBF_Norell">Tweets by TBF_Norell</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-        <li><a class="twitter-timeline" data-min-width="300" data-width="420"  data-height="560" data-theme="dark" data-link-color="#19CF86" href="https://twitter.com/Aporia_XZander">Tweets by Aporia_XZander</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-      </ul>
-    -->
+    </ul>
 
 
 
-      <h3 style="text-shadow: none; font: 4em Helvetica, Sans-Serif; letter-spacing: -5px; margin-top: 10px; color: white;">Streaming Schedule</h3>
-   
-    </li>
-    <li>
-      <iframe src="https://calendar.google.com/calendar/embed?title=TBF%20eSports&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=328&amp;wkst=1&amp;bgcolor=%2300cccc&amp;src=thebandfamous%40gmail.com&amp;color=%2329527A&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="70%" height="328" frameborder="0" scrolling="no"></iframe>
-      <br>
-      <h3 style="text-shadow: none; font: 4em Helvetica, Sans-Serif; letter-spacing: -5px; margin-top: 10px; color: white;">Tune In</h3>
-    </li>
-    <!--  
-    <li>
-        LoL Guides -->
-        <!--
-          <ul class="guides" style="margin-top:11px;">
-            <li><a href="https://www.mobafire.com" target="_blank" title="Check out Mobafire!"><img src="img/esports/mobafire.png" alt="Mobafire.com"></a><p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px; color: white; width: 80%;">Mobafire is a very helpful in-depth website to help you with strategy build guides. It is, in our opinions, an essential guide to learning any champion of your choice, as many players in every Elo (LoL's adopted method of ranking relative skill levels of players, this is the same method used in games like chess) share their favorite item builds for various roles any champion is capable of fulfilling.</p></li>
-            
-          </ul>
-        </li>
-        <li>
-          <li>
-            <ul class="guides">
-              <li><a href="http://www.op.gg/summoner/" target="_blank" title="Check out Op.gg!"><img src="img/esports/opgg.png" alt="Op.gg" style="width:8%; min-width: 100px; margin-top: 11px;"></a></li><li><p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px; color: white; width: 80%;">Op.gg is a great resource for investigating your opponents to get a better feeling with who you are going up against. Doing this will better your odds if you use this as a guide to your draft picks, for example you can see what champions they lose against in lane, and also what item builds will help you most in game against them.</p></li>
-            </ul>
-          </li> -->
-          <!-- PoGo Guides -->
-          <!--
-          <li>  
-            <ul class="guides">
-              <li><a href="https://pokemongohub.net" target="_blank" title="Check out Pokémon Go Hub!"><img src="img/esports/pogohub.png" alt="PokemonGoHub.net"></a><p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px; color: white; width: 80%;">Pokémon Go Hub is a great site to stay updated with Pokémon Go news, guides, tips, and tricks. It is the biggest Pokémon Go news site that we have found, and includes in-depth raid guides.</p></li>
-            </ul>
-          </li>
-          <li>
-            <ul class="guides">
-              <li><a href="https://www.pokebattler.com" target="_blank" title="Check out PokeBattler!"><img src="img/esports/pokebattler.png" alt="PokeBattler.com" style="margin-top:4px;"></a><p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px; color: white; width: 80%;">PokéBattler is a great resource for learning what Pokémons are strong and weak against. This is primarily a Pokémon Go Battle Simulator, so you can see how your Pokémon will fare in battle without wasting in-game resources. It is very helpful for strategizing how to take down gyms while minimizing the amount of Pokémons that faint during battle. It has a raid guide as well, and various research articles.</p></li>
-            </ul> 
-          </li>
-          <li>
-            <ul class="guides">
-              <li><a href="https://thesilphroad.com" target="_blank" title="Check out The Silph Road!"><img src="img/esports/silphroad.png" alt="TheSilphRoad.com" style="width:3%; min-width: 40px; margin-top: 11px;"></a><p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px; color: white; width: 80%;">The Silph Road is a network and community of Pokémon Go trainers and players around the world. This is a great site to learn about current nests in any given region, as real-life players report their findings during their Pokémon Go training and explorations.</p></li>
-            </ul>
-          </li>
-        
-  
-
-        <br>
-
-    </li>  -->
-    <!-- TBF eSports Dept -->
-    <a href="https://twitch.tv/bandfamous" target="_blank" title="The Band Famous for eSports"><img src="img/esports/TBF_2018.jpg" alt="The Band Famous for eSports" style="width: 70%;">
-    
-  </ul>
-
-  <p style="text-shadow: none; font-size: 14pt; margin-bottom: 10px; margin-top: 10px; color: white;">Thank you for checking out TBF.TV on BandFamous.com.</p>
-  <br>
-  <!-- Twitter of individual band members. -->
-  <!-- Follow our gamer accounts!
-  <ul class="esports">
-    <li>
-      <a href="https://twitter.com/TBF_Norell" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TBF_Norell</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    </li>
-    <li>
-      <a href="https://twitter.com/Aporia_XZander" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Aporia_XZander</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    </li>
+  <div id="one" class="reveal-modal" data-reveal style="max-height:2000px; height: auto; min-height: 350px;">
+    <br>
+        <ul id="shop">
+          <li><a href="esports.html"><center><h4 style="background: black; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px; height: 88px; margin-bottom: 0px; margin-top:-20px; padding-bottom: 44px; padding-top: 11px; width: 80%;">Welcome to TBF eSports!</h4></center></a></li>
           
-    <li>
-      <a href="https://twitter.com/TheBandFamous" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TheBandFamous</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>  
-    </li>
-  </ul>
+        </ul>
+    <br>
+
+  <br>
+  <br>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">This page is dedicated to passionate eSports enthusiasts specifically as Pokémon Go as an eSport; albeit in its infancy stages. This page is an online eSports collective brought to you by The Band Famous&#174; featuring creatives who are LGBTQA+ and BIPOC friendly and all-inclusive. We don't support gamers or people in real life who are racist, homophobic, sexist, or hateful in any way. We have chosen to sponsor these creatives in the Pokémon Go community. Stay tuned, as this page is sure to grow and blossom.</p>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">Along with being the founding, active members of the music group The Band Famous® aka TBF, Zander and Norell are also the developers behind this website you are on, both TBF apps, and the Hall Of Fame.</p>
+
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">What are eSports? Think of it as a sort of competitive playing ground but in the virtual sense. Specifically, eSports are a form of competition using video games, namely multiplayer video game competitions, with some of the most common game genres including strategy, first-person shooter, and multiplayer online battle arena.</p>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">Why eSports?</p>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">We feel that eSports are relevant, but it goes deeper than that. It's an entire community. On a more personal level, TBF is responsible for all of our own music production and distribution, and we also manage and maintain all of The Band Famous&#174; software. At times we find ourselves facing mental and/or creative roadblocks, be it troubleshooting updates to software, or trying to get a beat just right for a new song we're producing. If we don't walk away sometimes and trouble-shoot in increments, we risk getting too much inside our own heads, and further down the rabbit hole we'd fall.</p> 
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">Enter: eSports</p>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">We're an app-forward band sharing our musical and artistic pursuits via our own free software. As makers of free software, we also enjoy using other free software. We take pride knowing that some of our extracurricular activities include supporting free software and our fellow developer teams. We are regulars in the Rift, as well as frequently battling and holding gyms as well as participating in PvP in the world of Pokémon Go!</p> 
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">How We Participate in eSports</p>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">We will be live-streaming games, and uploading videos to our YouTube, and aspire to compete in more tournaments in the near future. We have won a past Clash tournament in League of Legends and we aim to do it again.</p>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">As there are already World Championships for eSports built around LoL and app-only games like Vainglory, we know anything is possible. There are already Pokémon World Championships built around all aspects of the Pokémon franchise (currently a pinnacle of competitive Pokémon play). While Pokémon Go is not yet fully accepted to be considered an eSport, we believe that with the implementation and eventaul improvement of PvP experience to the game, that is all about to change. Even League of Legends dealt with bugs and still does to this day, but we treasure Riot and all of the free software they have given us and the world at large. Pokémon Go has also given the world at large much for free with their intially free-to-download software game, even adapting for us during a global pandemic. True there are in-app purchases, but then again there are in most free games. We ourselves are working on adding in-app purchases to our own free apps in the future.</p>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">Thank you for visiting this page and getting to know some of our friends in the eSports world! You are always welcome.</p>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">Level Up with Band Famous and Friends and join us in the action!</p>
+    <!--
+
+    <h2 style="color: indigo;">Want to be featured in the Hall Of Fame?</h2>
+    <br>
+    <center><a href="hof.html"><button>Learn More</button></a></center>
+
   -->
 
-
-<!--<p style="text-shadow: none; font-size: 14pt; margin-bottom: 10px; margin-top: 10px; color: white;">The Following Links Invite You to Download and Learn More About the Games We Play:</p>
-<br> -->
-
-<!--Pattern HTML-->
-<!--
-  <div id="pattern" class="pattern">
-    <div class="col-group">
-      <div> -->
-        <!--
-        <h2>Here's a column of text</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
-      -->
-      <!--
-      </div>
-      <div>
-
-        <a href="http://play.na.leagueoflegends.com/en_US" target="_blank"><img src="img/lol.png" title="TBF is proud to play League Of Legends" style="width: 330px; height: auto; margin-left: 8px;" alt="TBF in League Of Legends" /></a>
-
-        <br>
-        <br>
-        <br>
-
-        <a href="http://www.pokemongo.com/" target="_blank"><img src="img/pokemon_go.png" title="TBF is proud to play Pokémon Go!" style="width: 300px; height: auto; margin-left:20px;" alt="TBF in Pokémon Go" /></a>
-
-        <br>
-        <br>
-
-
-        <br>
-      </div>
-      <div>
-        
-       
-        
-      </div>
-      <div>
-       
-        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/BGtROJeMPeE" frameborder="0" allowfullscreen style="line-height: 2px;"></iframe>
-
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/SWtDeeXtMZM" frameborder="0" allowfullscreen style="line-height: 2px;"></iframe>
-   
-        <br>
-        <br>
-        <br>
-        <br>
-
-        
-
-
-
-      </div>
-      <div> -->
-        <!--<h2>Oh look, a fifth column</h2>
-        <p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>-->
-      <!--</div>
-    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a class="close-reveal-modal">&#215;</a>
   </div>
--->
+
+
+
+
+
+
+<!-- TBF.tv -->   
+    <h4 style="background: black; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px; height: 88px; margin-bottom: -11px; margin-top:-20px; padding-bottom: 44px; padding-top: 11px;">TBF eSports</h4>
+
+
+  <!--Pattern HTML-->
+  <div id="pattern" class="pattern">
+      <!-- TBF eSports Hall Of Fame -->
+   
+    <div class="col-group">
+      <div>
+       
+      <br>
+        
+        <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">The Band Famous has hand-selected these members of the Pokémon Go community to affiliate with, proudly represent, and sponsor.</p>
+
+
+      </div>
+      <div>
+
+
+        <br>
+        <br>
+
+
+        <!-- Left column -->
+
+        <!-- TheSirMaximus -->
+        <a href="" target="_blank"><img src="img/esports/TheSirMaximus.jpg" title="Check out TheSirMaximus" style="width: 250px; height: auto; margin-left: -20px; box-shadow: 8px 8px 5px #888888;" alt="TheSirMaximus" /></a>
+
+        <br>
+        
+        <p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px;">TheSirMaximus</p>
+        <a href="https://www.twitch.tv/thesirmaximus" target="_blank" style="font-size: 14pt; color: white; " title="Check out TheSirMaximus">Official Website</a> 
+        <h4 title="TIP" ><a href="https://streamlabs.com/thesirmaximus/tip" target="_blank" style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #33CC33 0px 0px 20px, #33CC33 0px 0px 30px, #33CC33 0px 0px 40px, #33CC33 0px 0px 50px, #33CC33 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px;">TIP</a></h4>
+        <br>
+        <br>
+
+       
+
+
+
+
+      </div>
+      <div>
+
+        <br>
+        <br>
+
+        <!-- Middle column -->
+
+        <!-- Anadactyl -->
+        <a href="https://sil.ph/AnaDactyl" target="_blank"><img src="img/esports/Anadactyl.jpg" title="Check out Anadactyl" style="width: 250px; height: auto; margin-left: -20px; box-shadow: 8px 8px 5px #888888;" alt="Anadactyl" /></a>
+
+        <br>
+
+        <p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px;">Anadactyl</p>
+        <a href="https://sil.ph/AnaDactyl" target="_blank" style="font-size: 14pt; color: white; " title="Check out Anadactyl">Official Website</a> 
+        <h4 title="TIP" ><a href ="https://www.gofundme.com/f/emergency-fund-for-anadactyl" target="_blank" style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #33CC33 0px 0px 20px, #33CC33 0px 0px 30px, #33CC33 0px 0px 40px, #33CC33 0px 0px 50px, #33CC33 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px;">Emergency Fund for AnaDactyl</a></h4>
+        <br>
+        <br>
+        <p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px; color: white; text-align: left;">
+        One of Anadactyl's friends organized a GoFundMe for Anadactyl, who was forced to leave a relationship due to domestic violence. Please help them surpass the goal, they are so close! That's how amazing the Pokémon Go community can be, and that's why we're choosing to help sponsor and support some of the creatives we respect. Anadactyl happens to be one of them, as she speaks her mind and is authenitic, plus she advocates for LGBTQA+ and BIPOC because - in her words - "she's not a piece of shit". Well said. <br>Please share the GoFundMe if you can, and give even a little if you are able to help Anadactyl make a fresh start away from abuse. Thank you!</p>
+
+   
+
+
+
+
+      </div>
+      <div>
+
+
+
+        <br>
+        <br>
+
+
+
+        <!-- Right column -->
+
+        <!-- TBA -->
+        <a href="" target="_blank">
+          <!--<img src="img/esports/comingsoon.jpg" title="Coming Soon" style="height: 200px; margin-left: -20px; box-shadow: 8px 8px 5px #888888;" alt="TBA" />-->
+          </a>
+        
+      
+           
+        <br>
+
+        <p style="text-shadow: none; font-size: 14pt; margin-bottom: 4px; margin-top: 4px;">To Be Announced!</p>
+        <a href="#" style="font-size: 14pt; color: white; " title="To Be Announced" >Official Website</a> 
+
+        <br>
+        <br>
+
+
+
+      </div>
+      <div>
+
+
+
+        <br>
+         <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">Stay tuned for the continuation of our "Party for a Purpose" benefit music events (and festivals when we are are able to or per social distancing guidelines).
+        </p>
+   
+
+
+      </div>
+    </div>
+
+  </div>
   <!--End Pattern HTML-->
 
-  <hr style="border-top: 8px solid black; margin: 20px; margin-top: 90px;">
+  <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">We will continue the Pokémon Go PvP ranked tournaments for charity in collaboration with the Pokémon Go playerbase.</p>
+  <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">We will be live-streaming casually in the meanwhile; playing all kinds of games on twitch.tv/bandfamous, and occasionally hosting friends, sponsors, and those we are sponsoring.</p>
+
+   <!-- TBF.tv -->   
+    <h4 style="background: black; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 70%; font-size: 47px; height: 88px; margin-bottom: -11px; margin-top:-20px; padding-bottom: 44px; padding-top: 11px;">NOW PLAYING</h4>
+
+    <span class="LIVE">
+      <center>
+        <table class="LIVE">
+          <tr>
+            <td>
+              <!-- TBF twitch stream -->
+       
 
 
+                <div class="twitch">
+                  <div class="twitch-video">
+                    <iframe
+                      src="https://player.twitch.tv/?channel=bandfamous&parent=bandfamous.com&autoplay=false"
+                      frameborder="0"
+                      scrolling="no"
+                      allowfullscreen="true"
+                      height="100%"
+                      width="100%">
+                    </iframe>
+                  </div>
+                  <div class="twitch-chat">
+                    <iframe
+                      frameborder="0"
+                      scrolling="no"
+                      src="https://www.twitch.tv/embed/bandfamous/chat?parent=bandfamous.com"
+                      height="100%"
+                      width="100%">
+                    </iframe>
+                  </div>
+                </div>
+   
+
+              </td>
+            </tr>
+          </table>
+
+
+          <h4 title="Stage One" style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px;">Stage One</h4>
+          <br>
+          <h4 title="TIP" ><a href="https://streamlabs.com/bandfamous/tip" target="_blank" style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #33CC33 0px 0px 20px, #33CC33 0px 0px 30px, #33CC33 0px 0px 40px, #33CC33 0px 0px 50px, #33CC33 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px;">TIP</a></h4>
+          <br>
+      </center>
+
+
+    </span>
+
+  <!-- Amazon ads -->    
+  <br>
+  <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=maryn.jackson-20&linkCode=ur2&linkId=f351c6f63714a865535ec84d09919d33&camp=1789&creative=9325&node=11091801" style="font-family: Julius Sans One; font-size: 30px; text-decoration: none;" >Check Out These Hot Music Items</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=maryn.jackson-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />  
+  <br>
+  <br>
+  <center><iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=musicandentertainmentrot&f=ifr&linkID=51cea66499e12f13aa50e4389d39a9af&t=maryn.jackson-20&tracking_id=maryn.jackson-20" width="700px" min-width="400px" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe></center>
+  <!-- Amazon ads -->   
+
+
+
+
+                <br>
+
+              <!-- media net ad revenue -->
+              <div id="653086164">
+                <script type="text/javascript">
+                    try {
+                        window._mNHandle.queue.push(function (){
+                            window._mNDetails.loadTag("653086164", "728x90", "653086164");
+                        });
+                    }
+                    catch (error) {}
+                </script>
+              </div>
+
+
+
+  <hr style="border-top: 8px solid black; margin: 20px; margin-top: 70px;">
 </center>
 
 <footer class="homeFoot"><h2>The Band Famous&#174;</h2><a href="https://www.phonixintl.com" target="_blank" title="Visit PhonixIntl.com"><h2 style="font-size: 16px; margin-top: -20px;">Website by Phönix LLC</h2></a></footer>
 <script>$("header").wrap("<div></div>");</script>
+
+<!-- revenue hits revenue -->
+<script data-cfasync='false' type='text/javascript' src='//p391390.clksite.com/adServe/banners?tid=391390_768909_0&type=footer&size=37'></script>
+
+
+
 <script src="https://code.jquery.com/jquery-2.0.0.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-1.1.1.js"></script>
 <script type="text/javascript" src="js/tabs.js"></script>
@@ -285,7 +382,11 @@ document.location = "news.html";
 <script src="js/foundation.min.js"></script>
 <script>
   $(document).foundation();
+  $(document).ready(function(){$('#one').foundation('reveal', 'open')});
 </script>
+
+<!-- beta publisher social bar ad -->
+<script type='text/javascript' src='//pl15776918.cpmnetworkcontent.com/ed/83/9d/ed839de71f282070e0d170b6b39e34c9.js'></script>
 
 </body>
 </html>
