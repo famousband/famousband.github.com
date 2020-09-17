@@ -23,51 +23,73 @@
         height:auto;
 
       }
-      /* Overriding jquery mobile button styles */
-      div.bbplayer > button.bb-play {
-        display: inline-block;
-        vertical-align: middle;
-        height: 65px;
-        width:  65px;
-        border: 5px solid #CFCFCF;
-        border-radius: 50%; 
-        background: transparent; 
-        background-image: url('images/play_med.png');
-        background-repeat: no-repeat;
-        background-position: 7px center;
-        cursor: pointer;
-      }
 
-      div.bbplayer > button.bb-playing {
-        vertical-align: middle;
-        background-image: url('images/pause.png');
-        background-position: center center;
-      }
 
-      div.bbplayer > button.bb-forward {
-        vertical-align: middle;
-        display: inline-block;
-        height: 32px;
-        width:  32px;
-        background: transparent;
-        background-image: url('images/forward.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        cursor: pointer;
-      }
+/* Original Live-Stream Band Since 2013 */
 
-      div.bbplayer > button.bb-rewind {
-        vertical-align: middle;
-        display: inline-block;
-        height: 32px;
-        width:  32px;
-        background: transparent;
-        background-image: url('images/rewind.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        cursor: pointer;
-      }
+  table.LIVE {
+    border: none;
+    width: 80%;
+    max-width: 1600px;
+    min-width: 220px;
+    background: transparent;
+    /*background-image: url(img/DiscoLightsVidevo.mp4) center; */
+    height: auto;
 
+  }
+
+  span.LIVE {
+    display: inline-block;
+    width: 80%;
+    max-width: 1600px;
+    min-width: 220px;
+    background: url(media/DiscoLightsVidevo.mp4) center;
+    background-image: url(img/DiscoLightsVidevo.mp4) center; 
+    height: auto;
+
+  }
+
+
+@media only screen and (max-width: 500px) {
+
+  span.LIVE {
+
+    display: inline-block;
+    background: url(media/DiscoLightsVidevo.mp4) center;
+    background-image: url(img/DiscoLightsVidevo.mp4) center; 
+
+  }
+
+  table.LIVE {
+    border: none;
+    width: 80%;
+    max-width: 500px;
+    min-width: 220px;
+    background: transparent;
+    /*background-image: url(img/DiscoLightsVidevo.mp4) center; */
+    height: auto;
+
+  }
+
+  table.LIVE tr {
+    display: inline-block;
+    width: 90%;
+    margin-left: 15px;
+
+  }
+
+  table.LIVE tr td {
+    display: inline-block;
+    width: 100%;
+
+  }
+
+  img {
+    width: 90%;
+  }
+
+
+}
 
 			img{
 				width: 100%;
@@ -147,19 +169,54 @@
     <div data-role="content">
       
 
-      <!-- TBF twitch stream -->
-      <iframe src="https://player.twitch.tv/?channel=bandfamous" frameborder="0" scrolling="no" min-width="320" max-width="500" width="100%" height="311px" allowfullscreen="true"></iframe><a href="https://www.twitch.tv/bandfamous?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:underline;">Brought to you by The Band Famous - Subscribe on Twitch</a>
+<!-- TBF.tv -->   
+    <h4 style="background: black; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px; height: 88px; margin-bottom: -11px; margin-top:-20px; padding-bottom: 44px; padding-top: 11px;">TBF.TV</h4>
 
-      <!-- <br> -->
+    <span class="LIVE">
+      <center>
+        <table class="LIVE">
+          <tr>
+            <td>
+              <!-- TBF twitch stream -->
+       
 
-      <!-- Astrolex twitch stream -->
-      <iframe src="https://player.twitch.tv/?channel=imnotassmartasithinkiam" frameborder="0" allowfullscreen="true" scrolling="no" min-width="320" max-width="500" width="100%" height="311px"></iframe><a href="https://www.twitch.tv/imnotassmartasithinkiam?tt_content=text_link&tt_medium=live_embed" style="padding:2px 0px 4px; display:block; max-width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">imnotassmartasithinkiam on www.twitch.tv</a>
 
-      <!-- <br> -->
+                <div class="twitch">
+                  <div class="twitch-video">
+                    <iframe
+                      src="https://player.twitch.tv/?channel=bandfamous&parent=bandfamous.com&autoplay=false"
+                      frameborder="0"
+                      scrolling="no"
+                      allowfullscreen="true"
+                      height="100%"
+                      width="100%">
+                    </iframe>
+                  </div>
+                  <div class="twitch-chat">
+                    <iframe
+                      frameborder="0"
+                      scrolling="no"
+                      src="https://www.twitch.tv/embed/bandfamous/chat?parent=bandfamous.com"
+                      height="100%"
+                      width="100%">
+                    </iframe>
+                  </div>
+                </div>
+   
 
-      <!-- Mixer stream -->
+              </td>
+            </tr>
+          </table>
 
-      <iframe title="BandFamous's player frame" i18n-title="channel#ShareDialog:playerEmbedFrame|Embed player Frame copied from share dialog" allowfullscreen="true" src="https://mixer.com/embed/player/BandFamous?disableLowLatency=1" min-width="320" max-width="500" width="100%" height="311px"> </iframe>
+
+          <h4 title="Stage One" style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px;">Stage One</h4>
+          <br>
+          <h4 title="TIP" ><a href="https://streamlabs.com/bandfamous/tip" target="_blank" style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #33CC33 0px 0px 20px, #33CC33 0px 0px 30px, #33CC33 0px 0px 40px, #33CC33 0px 0px 50px, #33CC33 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px;">TIP</a></h4>
+          <br>
+      </center>
+
+
+    </span>
       
       <br>
 
@@ -171,21 +228,6 @@
 
       </form>
 
-      <!-- Chat -->
-
-      <!-- twitch chat -->
-      <iframe frameborder="0"
-        scrolling="no"
-        id="chat_embed"
-        src="https://www.twitch.tv/embed/bandfamous/chat?parent=bandfamous.com"
-        min-width="320" max-width="500" width="100%" height="311px"
-        >
-      </iframe>
-
-
-      <!-- mixer chat -->
-
-      <iframe title="BandFamous's chat frame" i18n-title="channel#ShareDialog:chatEmbedFrame|eEmbedmbed chat frame copied from share dialog" src="https://mixer.com/embed/chat/BandFamous" min-width="320" max-width="500" width="100%" height="311px"> </iframe>
       
       <br>
 
@@ -193,7 +235,9 @@
 
       <!-- YouTube stream -->
 
+    <!--
       <iframe min-width="320" max-width="500" width="100%" height="311px" src="https://www.youtube.com/embed/zLNkbrbdjIo" frameborder="0" allowfullscreen></iframe> 
+  	-->
 
 
     </div>
