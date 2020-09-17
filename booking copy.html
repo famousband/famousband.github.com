@@ -39,100 +39,226 @@
   }
 
 
-  /*------------------------------------*\
-    #GLOBAL/IRRELEVANT STUFF
-\*------------------------------------*/
+  // Colors
+$orange: rgb(250,96,42);
+$yellow: rgb(252,180,0);
+$purple: rgb(158,12,128);
+$blue: rgb(0,226,255);
+$green: rgb(149,174,32);
+
+$neutral: rgb(51,51,51);
+$light: #ffffff;
+
+// Fonts
+$adelle: "adelle", Georgia, serif;
+$helvetica: 'Helvetica Neue', Helvetica, sans-serif;
+$din: "din-condensed-web", sans-serif;
+
+$font: $helvetica;
+$font-secondary: $adelle;
+
+// Units
+$pad: 1rem;
+$space: 1rem;
+
+// Breakpoints
+$bp-medium: 40em;
+$bp-large: 70em;
+
 * {
   box-sizing: border-box;
 }
 
-
-section {
-  /*background: #eaefce;*/
-  padding: 4rem 2rem;
+.wrapper {
+  max-width: $bp-large;
+  margin: 0 auto;
 }
 
-
-
-
-
-/*------------------------------------*\
-    #BLOCK
-\*------------------------------------*/
-.block {
-  background: #fff;
-  border: 1px solid #ddd;
+nav {
+  background: $neutral;
+  color: $light;
+  font-family: $din;
+  text-transform: uppercase;
+  padding: $pad;
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: $light;
+    text-decoration: none;
+  }
 }
 
-.block__title {
-  margin: 0;
-  padding: 0.5rem;
+.features {
+  h3 {
+    margin-top: 0;
+    font-weight: 300;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
 }
 
-.block__img {
-  max-width: 100%;
-  width: 100%;
+article {
+  background: linear-gradient(45deg, $purple, $orange);
+  position: relative;
+  
+  &:first-child {
+    h3 {
+      font-size: 3em;
+    }
+  }
+  
+  &:nth-child(2) {
+    background: linear-gradient(45deg, $orange, $yellow);
+  }
+  
+  &:nth-child(3) {
+    background: linear-gradient(45deg, $blue, $orange);
+  }
+  
+  &:nth-child(4) {
+    background: linear-gradient(45deg, $purple, $yellow);
+  }
+  
+  &:nth-child(5) {
+    background: linear-gradient(45deg, $orange, $blue);
+  }
+  
+  &:nth-child(6) {
+    background: linear-gradient(45deg, $purple, $blue);
+  }
+  
+  &:last-child {
+    h3 {
+      font-size: 3em;
+    }
+  }
+}
+
+article > a {
   display: block;
-}
-
-
-
-
-
-/*------------------------------------*\
-    #LAYOUT
-\*------------------------------------*/
-
-/**
- * Grid object
- * 1) Over-arching grid container
- * 2) Creates overlap effect with content below
- */
-.g {
-  padding: 0.5rem;
-  max-width: 84rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -3rem; /* 2 */
-}
-
-/**
- * 2-to-3-up masonry grid
- * 1) Creates a Pinterest-style, masonry grid with blocks of varying heights.
- * 2) Set number of columns to display
- */
-.g--masonry-2-to3-up {
-  column-count: 2; /* 2 */
-  column-gap: 0;
+  text-decoration: none;
+  position: relative;
+  padding: $pad;
+  color: $light;
+  height: 100%;
   
-  @media all and (min-width: 40em) {
-    column-count: 3; /* 2 */
-  }
-  
-  @media all and (min-width: 56em) {
-    column-count: 4; /* 2 */
+  &:hover .thumbnail {
+    opacity: 0.2;
   }
 }
 
-/**
- * Grid item
- * 1) Direct child of the grid container element
- * 2) Prevents content from splitting up because of the 
- *    parent's CSS columns
- */
-.g__item {
-  padding: 0.5rem;
-  -webkit-column-break-inside: avoid; /* 2 */
-  page-break-inside: avoid;
-  break-inside: avoid;
+article .thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.4;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  box-shadow: inset 10px -10px 25px rgba(0, 0, 0, 0.9), inset -10px 10px 25px rgba(0, 0, 0, 0.9);
 }
+
+article {
+  h3, .comments, .meta {
+    position: relative;
+    z-index: 1;
+  }
+  
+  h3 {
+    font-family: $font-secondary;
+    text-shadow: 1px 1px 1px $neutral;
+    font-size: 2em;
+    line-height: 1;
+    margin-bottom: $space*2;
+  }
+  
+  .comments {
+    float: right;
+    background: $green;
+    color: $neutral;
+    font-family: $din;
+    padding: $pad/4;
+  }
+}
+
+@media all and (min-width: $bp-medium) {
+  .features {
+    font-size: 0px;
+  }
+  
+  article {
+    display: inline-block;
+    width: 50%;
+    min-height: 200px;
+    vertical-align: top;
+    font-size: 1rem;
+    overflow: hidden;
+    
+    &:last-child {
+      width: 100%;
+    }
+  }
+  
+  article > a {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+@media all and (min-width: $bp-large) {
+  $height: 600px;
+  
+  .features {
+    position: relative;
+    overflow: auto;
+    margin-bottom: $space*2;
+  }
+  
+  .wrapper {
+    margin-top: $space*2;
+  }
+  
+  article {
+    display: block;
+    float: left;
+    min-height: ($height / 3);
+    width: 33.3%;
+    
+    &:first-child, &:last-child {
+      min-height: ($height * 2/3);
+      width: 33.3%;
+    }
+    
+    &:nth-child(5) {
+      clear: left;
+    }
+    
+    &:last-child {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin-right: .1%;
+    }
+  }
+}
+
 
    
 </style>
 <script type="text/javascript">
 <!--
 
-//document.location = "contact.html";
+// document.location = "contact.html";
 
 -->
 </script>
@@ -180,7 +306,6 @@ section {
   <!-- Book Norell, lead singer + model - key points: Maxim 2019 Cover Girl Quarter Finalist ; 2020 Malibu Strings Bikini Competition Winner ; Modeled for artist Suzann Beck-include flyer for art gallery ; modeled for Ted Gibson-include photos side-by-side group pic with kitty and my hair on his flyer ; Available for and will consdier concepts : Mild to Wild -->
   
   
-
   <!-- Body Painting by the artist Zander - copy over from TBF Services doc - body painting -->
 
   
@@ -190,99 +315,95 @@ section {
 
 
   <!-- Booking The Band Famous venue for your photo/video production - copy from services/prics -->
+  
 
-  <div class="g g--masonry-2-to3-up">
-  
-  <div class="g__item">
-    <div class="block">
-      <img src="https://bandfamous.com/img/MaximQuarterFinalist.jpeg" alt="" class="block__img" />
-      <h2 class="block__title" style="text-shadow: none;">2019 Maxim Cover Girl Quarter Finalist</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
-  
-  <div class="g__item">
-    <div class="block">
-      <img src="https://bandfamous.com/img/sponsors/TheBandFamousMalibuStrings.gif" alt="" class="block__img" />
-      <h2 class="block__title" style="text-shadow: none;">Regularly featured on MalibuStrings.com</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
-  
-  <div class="g__item">
-    <div class="block">
-      <img src="https://bandfamous.com/img/sponsors/MalibuStringsPromo.jpg" alt="" class="block__img" />
-      <h2 class="block__title" style="text-shadow: none;">Malibu Strings sponsors The Band Famous</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
-  
-  <div class="g__item">
-    <div class="block">
-      <img src="https://bandfamous.com/img/press/tedgibson.jpg" alt="" class="block__img" />
-      <h2 class="block__title" style="text-shadow: none;">Modeled for oil portrait painter Suzann Beck</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
 
-  <div class="g__item">
-    <div class="block">
-      <img src="https://bandfamous.com/img/press/tedgibson.jpg" alt="" class="block__img" />
-      <h2 class="block__title" style="text-shadow: none;">Modeled for Celebrity Hair Stylist Ted Gibson</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
-  
-  <div class="g__item">
-    <div class="block">
-      <img src="https://bandfamous.com/img/press/withted.jpg" alt="" class="block__img" />
-      <h2 class="block__title" style="text-shadow: none;">Modeled cut/color at Ted Gibson Salon in NYC</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
-  
-  <div class="g__item">
-    <div class="block">
-      <img src="http://lorempixel.com/g/400/555/" alt="" class="block__img" />
-      <h2 class="block__title">Lorem ipsum dolar semet</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
-  
-  <div class="g__item">
-    <div class="block">
-      <img src="https://bandfamous.com/img/sponsors/TBF2020MalibuStrings.gif" alt="" class="block__img" />
-      <h2 class="block__title" style="text-shadow: none;">2020 Malibu Strings Bikini Competition Winner</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
-  
-  <div class="g__item">
-    <div class="block">
-      <img src="https://bandfamous.com/img/press/suzannbeck.jpg" alt="" class="block__img" />
-      <h2 class="block__title" style="text-shadow: none;">Lorem ipsum dolar semet</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
-  
-  <div class="g__item">
-    <div class="block">
-      <img src="http://lorempixel.com/g/400/310/" alt="" class="block__img" />
-      <h2 class="block__title" style="text-shadow: none;">Lorem ipsum dolar semet</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
-  
-  <div class="g__item">
-    <div class="block">
-      <img src="http://lorempixel.com/g/400/390/" alt="" class="block__img" />
-      <h2 class="block__title" style="text-shadow: none;">Lorem ipsum dolar semet</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
-  
-  <div class="g__item">
-    <div class="block">
-      <img src="http://lorempixel.com/g/400/550/" alt="" class="block__img" />
-      <h2 class="block__title" style="text-shadow: none;">Lorem ipsum dolar semet</h2>
-    </div><!--end block-->
-  </div><!--end g__item-->
-  
-</div><!--end g-->
 
-<section>
-  New Section stuff Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odio consequuntur corrupti facilis perferendis quo quaerat fugiat maxime libero corporis, accusantium saepe, repellendus ratione odit impedit, explicabo mollitia veritatis, nulla.
-</section>
-
+<div class="wrapper">
+  <nav role='navigation'>
+    <ul>
+      <li><a href="#">Navigation</a></li>
+    </ul>
+  </nav>
+  <div class="features">
+    <article>
+      <a href="#">
+        <h3>This is a big story.</h3>
+        <div href="#" class="comments">10</div>
+        <p class="meta">
+          By <strong>Josh Larson</strong>
+        </p>
+        <div class="thumbnail" style="background-image: url(http://placepuppy.it/400/300);"></div>
+      </a>
+    </article>
+    <article>
+      <a href="#">
+        <h3>This is another one.</h3>
+        <div href="#" class="comments">10</div>
+        <p class="meta">
+          By <strong>Josh Larson</strong>
+        </p>
+        <div class="thumbnail" style="background-image: url(http://lorempixel.com/400/500);"></div>
+      </a>
+    </article>
+    <article>
+      <a href="#">
+        <h3>Surprise! Free money for everyone.</h3>
+        <div class="comments">10</div>
+        <p class="meta">
+          By <strong>Josh Larson</strong>
+        </p>
+        <div class="thumbnail" style="background-image: url(http://placekitten.com/800/400);"></div>
+      </a>
+    </article>
+    <article>
+      <a href="#">
+        <h3>Not really that important.</h3>
+        <div class="comments">10</div>
+        <p class="meta">
+          By <strong>Josh Larson</strong>
+        </p>
+        <div class="thumbnail" style="background-image: url(http://lorempixel.com/600/400);"></div>
+      </a>
+    </article>
+    <article><a href="#">
+      <h3>We landed on the moon. Again.</h3>
+      <div class="comments">10</div>
+      <p class="meta">
+        By <strong>Josh Larson</strong>
+      </p>
+      <div class="thumbnail" style="background-image: url(http://lorempixel.com/400/300);"></div>
+      </a></article>
+    <article>
+      <a href="#">
+        <h3>You won't believe what just happened.</h3>
+        <div class="comments">10</div>
+        <p class="meta">
+          By <strong>Josh Larson</strong>
+        </p>
+        <div class="thumbnail" style="background-image: url(http://placepuppy.it/500/600);"></div>
+      </a>
+    </article>
+    <article>
+      <a href="#">
+        <h3>I haven't seen my left hand in five days.</h3>
+        <div class="comments">10</div>
+        <p class="meta">
+          By <strong>Josh Larson</strong>
+        </p>
+        <div class="thumbnail" style="background-image: url(http://placekitten.com/400/300);"></div>
+      </a>
+    </article>
+  </div>
+  
+  <p>
+    This is a pure-CSS, responsive implementation of a <a href="http://theverge.com">Verge-style homepage tile layout</a>.
+  </p>  
+  
+  <p>
+    At the smallest view, each article is block-level. They then split into inline-block and are given a min-height. At the largest view, they move to a floated block layout and are given widths and min-heights. The last one has to be positioned absolutely.
+  </p>
+</div>
 
 
   <hr style="border-top: 8px solid black; margin: 20px; margin-top: 90px;">
