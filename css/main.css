@@ -372,6 +372,13 @@ ul.topnav li a:hover {background-color: #555;}
 
 ul.topnav li.icon {display: none;}
 
+
+
+h4.bandfamous {
+background: black; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px; height: 88px; margin-bottom: -11px; margin-top:-20px; padding-bottom: 44px; padding-top: 11px;
+  
+}
+
 /* When screen is less than 680px wide, hide list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 
 
@@ -989,7 +996,7 @@ label {
 #content{
     height:auto;
     min-width:220px;
-    width: 80%;
+    width: 100%;
     position: center absolute;
     background-position: fixed;
 }
