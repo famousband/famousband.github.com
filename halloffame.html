@@ -145,7 +145,7 @@
      -webkit-text-stroke-color: indigo; width:300px; height: auto; color: white; height: ">
 
         <ul id="shop">
-          <li><a href="halloffame.html"><img src="img/halloffame.jpg" alt="Hall of Fame" title="Check out the Hall of Fame" style="width: 80%; "/></a></li>
+          <li><a href="#" data-reveal-id="one" onload="learnAboutHallOfFame()"><img src="img/halloffame-info.jpg" alt="Hall of Fame" title="Info" style="width: 80%; "/></a></li>
           
         </ul>
 
@@ -157,16 +157,30 @@
     </ul>
 
 
-  <div id="one" class="reveal-modal" data-reveal style="max-height:850px; height: auto; min-height: 350px;">
-    <img src="img/halloffame.jpg" alt="Hall Of Fame" title="Check out the Hall of Fame" style="width: 100%; min-width: 180px; height:auto; margin-bottom:30px;"/>
-    <h2 style="color: indigo;">Welcome to the HOF!</h2>
+  <div id="one" class="reveal-modal" data-reveal style="max-height:2500px; height: auto; min-height: 350px;">
+    <img src="img/halloffame.jpg" alt="Hall Of Fame" title="Welcome to the Hall of Fame" style="width: 100%; min-width: 180px; height:auto; margin-bottom:11px;"/>
+	<center>
+		<h4 style="background: black; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px; height: 88px; margin-bottom: -11px; margin-top:-20px; padding-bottom: 44px; padding-top: 11px;">THE BAND FAMOUS</h4>
+	</center>  
+	<br>  
+    <h2 style="color: indigo;">Shop Open - Check It Out</h2>
     <br>
-    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 20px; text-align: center;">Artists in the Hall Of Fame are artists and musicians, but more than that, we consider them kindred spirits, and part of our creative community. <br> We enjoy their music and we think you will, too. Tune in to TBF Radio to get a taste!</p>
+    <center><a href="shop.html" title="Check out The Band Famous Shop - Online and In-Store!"><video controls autoplay> 
+
+            <source src="img/shop/ShopOpen.mp4" type="video/mp4"> 
+
+      Your browser does not support the video tag. 
+    </video></a></center>
     <br>
-    <center><a href="radio.html" title="Listen Now" target="popup" onclick="window.open('radio.html','popup','width=700,height=700'); return false;" class="ui-btn ui-btn-inline ui-corner-all"><img src="img/tbfradio.png" style="height: 100px; width: 100px; margin:0;" alt="TBF Radio"/></a></center>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 10px; margin-top: 10px; text-align: center;">With 85% of proceeds going to the artist you are supporting!</p>
+    <br>
+    <p style="text-shadow: none; color: indigo; font-size: 14pt; margin-bottom: 20px; margin-top: 10px; text-align: center;">Artists in the Hall Of Fame are artists and musicians, but more than that, we consider them kindred spirits, and part of our creative community and family. <br> We enjoy their music and we think you will, too. Tune in to TBF Radio to get a taste!</p>
+    <br>
+    <center><a href="radio.html" title="Listen Now" target="popup" onclick="window.open('radio.html','popup','width=700,height=700'); return false;" class="ui-btn ui-btn-inline ui-corner-all"><img src="img/tbfradio.png" style="height: 150px; width: 150px; margin:0;" alt="TBF Radio"/></a></center>
     <br>
     <br>
     <h2 style="color: indigo;">Want to be featured in the Hall Of Fame?</h2>
+    <br>
     <br>
     <center><a href="hof.html"><button>Learn More</button></a></center>
     <br>
@@ -632,7 +646,9 @@
 <script src="js/foundation.min.js"></script>
 <script>
   $(document).foundation();
-  $(document).ready(function(){$('#one').foundation('reveal', 'open')});
+  
+  //$(document).ready(function(){$('#one').foundation('reveal', 'open')});
+
 </script>
 
 <!-- beta publisher social bar ad -->
