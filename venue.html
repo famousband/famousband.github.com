@@ -39,7 +39,7 @@ fa·mous 1. The Band Famous&#174; aka TBF is the first band in the world to rele
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great|Love+Ya+Like+A+Sister|Vast+Shadow|Della+Respira|Marcellus|Galindo|The+Girl+Next+Door|Montserrat+Subrayada|Stalemate|Rock+Salt|Dawning+of+a+New+Day|Julius+Sans+One' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/foundation/foundation.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/main.css" type="text/css"/>
 
 <style>
@@ -70,6 +70,83 @@ fa·mous 1. The Band Famous&#174; aka TBF is the first band in the world to rele
     color: white;
     text-shadow: none;
   }
+
+
+  /* for images of venue */
+
+
+  /*------------------------------------*\
+      #BLOCK
+  \*------------------------------------*/
+  .block {
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+
+  .block__title {
+    margin: 0;
+    padding: 0.5rem;
+  }
+
+
+  .block__img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+  }
+
+
+
+
+
+  /*------------------------------------*\
+      #LAYOUT
+  \*------------------------------------*/
+
+  /**
+   * Grid object
+   * 1) Over-arching grid container
+   * 2) Creates overlap effect with content below
+   */
+  .g {
+    padding: 0.5rem;
+    max-width: 84rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -3rem; /* 2 */
+  }
+
+  /**
+   * 2-to-3-up masonry grid
+   * 1) Creates a Pinterest-style, masonry grid with blocks of varying heights.
+   * 2) Set number of columns to display
+   */
+  .g--masonry-2-to3-up {
+    column-count: 2; /* 2 */
+    column-gap: 0;
+    
+    @media all and (min-width: 40em) {
+      column-count: 3; /* 2 */
+    }
+    
+    @media all and (min-width: 56em) {
+      column-count: 4; /* 2 */
+    }
+  }
+
+  /**
+   * Grid item
+   * 1) Direct child of the grid container element
+   * 2) Prevents content from splitting up because of the 
+   *    parent's CSS columns
+   */
+  .g__item {
+    padding: 0.5rem;
+    -webkit-column-break-inside: avoid; /* 2 */
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
 
   /* Original Live-Stream Band Since 2013 */
 
@@ -139,16 +216,19 @@ fa·mous 1. The Band Famous&#174; aka TBF is the first band in the world to rele
 
 }
 
+
+
+  ul.tbf {
+    list-style: none;
+  }
+
+  ul.tbf li {
+    display: inline-block;
+  }
+
+
 </style>
 
-<!-- media net ad revenue -->
-<script type="text/javascript">
-    window._mNHandle = window._mNHandle || {};
-    window._mNHandle.queue = window._mNHandle.queue || [];
-    medianet_versionId = "3121199";
-</script>
-<script src="https://contextual.media.net/dmedianet.js?cid=8CUX547G8" async="async"></script>
-<!-- media net ad revenue -->
 
 </head>
 <body>
@@ -185,7 +265,7 @@ fa·mous 1. The Band Famous&#174; aka TBF is the first band in the world to rele
   <li><a href="testimonials.html">TESTIMONIALS</a></li>
   <li><a href="latest.html">NEWS</a></li>
   <li><a href="press.html">PRESS</a></li>
-  <li><a href="https://phonixintl.com/events" target="_blank">VENUE</a></li>
+  <li><a href="venue.html">VENUE</a></li>
   <li><a href="radio.html" title="Listen Now" target="popup" onclick="window.open('radio.html','popup','width=700,height=700'); return false;" class="ui-btn ui-btn-inline ui-corner-all"><img src="img/tbfradio.png" style="height: 72px; width: 72px; margin:0;" alt="TBF Radio"/></a></li>
   <li class="icon">
     <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
@@ -211,609 +291,688 @@ fa·mous 1. The Band Famous&#174; aka TBF is the first band in the world to rele
   <hr style="border-top: 8px solid black; margin-top: 20px; margin-bottom: 20px;">
 
     <!-- The Venue -->
-    <h4 style="background: black; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px; height: 88px; margin-bottom: -20px; margin-top:-20px; padding-bottom: 44px; padding-top: 11px;">THE VENUE</h4>
+    <h4 style="background: black; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px; height: 60px; margin-bottom: -27px; margin-top:-22px; padding-top: 30px;">THE VENUE</h4>
 
-    <!--Pattern HTML-->
-      <div id="pattern" class="pattern">
+    <div class="legacy" style="background: white; width: 90%; margin-top: -11px;">
 
+      <section style="background: white;">
+
+        <p style="color: black; text-shadow: none; padding: 11px;">
+          Having dealt with censorship on social media and the media in general, Norell and Zander made their own software for their album release and livestream shows back in 2014, aka The Band Famous interactive app; but beyond this, they had a vision of opening their own independent venue also. Zander had previously opened and ran a multimedia art gallery, Karnak Gallery, in the heart of downtown Minneapolis that had later inspired several other similar styles of galleries in the Twin Cities, such as Public Functionary.
+        </p>
+
+        <!-- All Over the Walls movie poster, couple photos of Karnak - one opens gallery with some images of Karnak -->
+
+        <p style="color: black; text-shadow: none; padding: 11px;">
+          There was a documentary made about Zander and his gallery, <a href="http://karnakgallery.com" target="_blank">All Over The Walls</a>, that premiered at the Minneapolis St. Paul International Film Festival in 2011, and also went on to showcase at several other film festivals, winning "Best Featured Documentary" at Highway 61 Film Festival in 2011. In a similiar fashion, Zander - with Norell's help this time - wanted to try again only this time a full-on venue for livestreaming not only his multimedia art, but for their combined collaborations and live music with their indie online music collective the Hall Of Fame and radio station.
+        </p>
+      </section>
         <!-- Photos of past events, great memories where we Party for a Purpose -->
-
-        <br>
-        <span class="LIVE"><h4 style="background: transparent; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 3em; height: 88px; margin-bottom: 7px; margin-top:7px; padding-bottom: 44px; padding-top: 11px;">&quot;Party For A Purpose&quot;</h4></span>
-
-        <div class="col-group">
+        <span class="LIVE"><h4 style="background: transparent; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 3em; height: 90px; margin-bottom: -25px; margin-top:11px; padding-top: 30px;">&quot;PARTY FOR A PURPOSE&quot;</h4></span>
 
 
-          <div>
-            
-            <h4 title="Support The Band Famous!" style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 35px;">Featured Events</h4>
+        <blockquote style="color: black; text-shadow: none;">
+          <p style="color: black; text-shadow: none;">        If you were there you were there, and you were part of rock n roll history. </p>
+          <footer>— The Band Famous</footer>
+        </blockquote>
 
 
-            <!-- LIVE + FOLLOW YOUR DREAMS -->
-            <a href="https://bit.ly/live-and-follow-your-dreams" target="_blank" title="Limited Tickets Available, Reserve Yours Now!" style="text-decoration:none;"><h2>"Live + Follow Your Dreams"</h2></a>
-            <a href="https://bit.ly/live-and-follow-your-dreams" target="_blank">
-              <img src="img/events/1-17.jpg" alt="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" title="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" style="width: 50%; min-width: 180px; height:auto; margin-bottom:10px;"/>
-              <img src="img/events/1-17-Mystic7.JPG" alt="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" title="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" style="width: 50%; min-width: 180px; height:auto; margin-bottom:10px;"/>
-              <img src="img/events/1-17-TrainerTips.JPG" alt="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" title="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" style="width: 50%; min-width: 180px; height:auto; margin-bottom:10px;"/>
-              <img src="img/events/1-18.jpg" alt="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" title="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" style="width: 50%; min-width: 180px; height:auto; margin-bottom:10px;"/>
-              <img src="img/events/1-18 Comedy.jpeg" alt="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" title="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" style="width: 43%; min-width: 180px; height:auto; margin-bottom:30px;"/>
-              <img src="img/events/1-18 with Gabriel Diggs.jpg" alt="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" title="The first ever live-stream benefit music festival featuring the first ever Pokémon GO ranked PvP tournament for charity!" style="width: 53%; min-width: 180px; height:auto; margin-bottom:30px;"/>
-            </a>
-
-            <p style="text-shadow: none; color: white; font-size: 17px; margin-bottom: 20px; margin-top: 0px; text-align: left;">We rescheduled the <b>"LIVE"</b> benefit show due to weather and illness, bringing you not only a benefit concert, a good show for a great cause, but we doubled up, inviting you to <b>"FOLLOW YOUR DREAMS"</b> as well.</p>
-             
-              <p style="font-size: 17px; text-align: left; color: white; text-shadow: none;">We enjoyed a magical weekend of live music featuring performances by <a href="https://soundcloud.com/mattisnur_d" target="_blank">Nur-D</a>, <a href="https://soundcloud.com/dakotah-poitra" target="_blank">Dakotah Faye</a>, <a href="https://korynnoc.com" target="_blank">Korynn OC</a>, <a href="https://iamdryx.com" target="_blank">DRYX</a>, <a href="https://soundcloud.com/quaesarofficial" target="_blank">Quaesar</a>, and <a href="https://bandfamous.com" target="_blank">The Band Famous</a>. We honored and remembered our beloved friend Eyva Kid Cash, and raised awareness and funds for <a href="https://give.cff.org/tribute/bandfamousforcff" target="_blank"><img src="img/events/cff.png" style="margin-left: 5px; width: 100%; margin-top: 0px;" alt="Cystic Fibrosis Foundation"/>Cystic Fibrosis Foundation</a>, 
-              as well as for <a href="https://www.myfriendsplace.org" target="_blank"><img src="img/events/myfriendsplace.png" style="margin-left: 5px; width: 100%; margin-top: 0px;" alt="My Friend's Place"/>My Friend's Place</a>, helping homeless youth.<br><br>We had Pokémon Go YouTube celebrities <a href="https://www.youtube.com/channel/UC7MKIIrXba8AjaRrgyfX3mQ" target="_blank">PkmnMaster Holly</a>, <a href="https://www.youtube.com/channel/UCrtyNMe3xtv3CLg5QR78HzQ" target="_blank">Trnr Tips</a>, <a href="https://www.youtube.com/channel/UCPGnxMlcQtYKLAYymFgB3YA" target="_blank">Mystic7</a>, <a href="https://www.youtube.com/channel/UCc4RZKypGdWVUfXdp73ukNA" target="_blank">DarkMatterWolf</a>, and more special guests that joined us for the first-ever live-streamed Pokémon Go PvP Ranked Tournament for Charity on Friday, Jan. 17th. Our event on Jan. 17th was an all ages event, and our event on Jan. 18th was 18+ with live music, body painting, and more. We even had live stand-up comedy on Jan. 18th courtesy of <a href="https://www.imdb.com/name/nm8661004/" target="_blank">Braxton Herda</a>, <img src="img/events/Braxton Herda.jpg" style="margin-left: 5px; width: 100%; margin-top: 0px;" alt="Braxton Herda"/> whom you may have seen in the movies "Long Shot", or "Arrested Development". We had <a href="https://pkmnmasterholly.merchforall.com" target="_blank">PkmnMaster Holly</a> as our official MC and co-host for the entire weekend! <a href="https://www.gabrieldiggs.com" target="_blank">Gabriel Diggs</a>, <img src="img/events/Gabriel Diggs.jpg" style="margin-left: 5px; width: 90%; margin-top: 0px;" alt="Gabriel Diggs"/><br> who as a producer as well as DJ, has remixed highly acclaimed artists Idina Menzel, John Legend, Steve Aoki, Sarah McLachlan and Usher, and has DJed internationally in Ibiza, Brazil, Berlin, and more, was with us for the 17th and 18th of the "Live + Follow Your Dreams" Benefit Music Festival. We also had <a href="https://www.moonchannel.tv" target="_blank">Moon Channel</a> <img src="img/events/Moon Channel.jpg" style="margin-left: 5px; width: 90%; margin-top: 0px;" alt="Moon Channel"/><br> and Power 106 and Young California's <a href="https://www.mixcloud.com/DjTeeTime/" target="_blank">DJ Tee Time</a> <img src="img/events/DJ Tee Time.jpg" style="margin-left: 5px; width: 90%; margin-top: 0px;" alt="DJ Tee Time"/><br> DJing both nights!</p>
 
 
-            <p style="font-size: 17px; text-align: left;">As Always, for our long distance friends and fans:</p>
-            <p style="font-size: 17px; text-align: left;">We boadcasted the entire event - both nights - through the TBF apps; those with our app were able to tune in to the in-app concert if they were unable to be there in person.</p>
-            <p style="font-size: 17px; text-align: left;">Thank you to everyone in the vicinity of Los Angeles, California, who joined us for these monumental evenings helping two great causes.</p>
+        <p style="color: black; text-shadow: none;">Circa Oct 2017 - Feb 2019</p>
+        
+        <p style="margin-right:10px; color: black;">2004 East 1st Street, Los Angeles, CA 90065</p>  
 
-            <p style="font-size: 17px; text-align: left;">Thank you for "Partying for a Purpose" with us!</p>
+        <!-- add map of this location here just as 3920 has one -->
 
-            <p style="font-size: 17px; text-align: left;">Cheers,</p>
+        <!-- Images  -->
 
-            <p style="font-size: 17px; text-align: left;">The Band Famous®</p>
-              
+        <div class="g g--masonry-2-to3-up">
 
-              <center><img src="img/events/unity.png" alt="Gratitude" style="width: 90%; min-width: 250px; height: auto; vertical-align: center; margin-top: 4px;"/></center>
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/Security2004.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
-              <br>
-
-
-          <div>
-            <!-- Love Affair -->
-
-            <img src="img/events/LoveAffair.jpg" style="width: 250px; min-width: 100%; height: auto; vertical-align: center; margin-left: 0px; margin-bottom: 10px;" alt="Engage in a Love Affair you can feel good about!" title="A Love Affair you can feel good about!"/>
- 
-                <b><p style="text-align: left;">Thank You for Supporting The Band Famous "Love Affair", event with American Heart Association as charitable beneficiary.</p></b>
-
-                  <p style="font-size: 17px; text-align: left;">We invited you to join The Band Famous and friends on the evening of Friday, February 15, 2019. Be our Valentine!</p>
-
-                  <p style="font-size: 17px; text-align: left;">We hosted a benefit concert featuring three wonderfully talented musicians and even better, wonderful humans. We brought you this love affair in partnership with the American Heart Association, which has been fighting against heart disease and stroke for over 100 years!</p>
-
-                  <img src="img/events/heartorg.png" style="margin-left: 5px; width: 100%; margin-top: 0px;" alt="American Heart Association"/>
-
-                  <p style="font-size: 17px; text-align: left;">Being that heart disease is the number one killer worldwide, with stroke ranking in second place, we feel that this organization's work is vital.</p>
-
-                  <p style="font-size: 17px; text-align: left;">
-                    The heart is the strongest muscle. We have demonstrated how strong our hearts are when we put our love to work collectively!
-                  </p>
-
-            <br>
-
-           
-            <h4>THANK YOU FOR HELPING US MAKE A DIFFERENCE</h4>
-            <p style="font-size: 17px; text-align: left;">Thank you for joining us for the "Love Affair" benefit concert where we accepted donations on behalf of www.heart.org, and in addition 10% of proceeds from the event went to the Heart Association.</p>
-
-            <img src="img/events/unity.png" style="width: 250px; min-width: 100%; height: auto; vertical-align: center; margin-left: 0px; margin-bottom: 10px;" alt="Unity"/>
-          
-
-          </div>
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/2004studio.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
 
-            <!-- Follow Your Dreams -->
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/2004studio2.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+  
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/2004studio3.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/2004studio4.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/KorynnOC2004.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/events/tbfcrewweb.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
 
-            <img src="img/events/18  _ 21  BYOB Tickets @ Eventbrite Door$10.00 General Admission _ $5.00 TBF VIP App Entry.jpg" style="width: 250px; min-width: 100%; height: auto; vertical-align: center; margin-left: 0px; margin-bottom: 10px;" alt="Follow Your Dreams!"/>
- 
-                <b><p style="text-align: left;">Thank You for Supporting The Band Famous "Follow Your Dreams", 
-                  <br>event with LA Food Bank as charitable beneficiary.</p></b>
-
-                  <p style="font-size: 17px; text-align: left;">We invited you to join The Band Famous and friends in a fundraising party on the evening of January 19, 2019. The theme: “Follow Your Dreams.” Being that January 15th is the birthday of one of the greatest activists for humanity, and Monday, January 21, 2019 was Martin Luther King Jr. day, we hosted a celebration of unity, and a celebration of the beauty that is the right to follow your dreams.</p>
-
-                  <p style="font-size: 17px; text-align: left;">We believe that it is so important to follow your dreams that we want to show just how much of a positive effect we can make together.</p>
-
-                  <p style="font-size: 17px; text-align: left;">
-                    Thank you for coming together with The Band Famous and friends where dreamers unite! 10% of proceeds from the event went to the LA Food Bank, out of deference to those at a station of life-struggles.
-                  </p>
-
-                  <p style="font-size: 17px; text-align: left;">
-                    We believe everybody deserves the chance to create the life they want for themselves, and we know sometimes this is easier said than done. As brothers and sisters, we must band together to lift each other up and help one another persevere. Never give up. Follow your dreams and help make the world a better place to live in.
-                  </p>
 
 
-            <br>
 
-           
-            <h4>THANK YOU FOR HELPING US MAKE A DIFFERENCE</h4>
-            <p style="font-size: 17px; text-align: left;">We hosted a food drive in partnership with the Los Angeles Regional Food Bank, which serves one million individuals, including 400,000 children, annually.</p>
-            <img src="img/events/foodbank.jpg" style="margin-left: 5px; width: 100%; margin-top: 0px;" alt="Los Angeles Food Bank"/>
-            <p style="font-size: 17px; text-align: left;">The LA Food Bank distributes food and other essentials to children, seniors, families and others in need.</p>
-            <p style="font-size: 17px; text-align: left;">We accepted donations to aid homeless youth, and had boxes for collecting donations of non-perishable food items that we delivered to the Los Angeles Regional Food Bank following this inspiring weekend.</p>
-
-
-          </div>
 
           
+          <!-- 2nd column -->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/Security2004-2.jpg" alt="The Band Famous" class="block__img" />
         
-          <div>
-            
-            <!-- LIVE + FOLLOW YOUR DREAMS -->
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
-            <p style="font-size: 17px; text-align: left; margin-left: 20px; margin-top: 25px;">
-                The following artists performed their music live at the 01.17 event:
-              </p>
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                <h4>Nur-D</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://nurdrocks.com" target="_blank">nurdrocks.com</a> | instagram: <a href="https://instagram.com/nurdrocks" target="_blank">@nurdrocks</a>]</p>
-                
-              </p>
-
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                <h4>Dakotah Faye</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://soundcloud.com/dakotah-poitra" target="_blank">soundcloud.com/dakotah-poitra</a> | instagram: <a href="https://instagram.com/pokawho" target="_blank">@pokawho</a>]</p>
-                
-              </p>
-
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                <h4>DRYX</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://iamdryx.com" target="_blank">iamdryx.com</a> | instagram: <a href="https://instagram.com/iamdryx" target="_blank">@iamdryx</a>]</p>
-                         
-              </p>
-                      
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                <h4>The Band Famous</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://www.bandfamous.com" target="_blank">bandfamous.com</a> | instagram: <a href="https://instagram.com/the_band_famous" target="_blank">@the_band_famous</a>]</p>
-               
-              </p>   
-
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px; margin-top: 25px;">
-                The following artists will be performing their music live at the 01.18 event:
-              </p>
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                <h4>Nur-D</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://soundcloud.com/mattisnur_d" target="_blank">soundcloud.com/mattisnur_d</a> | instagram: <a href="https://instagram.com/nurdrocks" target="_blank">@nurdrocks</a>]</p>
-                
-              </p>
-
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                <h4>Dakotah Faye</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://soundcloud.com/dakotah-poitra" target="_blank">soundcloud.com/dakotah-poitra</a> | instagram: <a href="https://instagram.com/pokawho" target="_blank">@pokawho</a>]</p>
-                
-              </p>
-
-                   
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                <h4>Quaesar</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://soundcloud.com/quaesarofficial" target="_blank">soundcloud.com/quaesarofficial</a> | instagram: <a href="https://instagram.com/quaesar" target="_blank">@quaesar</a>]</p>
-                
-              </p>
-
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                <h4>DRYX</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://iamdryx.com" target="_blank">iamdryx.com</a> | instagram: <a href="https://instagram.com/iamdryx" target="_blank">@iamdryx</a>]</p>
-                         
-              </p>
-
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                <h4>Korynn OC</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://www.korynnoc.com" target="_blank">korynnoc.com</a> | instagram: <a href="https://instagram.com/korynnoc" target="_blank">@korynnoc</a>]</p>
-                
-              </p>
-                      
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                <h4>The Band Famous</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://www.bandfamous.com" target="_blank">bandfamous.com</a> | instagram: <a href="https://instagram.com/the_band_famous" target="_blank">@the_band_famous</a>]</p>
-               
-              </p>  
-
-              <h4>DETAILS<h4>
-            <u><b>When:</b></u><p>Friday Jan 17, 2020 <br>&amp;<br>Saturday Jan 18, 2020</p>
-            <p style="font-size: 17px;">Doors open at 6:00pm. <br>Come early!<br>Music starts ~10:00pm.</p>
-
-            <u><b>Where:<b></u><p style="font-size: 17px; text-align: center;">The Band Famous <br>3920 E. 3rd St. <br>Los Angeles, CA, 90063</p>
-
-            <u><b>Parking:</b></u><p style="font-size: 17px; text-align: left;">Some parking available for early birds, with the neighboring McDonalds sponsoring overflow parking for guests. Thank you McDonalds!</p>
-
-            <u><b>Admission:</b></u><p style="font-size: 17px; text-align: left;">$10 in advance at Eventbrite | $20 cash at doors | $10 cash at doors if you show The Band Famous app on your phone!</p>
-
-
-            <p style="font-size: 17px; text-align: left; margin-left: 20px;">Featuring concessions on site including Rockstar lemonades, coconut waters, waters, candy and fun-sized candy.</p>
-
-            <p style="font-size: 17px; text-align: left; margin-left: 20px;">Featuring a donation-based bar with a suggested donation of $5.00 for guests who are 21+ only.</p>
-
-            <p style="font-size: 17px; text-align: left; margin-left: 20px;">B.Y.O.B OK, and 420-friendly on the 18th.</p>
-
-            <img src="img/events/unity.png" alt="Gratitude" style="width: 100%; height: auto; margin-top: 10px; margin-bottom: 4px; margin-left: 20px;"/>
-
-
-            
-            <!-- Love Affair -->
-
-          <div>
-
-            
-              <p style="font-size: 17px; text-align: left; margin-left: 20px; margin-top: 25px;">
-                    The following artists performed their music live at the event:
-              </p>
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                    <h4>Korynn OC</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://www.korynnoc.com" target="_blank">korynnoc.com</a> | instagram: <a href="https://instagram.com/korynnoc" target="_blank">@korynnoc</a>]</p>
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/2004venue.jpg" alt="The Band Famous" class="block__img" />
         
-              </p>
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                    <h4>DRYX</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://www.iamdryx.com" target="_blank">iamdryx.com</a> | instagram: <a href="https://instagram.com/iamdryx" target="_blank">@iamdryx</a>]</p>
-                 
-              </p>
-              
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                    <h4>Exxy</h4><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="http://www.exxymusic.com" target="_blank">exxymusic.com</a> | instagram: <a href="https://instagram.com/lifeofexxy" target="_blank">@lifeofexxy</a>]</p>
-       
-              </p>      
-
-
-
-            <h4>DETAILS<h4>
-            <u><b>When:</b></u><p>Fri Feb 15, 2019.</p>
-            <p style="font-size: 17px;">Doors open at 8:00pm. Come early!<br>Music starts ~9:00pm.</p>
-
-            <u><b>Where:</b></u><p style="font-size: 17px; text-align: center;">The Band Famous <br>2004 E. 1st Street <br>Los Angeles, CA, 90033</p>
-
-            <u><b>Parking:</b></u><p style="font-size: 17px; text-align: left;">Some parking available for early birds.</p>
-
-            <u><b>Admission:</b></u><p style="font-size: 17px; text-align: left;">$10 if purchased here at Eventbrite | $10 cash at the door | $5 at the door if you show your TBF app on your phone!</p>
-
-            <p style="font-size: 17px; text-align: left; margin-left: 20px;">Featuring concessions available on site including Rockstar lemonades, coconut waters, waters, candy and fun-sized candy.</p>
-
-            <p style="font-size: 17px; text-align: left; margin-left: 20px;">Featuring a donation-based bar with a suggested donation of $5.00 for guests who are 21+ only.</p>
-
-            <img src="img/events/unity.png" alt="Gratitude" style="width: 100%; height: auto; margin-top: 10px; margin-bottom: 4px; margin-left: 20px;"/>
-
-          </div>
-
-            <!-- Follow Your Dreams -->
-
-
-            <a href="https://bit.ly/TBFSHOW" target="_blank" title="Limited Tickets Available, Reserve Yours Now!"><img src="img/events/eventbrite.png" alt="Limited Tickets Available, Reserve Yours Now!" style="width: 100%; height: auto; margin-top: 10px; margin-bottom: 4px; margin-left: 20px;"/></a>
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px; margin-top: 25px;">
-                    The following artists performed their music live at the event:
-              </p>
-
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                    <h2>Crown</h2><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://soundcloud.com/whoiscrown" target="_blank">soundcloud.com/whoiscrown</a> | instagram: <a href="https://instagram.com/whoiscrown" target="_blank">@whoiscrown</a>]</p>
-                 
-              </p>
-              
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                    <h2>Korynn OC</h2><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://www.korynnoc.com" target="_blank">korynnoc.com</a> | instagram: <a href="https://instagram.com/korynnoc" target="_blank">@korynnoc</a>]</p>
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/2004venue2.jpg" alt="The Band Famous" class="block__img" />
         
-              </p>
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
-              <p style="font-size: 17px; text-align: left; margin-left: 20px;">
-                    <h2>Dakotah Faye</h2><p style="font-size: 17px; text-align: left; margin-left: 20px;">[website: <a href="https://www.fanlink.to/bornidentity" target="_blank">fanlink.to/bornidentity</a> | instagram: <a href="https://instagram.com/pokawho" target="_blank">@pokawho</a>]</p>
-       
-              </p>      
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/2004venue3.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/2004venue4.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/2004studio5.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
-            <h4>DETAILS<h4>
-            <u><b>When:</b></u><p>Sat Jan 19, 2019.</p>
-            <p style="font-size: 17px;">Doors open at 8:30pm. Come early!<br>Music starts at 9:00pm.</p>
+          <div class="g__item">
+            <div class="block">
+              <img src="img/events/concessionsweb.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
-            <u><b>Where:</b></u><p style="font-size: 17px; text-align: center;">The Band Famous <br>2004 E. 1st Street <br>Los Angeles, CA 90033</p>
-
-            <u><b>Parking:</b></u><p style="font-size: 17px; text-align: left;">Some parking available for early birds.</p>
-
-            <u><b>Admission:</b></u><p style="font-size: 17px; text-align: left;">$10 if purchased here at Eventbrite | $10 cash at the door | $5 at the door if you show your TBF app on your phone!</p>
-
-            <p>Thank you for joining us for a positively good time; supporting good music and good cause.</p>
-
-            <p>For those interested in donating now and in the future, we collected the following type of items by request of LA Food Bank:</p>
-            <i style="text-align: left; color: white; font-size: 18px;">Canned or dry fruits and vegetables in an array of colors to ensure consumption of a variety of vitamins and minerals;</i> 
-            <br>
-            <br>
-            <i style="text-align: left; color: white; font-size: 18px;">Shelf-stable lean meats as a good source of low-fat protein and canned or dry beans as a good source of fiber;</i>
-            <br>
-            <br>
-            <i style="text-align: left; color: white; font-size: 18px;">Non-perishable whole grains for maximum nutritional value;</i>
-            <br>
-            <br>
-            <i style="text-align: left; color: white; font-size: 18px;">Shelf-stable low-fat dairy / non-dairy products fortified with vitamin D;</i>
-
-
-
-
-          </div>
-
-          
-          <div>
-            <!--<h3>HQ</h3>-->
-            
-           
-            
-          </div>
-
-          <div>
-            <!--<h3>Body Painting</h3>-->
-
-             
-          </div>
+           <div class="g__item">
+            <div class="block">
+              <img src="img/studio/rockstar.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
 
-      
-
-          <div>
-
-            <h4 title="Support The Band Famous!" style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 3em;">The Band Famous</h4>
-               
-            <p style="margin-right:10px;">3920 East 3rd Street, Los Angeles, CA 90063</p>  
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.417740755191!2d-118.18490788478547!3d34.03315388061121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cf5d5e24c72d%3A0x7ff44602356a72!2s3920%20E%203rd%20St%2C%20Los%20Angeles%2C%20CA%2090063!5e0!3m2!1sen!2sus!4v1573864398784!5m2!1sen!2sus" width="47%" height="400" frameborder="0" style="border: 0 ; min-width: 250px;" allowfullscreen></iframe>
-           
-            <br>
-            <br>
-
-            <a href="shop.html" title="Shop Online"><h4 title="Support The Band Famous!" style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 35px;">Shop Open</h4></a>
-            <p style="margin-right:10px;">Featuring Store Hours Every Saturday 3:00PM-5:00PM PST! <br><br>Hours expanding soon!<br><br>*Must wear a mask to enter.<br>*Limited guests allowed inside at a time, <br>per social distancing guidelines.</p>
-            
-            <p style="margin-right:10px; margin-bottom: 17px;">Walk the red carpet and support great artists when you shop The Band Famous! <br><br>Check out the merchandise we are selling for the wonderful people we feature in our<br>Hall Of Fame music collective, including Nur-D, Korynn OC, and Elliott Roche,<br>with <u>85% of proceeds going to the artist you are supporting</u>!</p>
-            <center><a href="shop.html" title="Check out The Band Famous Shop - Online and In-Store!"><video controls autoplay> 
-
-                    <source src="img/shop/ShopOpen.mp4" type="video/mp4"> 
-
-              Your browser does not support the video tag. 
-            </video></a>
-            <a href="shop.html" title="Check out The Band Famous Shop - Online and In-Store!"><video controls autoplay> 
-
-              <source src="img/shop/TBFShopOpen.mp4" type="video/mp4"> 
-
-              Your browser does not support the video tag. 
-            </video></a>
-
-            </center>
-
-
-            <h4>THANK YOU FOR SUPPORTING GOOD MUSIC &amp; GOOD CAUSE<h4>
-
-            <img src="img/events/unity.png" style="min-width: 250px; width: 47%; height: auto; vertical align: center; margin-left: 0px; margin-bottom: 10px; margin-top: 10px;" alt="Unity" />
-
-           
-
-
-
-
-
-
-
-           
-
-
-          </div>
         </div>
 
 
-          
-      </div>
+        <p style="color: black; text-shadow: none;">This was a live/work space that was both our recording studio and production as well as a live music venue. It took us time to renovate as it was in need of serious renovations. Upon renovations being complete, we hosted and produced private and public events. Private events included a private VIP screening of our self-produced music video for "Emotional Scatter". Public events included "Follow Your Dreams", a food drive and benefit show for Los Angeles Regional Food Bank featuring performances by Crown, Dakotah Faye, and Korynn OC. This would be the first time Los Angeles would be graced with these three artists' performances. We raised money for the LA Food Bank and delivered two big boxes of food. We also produced the "Love Affair" Valentine Benefit Show for American Heart Association with Korynn OC co-producing and performing along with artists DRYX, and EXXY.</p>
 
+        <!-- Photos of private shows (space outfit, MS on stage), Follow Your Dreams, Audience, Love Affair -->
 
+        <p style="color: black; text-shadow: none;">There were more events in production and planning, but sadly our landlord had not maintained the building well, and some bad rainstorms saw our ceiling caving in, with water destroying some of our studio equipment. It was a major blow, and it forced us to move our venue location, which was incredibly difficult with our stage alone weighing over 300lbs.</p>
 
-      <!--End Pattern HTML-->
-
-      
-
-      <div>
+        <ul class="clearing-thumbs clearing-feature" data-clearing="">
+          <li class="clearing-featured-img">
+            <img src="img/studio/2004/IMG-1855.jpg" alt="2004 E 1st St Roof Damages" class="block__img" style="width: 69%; height: auto; margin-top: -15px;"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1856.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1857.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1858.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1859.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1860.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1861.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1862.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1863.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1864.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1865.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1866.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1867.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1868.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1869.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1870.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1871.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1872.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+          <li>
+            <img src="img/studio/2004/IMG-1878.jpg" alt="2004 E 1st St Roof Damages"/>
+          </li>
+        </ul>
         
+        <!-- UL gallery open to show damages to property - show pics of ceiling etc. -->
 
-      <center>
-      <!-- Amazon ads -->    
-      <br>
-      <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=maryn.jackson-20&linkCode=ur2&linkId=f351c6f63714a865535ec84d09919d33&camp=1789&creative=9325&node=11091801" style="font-family: Julius Sans One; font-size: 30px; text-decoration: none;" >Check Out These Hot Items</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=maryn.jackson-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />  </center>
-      <br>
-      <br>
+        <p style="color: black; text-shadow: none;">Circa March 2019 - Feb 2021</p>
+        
+        <p style="margin-right:10px; color: black;">3920 East 3rd Street, Los Angeles, CA 90063</p>  
 
+        <img src="img/TBF.jpg" alt="The Band Famous venue" style="width: 69%; "/>
 
-      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
-          amzn_assoc_ad_type = "link_enhancement_widget";
-          amzn_assoc_tracking_id = "maryn.jackson-20";
-          amzn_assoc_linkid = "8805d573ae4c536eb9b2f84a54d4c5c7";
-          amzn_assoc_placement = "";
-          amzn_assoc_marketplace = "amazon";
-          amzn_assoc_region = "US";
-      </script>
-      <script src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=US"></script>
-      <!-- Amazon ads --> 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.417740755191!2d-118.18490788478547!3d34.03315388061121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cf5d5e24c72d%3A0x7ff44602356a72!2s3920%20E%203rd%20St%2C%20Los%20Angeles%2C%20CA%2090063!5e0!3m2!1sen!2sus!4v1573864398784!5m2!1sen!2sus" width="47%" height="400" frameborder="0" style="border: 0 ; min-width: 250px;" allowfullscreen></iframe>
+           
+        <br>
+
+        <p style="color: black; text-shadow: none; margin-bottom: -15px;">
+          In addition to our recording and production studio and live music venue, we added a custom neon sign in the window, a sandwhich board sign for the sidewalk, as well as registering our business to Apple and Google Maps, and we upgraded from street parking to a private parking lot.
+        </p>
+        <!-- sandwich board sign, neon sign photos -->
 
 
-      <br>
-
-        <!-- clickbank singorama -->
-                                                                                                                                                  
-        <span><a href="https://74ed94qfj7ij-hycxhwhs6v0fc.hop.clickbank.net/?tid=SING" target="_blank"><img src="img/affiliates/singorama2.png" style="width: 25%; height: auto; max-width: 728px; margin-bottom: 10px;"></a></span>
+        <!-- Festival Flyers + photos of all celebs, performers, good shots of the crowd, etc -->
 
 
-        <!-- clickbank honey -->
-        <span><a href="http://www.secretsofmanukahoney.com/thebenefits/?go=bandfamous">
-        <img border="0" src="http://www.secretsofmanukahoney.com/ads/336x280-animated-best.gif" width="336" height="280" style="width: 36%; height: auto; max-width: 728px; margin-bottom: 10px; margin-top: -20px;"></a></span>
+         <div class="g g--masonry-2-to3-up">
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/tbfVenueLA5.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/tbfVenueLA.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+  
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/tbfLAstudio.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAstudio1.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAstudio2.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/Princeguitar.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/tbfVenue5.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/NorellMask.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAVenue.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAVenue3.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAneon.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/signage.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAneonTBF.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+
+
+
+
+          
+          <!-- 2nd column -->
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/tbfVenueLA3.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAstudio3.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/tbfLAstudio2.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAstudio.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/tbfVenueLA4.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/VIP.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/ZanderMask.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAVenue2.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAVenue4.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/entry.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/3920.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/neonTBF.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+
+        </div>
+       
+        <p style="color: black; text-shadow: none; margin-bottom: -15px;">
+          We also built a Los Angeles storefront featuring NurD and Korynn OC with a merchandise display we hand-built, which included T-Shirts, tank tops, coozies, and more with store hours every Saturday run and operated by Norell and Zander single-handedly. We were so happy to represent these phenomenal musicians! However despite our efforts with face masks, an air purifier that destroys viruses in the air, and regular sanitation and cleanings, covid-19 posed difficulties that made it clear that our efforts were not sustainable for the foreseeable future as a queer-run indie enterprise.
+        </p>
+
+
+        <div class="g g--masonry-2-to3-up">
+
+          <div class="g__item">
+            <div class="block">
+              <video controls autoplay muted style="width: 100%; height: 100%;"> 
+
+                    <source src="img/shop/ShopOpen.mp4" type="video/mp4" > 
+
+                  Your browser does not support the video tag. 
+                </video>
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+
+          <div class="g__item">
+            <div class="block">
+              <video controls autoplay muted style="width: 100%; height: 100%;"> 
+
+                  <source src="img/shop/TBFShopOpen.mp4" type="video/mp4" > 
+
+                  Your browser does not support the video tag. 
+                </video>
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+  
+
+          <div class="g__item">
+            <div class="block">
+              <video controls autoplay muted style="width: 100%; height: 100%;"> 
+
+                  <source src="img/shop/ShopOpen2.mp4" type="video/mp4" > 
+
+                  Your browser does not support the video tag. 
+                </video>
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+
+          <div class="g__item">
+            <div class="block">
+              <video controls autoplay muted style="width: 100%; height: 100%;"> 
+
+                  <source src="img/shop/ShopOpen3.mp4" type="video/mp4" > 
+
+                  Your browser does not support the video tag. 
+                </video>
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+        </div>
+
+
+
+        <p style="color: black; text-shadow: none;">
+          Due to covid19 and many other reasons, The Band Famous enterprise is now completely green, solar-powered with a private water well on 41 acres in Arizona. Rather than renting, The Band Famous is now owning. Rather than having a max capacity in a downtown venue, we are going to continue our "Party for a Purpose" movement with our 3rd festival "Live + Follow Your Dreams" taking place on 41 acres, where the sky is the limit! We are continuing to build and grow, and this time instead of benefiting charities and causes, we are going to be benefiting musicians in our Hall Of Fame, paying them in Crypto-currency to perform at our annual festival. We are not charging guests entry fees who are active subscribers to The Band Famous mailing list, so if you'd like to attend our next or future benefit music art festival for free, all you have to do is get on our newsletter!
+        </p>
+
+
+
+        <span class="LIVE"><h4 style="background: transparent; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 3em; height: 90px; margin-bottom: -25px; margin-top:11px; padding-top: 30px;">&quot;WHAT IT TOOK&quot;</h4></span>
+
+        <p style="color: black; text-shadow: none; margin-bottom: -15px;">Originally, Norell and Zander moved to Los Angeles after living in Manhattan for a year, and with finances being tight they decided to take a huge risk and they lived out of their car - a Toyota Yaris - in Los Angeles for two-and-a-half years in order to launch their vision of The Band Famous venue. They stayed with a few kind people they met on CouchSurfing.org, giving them a break from the car for maybe one-and-a-half months total of those two-and-a-half years. They showered at public beaches in the beginning, and later got a gym membership so they could shower there. They made McDonalds, Starbucks, laundromats, and even public parks and street picnic tables their office.</p>
 
         <br>
 
-          <!-- beta publishing ad revenue -->
-          <script async="async" data-cfasync="false" src="//pl15386248.passtechusa.com/146fe876abf5931c7cfe448ad782a23e/invoke.js"></script>
-          <div id="container-146fe876abf5931c7cfe448ad782a23e"></div>
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BC1zR0DE5cu/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/BC1zR0DE5cu/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BC1zR0DE5cu/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by The Band Famous™ (@thebandfamous)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+
+        <br>
+
+        <div class="g g--masonry-2-to3-up">
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/homeless-setup.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAoffice.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+          
+
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/NorellBeachShower.jpg" alt="The Band Famous" class="block__img" />
+        
+         
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/mobileoffice.jpg" alt="The Band Famous" class="block__img" />
+        
+         
+            </div><!--end block-->
+          </div><!--end g__item-->
+
     
-      <img src="img/TBFvenue.jpg" alt="The Band Famous®" style="width: 70%; height: auto;" title="The Band Famous®"/>      
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/ZNhomeless4.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- working at mcdonalds -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+
+
+
+
+          <!-- Column 2 -->
+
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/ZNhomeless.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- working at mcdonalds -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/ZNhomeless2.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- working at mcdonalds -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/ZanderBeachShower.jpg" alt="The Band Famous" class="block__img" />
         
      
+            </div><!--end block-->
+          </div><!--end g__item-->
 
-      <p style="margin-right:10px; width: 70%; color: white; font-size: 22px;">Coming soon to the Shop: <br><br>Limited edition all-natural full-spectrum CBD balms &amp; topicals, and more!</p>
-
-      <ul id="shop">
-        <li><img src="img/metro-to-TBF.jpg" alt="The Band Famous®" title="The Band Famous®" style="width: 37%; auto; border: 1px 1px indigo;"/></li>
-        <li><img src="img/TBF.jpg" alt="The Band Famous®" style="width: 33.3%; height: auto;" title="The Band Famous®"/></li>
-      </ul>
-
-      <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">Our location is conveniently located by the Metro! There is limited parking - first come, first serve - as well. Special thanks to our neighboring McDonald's for being a sponsor with parking!</p>
-      
-      <img src="img/sponsors/McDonalds.png" alt="McDonalds Sponsors Parking for Benefit Music Festivals" style="margin-top: -10px; width: 25%; height: auto;"/>
-      <img src="img/sponsors/Parking.jpeg" alt="McDonalds Sponsors Parking for Benefit Music Festivals" style="margin-top: -10px; width: 25%; height: auto;"/>
-      <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">Once our private parking is at capacity, additional parking is available at the McDonald's for guests supporting our benefit music festivals and events.</p>
-      <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">Want to receive 50% off every single cover charge at our future events? All you have to do is show our app at entry and you get in at 50% cover charge, no matter what.</p>
-      <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">Want to perform at The Band Famous® venue? Submit to join the Hall Of Fame roster!</p>
-      <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">Want TBF to host your next party or event? Email info@bandfamous.com.</p>
-
-      <br>
-
-      <!-- The Software -->
-      <h4 style="background: black; color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px; height: 88px; margin-bottom: 0px; margin-top:-20px; padding-bottom: 44px; padding-top: 11px; width: 80%;">THE SOFTWARE</h4>
-      <!-- TBF Apps -->
-      <ul id="shop" style="margin-top: -10px;">
-          <li>
-            <a href="https://itunes.apple.com/us/app/the-band-famous/id879979539?mt=8" target="_blank" title="Have an iPhone, iPad, or iPod Touch? Download our iOS app for free!"><img src="img/appstore.gif" style="width: 38.4%; min-width: 250px; height: auto; vertical-align: center; box-shadow: none;" alt="Download The Band Famous on the App Store today!"/></a>
-          </li>
-          <li>
-            <a href="https://play.google.com/store/apps/details?id=com.bandfamous.famous" target="_blank" title="Have an Android phone or tablet? Download our Android app for free!"><img src="img/googleplay.png" style="width: 37%; min-width: 250px; height: auto; vertical-align: center; margin-bottom: 10px; box-shadow: none;" alt="Download The Band Famous on Google Play today!"/></a>
-          </li>
-      </ul>
-
-      <h4 style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px;">BECOME VIP</h4>
-      <br>
-      <b><p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">The Band Famous&#174; free app for iPhone and Android also grant you 50% off entry for all TBF hosted events. To gain entry at 50% off cover charge simply show The Band Famous app running on your smartphone.</p></b>
-      <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">The Band Famous is the first interactive debut app album self-released by the band, musical group TBF (The Band Famous&#174;).</p>
-      <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">It is available for the iOS and Android platforms. It features the complete debut album, <i>Last Words</i>, an app-exclusive that is available offline, along with "Cycle of Destruction", a strategy, retro, sophisticated "Rock, Paper, Scissors" style video game with high difficulty to master.</p>
-      <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">The Band Famous&#174; app also features their live interactive in-app concerts and festivals at the touch of a button, among other features.</p>
-
-      <p style="font-size: 22px; width: 70%; margin-top:10px; text-shadow: none; color: white; text-align:left;">The Band Famous&#174; is also available as a mobile web app, featuring an online radio station.</p>
-
-      
-
-        <ul id="shop">
-          <li><a href="#" data-reveal-id="one" onload="learnAboutHallOfFame()"><h4 title="Support The Band Famous!" style="color: #FFFFFF; text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px; margin-top: 10px; width: 100%; font-size: 47px;">Show<br>Support</h4></a></li>
-        </ul> 
-
-        <table style="background: transparent; margin-left: 14%; border: none;">
-
-          <tr class="title" style="background: transparent;">
-            <td></td>
-            <td><a href="https://www.paypal.me/thebandfamous" target="_blank" title="Make a donation to The Band Famous via Paypal today!"><img src="img/sponsors/paypal.png" alt="Donate to The Band Famous with PayPal" style="width: 80%; max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
-            <td></td>
-          </tr>
-
-          
-      
-          <tr style="background: transparent;">
-            <td></td>
-            <td><a href="http://gf.me/u/xfcsmk" target="_blank" title="Make a donation to The Band Famous via GoFundMe today!"><img src="img/sponsors/gofundme.png" alt="Donate to The Band Famous on GoFundMe" style="width: 80%; max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
-            <td></td>
-                  
-          </tr>
-
-
-
-          <tr style="background: transparent;">
-            <td></td>
-            <td><a href="https://venmo.com/code?user_id=1963585781628928023" target="_blank" title="Make a donation to The Band Famous via Venmo today!"><img src="img/sponsors/venmo.png" alt="Donate to The Band Famous with Venmo" style="width: 80%; max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
-            <td></td>
-                  
-          </tr>
-
-          <tr style="background: transparent;">
-            <td></td>
-            <td><a href="https://cash.app/$TheBandFamous" target="_blank" title="Make a donation to The Band Famous via Cash App today!"><img src="img/sponsors/cashapp.jpg" alt="Donate to The Band Famous with Cash App" style="width: 80%; height: auto; box-shadow: none;  max-width: 400px; height: auto; box-shadow: none; min-width: 120px;" /></a></td>
-            <td></td>
-                         
-          </tr>    
-
-          <tr class="title" style="background: transparent;">
-            <td></td>
-            <td><a href="https://www.patreon.com/bePatron?u=637376" target="_blank" title="Become a Patreon for The Band Famous today!"><img src="img/sponsors/patreon.png" alt="Become a Patreon for The Band Famous" style="width: 80%; max-width: 600px; height: auto; box-shadow: none; min-width:120px; margin-left: -30px;"/></a></td>
-            <td></td>
-          </tr>
-
-
-
-        </table> 
-
-
-        <!-- Ads by Google -->
-        <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/ZNhomeless3.jpg" alt="The Band Famous" class="block__img" />
         
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-3229914950091766"
-               data-ad-slot="6137738733"
-               data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script> -->
-        <!-- End Ads by Google -->
+              <!-- working at mcdonalds -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
-        <!-- Ads by Google -->
-        <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          
-          <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-3229914950091766"
-                data-ad-slot="6137738733"
-                data-ad-format="auto"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script> -->
-        <!-- End Ads by Google -->
-
-          <!-- media net ad revenue -->
-          <div id="653086164">
-            <script type="text/javascript">
-                try {
-                    window._mNHandle.queue.push(function (){
-                        window._mNDetails.loadTag("653086164", "728x90", "653086164");
-                    });
-                }
-                catch (error) {}
-            </script>
-          </div>
-
-          <!-- Amazon ads -->    
-          <br>
-          <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=maryn.jackson-20&linkCode=ur2&linkId=f351c6f63714a865535ec84d09919d33&camp=1789&creative=9325&node=11091801" style="font-family: Julius Sans One; font-size: 30px; text-decoration: none;" >Check Out These Hot Music Items
-          <img src="//ir-na.amazon-adsystem.com/e/ir?t=maryn.jackson-20&l=ur2&o=1" width="auto" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></a>  
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/homeless.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- working at mcdonalds -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
 
-        <br>
-        <center><iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=musicandentertainmentrot&f=ifr&linkID=51cea66499e12f13aa50e4389d39a9af&t=maryn.jackson-20&tracking_id=maryn.jackson-20" width="auto" min-width="400px" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe></center>
-        <!-- Amazon ads -->   
-        <br>
+        </div>
+      
 
-        <!-- clickbank rich brain -->
-        <a href="https://www.totalmoneymagnetism.com/?aff=bandfamous&tid=richbrain&p=home" target="_blank"><img src="https://totalmoney.s3.amazonaws.com/images/banners/set1/728.jpg" style="width: 100%; height: auto; max-width: 728px; margin-bottom: 10px;" ></a>
+        <p style="color: black; text-shadow: none; margin-bottom: -15px;">Before launching their venue they opened an office at Hollywood Production Center in Glendale, CA, where they were able to do a good amount of production, but they still sufficed to sleep in their car every night until they moved into 2004 E 1st Street in downtown Los Angeles for their first live/work space. </p>
+        <p style="color: black; text-shadow: none; margin-bottom: -15px;">Someone offered to buy them a restaurant in Burbank, CA, and make The Band Famous the house band. They even said that Norell and Zander could live in the restaurant, fully aware of the sacrifices being made to launch The Band Famous venue. Norell and Zander politely declined this generous offer for the simple fact that Burbank has so many things going for it already. Instead The Band Famous decided to rent their location in East Los Angeles, in a neighborhood which has less resources for the community, the band aspired to make a positive impact.</p>
 
-        <!-- Ezoic - Money Comes to Band Famous - mid_content -->
-        <div id="ezoic-pub-ad-placeholder-101"> </div>
-        <!-- End Ezoic - Money Comes to Band Famous - mid_content -->
-
-        <!-- clickbank MiamiInk tattoos -->
-        <a target="_blank" href="https://3040eyjcr-ckpe5lmywcjhpk65.hop.clickbank.net/?tid=TATTOOS" style="font-family: Julius Sans One; font-size: 30px; text-decoration: none;" ><img src="img/affiliates/miami-ink.jpg" alt="" style="width: 100%; height: auto; max-width: 728px; margin-bottom: 10px;" /><br>Still looking for that perfect tattoo?</a>
-        <br>
-        <!-- clickbank honey -->
-        <!-- https://ceade4qbs5mgprwiom3iq3xbqr.hop.clickbank.net/?tid=HONEY
-        http://www.secretsofmanukahoney.com/thebenefits/?go=bandfamous -->
-        <a href="http://www.secretsofmanukahoney.com/thebenefits/?go=bandfamous" target="_blank">
-        <img border="0" src="img/affiliates/honey.gif" width="728" height="90" style="width: 100%; height: auto; max-width: 728px; margin-bottom: 10px; margin-top:10px;" ></a>
-
-      </span>
-
-      <br>
-
-        <!-- Amazon Influencer link -->
-        <a target="_blank" href="https://www.amazon.com/shop/the_band_famous?&_encoding=UTF8&tag=maryn.jackson-20&linkCode=ur2&linkId=9f0516eab7b392b9ca52ff4058b83a19&camp=1789&creative=9325" style="text-decoration: none; font-family: Julius Sans One; font-size: 30px;">Shop The Band Famous Fav Items on Amazon!</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=maryn.jackson-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-        <!-- Amazon Influencer link -->
-
-    
-        <!-- Ezoic - Support Band Famous - bottom_of_page -->
-        <div id="ezoic-pub-ad-placeholder-102"> </div>
-        <!-- End Ezoic - Support Band Famous - bottom_of_page -->
-
-  </center>
+        <div class="g g--masonry-2-to3-up">
 
 
-</div>
-          
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAOffice3.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
 
+          <div class="g__item">
+            <div class="block">
+              <img src="img/studio/LAOffice1.jpg" alt="The Band Famous" class="block__img" />
+        
+              <!-- <h2 class="block__title" style="text-shadow: none;">The Band Famous venue</h2> -->
+            </div><!--end block-->
+          </div><!--end g__item-->
+
+        </div>
+
+         <p style="font-size: 16px; color: black;">The Band Famous pictured in their office at Hollywood Production Center in Glendale, CA, prior to launching their venue in downtown Los Angeles and East Los Angeles.</p>
+
+
+  </div>
+
+</center>
   
     
 <hr style="border-top: 8px solid black; margin: 20px;">
@@ -847,29 +1006,6 @@ fa·mous 1. The Band Famous&#174; aka TBF is the first band in the world to rele
   $(document).ready(function(){$('#one').foundation('reveal', 'open')});
 </script>
 
-
-<script>
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=492306967513697";
-      fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-<!-- required for instagram callin -->
-<script type="text/javascript" src="js/instafeed.js"></script>
-<script type="text/javascript">
-  var feed = new Instafeed({
-    get: 'user',
-    userId: 'the_band_famous',
-    limit: 5,
-    clientId: '361e764ecb3f4153baf84f49f0ab8d58'
-  });
-  feed.run();
-</script>
 
 <!-- beta publisher social bar ad -->
 <script type='text/javascript' src='//pl15776918.cpmnetworkcontent.com/ed/83/9d/ed839de71f282070e0d170b6b39e34c9.js'></script>
