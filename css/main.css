@@ -5,6 +5,8 @@ html,  {
   min-width: 220px;
   position: relative;
   overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
 
 
 }
@@ -12,7 +14,8 @@ html,  {
 body {    
   background: linear-gradient(#33CC33, #3399FF, #33CC33);
   border-radius: 6px;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
   min-width: 220px;
   line-height: 1.5em;
   position: relative;
