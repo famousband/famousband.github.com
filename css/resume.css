@@ -9,10 +9,9 @@ html
 
 body
 {
-  background: linear-gradient(#33CC33, #3399FF, #33CC33);
+  
   -webkit-font-smoothing:antialiased;
-  color:#333332;
-  font-family:Della Resitra, serif;
+
   font-size:18px;
   font-weight:400;
   line-height:1.4;
@@ -27,6 +26,10 @@ body
 h1
 {
   color:rgba(0,0,0,.75);
+  font-family: 'Inspiration', cursive;
+  margin: auto;
+  padding: auto;
+
 }
 
 .wrapper
@@ -71,7 +74,7 @@ h1
 
 .me-img
 {
-  background:url(https://media-exp1.licdn.com/dms/image/C4E03AQGnLq_IB_mf8Q/profile-displayphoto-shrink_400_400/0/1631022739752?e=1648684800&v=beta&t=eICUjHeH_g9GQEItmEMK1j2gCADwqfjrlccSD_5za58) no-repeat center center ;
+  background:url(https://scontent-dfw5-2.xx.fbcdn.net/v/t1.18169-9/487536_10151427560234079_1130447966_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=de6eea&_nc_ohc=hZgKM_rNmAEAX8hq_bB&_nc_ht=scontent-dfw5-2.xx&oh=00_AfALda6i8weBTZW-GvnWIsXuqUQ99KR1OzfvGVie2iz-tQ&oe=641F99D7) no-repeat center center ;
   background-size:100%;
   background-position:0px;
   border-radius:100%;
@@ -83,8 +86,8 @@ h1
 
 .NorellResume h1
 {
-  font-family:Open Sans, sans-serif;
-  font-size:1.5em;
+font-family: 'Inspiration', cursive;
+  font-size:3.45em;
   text-align:center;
 }
 
@@ -102,6 +105,7 @@ h1
   line-height:1.5;
   margin:0 8px 0 0;
   text-align:center;
+  font-family: Karma, serif;
 }
 
 .NorellResume .name-text
@@ -119,18 +123,20 @@ h1
 
 .inner h1
 {
-  font-size:1.75em;
+  font-size:4em;
 }
 
 .inner p
 {
   color:rgba(0,0,0,.5);
+  font-family: Karma, serif;
 }
 
 .inner p em
 {
   color:rgba(0,0,0,1);
   font-style:normal;
+  font-family: Karma, serif;
 }
 
 .inner section
@@ -149,7 +155,7 @@ ul.resume
 
 .skill-set li
 {
-  background:rgba(0,0,0,.75);
+  background:indigo;
   border-radius:5px;
   color:#FFF;
   display:inline-block;
@@ -157,7 +163,20 @@ ul.resume
   margin:15px 15px 0 0;
   padding:10px;
   text-align:justify;
+  opacity: 70%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: .777em;
 }
+
+footer {
+font-family: 'Notable', sans-serif;
+position: absolute;
+margin: auto;
+
+}
+
+
+
 
 @media screen and (max-width: 48em) {
   .right,.left
@@ -193,7 +212,10 @@ ul.resume
   margin-top:100px;
 }
 .handmade em {
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Galindo', sans-serif;
   font-size: 1.25em;
   margin-left:5px;
 }
+
+
+
