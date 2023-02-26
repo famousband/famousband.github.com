@@ -27,6 +27,12 @@ header {
   position: center;
 }
 
+h4.newmusic {
+  font-family: "Della Respira", serif ;
+  color: black;
+
+}
+
 /* id of "wrapper" */
 
 #wrapper {
