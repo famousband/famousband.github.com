@@ -20,6 +20,7 @@ body { margin: 0; background: #101; }
 }
 
 div { font-family: "Passions Conflict", cursive; }
+
 div a { 
   color: mediumpurple; text-decoration: none;
   width: 100%; height: 100%; 
@@ -104,4 +105,68 @@ footer h4 {
   text-align: center; margin-top: 3rem;
   padding: 0 1rem; font-size: 2rem;
   transition: .3s; line-height: 1; 
+}
+
+/*------------------------------------*\
+    #BLOCK
+\*------------------------------------*/
+.block {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.block__title {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.block__img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+
+/**
+ * Grid object
+ * 1) Over-arching grid container
+ * 2) Creates overlap effect with content below
+ */
+.g {
+  padding: 0.5rem;
+  max-width: 84rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -3rem; /* 2 */
+}
+
+
+/* 2-to-3-up masonry grid
+ * 1) Creates a Pinterest-style, masonry grid with blocks of varying heights.
+ * 2) Set number of columns to display */
+
+.g--masonry-2-to3-up {
+  column-count: 2; /* 2 */
+  column-gap: 0;
+  
+  @media all and (min-width: 40em) {
+    column-count: 3; /* 2 */
+  }
+  
+  @media all and (min-width: 56em) {
+    column-count: 4; /* 2 */
+  }
+}
+
+/**
+ * Grid item
+ * 1) Direct child of the grid container element
+ * 2) Prevents content from splitting up because of the 
+ *    parent's CSS columns
+ */
+.g__item {
+  padding: 0.5rem;
+  -webkit-column-break-inside: avoid; /* 2 */
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
